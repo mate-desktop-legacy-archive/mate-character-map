@@ -29,336 +29,392 @@
 
 #ifdef HAVE_MATECONF
 	#include <mateconf/mateconf-client.h>
-	static MateConfClient *client;
+	static MateConfClient* client;
+#else
+	// gio?
+	static GSettings* client;
 #endif
 
 /* The last unicode character we support */
 /* keep in sync with mucharmap-private.h! */
-#define UNICHAR_MAX (0x0010FFFFUL)
+#define UNICHAR_MAX    (0x0010FFFFUL)
 
-#define WINDOW_STATE_TIMEOUT 1000 /* ms */
+#define WINDOW_STATE_TIMEOUT    1000 /* ms */
 
-#define MATECONF_PREFIX "/apps/mucharmap"
+#define MATECONF_PREFIX    "/apps/mucharmap"
+#define GUCHARMAP_GSETTINGS_SCHEME    "org.mate.mucharmap"
 
 static MucharmapChaptersMode
-get_default_chapters_mode (void)
+get_default_chapters_mode(void)
 {
-  /* XXX: In the future, do something based on chapters mode and locale 
-   * or something. */
-  return GUCHARMAP_CHAPTERS_SCRIPT;
+	/* XXX: In the future, do something based on chapters mode and locale
+	 * or something. */
+	return GUCHARMAP_CHAPTERS_SCRIPT;
 }
 
-static gchar *
-get_default_font (void)
+static gchar*
+get_default_font(void)
 {
-  return NULL;
-}
-
-static gboolean
-get_default_snap_pow2 (void)
-{
-  return FALSE;
-}
-
-#ifdef HAVE_MATECONF
-
-void
-mucharmap_settings_initialize (void)
-{
-  client = mateconf_client_get_default ();
-
-  if (client == NULL) {
-    g_message(_("MateConf could not be initialized."));
-    return;
-  }
-
-  mateconf_client_add_dir (client, MATECONF_PREFIX,
-                        MATECONF_CLIENT_PRELOAD_ONELEVEL, NULL);
-}
-
-void
-mucharmap_settings_shutdown (void)
-{
-  mateconf_client_remove_dir (client, MATECONF_PREFIX, NULL);
-  g_object_unref(client);
-  client = NULL;
+	return NULL;
 }
 
 static gboolean
-mucharmap_settings_initialized (void) 
+get_default_snap_pow2(void)
 {
-  return (client != NULL);
+	return FALSE;
+}
+
+void
+mucharmap_settings_initialize(void)
+{
+	#ifdef HAVE_MATECONF
+		client = mateconf_client_get_default();
+	#else
+		/* with g_settings_list_schemas, find if the schema exists */
+		const gchar* const* list_schemas = g_settings_list_schemas();
+		int i = 0;
+
+		while (list_schemas[i] != NULL)
+		{
+			if (strcmp (list_schemas[i], GUCHARMAP_GSETTINGS_SCHEME) == 0)
+			{
+				client = g_settings_new(GUCHARMAP_GSETTINGS_SCHEME);
+			}
+
+			i++;
+		}
+
+	#endif
+
+	if (client == NULL)
+	{
+		#ifdef HAVE_MATECONF
+			g_message(_("MateConf could not be initialized."));
+		#else
+			g_message(_("GSettings could not be initialized."));
+		#endif
+
+		return;
+	}
+
+	#ifdef HAVE_MATECONF
+		mateconf_client_add_dir(client, MATECONF_PREFIX,
+		                        MATECONF_CLIENT_PRELOAD_ONELEVEL, NULL);
+	#else
+		g_settings_delay(client);
+		//g_settings_sync();
+	#endif
+}
+
+static gboolean
+mucharmap_settings_initialized(void)
+{
+	return (client != NULL);
+}
+
+void
+mucharmap_settings_shutdown(void)
+{
+	if (mucharmap_settings_initialized())
+	{
+		#ifdef HAVE_MATECONF
+			mateconf_client_remove_dir(client, MATECONF_PREFIX, NULL);
+		#else
+			g_settings_apply(client);
+		#endif
+
+		g_object_unref(client);
+		client = NULL;
+	}
 }
 
 MucharmapChaptersMode
-mucharmap_settings_get_chapters_mode (void)
+mucharmap_settings_get_chapters_mode(void)
 {
-  MucharmapChaptersMode ret;
-  gchar *mode;
-  
-  mode = mateconf_client_get_string (client, MATECONF_PREFIX"/chapters_mode", NULL);
-  if (mode == NULL)
-    return get_default_chapters_mode ();
+	MucharmapChaptersMode ret;
+	gchar* mode;
 
-  if (strcmp (mode, "script") == 0)
-    ret = GUCHARMAP_CHAPTERS_SCRIPT;
-  else if (strcmp (mode, "block") == 0)
-    ret = GUCHARMAP_CHAPTERS_BLOCK;
-  else
-    ret = get_default_chapters_mode ();
+	if (!mucharmap_settings_initialized())
+	{
+		return get_default_chapters_mode();
+	}
 
-  g_free (mode);
-  return ret;
+	#ifdef HAVE_MATECONF
+		mode = mateconf_client_get_string(client, MATECONF_PREFIX"/chapters_mode", NULL);
+	#else
+		mode = g_settings_get_string(client, "chapters-mode");
+	#endif
+
+	if (strcmp (mode, "script") == 0)
+	{
+		ret = GUCHARMAP_CHAPTERS_SCRIPT;
+	}
+	else if (strcmp (mode, "block") == 0)
+	{
+		ret = GUCHARMAP_CHAPTERS_BLOCK;
+	}
+	else
+	{
+		ret = get_default_chapters_mode();
+	}
+
+	g_free(mode);
+
+	return ret;
 }
 
 void
-mucharmap_settings_set_chapters_mode (MucharmapChaptersMode mode)
+mucharmap_settings_set_chapters_mode(MucharmapChaptersMode mode)
 {
-  switch (mode)
-    {
-      case GUCHARMAP_CHAPTERS_SCRIPT:
-        mateconf_client_set_string (client, MATECONF_PREFIX"/chapters_mode", "script", NULL);
-      break;
+	if (!mucharmap_settings_initialized())
+	{
+		return;
+	}
 
-      case GUCHARMAP_CHAPTERS_BLOCK:
-        mateconf_client_set_string (client, MATECONF_PREFIX"/chapters_mode", "block", NULL);
-      break;
-    }
+	switch (mode)
+	{
+		case GUCHARMAP_CHAPTERS_SCRIPT:
+
+			#ifdef HAVE_MATECONF
+				mateconf_client_set_string(client, MATECONF_PREFIX"/chapters_mode", "script", NULL);
+			#else
+				g_settings_set_string(client, "chapters-mode", "script");
+			#endif
+
+			break;
+
+		case GUCHARMAP_CHAPTERS_BLOCK:
+
+			#ifdef HAVE_MATECONF
+				mateconf_client_set_string(client, MATECONF_PREFIX"/chapters_mode", "block", NULL);
+			#else
+				g_settings_set_string(client, "chapters-mode", "block");
+			#endif
+
+			break;
+	}
 }
 
-gchar *
-mucharmap_settings_get_font (void)
+gchar*
+mucharmap_settings_get_font(void)
 {
-  char *font;
+	char* font;
 
-  if (!mucharmap_settings_initialized ()) {
-      return get_default_font ();
-  }
-  
-  font = mateconf_client_get_string (client, MATECONF_PREFIX"/font", NULL);
-  if (!font || !font[0]) {
-    g_free (font);
-    return NULL;
-  }
+	if (!mucharmap_settings_initialized())
+	{
+		return get_default_font();
+	}
 
-  return font;
+	#ifdef HAVE_MATECONF
+		font = mateconf_client_get_string (client, MATECONF_PREFIX"/font", NULL);
+	#else
+		font = g_settings_get_string(client, "font");
+	#endif
+
+	if (!font || !font[0])
+	{
+
+		g_free(font);
+		return NULL;
+	}
+
+	return font;
 }
 
 void
-mucharmap_settings_set_font (gchar *fontname)
+mucharmap_settings_set_font(gchar* fontname)
 {
-  if (!mucharmap_settings_initialized ()) {
-      return;
-  }
-  
-  mateconf_client_set_string (client, MATECONF_PREFIX"/font", fontname, NULL);
+	if (!mucharmap_settings_initialized())
+	{
+		return;
+	}
+
+	#ifdef HAVE_MATECONF
+		mateconf_client_set_string(client, MATECONF_PREFIX"/font", fontname, NULL);
+	#else
+		g_settings_set_string(client, "font", fontname);
+	#endif
 }
 
 gunichar
-mucharmap_settings_get_last_char (void)
+mucharmap_settings_get_last_char(void)
 {
-  /* See bug 469053 */
-  gchar *str, *endptr;
-  guint64 value;
+	/* See bug 469053 ? */
+	gchar* str;
+	gchar* endptr;
+	guint64 value;
 
-  if (!mucharmap_settings_initialized ()) {
-      return mucharmap_unicode_get_locale_character ();
-  }
+	if (!mucharmap_settings_initialized())
+	{
+		return mucharmap_unicode_get_locale_character();
+	}
 
-  str = mateconf_client_get_string (client, MATECONF_PREFIX"/last_char", NULL);
-  if (!str || !g_str_has_prefix (str, "U+")) {
-    g_free (str);
-    return mucharmap_unicode_get_locale_character  ();
-  }
+	#ifdef HAVE_MATECONF
+		str = mateconf_client_get_string (client, MATECONF_PREFIX"/last_char", NULL);
+	#else
+		str = g_settings_get_string(client, "last-char");
+	#endif
 
-  endptr = NULL;
-  errno = 0;
-  value = g_ascii_strtoull (str + 2 /* skip the "U+" */, &endptr, 16);
-  if (errno || endptr == str || value > UNICHAR_MAX) {
-    g_free (str);
-    return mucharmap_unicode_get_locale_character  ();
-  }
+	if (!str || !g_str_has_prefix(str, "U+"))
+	{
+		g_free(str);
+		return mucharmap_unicode_get_locale_character();
+	}
 
-  g_free (str);
+	endptr = NULL;
+	errno = 0;
+	value = g_ascii_strtoull(str + 2 /* skip the "U+" */, &endptr, 16);
 
-  return (gunichar) value;
+	if (errno || endptr == str || value > UNICHAR_MAX)
+	{
+		g_free(str);
+		return mucharmap_unicode_get_locale_character();
+	}
+
+	g_free(str);
+
+	return (gunichar) value;
 }
 
 void
-mucharmap_settings_set_last_char (gunichar wc)
+mucharmap_settings_set_last_char(gunichar wc)
 {
-  char str[32];
+	char str[32];
 
-  if (!mucharmap_settings_initialized ()) {
-      return;
-  }
-  
-  g_snprintf (str, sizeof (str), "U+%04X", wc);
-  str[sizeof (str) - 1] = '\0';
-  mateconf_client_set_string (client, MATECONF_PREFIX"/last_char", str, NULL);
+	if (!mucharmap_settings_initialized())
+	{
+		return;
+	}
+
+	g_snprintf(str, sizeof (str), "U+%04X", wc);
+	str[sizeof (str) - 1] = '\0';
+
+	#ifdef HAVE_MATECONF
+		mateconf_client_set_string(client, MATECONF_PREFIX"/last_char", str, NULL);
+	#else
+		g_settings_set_string(client, "last-char", str);
+	#endif
 }
 
 gboolean
-mucharmap_settings_get_snap_pow2 (void)
+mucharmap_settings_get_snap_pow2(void)
 {
-  if (!mucharmap_settings_initialized ()) {
-      return get_default_snap_pow2 ();
-  }
-  
-  return mateconf_client_get_bool (client, MATECONF_PREFIX"/snap_cols_pow2", NULL);
+	if (!mucharmap_settings_initialized())
+	{
+		return get_default_snap_pow2();
+	}
+
+	#ifdef HAVE_MATECONF
+		return mateconf_client_get_bool(client, MATECONF_PREFIX"/snap_cols_pow2", NULL);
+	#else
+		return g_settings_get_boolean(client, "snap-cols-pow2");
+	#endif
 }
 
 void
-mucharmap_settings_set_snap_pow2 (gboolean snap_pow2)
+mucharmap_settings_set_snap_pow2(gboolean snap_pow2)
 {
-  if (!mucharmap_settings_initialized ()) {
-      return;
-  }
-  
-  mateconf_client_set_bool (client, MATECONF_PREFIX"/snap_cols_pow2", snap_pow2, NULL);
+	if (!mucharmap_settings_initialized())
+	{
+		return;
+	}
+
+	#ifdef HAVE_MATECONF
+		mateconf_client_set_bool(client, MATECONF_PREFIX"/snap_cols_pow2", snap_pow2, NULL);
+	#else
+		g_settings_set_boolean(client, "snap-cols-pow2", snap_pow2);
+	#endif
 }
 
-#else /* HAVE_MATECONF */
-
-void
-mucharmap_settings_initialize (void)
-{
-  return;
-}
-
-void 
-mucharmap_settings_shutdown (void)
-{
-  return;
-}
-
-static gboolean
-mucharmap_settings_initialized (void)
-{
-  return FALSE;
-}
-
-MucharmapChaptersMode
-mucharmap_settings_get_chapters_mode (void)
-{
-  return get_default_chapters_mode();
-}
-
-void
-mucharmap_settings_set_chapters_mode (MucharmapChaptersMode mode)
-{
-  return;
-}
-
-gchar *
-mucharmap_settings_get_font (void)
-{
-  return get_default_font ();
-}
-
-void
-mucharmap_settings_set_font (gchar *fontname)
-{
-  return;
-}
-
-gunichar
-mucharmap_settings_get_last_char (void)
-{
-  return mucharmap_unicode_get_locale_character  ();
-}
-
-void
-mucharmap_settings_set_last_char (gunichar wc)
-{
-  return;
-}
-
-gboolean
-mucharmap_settings_get_snap_pow2 (void)
-{
-  return get_default_snap_pow2 ();
-}
-
-void
-mucharmap_settings_set_snap_pow2 (gboolean snap_pow2)
-{
-  return;
-}
-
-#endif /* HAVE_MATECONF */
-
-#ifdef HAVE_MATECONF
-
+/** Window state functions **/
 typedef struct {
-  guint timeout_id;
-  int width;
-  int height;
-  guint is_maximised : 1;
-  guint is_fullscreen : 1;
+	guint timeout_id;
+	int width;
+	int height;
+	guint is_maximised: 1;
+	guint is_fullscreen: 1;
 } WindowState;
 
 static gboolean
-window_state_timeout_cb (WindowState *state)
+window_state_timeout_cb(WindowState* state)
 {
-  mateconf_client_set_int (client, MATECONF_PREFIX "/width", state->width, NULL);
-  mateconf_client_set_int (client, MATECONF_PREFIX "/height", state->height, NULL);
+	#ifdef HAVE_MATECONF
+		mateconf_client_set_int(client, MATECONF_PREFIX "/width", state->width, NULL);
+		mateconf_client_set_int(client, MATECONF_PREFIX "/height", state->height, NULL);
+	#else
+		g_settings_set_int(client, "width", state->width);
+		g_settings_set_int(client, "height", state->height);
+	#endif
 
-  state->timeout_id = 0;
-  return FALSE;
+	state->timeout_id = 0;
+	return FALSE;
 }
 
 static void
 free_window_state (WindowState *state)
 {
-  if (state->timeout_id != 0) {
-    g_source_remove (state->timeout_id);
+	if (state->timeout_id != 0)
+	{
+		g_source_remove(state->timeout_id);
 
-    /* And store now */
-    window_state_timeout_cb (state);
-  }
+		/* And store now */
+		window_state_timeout_cb(state);
+	}
 
-  g_slice_free (WindowState, state);
+	g_slice_free(WindowState, state);
 }
 
 static gboolean
-window_configure_event_cb (GtkWidget *widget,
-                           GdkEventConfigure *event,
-                           WindowState *state)
+window_configure_event_cb(GtkWidget* widget,
+                          GdkEventConfigure* event,
+                          WindowState* state)
 {
-  if (!state->is_maximised && !state->is_fullscreen &&
-      (state->width != event->width || state->height != event->height)) {
-    state->width = event->width;
-    state->height = event->height;
+	if (!state->is_maximised && !state->is_fullscreen &&
+		(state->width != event->width || state->height != event->height))
+	{
+		state->width = event->width;
+		state->height = event->height;
 
-    if (state->timeout_id == 0) {
-      state->timeout_id = g_timeout_add (WINDOW_STATE_TIMEOUT,
-                                         (GSourceFunc) window_state_timeout_cb,
-                                         state);
-    }
-  }
+		if (state->timeout_id == 0)
+		{
+			state->timeout_id = g_timeout_add(WINDOW_STATE_TIMEOUT,
+			                                  (GSourceFunc) window_state_timeout_cb,
+			                                  state);
+		}
+	}
 
-  return FALSE;
+	return FALSE;
 }
 
 static gboolean
-window_state_event_cb (GtkWidget *widget,
-                       GdkEventWindowState *event,
-                       WindowState *state)
+window_state_event_cb(GtkWidget* widget,
+                      GdkEventWindowState* event,
+                      WindowState* state)
 {
-  if (event->changed_mask & GDK_WINDOW_STATE_MAXIMIZED) {
-    state->is_maximised = (event->new_window_state & GDK_WINDOW_STATE_MAXIMIZED) != 0;
-    mateconf_client_set_bool (client, MATECONF_PREFIX "/maximized", state->is_maximised, NULL);
-  }
-  if (event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN) {
-    state->is_fullscreen = (event->new_window_state & GDK_WINDOW_STATE_FULLSCREEN) != 0;
-    mateconf_client_set_bool (client, MATECONF_PREFIX "/fullscreen", state->is_fullscreen, NULL);
-  }
+	if (event->changed_mask & GDK_WINDOW_STATE_MAXIMIZED)
+	{
+		state->is_maximised = (event->new_window_state & GDK_WINDOW_STATE_MAXIMIZED) != 0;
 
-  return FALSE;
+		#ifdef HAVE_MATECONF
+			mateconf_client_set_bool(client, MATECONF_PREFIX "/maximized", state->is_maximised, NULL);
+		#else
+			g_settings_set_boolean(client, "maximized", state->is_maximised);
+		#endif
+	}
+
+	if (event->changed_mask & GDK_WINDOW_STATE_FULLSCREEN)
+	{
+		state->is_fullscreen = (event->new_window_state & GDK_WINDOW_STATE_FULLSCREEN) != 0;
+
+		#ifdef HAVE_MATECONF
+			mateconf_client_set_bool(client, MATECONF_PREFIX "/fullscreen", state->is_fullscreen, NULL);
+		#else
+			g_settings_set_boolean(client, "fullscreen", state->is_fullscreen);
+		#endif
+	}
+
+	return FALSE;
 }
-
-#endif /* HAVE_MATECONF */
 
 /**
  * gucharma_settings_add_window:
@@ -369,50 +425,62 @@ window_state_event_cb (GtkWidget *widget,
  * @window must not be realised yet.
  */
 void
-mucharmap_settings_add_window (GtkWindow *window)
+mucharmap_settings_add_window(GtkWindow* window)
 {
+	WindowState* state;
+	int width, height;
+	gboolean maximised, fullscreen;
+
+	if (!mucharmap_settings_initialized())
+	{
+		return;
+	}
+
+	g_return_if_fail(GTK_IS_WINDOW(window));
+
+	#if GTK_CHECK_VERSION (2,20,0)
+		g_return_if_fail(!gtk_widget_get_realized(GTK_WIDGET(window)));
+	#else
+		g_return_if_fail(!GTK_WIDGET_REALIZED(window));
+	#endif
+
+	state = g_slice_new0(WindowState);
+	g_object_set_data_full(G_OBJECT(window), "GamesConf::WindowState",
+	                       state, (GDestroyNotify) free_window_state);
+
+	g_signal_connect(window, "configure-event",
+	                 G_CALLBACK(window_configure_event_cb), state);
+	g_signal_connect(window, "window-state-event",
+	                 G_CALLBACK(window_state_event_cb), state);
+
 	#ifdef HAVE_MATECONF
-	
-		WindowState *state;
-		int width, height;
-		gboolean maximised, fullscreen;
 
-		g_return_if_fail (GTK_IS_WINDOW (window));
-	
-		#if GTK_CHECK_VERSION (2,20,0)
-			g_return_if_fail (!gtk_widget_get_realized (GTK_WIDGET (window)));
-		#else
-			g_return_if_fail (!GTK_WIDGET_REALIZED (window));
-		#endif
+		maximised = mateconf_client_get_bool(client, MATECONF_PREFIX "/maximized", NULL);
+		fullscreen = mateconf_client_get_bool(client, MATECONF_PREFIX "/fullscreen", NULL);
+		width = mateconf_client_get_int(client, MATECONF_PREFIX "/width", NULL);
+		height = mateconf_client_get_int(client, MATECONF_PREFIX "/height", NULL);
 
-		state = g_slice_new0 (WindowState);
-		g_object_set_data_full (G_OBJECT (window), "GamesConf::WindowState",
-				              state, (GDestroyNotify) free_window_state);
+	#else /* !HAVE_MATECONF */
 
-		g_signal_connect (window, "configure-event",
-				        G_CALLBACK (window_configure_event_cb), state);
-		g_signal_connect (window, "window-state-event",
-				        G_CALLBACK (window_state_event_cb), state);
-
-		maximised = mateconf_client_get_bool (client, MATECONF_PREFIX "/maximized", NULL);
-		fullscreen = mateconf_client_get_bool (client, MATECONF_PREFIX "/fullscreen", NULL);
-		width = mateconf_client_get_int (client, MATECONF_PREFIX "/width", NULL);
-		height = mateconf_client_get_int (client, MATECONF_PREFIX "/height", NULL);
-
-		if (width > 0 && height > 0)
-		{
-			gtk_window_set_default_size (GTK_WINDOW (window), width, height);
-		}
-		
-		if (maximised)
-		{
-			gtk_window_maximize (GTK_WINDOW (window));
-		}
-		
-		if (fullscreen)
-		{
-			gtk_window_fullscreen (GTK_WINDOW (window));
-		}
+		maximised = g_settings_get_boolean(client, "maximized");
+		fullscreen = g_settings_get_boolean(client, "fullscreen");
+		width = g_settings_get_int(client, "width");
+		height = g_settings_get_int(client, "height");
 
 	#endif /* HAVE_MATECONF */
+
+	if (width > 0 && height > 0)
+	{
+		gtk_window_set_default_size(GTK_WINDOW(window), width, height);
+	}
+
+	if (maximised)
+	{
+		gtk_window_maximize(GTK_WINDOW(window));
+	}
+
+	if (fullscreen)
+	{
+		gtk_window_fullscreen(GTK_WINDOW(window));
+	}
 }
