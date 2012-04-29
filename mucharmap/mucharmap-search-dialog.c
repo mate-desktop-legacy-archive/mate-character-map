@@ -93,7 +93,7 @@
 	G_DEFINE_TYPE (MucharmapSearchDialog, mucharmap_search_dialog, GTK_TYPE_DIALOG)
 
 	static const gchar *
-	utf8_strcasestr (const gchar *haystack, 
+	utf8_strcasestr (const gchar *haystack,
 		             const gchar *needle,
 			 const gboolean whole_word)
 	{
@@ -133,8 +133,8 @@
 		     const gboolean         annotations)
 	{
 	  MucharmapSearchDialogPrivate *priv = GUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
-	  const gchar *haystack; 
-	  const gchar **haystack_arr; 
+	  const gchar *haystack;
+	  const gchar **haystack_arr;
 	  gchar *haystack_nfd;
 	  gboolean matched = FALSE;
 	  gint i;
@@ -438,8 +438,8 @@
 
 	/**
 	 * mucharmap_search_state_get_found_char:
-	 * @search_state: 
-	 * Return value: 
+	 * @search_state:
+	 * Return value:
 	 **/
 	static gunichar
 	mucharmap_search_state_get_found_char (MucharmapSearchState *search_state)
@@ -452,7 +452,7 @@
 
 	/**
 	 * mucharmap_search_state_free:
-	 * @search_state: 
+	 * @search_state:
 	 **/
 	static void
 	mucharmap_search_state_free (MucharmapSearchState *search_state)
@@ -477,11 +477,11 @@
 	 *
 	 * Return value: the new #MucharmapSearchState.
 	 **/
-	static MucharmapSearchState * 
+	static MucharmapSearchState *
 	mucharmap_search_state_new (MucharmapCodepointList       *list,
-		                        const gchar                  *search_string, 
-		                        gint                          start_index, 
-		                        MucharmapDirection            direction, 
+		                        const gchar                  *search_string,
+		                        gint                          start_index,
+		                        MucharmapDirection            direction,
 		                        gboolean                      whole_word,
 		                        gboolean                      annotations)
 	{
@@ -707,12 +707,12 @@
 	  gboolean is_empty;
 
 	  is_empty = _entry_is_empty (GTK_ENTRY (priv->entry));
-		  
+
 	  gtk_widget_set_sensitive (priv->prev_button, !is_empty);
 	  gtk_widget_set_sensitive (priv->next_button, !is_empty);
 	}
 
-	static void 
+	static void
 	set_button_stock_image_and_label (GtkButton *button,
 		                              gchar     *stock_id,
 		                              gchar     *mnemonic)
@@ -810,7 +810,7 @@
 	  g_signal_connect (GTK_DIALOG (search_dialog), "response", G_CALLBACK (search_find_response), NULL);
 	}
 
-	static void 
+	static void
 	mucharmap_search_dialog_finalize (GObject *object)
 	{
 	  MucharmapSearchDialog *search_dialog = GUCHARMAP_SEARCH_DIALOG (object);
@@ -834,11 +834,11 @@
 
 	  mucharmap_search_dialog_signals[SEARCH_START] =
 		  g_signal_new (I_("search-start"), mucharmap_search_dialog_get_type (), G_SIGNAL_RUN_FIRST,
-		                G_STRUCT_OFFSET (MucharmapSearchDialogClass, search_start), NULL, NULL, 
+		                G_STRUCT_OFFSET (MucharmapSearchDialogClass, search_start), NULL, NULL,
 		                g_cclosure_marshal_VOID__VOID, G_TYPE_NONE, 0);
 	  mucharmap_search_dialog_signals[SEARCH_FINISH] =
-		  g_signal_new (I_("search-finish"), mucharmap_search_dialog_get_type (), G_SIGNAL_RUN_FIRST, 
-		                G_STRUCT_OFFSET (MucharmapSearchDialogClass, search_finish), NULL, NULL, 
+		  g_signal_new (I_("search-finish"), mucharmap_search_dialog_get_type (), G_SIGNAL_RUN_FIRST,
+		                G_STRUCT_OFFSET (MucharmapSearchDialogClass, search_finish), NULL, NULL,
 		                g_cclosure_marshal_VOID__UINT, G_TYPE_NONE, 1, G_TYPE_UINT);
 	}
 

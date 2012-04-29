@@ -156,6 +156,7 @@
 	static gboolean
 	update_progress_bar (MucharmapWindow *guw)
 	{
+		#ifdef ENABLE_PROGRESSBAR_ON_STATUSBAR
 	  gdouble fraction_completed;
 
 	  fraction_completed = mucharmap_search_dialog_get_completed (GUCHARMAP_SEARCH_DIALOG (guw->search_dialog));
@@ -171,6 +172,7 @@
 		  gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (guw->progress), fraction_completed);
 		  return TRUE;
 		}
+		#endif
 	}
 
 	/* "progress" aka "busy-interactive" cursor (pointer + watch)
@@ -245,8 +247,11 @@
 	  action = gtk_action_group_get_action (guw->action_group, "FindPrevious");
 	  gtk_action_set_sensitive (action, FALSE);
 
-	  gtk_progress_bar_set_text (GTK_PROGRESS_BAR (guw->progress), _("Searching…"));
-	  g_timeout_add (100, (GSourceFunc) update_progress_bar, guw);
+		#ifdef ENABLE_PROGRESSBAR_ON_STATUSBAR
+			gtk_progress_bar_set_text (GTK_PROGRESS_BAR (guw->progress), _("Searching…"));
+
+			g_timeout_add (100, (GSourceFunc) update_progress_bar, guw);
+		#endif
 	}
 
 	static void
@@ -256,8 +261,10 @@
 	{
 	  GtkAction *action;
 
-	  gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (guw->progress), 0);
-	  gtk_progress_bar_set_text (GTK_PROGRESS_BAR (guw->progress), NULL);
+		#ifdef ENABLE_PROGRESSBAR_ON_STATUSBAR
+			gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (guw->progress), 0);
+			gtk_progress_bar_set_text (GTK_PROGRESS_BAR (guw->progress), NULL);
+		#endif
 
 	  if (found_char != (gunichar)(-1))
 		mucharmap_charmap_set_active_character (guw->charmap, found_char);
@@ -277,16 +284,17 @@
 	search_find (GtkAction       *action,
 		         MucharmapWindow *guw)
 	{
-	  g_assert (GUCHARMAP_IS_WINDOW (guw));
+		g_assert (GUCHARMAP_IS_WINDOW (guw));
 
-	  if (guw->search_dialog == NULL)
+		if (guw->search_dialog == NULL)
 		{
-		  guw->search_dialog = mucharmap_search_dialog_new (guw);
-		  g_signal_connect (guw->search_dialog, "search-start", G_CALLBACK (search_start), guw);
-		  g_signal_connect (guw->search_dialog, "search-finish", G_CALLBACK (search_finish), guw);
+			guw->search_dialog = mucharmap_search_dialog_new (guw);
+
+			g_signal_connect (guw->search_dialog, "search-start", G_CALLBACK (search_start), guw);
+			g_signal_connect (guw->search_dialog, "search-finish", G_CALLBACK (search_finish), guw);
 		}
 
-	  mucharmap_search_dialog_present (GUCHARMAP_SEARCH_DIALOG (guw->search_dialog));
+		mucharmap_search_dialog_present (GUCHARMAP_SEARCH_DIALOG (guw->search_dialog));
 	}
 
 	static void
@@ -507,7 +515,7 @@
 				"with Mucharmap; you can always find it at Unicode's website: "
 				"http://www.unicode.org/copyright.html")
 		};
-		
+
 		gchar* license_trans = g_strconcat(_(license[0]), "\n\n",
 		                                   _(license[1]), "\n\n",
 		                                   _(license[2]), "\n\n",
@@ -1014,20 +1022,23 @@
 	  hbox = gtk_hbox_new (FALSE, 0);
 	  gtk_box_pack_start (GTK_BOX (big_vbox), hbox, FALSE, FALSE, 0);
 
-	  guw->status = gtk_statusbar_new ();
-	  gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (guw->status), FALSE);
-	  gtk_box_pack_start (GTK_BOX (hbox), guw->status, TRUE, TRUE, 0);
-	  gtk_widget_show (guw->status);
-	  g_signal_connect (guw->status, "realize", G_CALLBACK (status_realize), guw);
+	#ifdef ENABLE_PROGRESSBAR_ON_STATUSBAR
+		guw->status = gtk_statusbar_new ();
+		gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (guw->status), FALSE);
+		gtk_box_pack_start (GTK_BOX (hbox), guw->status, TRUE, TRUE, 0);
+		gtk_widget_show (guw->status);
+		g_signal_connect (guw->status, "realize", G_CALLBACK (status_realize), guw);
 
-	  guw->progress = gtk_progress_bar_new ();
-	  gtk_box_pack_start (GTK_BOX (hbox), guw->progress, FALSE, FALSE, 0);
-
-	#if 0
-	  grip = gtk_statusbar_new ();
-	  gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (grip), TRUE);
-	  gtk_box_pack_start (GTK_BOX (hbox), grip, FALSE, FALSE, 0);
+		guw->progress = gtk_progress_bar_new ();
+		gtk_box_pack_start (GTK_BOX (hbox), guw->progress, FALSE, FALSE, 0);
+	#else
+		guw->status = gtk_statusbar_new ();
+		gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (guw->status), TRUE);
+		gtk_box_pack_start (GTK_BOX (hbox), guw->status, TRUE, TRUE, 0);
+		gtk_widget_show(guw->status);
+		g_signal_connect (guw->status, "realize", G_CALLBACK (status_realize), guw);
 	#endif
+
 	  gtk_widget_show_all (hbox);
 
 	  g_signal_connect (guw->charmap, "status-message", G_CALLBACK (status_message), guw);
