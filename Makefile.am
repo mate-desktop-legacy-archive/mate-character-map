@@ -27,6 +27,20 @@ schemadir         = $(MATECONF_SCHEMA_FILE_DIR)
 schema_in_files   = mucharmap.schemas.in
 schema_DATA       = $(schema_in_files:.schemas.in=.schemas)
 
+#
+# GSettings schema
+#
+gsettingsschema_in_files = org.mate.mucharmap.gschema.xml.in
+# gsettings_SCHEMAS is a list of all the schemas you want to install
+gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
+
+.PRECIOUS: $(gsettings_SCHEMAS)
+
+@INTLTOOL_XML_NOMERGE_RULE@
+
+# include the appropriate makefile rules for schema handling
+@GSETTINGS_RULES@
+
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = mucharmap-$(GUCHARMAP_API_PC_VERSION).pc
 
@@ -37,6 +51,7 @@ EXTRA_DIST = \
 	gtkrc.win32 \
 	mate-doc-utils.make \
 	$(schema_in_files) \
+	$(gsettingsschema_in_files) \
 	COPYING.UNICODE \
 	$(NULL)
 
@@ -46,6 +61,9 @@ DISTCHECK_CONFIGURE_FLAGS = \
 	--enable-gtk-doc \
 	--disable-introspection \
 	--with-gtk=2.0
+
+DISTCLEANFILES = \
+	$(gsettings_SCHEMAS)
 
 CLEANFILES = \
 	$(desktop_DATA) \

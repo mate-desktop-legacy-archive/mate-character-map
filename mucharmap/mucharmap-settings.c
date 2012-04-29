@@ -72,16 +72,20 @@ mucharmap_settings_initialize(void)
 	#else
 		/* with g_settings_list_schemas, find if the schema exists */
 		const gchar* const* list_schemas = g_settings_list_schemas();
-		int i = 0;
 
-		while (list_schemas[i] != NULL)
+		if (list_schemas != NULL)
 		{
-			if (strcmp (list_schemas[i], GUCHARMAP_GSETTINGS_SCHEME) == 0)
-			{
-				client = g_settings_new(GUCHARMAP_GSETTINGS_SCHEME);
-			}
+			int i = 0;
 
-			i++;
+			while (list_schemas[i] != NULL)
+			{
+				if (strcmp (list_schemas[i], GUCHARMAP_GSETTINGS_SCHEME) == 0)
+				{
+					client = g_settings_new(GUCHARMAP_GSETTINGS_SCHEME);
+				}
+
+				i++;
+			}
 		}
 
 	#endif

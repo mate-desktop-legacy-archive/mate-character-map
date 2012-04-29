@@ -64,11 +64,12 @@ MATE_COMMON_INIT
 MATE_DEBUG_CHECK
 MATE_COMPILE_WARNINGS([maximum])
 #MATE_MAINTAINER_MODE_DEFINES
+GLIB_GSETTINGS
 
 # check for win32
 case "$host" in
-  *-*-mingw*) os_win32="yes" ;; 
-  *) os_win32="no" ;; 
+  *-*-mingw*) os_win32="yes" ;;
+  *) os_win32="no" ;;
 esac
 
 if test "x$os_win32" = "xyes"
@@ -131,7 +132,7 @@ GLIB_MKENUMS="$($PKG_CONFIG --variable=glib_mkenums glib-2.0)"
 AC_SUBST([GLIB_MKENUMS])
 
 AC_ARG_ENABLE([mateconf],
-    [AS_HELP_STRING([--disable-mateconf],[don't build with mateconf support])],
+    [AS_HELP_STRING([--disable-mateconf],[do not build with mateconf support])],
     [],[enable_mateconf=yes])
 
 if test "$enable_mateconf" = "yes"; then
@@ -142,7 +143,8 @@ if test "$enable_mateconf" = "yes"; then
 else
     MATECONFPKGS=
     AC_MSG_NOTICE([MATECONF support disabled with --disable-mateconf])
-fi  
+    AM_CONDITIONAL([MATECONF_SCHEMAS_INSTALL], false)
+fi
 AC_SUBST([MATECONFPKGS])
 
 AM_MATECONF_SOURCE_2
@@ -156,7 +158,7 @@ AC_MSG_RESULT([$enable_charmap])
 
 AM_CONDITIONAL([ENABLE_CHARMAP],[test "$enable_charmap" = "yes"])
 
-# checks for funcs 
+# checks for funcs
 AC_CHECK_FUNCS([bind_textdomain_codeset])
 
 AC_SUBST(GTK_CFLAGS)
@@ -166,8 +168,8 @@ AC_SUBST(MATECONF_CFLAGS)
 AC_SUBST(MATECONF_LIBS)
 
 AH_TEMPLATE([ENABLE_UNIHAN], [Define if you want CJK ideograph information])
-AC_ARG_ENABLE(unihan, 
-              AC_HELP_STRING([--disable-unihan], 
+AC_ARG_ENABLE(unihan,
+              AC_HELP_STRING([--disable-unihan],
                              [don't build in CJK ideograph information]))
 if test "x$enable_unihan" != "xno" ; then
     AC_DEFINE([ENABLE_UNIHAN],[1],[Define if you want CJK ideograph information])
@@ -180,12 +182,12 @@ AC_PROG_LN_S
 # if test "$GTK_BUILDER_CONVERT" = "false"; then
 #   AC_MSG_ERROR([gtk-builder-convert not found])
 # fi
-# 
+#
 # AC_PATH_PROG([XMLLINT],[xmllint],[false])
 # if test "$XMLLINT" = "false"; then
 #   AC_MSG_ERROR([xmllint not found])
 # fi
-# 
+#
 # AC_PATH_PROG([HEXDUMP],[hexdump],[false])
 # if test "$HEXDUMP" = "false"; then
 #   AC_MSG_ERROR([hexdump not found])
@@ -275,7 +277,7 @@ fi # with_gtk = 2.0
 AM_CONDITIONAL([ENABLE_PYTHON_BINDINGS],[test "$enable_python_bindings" = "yes"])
 
 # ***
-# GIR 
+# GIR
 # ***
 
 AC_MSG_CHECKING([whether GObject introspection is requested])
@@ -330,6 +332,7 @@ Makefile
 mucharmap.desktop.in
 mucharmap.nsi
 mucharmap.spec
+org.mate.mucharmap.gschema.xml
 bindings/Makefile
 bindings/python/Makefile
 docs/Makefile

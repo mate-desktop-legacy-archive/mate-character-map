@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.mate.mucharmap" path="/org/mate/mucharmap/" gettext-domain="mucharmap">
+    <key name="chapters-mode" type="s">
+      <default>''</default>
+    </key>
+    <key name="last-char" type="s">
+      <default>''</default>
+    </key>
+    <key name="font" type="s">
+      <default>''</default>
+    </key>
+    <key name="height" type="i">
+      <default>0</default>
+    </key>
+    <key name="snap-cols-pow2" type="b">
+      <default>false</default>
+    </key>
+    <key name="width" type="i">
+      <default>0</default>
+    </key>
+    <key name="maximized" type="b">
+      <default>false</default>
+    </key>
+    <key name="fullscreen" type="b">
+      <default>false</default>
+    </key>
+  </schema>
+</schemalist>
+
