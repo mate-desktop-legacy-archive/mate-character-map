@@ -1,0 +1,1203 @@
+# Slovak translations for mucharmap package
+# Slovenské preklady pre balík mucharmap.
+# Copyright (C) 2003, 2004, 2005, 2006, 2008 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mucharmap package.
+# Marcel Telka <marcel@telka.sk>, 2003, 2004, 2005, 2006, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mucharmap\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-03-14 08:42+0100\n"
+"PO-Revision-Date: 2008-03-14 08:42+0100\n"
+"Last-Translator: Marcel Telka <marcel@telka.sk>\n"
+"Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../mucharmap.desktop.in.in.h:1 ../mucharmap/mucharmap-window.c:923
+msgid "Character Map"
+msgstr "Mapa znakov"
+
+#: ../mucharmap.desktop.in.in.h:2
+msgid "Insert special characters into documents"
+msgstr "Vložiť špeciálne znaky do dokumentov"
+
+#: ../mucharmap/mucharmap-charmap.c:267
+msgid "Canonical decomposition:"
+msgstr "Kanonická dekompozícia:"
+
+#: ../mucharmap/mucharmap-charmap.c:308 ../mucharmap/mucharmap-chartable.c:371
+msgid "[not a printable character]"
+msgstr "[nie je tlačiteľný znak]"
+
+#: ../mucharmap/mucharmap-charmap.c:322
+msgid "General Character Properties"
+msgstr "Všeobecné vlastnosti znakov"
+
+#. character category
+#: ../mucharmap/mucharmap-charmap.c:325
+msgid "Unicode category:"
+msgstr "Kategória Unicode:"
+
+#: ../mucharmap/mucharmap-charmap.c:334
+msgid "Various Useful Representations"
+msgstr "Rôzne užitočné reprezentácie"
+
+#: ../mucharmap/mucharmap-charmap.c:344
+msgid "UTF-8:"
+msgstr "UTF-8:"
+
+#: ../mucharmap/mucharmap-charmap.c:352
+msgid "UTF-16:"
+msgstr "UTF-16:"
+
+#: ../mucharmap/mucharmap-charmap.c:363
+msgid "C octal escaped UTF-8:"
+msgstr "C osmičkové escape UTF-8:"
+
+#: ../mucharmap/mucharmap-charmap.c:373
+msgid "XML decimal entity:"
+msgstr "Desiatková entita XML:"
+
+#: ../mucharmap/mucharmap-charmap.c:384
+msgid "Annotations and Cross References"
+msgstr "Poznámky a krížové odkazy"
+
+#: ../mucharmap/mucharmap-charmap.c:391
+msgid "Alias names:"
+msgstr "Alternatívne názvy:"
+
+#: ../mucharmap/mucharmap-charmap.c:400
+msgid "Notes:"
+msgstr "Poznámky:"
+
+#: ../mucharmap/mucharmap-charmap.c:409
+msgid "See also:"
+msgstr "Pozri tiež:"
+
+#: ../mucharmap/mucharmap-charmap.c:418
+msgid "Approximate equivalents:"
+msgstr "Približné ekvivalenty:"
+
+#: ../mucharmap/mucharmap-charmap.c:427
+msgid "Equivalents:"
+msgstr "Ekvivalenty:"
+
+#: ../mucharmap/mucharmap-charmap.c:443
+msgid "CJK Ideograph Information"
+msgstr "Informácia o CJK symbole"
+
+#: ../mucharmap/mucharmap-charmap.c:448
+msgid "Definition in English:"
+msgstr "Definícia v angličtine:"
+
+#: ../mucharmap/mucharmap-charmap.c:453
+msgid "Mandarin Pronunciation:"
+msgstr "Mandarínska výslovnosť:"
+
+#: ../mucharmap/mucharmap-charmap.c:458
+msgid "Cantonese Pronunciation:"
+msgstr "Kantonská výslovnosť:"
+
+#: ../mucharmap/mucharmap-charmap.c:463
+msgid "Japanese On Pronunciation:"
+msgstr "Japonská On výslovnosť:"
+
+#: ../mucharmap/mucharmap-charmap.c:468
+msgid "Japanese Kun Pronunciation:"
+msgstr "Japonská Kun výslovnosť:"
+
+#: ../mucharmap/mucharmap-charmap.c:473
+msgid "Tang Pronunciation:"
+msgstr "Tang výslovnosť:"
+
+#: ../mucharmap/mucharmap-charmap.c:478
+msgid "Korean Pronunciation:"
+msgstr "Kórejská výslovnosť:"
+
+#: ../mucharmap/mucharmap-charmap.c:806
+msgid "Characte_r Table"
+msgstr "Tabuľka _znakov"
+
+#: ../mucharmap/mucharmap-charmap.c:809
+msgid "Character _Details"
+msgstr "Po_drobnosti znaku"
+
+#: ../mucharmap/mucharmap-chartable.c:1150
+msgid "Unknown character, unable to identify."
+msgstr "Neznámy znak, nepodarilo sa identifikovať."
+
+#: ../mucharmap/mucharmap-chartable.c:1152
+#: ../mucharmap/mucharmap-search-dialog.c:596
+msgid "Not found."
+msgstr "Nenájdené."
+
+#: ../mucharmap/mucharmap-chartable.c:1155
+msgid "Character found."
+msgstr "Znak nájdený."
+
+#: ../mucharmap/mucharmap-chartable-accessible.c:754
+msgid "Character Table"
+msgstr "Tabuľka znakov"
+
+#: ../mucharmap/mucharmap-mini-fontsel.c:228
+msgid "Font"
+msgstr "Písmo"
+
+#: ../mucharmap/mucharmap-mini-fontsel.c:242
+msgid "Font Family"
+msgstr "Rodina písma"
+
+#: ../mucharmap/mucharmap-mini-fontsel.c:260
+msgid "Font Size"
+msgstr "Veľkosť písma"
+
+#: ../mucharmap/mucharmap-settings.c:61 ../mucharmap/mucharmap-window.c:568
+msgid "_File"
+msgstr "_Súbor"
+
+#: ../mucharmap/mucharmap-settings.c:92
+msgid "MateConf could not be initialized."
+msgstr "Nepodarilo sa inicializovať MateConf."
+
+#. Unicode assigns "Common" as the script name for any character not
+#. * specifically listed in Scripts.txt
+#: ../mucharmap/mucharmap-script-codepoint-list.c:432
+#: ../mucharmap/unicode-scripts.h:26
+msgid "Common"
+msgstr "Všeobecné"
+
+#: ../mucharmap/mucharmap-unicode-info.c:96
+msgid "<Non Private Use High Surrogate>"
+msgstr "<Nesúkromné použitie vyššie náhradné>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:98
+msgid "<Private Use High Surrogate>"
+msgstr "<Súkromné použitie vyššie náhradné>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:100
+msgid "<Low Surrogate>"
+msgstr "<Nižšie náhradné>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:102
+msgid "<Private Use>"
+msgstr "<Súkromné použitie>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:104
+msgid "<Plane 15 Private Use>"
+msgstr "<Hladina 15 súkromné použitie>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:106
+msgid "<Plane 16 Private Use>"
+msgstr "<Hladina 16 súkromné použitie>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:111
+msgid "<not assigned>"
+msgstr "<nepridelené>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:124
+msgid "Other, Control"
+msgstr "Ostatné, riadiace"
+
+#: ../mucharmap/mucharmap-unicode-info.c:125
+msgid "Other, Format"
+msgstr "Ostatné, formát"
+
+#: ../mucharmap/mucharmap-unicode-info.c:126
+msgid "Other, Not Assigned"
+msgstr "Ostatné, nepridelené"
+
+#: ../mucharmap/mucharmap-unicode-info.c:127
+msgid "Other, Private Use"
+msgstr "Ostané, súkromné použitie"
+
+#: ../mucharmap/mucharmap-unicode-info.c:128
+msgid "Other, Surrogate"
+msgstr "Osatné, náhradné"
+
+#: ../mucharmap/mucharmap-unicode-info.c:129
+msgid "Letter, Lowercase"
+msgstr "Písmeno, malé"
+
+#: ../mucharmap/mucharmap-unicode-info.c:130
+msgid "Letter, Modifier"
+msgstr "Písmeno, modifikátor"
+
+#: ../mucharmap/mucharmap-unicode-info.c:131
+msgid "Letter, Other"
+msgstr "Písmeno, ostatné"
+
+#: ../mucharmap/mucharmap-unicode-info.c:132
+msgid "Letter, Titlecase"
+msgstr "Písmeno, titulkové"
+
+#: ../mucharmap/mucharmap-unicode-info.c:133
+msgid "Letter, Uppercase"
+msgstr "Písmeno, veľké"
+
+#: ../mucharmap/mucharmap-unicode-info.c:134
+msgid "Mark, Spacing Combining"
+msgstr "Značka, spájanie medzery"
+
+#: ../mucharmap/mucharmap-unicode-info.c:135
+msgid "Mark, Enclosing"
+msgstr "Značka, uzatváracia"
+
+#: ../mucharmap/mucharmap-unicode-info.c:136
+msgid "Mark, Non-Spacing"
+msgstr "Značka, nie medzery"
+
+#: ../mucharmap/mucharmap-unicode-info.c:137
+msgid "Number, Decimal Digit"
+msgstr "Číslo, desiatková číslica"
+
+#: ../mucharmap/mucharmap-unicode-info.c:138
+msgid "Number, Letter"
+msgstr "Číslo, písmeno"
+
+#: ../mucharmap/mucharmap-unicode-info.c:139
+msgid "Number, Other"
+msgstr "Číslo, ostatné"
+
+#: ../mucharmap/mucharmap-unicode-info.c:140
+msgid "Punctuation, Connector"
+msgstr "Interpunkcia, spojka"
+
+#: ../mucharmap/mucharmap-unicode-info.c:141
+msgid "Punctuation, Dash"
+msgstr "Interpunkcia, pomlčka"
+
+#: ../mucharmap/mucharmap-unicode-info.c:142
+msgid "Punctuation, Close"
+msgstr "Interpunkcia, uzatváranie"
+
+#: ../mucharmap/mucharmap-unicode-info.c:143
+msgid "Punctuation, Final Quote"
+msgstr "Interpunkcia, koncová úvodzovka"
+
+#: ../mucharmap/mucharmap-unicode-info.c:144
+msgid "Punctuation, Initial Quote"
+msgstr "Interpunkcia, začiatočná úvodzovka"
+
+#: ../mucharmap/mucharmap-unicode-info.c:145
+msgid "Punctuation, Other"
+msgstr "Interpunkcia, ostatné"
+
+#: ../mucharmap/mucharmap-unicode-info.c:146
+msgid "Punctuation, Open"
+msgstr "Interpunkcia, otváranie"
+
+#: ../mucharmap/mucharmap-unicode-info.c:147
+msgid "Symbol, Currency"
+msgstr "Symbol, mena"
+
+#: ../mucharmap/mucharmap-unicode-info.c:148
+msgid "Symbol, Modifier"
+msgstr "Symbol, modifikátor"
+
+#: ../mucharmap/mucharmap-unicode-info.c:149
+msgid "Symbol, Math"
+msgstr "Symbol, matematika"
+
+#: ../mucharmap/mucharmap-unicode-info.c:150
+msgid "Symbol, Other"
+msgstr "Symbol, ostatné"
+
+#: ../mucharmap/mucharmap-unicode-info.c:151
+msgid "Separator, Line"
+msgstr "Oddeľovač, riadok"
+
+#: ../mucharmap/mucharmap-unicode-info.c:152
+msgid "Separator, Paragraph"
+msgstr "Oddeľovač, odstavec"
+
+#: ../mucharmap/mucharmap-unicode-info.c:153
+msgid "Separator, Space"
+msgstr "Oddeľovač, medzera"
+
+#: ../mucharmap/mucharmap-window.c:180
+msgid "Searching..."
+msgstr "Hľadanie..."
+
+#: ../mucharmap/mucharmap-window.c:380
+msgid ""
+"Mucharmap is free software; you can redistribute it and/or modify it under "
+"the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+"Mucharmap je slobodný softvér. Môžete ho šíriť a/alebo modifikovať podľa "
+"ustanovení Všeobecnej verejnej licencie GNU, vydanej nadáciou Free Software "
+"Foundation a to buď verzie 2 tejto licencie, alebo (podľa vášho uváženia) "
+"kterejkoľvek neskoršej verzie."
+
+#: ../mucharmap/mucharmap-window.c:384
+msgid ""
+"Permission is hereby granted, free of charge, to any person obtaining a copy "
+"of the Unicode data files to deal in them without restriction, including "
+"without limitation the rights to use, copy, modify, merge, publish, "
+"distribute, and/or sell copies."
+msgstr ""
+"Zároveň s týmto je pre každého udelené bezodplatné oprávnenie na získanie "
+"kópie dátových súborov Unicode a nakladanie s nimi bez obmedzenia, vrátane "
+"neobmedzeného práva na ich použitie, kopírovanie, úpravy, spájanie, "
+"publikovanie, distribúciu a predaj kópií."
+
+#: ../mucharmap/mucharmap-window.c:388
+msgid ""
+"Mucharmap and the Unicode data files are distributed in the hope that they "
+"will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty "
+"of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General "
+"Public License and Unicode Copyright for more details."
+msgstr ""
+"Mucharmap a dátové súbory Unicode sú rozširované v nádeji, že budú užitočné, "
+"avšak BEZ AKEJKOĽVEK ZÁRUKY. Neposkytujú sa ani odvodené záruky PREDAJNOSTI "
+"alebo VHODNOSTI PRE URČITÝ ÚČEL. Ďalšie podrobnosti hľadajte vo Všeobecnej "
+"verejnej licencii GNU."
+
+#: ../mucharmap/mucharmap-window.c:392
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"Mucharmap; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02110-1301  USA"
+msgstr ""
+"Kópiu Všeobecnej verejnej licencie GNU ste mali dostať spolu s programom "
+"Mucharmap. Ak sa tak nestalo, napíšte na adresu Free Software Foundation, "
+"Inc., 59 Temple Place, Suite 330, Boston, MA  02110-1301  USA"
+
+#: ../mucharmap/mucharmap-window.c:395
+msgid ""
+"Also you should have received a copy of the Unicode Copyright along with "
+"Mucharmap; you can always find it at Unicode's website: http://www.unicode."
+"org/copyright.html"
+msgstr ""
+"Tiež by ste mali spolu s programom Mucharmap dostať kópiu dokumentu Unicode "
+"Copyright. Vždy je dostupný na internetovej stránke Unicode: http://www."
+"unicode.org/copyright.html"
+
+#: ../mucharmap/mucharmap-window.c:408
+msgid ""
+"MATE Character Map\n"
+"based on the Unicode Character Database"
+msgstr ""
+"Znaková sada MATE\n"
+"založená na databáze znakov Unicode"
+
+#: ../mucharmap/mucharmap-window.c:414 ../mucharmap/main.c:58
+msgid "Mucharmap"
+msgstr "Mucharmap"
+
+#: ../mucharmap/mucharmap-window.c:416
+msgid "translator-credits"
+msgstr "Marcel Telka <marcel@telka.sk>"
+
+#: ../mucharmap/mucharmap-window.c:522 ../mucharmap/mucharmap-window.c:595
+msgid "Next Script"
+msgstr "Nasledujúce písmo"
+
+#: ../mucharmap/mucharmap-window.c:522 ../mucharmap/mucharmap-window.c:597
+msgid "Previous Script"
+msgstr "Predchádzajúce písmo"
+
+#: ../mucharmap/mucharmap-window.c:528 ../mucharmap/mucharmap-window.c:715
+msgid "Next Block"
+msgstr "Nasledujúci blok"
+
+#: ../mucharmap/mucharmap-window.c:528 ../mucharmap/mucharmap-window.c:715
+msgid "Previous Block"
+msgstr "Predchádzajúci blok"
+
+#: ../mucharmap/mucharmap-window.c:569
+msgid "_View"
+msgstr "_Zobraziť"
+
+#: ../mucharmap/mucharmap-window.c:570
+msgid "_Search"
+msgstr "_Hľadať"
+
+#: ../mucharmap/mucharmap-window.c:571
+msgid "_Go"
+msgstr "_Prejsť na"
+
+#: ../mucharmap/mucharmap-window.c:572
+msgid "_Help"
+msgstr "_Pomocník"
+
+#: ../mucharmap/mucharmap-window.c:574
+msgid "_Quit"
+msgstr "_Koniec"
+
+#: ../mucharmap/mucharmap-window.c:577
+msgid "Zoom _In"
+msgstr "Zväčš_it"
+
+#: ../mucharmap/mucharmap-window.c:579
+msgid "Zoom _Out"
+msgstr "Zm_enšiť"
+
+#: ../mucharmap/mucharmap-window.c:581
+msgid "_Normal Size"
+msgstr "_Normálna veľkosť"
+
+#: ../mucharmap/mucharmap-window.c:584
+msgid "_Find..."
+msgstr "_Nájsť..."
+
+#: ../mucharmap/mucharmap-window.c:586
+msgid "Find _Next"
+msgstr "Nájsť _nasledujúce"
+
+#: ../mucharmap/mucharmap-window.c:588
+msgid "Find _Previous"
+msgstr "Nájsť _predchádzajúce"
+
+#: ../mucharmap/mucharmap-window.c:591
+msgid "_Next Character"
+msgstr "_Nasledujúci znak"
+
+#: ../mucharmap/mucharmap-window.c:593
+msgid "_Previous Character"
+msgstr "_Predchádzajúci znak"
+
+#: ../mucharmap/mucharmap-window.c:600
+msgid "_Contents"
+msgstr "_Obsah"
+
+#: ../mucharmap/mucharmap-window.c:602
+msgid "_About"
+msgstr "O _programe"
+
+#: ../mucharmap/mucharmap-window.c:613
+msgid "By _Script"
+msgstr "Podľa _písma"
+
+#: ../mucharmap/mucharmap-window.c:615
+msgid "By _Unicode Block"
+msgstr "Podľa blokov _Unicode"
+
+#: ../mucharmap/mucharmap-window.c:680
+msgid "Snap _Columns to Power of Two"
+msgstr "Zalomiť počet _stĺpcov na mocnicu dvojky"
+
+#: ../mucharmap/mucharmap-window.c:813
+msgid "_Text to copy:"
+msgstr "_Text na kopírovanie:"
+
+#: ../mucharmap/mucharmap-window.c:834
+msgid "Copy to the clipboard."
+msgstr "Kopírovať do schránky."
+
+#: ../mucharmap/main.c:41
+msgid "Font to start with; ex: 'Serif 27'"
+msgstr "Font, s ktorým mám začať; napr. 'Serif 27'"
+
+#: ../mucharmap/main.c:41
+msgid "FONT"
+msgstr "PÍSMO"
+
+#: ../mucharmap/unicode-blocks.h:20
+msgid "Basic Latin"
+msgstr "Základná latinka"
+
+#: ../mucharmap/unicode-blocks.h:21
+msgid "Latin-1 Supplement"
+msgstr "Latinka-1 doplnky"
+
+#: ../mucharmap/unicode-blocks.h:22
+msgid "Latin Extended-A"
+msgstr "Latinka rozšírená-A"
+
+#: ../mucharmap/unicode-blocks.h:23
+msgid "Latin Extended-B"
+msgstr "Latinka rozšírená-B"
+
+#: ../mucharmap/unicode-blocks.h:24
+msgid "IPA Extensions"
+msgstr "Rozšírenia IPA"
+
+#: ../mucharmap/unicode-blocks.h:25
+msgid "Spacing Modifier Letters"
+msgstr "Medzery upravujúce písmená"
+
+#: ../mucharmap/unicode-blocks.h:26
+msgid "Combining Diacritical Marks"
+msgstr "Kombinujúce diakritické značky"
+
+#: ../mucharmap/unicode-blocks.h:27
+msgid "Greek and Coptic"
+msgstr "Grécke a Coptic"
+
+#: ../mucharmap/unicode-blocks.h:28 ../mucharmap/unicode-scripts.h:30
+msgid "Cyrillic"
+msgstr "Cyrilika"
+
+#: ../mucharmap/unicode-blocks.h:29
+msgid "Cyrillic Supplement"
+msgstr "Cyrilika doplnky"
+
+#: ../mucharmap/unicode-blocks.h:30 ../mucharmap/unicode-scripts.h:17
+msgid "Armenian"
+msgstr "Arménsky"
+
+#: ../mucharmap/unicode-blocks.h:31 ../mucharmap/unicode-scripts.h:43
+msgid "Hebrew"
+msgstr "Hebrejský"
+
+#: ../mucharmap/unicode-blocks.h:32 ../mucharmap/unicode-scripts.h:16
+msgid "Arabic"
+msgstr "Arabský"
+
+#: ../mucharmap/unicode-blocks.h:33 ../mucharmap/unicode-scripts.h:70
+msgid "Syriac"
+msgstr "Syriac"
+
+#: ../mucharmap/unicode-blocks.h:34
+msgid "Arabic Supplement"
+msgstr "Arabské doplnky"
+
+#: ../mucharmap/unicode-blocks.h:35 ../mucharmap/unicode-scripts.h:76
+msgid "Thaana"
+msgstr "Thaana"
+
+#: ../mucharmap/unicode-blocks.h:36
+msgid "NKo"
+msgstr "NKo"
+
+#: ../mucharmap/unicode-blocks.h:37 ../mucharmap/unicode-scripts.h:32
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: ../mucharmap/unicode-blocks.h:38 ../mucharmap/unicode-scripts.h:19
+msgid "Bengali"
+msgstr "Bengálsky"
+
+#: ../mucharmap/unicode-blocks.h:39 ../mucharmap/unicode-scripts.h:39
+msgid "Gurmukhi"
+msgstr "Gurmukhi"
+
+#: ../mucharmap/unicode-blocks.h:40 ../mucharmap/unicode-scripts.h:38
+msgid "Gujarati"
+msgstr "Gujarati"
+
+#: ../mucharmap/unicode-blocks.h:41 ../mucharmap/unicode-scripts.h:62
+msgid "Oriya"
+msgstr "Oriya"
+
+#: ../mucharmap/unicode-blocks.h:42 ../mucharmap/unicode-scripts.h:74
+msgid "Tamil"
+msgstr "Tamilský"
+
+#: ../mucharmap/unicode-blocks.h:43 ../mucharmap/unicode-scripts.h:75
+msgid "Telugu"
+msgstr "Telugu"
+
+#: ../mucharmap/unicode-blocks.h:44 ../mucharmap/unicode-scripts.h:46
+msgid "Kannada"
+msgstr "Kannada"
+
+#: ../mucharmap/unicode-blocks.h:45 ../mucharmap/unicode-scripts.h:54
+msgid "Malayalam"
+msgstr "Malayalam"
+
+#: ../mucharmap/unicode-blocks.h:46 ../mucharmap/unicode-scripts.h:68
+msgid "Sinhala"
+msgstr "Sinhala"
+
+#: ../mucharmap/unicode-blocks.h:47 ../mucharmap/unicode-scripts.h:77
+msgid "Thai"
+msgstr "Thajský"
+
+#: ../mucharmap/unicode-blocks.h:48 ../mucharmap/unicode-scripts.h:50
+msgid "Lao"
+msgstr "Laoský"
+
+#: ../mucharmap/unicode-blocks.h:49 ../mucharmap/unicode-scripts.h:78
+msgid "Tibetan"
+msgstr "Tibetský"
+
+#: ../mucharmap/unicode-blocks.h:50 ../mucharmap/unicode-scripts.h:56
+msgid "Myanmar"
+msgstr "Myanmarský"
+
+#: ../mucharmap/unicode-blocks.h:51 ../mucharmap/unicode-scripts.h:34
+msgid "Georgian"
+msgstr "Gruzínsky"
+
+#: ../mucharmap/unicode-blocks.h:52
+msgid "Hangul Jamo"
+msgstr "Hangul Jamo"
+
+#: ../mucharmap/unicode-blocks.h:53 ../mucharmap/unicode-scripts.h:33
+msgid "Ethiopic"
+msgstr "Etiópsky"
+
+#: ../mucharmap/unicode-blocks.h:54
+msgid "Ethiopic Supplement"
+msgstr "Etiópske doplnky"
+
+#: ../mucharmap/unicode-blocks.h:55 ../mucharmap/unicode-scripts.h:25
+msgid "Cherokee"
+msgstr "Cherokee"
+
+#: ../mucharmap/unicode-blocks.h:56
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "Unifikované kanadské domorodé slabiky"
+
+#: ../mucharmap/unicode-blocks.h:57 ../mucharmap/unicode-scripts.h:59
+msgid "Ogham"
+msgstr "Ogham"
+
+#: ../mucharmap/unicode-blocks.h:58 ../mucharmap/unicode-scripts.h:66
+msgid "Runic"
+msgstr "Runy"
+
+#: ../mucharmap/unicode-blocks.h:59 ../mucharmap/unicode-scripts.h:71
+msgid "Tagalog"
+msgstr "Tagalog"
+
+#: ../mucharmap/unicode-blocks.h:60 ../mucharmap/unicode-scripts.h:42
+msgid "Hanunoo"
+msgstr "Hanunoo"
+
+#: ../mucharmap/unicode-blocks.h:61 ../mucharmap/unicode-scripts.h:23
+msgid "Buhid"
+msgstr "Buhid"
+
+#: ../mucharmap/unicode-blocks.h:62 ../mucharmap/unicode-scripts.h:72
+msgid "Tagbanwa"
+msgstr "Tagbanwa"
+
+#: ../mucharmap/unicode-blocks.h:63 ../mucharmap/unicode-scripts.h:49
+msgid "Khmer"
+msgstr "Kmérsky"
+
+#: ../mucharmap/unicode-blocks.h:64 ../mucharmap/unicode-scripts.h:55
+msgid "Mongolian"
+msgstr "Mongolský"
+
+#: ../mucharmap/unicode-blocks.h:65 ../mucharmap/unicode-scripts.h:52
+msgid "Limbu"
+msgstr "Limbu"
+
+#: ../mucharmap/unicode-blocks.h:66 ../mucharmap/unicode-scripts.h:73
+msgid "Tai Le"
+msgstr "Tai Le"
+
+#: ../mucharmap/unicode-blocks.h:67 ../mucharmap/unicode-scripts.h:57
+msgid "New Tai Lue"
+msgstr "Nové Tai Lue"
+
+#: ../mucharmap/unicode-blocks.h:68
+msgid "Khmer Symbols"
+msgstr "Kmérske symboly"
+
+#: ../mucharmap/unicode-blocks.h:69 ../mucharmap/unicode-scripts.h:22
+msgid "Buginese"
+msgstr "Buginese"
+
+#: ../mucharmap/unicode-blocks.h:70 ../mucharmap/unicode-scripts.h:18
+msgid "Balinese"
+msgstr "Balinese"
+
+#: ../mucharmap/unicode-blocks.h:71
+msgid "Phonetic Extensions"
+msgstr "Fonetické rozšírenia"
+
+#: ../mucharmap/unicode-blocks.h:72
+msgid "Phonetic Extensions Supplement"
+msgstr "Doplnky fonetických rozšírení"
+
+#: ../mucharmap/unicode-blocks.h:73
+msgid "Combining Diacritical Marks Supplement"
+msgstr "Doplnky kombinujúcich diakritických značiek"
+
+#: ../mucharmap/unicode-blocks.h:74
+msgid "Latin Extended Additional"
+msgstr "Latinka rozšírená prídavná"
+
+#: ../mucharmap/unicode-blocks.h:75
+msgid "Greek Extended"
+msgstr "Grécke rozšírené"
+
+#: ../mucharmap/unicode-blocks.h:76
+msgid "General Punctuation"
+msgstr "Všeobecná interpunkcia"
+
+#: ../mucharmap/unicode-blocks.h:77
+msgid "Superscripts and Subscripts"
+msgstr "Horné a dolné indexy"
+
+#: ../mucharmap/unicode-blocks.h:78
+msgid "Currency Symbols"
+msgstr "Symboly meny"
+
+#: ../mucharmap/unicode-blocks.h:79
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "Kombinácia diakritických značiek a symbolov"
+
+#: ../mucharmap/unicode-blocks.h:80
+msgid "Letterlike Symbols"
+msgstr "Symboly ako písmená"
+
+#: ../mucharmap/unicode-blocks.h:81
+msgid "Number Forms"
+msgstr "Číselné formy"
+
+#: ../mucharmap/unicode-blocks.h:82
+msgid "Arrows"
+msgstr "Šípky"
+
+#: ../mucharmap/unicode-blocks.h:83
+msgid "Mathematical Operators"
+msgstr "Matematické operátory"
+
+#: ../mucharmap/unicode-blocks.h:84
+msgid "Miscellaneous Technical"
+msgstr "Rôzne technické"
+
+#: ../mucharmap/unicode-blocks.h:85
+msgid "Control Pictures"
+msgstr "Riadiace obrázky"
+
+#: ../mucharmap/unicode-blocks.h:86
+msgid "Optical Character Recognition"
+msgstr "Optické rozlišovanie znakov"
+
+#: ../mucharmap/unicode-blocks.h:87
+msgid "Enclosed Alphanumerics"
+msgstr "Vložené alfanumerické"
+
+#: ../mucharmap/unicode-blocks.h:88
+msgid "Box Drawing"
+msgstr "Kreslenie okienok"
+
+#: ../mucharmap/unicode-blocks.h:89
+msgid "Block Elements"
+msgstr "Blokové elementy"
+
+#: ../mucharmap/unicode-blocks.h:90
+msgid "Geometric Shapes"
+msgstr "Geometrické tvary"
+
+#: ../mucharmap/unicode-blocks.h:91
+msgid "Miscellaneous Symbols"
+msgstr "Rôzne symboly"
+
+#: ../mucharmap/unicode-blocks.h:92
+msgid "Dingbats"
+msgstr "Ornamenty"
+
+#: ../mucharmap/unicode-blocks.h:93
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "Rôzne matematické symboly-A"
+
+#: ../mucharmap/unicode-blocks.h:94
+msgid "Supplemental Arrows-A"
+msgstr "Doplnkové šípky-A"
+
+#: ../mucharmap/unicode-blocks.h:95
+msgid "Braille Patterns"
+msgstr "Braillove vzory"
+
+#: ../mucharmap/unicode-blocks.h:96
+msgid "Supplemental Arrows-B"
+msgstr "Doplnkové šípky-B"
+
+#: ../mucharmap/unicode-blocks.h:97
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "Rôzne matematické symboly-B"
+
+#: ../mucharmap/unicode-blocks.h:98
+msgid "Supplemental Mathematical Operators"
+msgstr "Doplnkové matematické operátory"
+
+#: ../mucharmap/unicode-blocks.h:99
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "Rôzne symboly a šípky"
+
+#: ../mucharmap/unicode-blocks.h:100 ../mucharmap/unicode-scripts.h:35
+msgid "Glagolitic"
+msgstr "Hlaholika"
+
+#: ../mucharmap/unicode-blocks.h:101
+msgid "Latin Extended-C"
+msgstr "Latinka rozšírená-C"
+
+#: ../mucharmap/unicode-blocks.h:102 ../mucharmap/unicode-scripts.h:27
+msgid "Coptic"
+msgstr "Koptické"
+
+#: ../mucharmap/unicode-blocks.h:103
+msgid "Georgian Supplement"
+msgstr "Gruzínske doplnky"
+
+#: ../mucharmap/unicode-blocks.h:104 ../mucharmap/unicode-scripts.h:79
+msgid "Tifinagh"
+msgstr "Tifinagh"
+
+#: ../mucharmap/unicode-blocks.h:105
+msgid "Ethiopic Extended"
+msgstr "Etiópske rozšírené"
+
+#: ../mucharmap/unicode-blocks.h:106
+msgid "Supplemental Punctuation"
+msgstr "Doplnková interpunkcia"
+
+#: ../mucharmap/unicode-blocks.h:107
+msgid "CJK Radicals Supplement"
+msgstr "CJK kmeňové doplnky"
+
+#: ../mucharmap/unicode-blocks.h:108
+msgid "Kangxi Radicals"
+msgstr "Kangxi kmene"
+
+#: ../mucharmap/unicode-blocks.h:109
+msgid "Ideographic Description Characters"
+msgstr "Znaky popisujúce symboly"
+
+#: ../mucharmap/unicode-blocks.h:110
+msgid "CJK Symbols and Punctuation"
+msgstr "CJK symboly a interpunkcia"
+
+#: ../mucharmap/unicode-blocks.h:111 ../mucharmap/unicode-scripts.h:44
+msgid "Hiragana"
+msgstr "Hiragana"
+
+#: ../mucharmap/unicode-blocks.h:112 ../mucharmap/unicode-scripts.h:47
+msgid "Katakana"
+msgstr "Katakana"
+
+#: ../mucharmap/unicode-blocks.h:113 ../mucharmap/unicode-scripts.h:20
+msgid "Bopomofo"
+msgstr "Bopomofo"
+
+#: ../mucharmap/unicode-blocks.h:114
+msgid "Hangul Compatibility Jamo"
+msgstr "Hangul kompatibilné Jamo"
+
+#: ../mucharmap/unicode-blocks.h:115
+msgid "Kanbun"
+msgstr "Kanbun"
+
+#: ../mucharmap/unicode-blocks.h:116
+msgid "Bopomofo Extended"
+msgstr "Bopomofo rozšírené"
+
+#: ../mucharmap/unicode-blocks.h:117
+msgid "CJK Strokes"
+msgstr "CJK Ťahy"
+
+#: ../mucharmap/unicode-blocks.h:118
+msgid "Katakana Phonetic Extensions"
+msgstr "Katakana fonetické rozšírenia"
+
+#: ../mucharmap/unicode-blocks.h:119
+msgid "Enclosed CJK Letters and Months"
+msgstr "Vložené CJK písmená a mesiace"
+
+#: ../mucharmap/unicode-blocks.h:120
+msgid "CJK Compatibility"
+msgstr "CJK kompatibilita"
+
+#: ../mucharmap/unicode-blocks.h:121
+msgid "CJK Unified Ideographs Extension A"
+msgstr "CJK unifikované symboly rozšírenie A"
+
+#: ../mucharmap/unicode-blocks.h:122
+msgid "Yijing Hexagram Symbols"
+msgstr "Yijing hexagram symboly"
+
+#: ../mucharmap/unicode-blocks.h:123
+msgid "CJK Unified Ideographs"
+msgstr "CJK unifikované symboly"
+
+#: ../mucharmap/unicode-blocks.h:124
+msgid "Yi Syllables"
+msgstr "Yi slabiky"
+
+#: ../mucharmap/unicode-blocks.h:125
+msgid "Yi Radicals"
+msgstr "Yi kmene"
+
+#: ../mucharmap/unicode-blocks.h:126
+msgid "Modifier Tone Letters"
+msgstr "Modifikátory písmen tónov"
+
+#: ../mucharmap/unicode-blocks.h:127
+msgid "Latin Extended-D"
+msgstr "Latinka rozšírená-D"
+
+#: ../mucharmap/unicode-blocks.h:128 ../mucharmap/unicode-scripts.h:69
+msgid "Syloti Nagri"
+msgstr "Syloti Nagri"
+
+#: ../mucharmap/unicode-blocks.h:129
+msgid "Phags-pa"
+msgstr "Phags-pa"
+
+#: ../mucharmap/unicode-blocks.h:130
+msgid "Hangul Syllables"
+msgstr "Hangul slabiky"
+
+#: ../mucharmap/unicode-blocks.h:131
+msgid "High Surrogates"
+msgstr "Vyššie náhradné"
+
+#: ../mucharmap/unicode-blocks.h:132
+msgid "High Private Use Surrogates"
+msgstr "Vyššie náhradné pre súkromné použitie"
+
+#: ../mucharmap/unicode-blocks.h:133
+msgid "Low Surrogates"
+msgstr "Nižšie náhradné"
+
+#: ../mucharmap/unicode-blocks.h:134
+msgid "Private Use Area"
+msgstr "Oblasť pre súkromné použitie"
+
+#: ../mucharmap/unicode-blocks.h:135
+msgid "CJK Compatibility Ideographs"
+msgstr "CJK kompatibilné znaky"
+
+#: ../mucharmap/unicode-blocks.h:136
+msgid "Alphabetic Presentation Forms"
+msgstr "Formy na preznetáciu abecedy"
+
+#: ../mucharmap/unicode-blocks.h:137
+msgid "Arabic Presentation Forms-A"
+msgstr "Arabské formy na prezentáciu-Y"
+
+#: ../mucharmap/unicode-blocks.h:138
+msgid "Variation Selectors"
+msgstr "Vyberače odchýliek"
+
+#: ../mucharmap/unicode-blocks.h:139
+msgid "Vertical Forms"
+msgstr "Vertikálne formy"
+
+#: ../mucharmap/unicode-blocks.h:140
+msgid "Combining Half Marks"
+msgstr "Polovičné značky na kombinovanie"
+
+#: ../mucharmap/unicode-blocks.h:141
+msgid "CJK Compatibility Forms"
+msgstr "CJK kompatibilné formy"
+
+#: ../mucharmap/unicode-blocks.h:142
+msgid "Small Form Variants"
+msgstr "Varianty malých foriem"
+
+#: ../mucharmap/unicode-blocks.h:143
+msgid "Arabic Presentation Forms-B"
+msgstr "Arabské formy na prezentáciu-B"
+
+#: ../mucharmap/unicode-blocks.h:144
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "Pološiroké a plnoširoké formy"
+
+#: ../mucharmap/unicode-blocks.h:145
+msgid "Specials"
+msgstr "Špeciálne"
+
+#: ../mucharmap/unicode-blocks.h:146
+msgid "Linear B Syllabary"
+msgstr "Lineárne B slabiky"
+
+#: ../mucharmap/unicode-blocks.h:147
+msgid "Linear B Ideograms"
+msgstr "Lineárne B symboly"
+
+#: ../mucharmap/unicode-blocks.h:148
+msgid "Aegean Numbers"
+msgstr "Čísla Aegean"
+
+#: ../mucharmap/unicode-blocks.h:149
+msgid "Ancient Greek Numbers"
+msgstr "Starodávne grécke čísla"
+
+#: ../mucharmap/unicode-blocks.h:150 ../mucharmap/unicode-scripts.h:60
+msgid "Old Italic"
+msgstr "Stará italika"
+
+#: ../mucharmap/unicode-blocks.h:151 ../mucharmap/unicode-scripts.h:36
+msgid "Gothic"
+msgstr "Gotické"
+
+#: ../mucharmap/unicode-blocks.h:152 ../mucharmap/unicode-scripts.h:80
+msgid "Ugaritic"
+msgstr "Ugaritické"
+
+#: ../mucharmap/unicode-blocks.h:153 ../mucharmap/unicode-scripts.h:61
+msgid "Old Persian"
+msgstr "Staré perzské"
+
+#: ../mucharmap/unicode-blocks.h:154 ../mucharmap/unicode-scripts.h:31
+msgid "Deseret"
+msgstr "Deseret"
+
+#: ../mucharmap/unicode-blocks.h:155 ../mucharmap/unicode-scripts.h:67
+msgid "Shavian"
+msgstr "Shavian"
+
+#: ../mucharmap/unicode-blocks.h:156 ../mucharmap/unicode-scripts.h:63
+msgid "Osmanya"
+msgstr "Osmanské"
+
+#: ../mucharmap/unicode-blocks.h:157
+msgid "Cypriot Syllabary"
+msgstr "Cyperské slabiky"
+
+#: ../mucharmap/unicode-blocks.h:158 ../mucharmap/unicode-scripts.h:65
+msgid "Phoenician"
+msgstr "Fenické"
+
+#: ../mucharmap/unicode-blocks.h:159 ../mucharmap/unicode-scripts.h:48
+msgid "Kharoshthi"
+msgstr "Kharoshthi"
+
+#: ../mucharmap/unicode-blocks.h:160 ../mucharmap/unicode-scripts.h:28
+msgid "Cuneiform"
+msgstr "Klinové písmo"
+
+#: ../mucharmap/unicode-blocks.h:161
+msgid "Cuneiform Numbers and Punctuation"
+msgstr "Čísla a interpunkcia klinového písma"
+
+#: ../mucharmap/unicode-blocks.h:162
+msgid "Byzantine Musical Symbols"
+msgstr "Byzantské hudobné symboly"
+
+#: ../mucharmap/unicode-blocks.h:163
+msgid "Musical Symbols"
+msgstr "Hudobné symboly"
+
+#: ../mucharmap/unicode-blocks.h:164
+msgid "Ancient Greek Musical Notation"
+msgstr "Starodávna grécka hudobná notácia"
+
+#: ../mucharmap/unicode-blocks.h:165
+msgid "Tai Xuan Jing Symbols"
+msgstr "Symboly Tai Xuan Jing"
+
+#: ../mucharmap/unicode-blocks.h:166
+msgid "Counting Rod Numerals"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:167
+msgid "Mathematical Alphanumeric Symbols"
+msgstr "Matematické alfanumerické symboly"
+
+#: ../mucharmap/unicode-blocks.h:168
+msgid "CJK Unified Ideographs Extension B"
+msgstr "CJK unifikované symboly rozšírenie B"
+
+#: ../mucharmap/unicode-blocks.h:169
+msgid "CJK Compatibility Ideographs Supplement"
+msgstr "CJK kompatibilné náhradné symboly"
+
+#: ../mucharmap/unicode-blocks.h:170
+msgid "Tags"
+msgstr "Značky"
+
+#: ../mucharmap/unicode-blocks.h:171
+msgid "Variation Selectors Supplement"
+msgstr "Vyberače odchýliek náhradné"
+
+#: ../mucharmap/unicode-blocks.h:172
+msgid "Supplementary Private Use Area-A"
+msgstr "Oblasť náhrad pre súkromné použitie-A"
+
+#: ../mucharmap/unicode-blocks.h:173
+msgid "Supplementary Private Use Area-B"
+msgstr "Oblasť náhrad pre súkromné použitie-B"
+
+#: ../mucharmap/unicode-scripts.h:21
+msgid "Braille"
+msgstr "Braillove"
+
+#: ../mucharmap/unicode-scripts.h:24
+msgid "Canadian Aboriginal"
+msgstr "Kanadské domorodé"
+
+#: ../mucharmap/unicode-scripts.h:29
+msgid "Cypriot"
+msgstr "Cyperské"
+
+#: ../mucharmap/unicode-scripts.h:37
+msgid "Greek"
+msgstr "Grécke"
+
+#: ../mucharmap/unicode-scripts.h:40
+msgid "Han"
+msgstr "Han"
+
+#: ../mucharmap/unicode-scripts.h:41
+msgid "Hangul"
+msgstr "Hangul"
+
+#: ../mucharmap/unicode-scripts.h:45
+msgid "Inherited"
+msgstr "Zdedené"
+
+#: ../mucharmap/unicode-scripts.h:51
+msgid "Latin"
+msgstr "Latinka"
+
+#: ../mucharmap/unicode-scripts.h:53
+msgid "Linear B"
+msgstr "Lineárne B"
+
+#: ../mucharmap/unicode-scripts.h:58
+msgid "Nko"
+msgstr "Nko"
+
+#: ../mucharmap/unicode-scripts.h:64
+msgid "Phags Pa"
+msgstr "Phags Pa"
+
+#: ../mucharmap/unicode-scripts.h:81
+msgid "Yi"
+msgstr "Yi"
+
+#: ../mucharmap/mucharmap-search-dialog.c:550
+msgid "Information"
+msgstr "Informácie"
+
+#. follow hig guidelines
+#: ../mucharmap/mucharmap-search-dialog.c:754
+msgid "Find"
+msgstr "Nájsť"
+
+#: ../mucharmap/mucharmap-search-dialog.c:768
+msgid "_Previous"
+msgstr "_Predchádzajúce"
+
+#: ../mucharmap/mucharmap-search-dialog.c:775
+msgid "_Next"
+msgstr "_Nasledujúce"
+
+#: ../mucharmap/mucharmap-search-dialog.c:785
+msgid "_Search:"
+msgstr "_Hľadať:"
+
+#: ../mucharmap/mucharmap-search-dialog.c:795
+msgid "Match _whole word"
+msgstr "Zhoda _celého slova"
+
+#: ../mucharmap/mucharmap-search-dialog.c:800
+msgid "Search in character _details"
+msgstr "Vyhľadávať v po_drobnostiach znaku"
+
+#: ../mucharmap/mucharmap-block-chapters-model.c:52
+msgid "All"
+msgstr "Všetko"
+
+#: ../mucharmap/mucharmap-block-chapters-model.c:130
+msgid "Unicode Block"
+msgstr "Blok Unicode"
+
+#: ../mucharmap/mucharmap-script-chapters-model.c:131
+msgid "Script"
+msgstr "Písmo"

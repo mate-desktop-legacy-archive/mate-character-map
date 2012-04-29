@@ -1,0 +1,1383 @@
+# Hebrew translation for mucharmap
+# Copyright (c) (c) 2006 Canonical Ltd, and Rosetta Contributors 2006
+# This file is distributed under the same license as the mucharmap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mucharmap\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-09-21 09:05+0200\n"
+"PO-Revision-Date: 2010-09-25 02:25+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: Hebrew <he@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2007-10-11 05:44+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#: ../mucharmap.desktop.in.in.h:1 ../mucharmap/mucharmap-window.c:915
+#: ../mucharmap/main.c:80
+msgid "Character Map"
+msgstr "מפת תווים"
+
+#: ../mucharmap.desktop.in.in.h:2
+msgid "Insert special characters into documents"
+msgstr "הכניסו תווים מיוחדים למסמכים"
+
+#: ../mucharmap/mucharmap-charmap.c:573
+msgid "Canonical decomposition:"
+msgstr ""
+
+#: ../mucharmap/mucharmap-charmap.c:616 ../mucharmap/mucharmap-chartable.c:553
+msgid "[not a printable character]"
+msgstr "[תו שאינו ניתן להדפסה]"
+
+#: ../mucharmap/mucharmap-charmap.c:630
+msgid "General Character Properties"
+msgstr "מאפייני תו כלליים"
+
+#: ../mucharmap/mucharmap-charmap.c:636
+msgid "In Unicode since:"
+msgstr "בתקן יוניקוד מאז:"
+
+#. character category
+#: ../mucharmap/mucharmap-charmap.c:640
+msgid "Unicode category:"
+msgstr "קטגוריית יוניקוד:"
+
+#: ../mucharmap/mucharmap-charmap.c:649
+msgid "Various Useful Representations"
+msgstr "מספר ייצוגים שימושיים"
+
+#: ../mucharmap/mucharmap-charmap.c:659
+msgid "UTF-8:"
+msgstr "UTF-8:"
+
+#: ../mucharmap/mucharmap-charmap.c:667
+msgid "UTF-16:"
+msgstr "UTF-16:"
+
+#: ../mucharmap/mucharmap-charmap.c:678
+msgid "C octal escaped UTF-8:"
+msgstr ""
+
+#: ../mucharmap/mucharmap-charmap.c:688
+msgid "XML decimal entity:"
+msgstr "יישות עשרונית של XML:"
+
+#: ../mucharmap/mucharmap-charmap.c:699
+msgid "Annotations and Cross References"
+msgstr "הערות והפניות"
+
+#: ../mucharmap/mucharmap-charmap.c:706
+msgid "Alias names:"
+msgstr "שמות נוספים:"
+
+#: ../mucharmap/mucharmap-charmap.c:715
+msgid "Notes:"
+msgstr "הערות:"
+
+#: ../mucharmap/mucharmap-charmap.c:724
+msgid "See also:"
+msgstr "ראו גם:"
+
+#: ../mucharmap/mucharmap-charmap.c:733
+msgid "Approximate equivalents:"
+msgstr "שקולות דומות:"
+
+#: ../mucharmap/mucharmap-charmap.c:742
+msgid "Equivalents:"
+msgstr "שקולות:"
+
+#: ../mucharmap/mucharmap-charmap.c:758
+msgid "CJK Ideograph Information"
+msgstr "מידע על על סימנים סיניים, יפנים וקוראניים."
+
+#: ../mucharmap/mucharmap-charmap.c:763
+msgid "Definition in English:"
+msgstr "הגדרה באנגלית:"
+
+#: ../mucharmap/mucharmap-charmap.c:768
+msgid "Mandarin Pronunciation:"
+msgstr "הגייה במנדרין:"
+
+#: ../mucharmap/mucharmap-charmap.c:773
+msgid "Cantonese Pronunciation:"
+msgstr "הגייה בקנטונזית:"
+
+#: ../mucharmap/mucharmap-charmap.c:778
+msgid "Japanese On Pronunciation:"
+msgstr "הגיית און יפנית:"
+
+#: ../mucharmap/mucharmap-charmap.c:783
+msgid "Japanese Kun Pronunciation:"
+msgstr "הגיית קון יפנית:"
+
+#: ../mucharmap/mucharmap-charmap.c:788
+msgid "Tang Pronunciation:"
+msgstr "הגייה בטאנג:"
+
+#: ../mucharmap/mucharmap-charmap.c:793
+msgid "Korean Pronunciation:"
+msgstr "הגייה בקוראנית:"
+
+#: ../mucharmap/mucharmap-charmap.c:1182
+msgid "Characte_r Table"
+msgstr "טבלת תווי_ם"
+
+#: ../mucharmap/mucharmap-charmap.c:1228
+msgid "Character _Details"
+msgstr "פרטי _תו"
+
+#: ../mucharmap/mucharmap-chartable.c:1452
+msgid "Unknown character, unable to identify."
+msgstr "תו לא ידוע, בלתי ניתן לזיהוי."
+
+#: ../mucharmap/mucharmap-chartable.c:1454
+#: ../mucharmap/mucharmap-search-dialog.c:589
+msgid "Not found."
+msgstr "לא נמצא."
+
+#: ../mucharmap/mucharmap-chartable.c:1457
+msgid "Character found."
+msgstr "התו נמצא."
+
+#: ../mucharmap/mucharmap-chartable-accessible.c:829
+msgid "Character Table"
+msgstr "טבלת תווים"
+
+#: ../mucharmap/mucharmap-mini-fontsel.c:282
+msgid "Font"
+msgstr "גופן"
+
+#: ../mucharmap/mucharmap-mini-fontsel.c:295
+msgid "Font Family"
+msgstr "משפחת גופן"
+
+#: ../mucharmap/mucharmap-mini-fontsel.c:313
+msgid "Font Size"
+msgstr "גודל גופן"
+
+#: ../mucharmap/mucharmap-settings.c:71
+msgid "MateConf could not be initialized."
+msgstr "לא ניתן להפעיל את MateConf."
+
+#. Unicode assigns "Common" as the script name for any character not
+#. * specifically listed in Scripts.txt
+#: ../mucharmap/mucharmap-script-codepoint-list.c:463
+#: ../mucharmap/unicode-scripts.h:30
+msgid "Common"
+msgstr "נפוצים"
+
+#: ../mucharmap/mucharmap-unicode-info.c:99
+msgid "<Non Private Use High Surrogate>"
+msgstr "<ממלאי מקום גבוהים שאינם בשימוש פרטי>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:101
+msgid "<Private Use High Surrogate>"
+msgstr "<מממלאי מקום גבוהים בשימוש פרטי>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:103
+msgid "<Low Surrogate>"
+msgstr "<מחליף נמוך>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:105
+msgid "<Private Use>"
+msgstr "<שימוש פרטי>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:107
+msgid "<Plane 15 Private Use>"
+msgstr "<לשימוש פרטי ממישור 15>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:109
+msgid "<Plane 16 Private Use>"
+msgstr "<לשימוש פרטי ממישור 16>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:114
+msgid "<not assigned>"
+msgstr "<לא שוייך>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:127
+msgid "Other, Control"
+msgstr "אחר, שליטה"
+
+#: ../mucharmap/mucharmap-unicode-info.c:128
+msgid "Other, Format"
+msgstr "אחר, פורמט"
+
+#: ../mucharmap/mucharmap-unicode-info.c:129
+msgid "Other, Not Assigned"
+msgstr "אחר, לא שוייך"
+
+#: ../mucharmap/mucharmap-unicode-info.c:130
+msgid "Other, Private Use"
+msgstr "אחר, שימוש פרטי"
+
+#: ../mucharmap/mucharmap-unicode-info.c:131
+msgid "Other, Surrogate"
+msgstr "אחר, ממלא מקום"
+
+#: ../mucharmap/mucharmap-unicode-info.c:132
+msgid "Letter, Lowercase"
+msgstr "אות, קטנה"
+
+#: ../mucharmap/mucharmap-unicode-info.c:133
+msgid "Letter, Modifier"
+msgstr "אות, משנה"
+
+#: ../mucharmap/mucharmap-unicode-info.c:134
+msgid "Letter, Other"
+msgstr "אות, אחר"
+
+#: ../mucharmap/mucharmap-unicode-info.c:135
+msgid "Letter, Titlecase"
+msgstr "אות, רישיות כותרת"
+
+#: ../mucharmap/mucharmap-unicode-info.c:136
+msgid "Letter, Uppercase"
+msgstr "אות, גדולה"
+
+#: ../mucharmap/mucharmap-unicode-info.c:137
+msgid "Mark, Spacing Combining"
+msgstr "סימן, מורכב ברווח"
+
+#: ../mucharmap/mucharmap-unicode-info.c:138
+msgid "Mark, Enclosing"
+msgstr "סימן, מקיף"
+
+#: ../mucharmap/mucharmap-unicode-info.c:139
+msgid "Mark, Non-Spacing"
+msgstr "סימן, ללא ריווח"
+
+#: ../mucharmap/mucharmap-unicode-info.c:140
+msgid "Number, Decimal Digit"
+msgstr "מספר, ספרה עשרונית"
+
+#: ../mucharmap/mucharmap-unicode-info.c:141
+msgid "Number, Letter"
+msgstr "מספר, אות"
+
+#: ../mucharmap/mucharmap-unicode-info.c:142
+msgid "Number, Other"
+msgstr "מספר, אחר"
+
+#: ../mucharmap/mucharmap-unicode-info.c:143
+msgid "Punctuation, Connector"
+msgstr "פיסוק, מחבר"
+
+#: ../mucharmap/mucharmap-unicode-info.c:144
+msgid "Punctuation, Dash"
+msgstr "פיסוק, קו מפריד"
+
+#: ../mucharmap/mucharmap-unicode-info.c:145
+msgid "Punctuation, Close"
+msgstr "פיסוק, סגירה"
+
+#: ../mucharmap/mucharmap-unicode-info.c:146
+msgid "Punctuation, Final Quote"
+msgstr "פיסוק, סיום ציטוט"
+
+#: ../mucharmap/mucharmap-unicode-info.c:147
+msgid "Punctuation, Initial Quote"
+msgstr "פיסוק, התחלת ציטוט"
+
+#: ../mucharmap/mucharmap-unicode-info.c:148
+msgid "Punctuation, Other"
+msgstr "פיסוק, אחר"
+
+#: ../mucharmap/mucharmap-unicode-info.c:149
+msgid "Punctuation, Open"
+msgstr "פיסוק, פתיחה"
+
+#: ../mucharmap/mucharmap-unicode-info.c:150
+msgid "Symbol, Currency"
+msgstr "סמל, מטבע"
+
+#: ../mucharmap/mucharmap-unicode-info.c:151
+msgid "Symbol, Modifier"
+msgstr "סמל, משנה"
+
+#: ../mucharmap/mucharmap-unicode-info.c:152
+msgid "Symbol, Math"
+msgstr "סמל, מתמטיקה"
+
+#: ../mucharmap/mucharmap-unicode-info.c:153
+msgid "Symbol, Other"
+msgstr "סמל, אחר"
+
+#: ../mucharmap/mucharmap-unicode-info.c:154
+msgid "Separator, Line"
+msgstr "מפריד, שורה"
+
+#: ../mucharmap/mucharmap-unicode-info.c:155
+msgid "Separator, Paragraph"
+msgstr "מפריד, פסקה"
+
+#: ../mucharmap/mucharmap-unicode-info.c:156
+msgid "Separator, Space"
+msgstr "מפריד, רווח"
+
+#: ../mucharmap/mucharmap-window.c:246
+msgid "Searching…"
+msgstr "בחיפוש…"
+
+#: ../mucharmap/mucharmap-window.c:493
+msgid ""
+"Mucharmap is free software; you can redistribute it and/or modify it under "
+"the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 3 of the License, or (at your option) "
+"any later version."
+msgstr ""
+"Mucharmap is free software; you can redistribute it and/or modify it under "
+"the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 3 of the License, or (at your option) "
+"any later version."
+
+#: ../mucharmap/mucharmap-window.c:497
+msgid ""
+"Permission is hereby granted, free of charge, to any person obtaining a copy "
+"of the Unicode data files to deal in them without restriction, including "
+"without limitation the rights to use, copy, modify, merge, publish, "
+"distribute, and/or sell copies."
+msgstr ""
+"Permission is hereby granted, free of charge, to any person obtaining a copy "
+"of the Unicode data files to deal in them without restriction, including "
+"without limitation the rights to use, copy, modify, merge, publish, "
+"distribute, and/or sell copies."
+
+#: ../mucharmap/mucharmap-window.c:501
+msgid ""
+"Mucharmap and the Unicode data files are distributed in the hope that they "
+"will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty "
+"of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General "
+"Public License and Unicode Copyright for more details."
+msgstr ""
+"Mucharmap and the Unicode data files are distributed in the hope that they "
+"will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty "
+"of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General "
+"Public License and Unicode Copyright for more details."
+
+#: ../mucharmap/mucharmap-window.c:505
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"Mucharmap; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02110-1301  USA"
+msgstr ""
+"You should have received a copy of the GNU General Public License along with "
+"Mucharmap; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02110-1301  USA"
+
+#: ../mucharmap/mucharmap-window.c:508
+msgid ""
+"Also you should have received a copy of the Unicode Copyright along with "
+"Mucharmap; you can always find it at Unicode's website: http://www.unicode."
+"org/copyright.html"
+msgstr ""
+"Also you should have received a copy of the Unicode Copyright along with "
+"Mucharmap; you can always find it at Unicode's website: http://www.unicode."
+"org/copyright.html"
+
+#: ../mucharmap/mucharmap-window.c:521 ../mucharmap/main.c:37
+msgid "MATE Character Map"
+msgstr "מפת התווים של MATE"
+
+#: ../mucharmap/mucharmap-window.c:523
+msgid "Based on the Unicode Character Database 5.2"
+msgstr "מבוססת על מאגר תווי ה־Unicode גרסה 5.2"
+
+#: ../mucharmap/mucharmap-window.c:532
+msgid "translator-credits"
+msgstr ""
+"יניב אביר <https://launchpad.net/~yanivabir>\n"
+"ירון שהרבני <sh.yaron@gmail.com>\n"
+"\n"
+"פרויקט תרגום MATE לעברית:\n"
+"‏http://mate-il.berlios.de"
+
+#: ../mucharmap/mucharmap-window.c:607 ../mucharmap/mucharmap-window.c:884
+msgid "Next Script"
+msgstr "הכתב הבא"
+
+#: ../mucharmap/mucharmap-window.c:607 ../mucharmap/mucharmap-window.c:886
+msgid "Previous Script"
+msgstr "הכתב הקודם"
+
+#: ../mucharmap/mucharmap-window.c:612
+msgid "Next Block"
+msgstr "המקטע הבא"
+
+#: ../mucharmap/mucharmap-window.c:612
+msgid "Previous Block"
+msgstr "המקטע הקודם"
+
+#: ../mucharmap/mucharmap-window.c:847
+msgid "_File"
+msgstr "_קובץ"
+
+#: ../mucharmap/mucharmap-window.c:848
+msgid "_View"
+msgstr "_תצוגה"
+
+#: ../mucharmap/mucharmap-window.c:849
+msgid "_Search"
+msgstr "_חיפוש"
+
+#: ../mucharmap/mucharmap-window.c:850
+msgid "_Go"
+msgstr "_מעבר"
+
+#: ../mucharmap/mucharmap-window.c:851
+msgid "_Help"
+msgstr "ע_זרה"
+
+#: ../mucharmap/mucharmap-window.c:854
+msgid "Page _Setup"
+msgstr "הגדרות _עמוד"
+
+#: ../mucharmap/mucharmap-window.c:875
+msgid "Find _Next"
+msgstr "חיפוש ה_בא"
+
+#: ../mucharmap/mucharmap-window.c:877
+msgid "Find _Previous"
+msgstr "חיפוש _קודם"
+
+#: ../mucharmap/mucharmap-window.c:880
+msgid "_Next Character"
+msgstr "התו ה_בא"
+
+#: ../mucharmap/mucharmap-window.c:882
+msgid "_Previous Character"
+msgstr "התו ה_קודם"
+
+#: ../mucharmap/mucharmap-window.c:889
+msgid "_Contents"
+msgstr "_תוכן עניינים"
+
+#: ../mucharmap/mucharmap-window.c:891
+msgid "_About"
+msgstr "על _אודות"
+
+#: ../mucharmap/mucharmap-window.c:901
+msgid "By _Script"
+msgstr "לפי _כתב"
+
+#: ../mucharmap/mucharmap-window.c:903
+msgid "By _Unicode Block"
+msgstr "לפי מ_קטע יוניקוד"
+
+#: ../mucharmap/mucharmap-window.c:908
+msgid "Snap _Columns to Power of Two"
+msgstr "הפרדה לעמודות ב_חזקות של שתיים"
+
+#: ../mucharmap/mucharmap-window.c:977
+msgid "_Text to copy:"
+msgstr "_טקסט להעתקה:"
+
+#: ../mucharmap/mucharmap-window.c:984
+msgid "Copy to the clipboard."
+msgstr "העתקה ללוח הגזירים."
+
+#: ../mucharmap/main.c:55
+msgid "Font to start with; ex: 'Serif 27'"
+msgstr "Font to start with; ex: 'Serif 27'"
+
+#: ../mucharmap/main.c:55
+msgid "FONT"
+msgstr "FONT"
+
+#: ../mucharmap/unicode-blocks.h:14
+msgid "Basic Latin"
+msgstr "לטיני בסיסי"
+
+#: ../mucharmap/unicode-blocks.h:15
+msgid "Latin-1 Supplement"
+msgstr "השלמה של לטיני-1"
+
+#: ../mucharmap/unicode-blocks.h:16
+msgid "Latin Extended-A"
+msgstr "לטינית מורחבת א׳"
+
+#: ../mucharmap/unicode-blocks.h:17
+msgid "Latin Extended-B"
+msgstr "לטינית מורחבת ב׳"
+
+#: ../mucharmap/unicode-blocks.h:18
+msgid "IPA Extensions"
+msgstr "הרחבות‫ לאלפבית הפונטי הבינלאומי"
+
+#: ../mucharmap/unicode-blocks.h:19
+msgid "Spacing Modifier Letters"
+msgstr "תווים משני מרווח"
+
+#: ../mucharmap/unicode-blocks.h:20
+msgid "Combining Diacritical Marks"
+msgstr "סימנים מבחינים מתחברים"
+
+#: ../mucharmap/unicode-blocks.h:21
+msgid "Greek and Coptic"
+msgstr "יוונית וקופטית"
+
+#: ../mucharmap/unicode-blocks.h:22 ../mucharmap/unicode-scripts.h:34
+msgid "Cyrillic"
+msgstr "קירילית"
+
+#: ../mucharmap/unicode-blocks.h:23
+msgid "Cyrillic Supplement"
+msgstr "השלמה של קירילית"
+
+#: ../mucharmap/unicode-blocks.h:24 ../mucharmap/unicode-scripts.h:17
+msgid "Armenian"
+msgstr "ארמנית"
+
+#: ../mucharmap/unicode-blocks.h:25 ../mucharmap/unicode-scripts.h:48
+msgid "Hebrew"
+msgstr "עברית"
+
+#: ../mucharmap/unicode-blocks.h:26 ../mucharmap/unicode-scripts.h:16
+msgid "Arabic"
+msgstr "ערבית"
+
+#: ../mucharmap/unicode-blocks.h:27 ../mucharmap/unicode-scripts.h:93
+msgid "Syriac"
+msgstr "סורית"
+
+#: ../mucharmap/unicode-blocks.h:28
+msgid "Arabic Supplement"
+msgstr "השלמה של ערבית"
+
+#: ../mucharmap/unicode-blocks.h:29 ../mucharmap/unicode-scripts.h:101
+msgid "Thaana"
+msgstr "ת׳אנה"
+
+#: ../mucharmap/unicode-blocks.h:30 ../mucharmap/unicode-scripts.h:73
+msgid "N'Ko"
+msgstr "נ׳קו"
+
+#: ../mucharmap/unicode-blocks.h:31 ../mucharmap/unicode-scripts.h:87
+msgid "Samaritan"
+msgstr "שומרונית"
+
+#: ../mucharmap/unicode-blocks.h:32 ../mucharmap/unicode-scripts.h:36
+msgid "Devanagari"
+msgstr "דוונגרי"
+
+#: ../mucharmap/unicode-blocks.h:33 ../mucharmap/unicode-scripts.h:21
+msgid "Bengali"
+msgstr "בנגלית"
+
+#: ../mucharmap/unicode-blocks.h:34 ../mucharmap/unicode-scripts.h:44
+msgid "Gurmukhi"
+msgstr "גורמוכי"
+
+#: ../mucharmap/unicode-blocks.h:35 ../mucharmap/unicode-scripts.h:43
+msgid "Gujarati"
+msgstr "גוג'ראטי"
+
+#: ../mucharmap/unicode-blocks.h:36 ../mucharmap/unicode-scripts.h:81
+msgid "Oriya"
+msgstr "אורייה"
+
+#: ../mucharmap/unicode-blocks.h:37 ../mucharmap/unicode-scripts.h:99
+msgid "Tamil"
+msgstr "טאמילית"
+
+#: ../mucharmap/unicode-blocks.h:38 ../mucharmap/unicode-scripts.h:100
+msgid "Telugu"
+msgstr "טלוגו"
+
+#: ../mucharmap/unicode-blocks.h:39 ../mucharmap/unicode-scripts.h:56
+msgid "Kannada"
+msgstr "קאנאדה"
+
+#: ../mucharmap/unicode-blocks.h:40 ../mucharmap/unicode-scripts.h:69
+msgid "Malayalam"
+msgstr "מלאיאלאם"
+
+#: ../mucharmap/unicode-blocks.h:41 ../mucharmap/unicode-scripts.h:90
+msgid "Sinhala"
+msgstr "סינהלה"
+
+#: ../mucharmap/unicode-blocks.h:42 ../mucharmap/unicode-scripts.h:102
+msgid "Thai"
+msgstr "תאית"
+
+#: ../mucharmap/unicode-blocks.h:43 ../mucharmap/unicode-scripts.h:61
+msgid "Lao"
+msgstr "לאו"
+
+#: ../mucharmap/unicode-blocks.h:44 ../mucharmap/unicode-scripts.h:103
+msgid "Tibetan"
+msgstr "טיבטית"
+
+#: ../mucharmap/unicode-blocks.h:45 ../mucharmap/unicode-scripts.h:72
+msgid "Myanmar"
+msgstr "מיאנמר (בורמזית)"
+
+#: ../mucharmap/unicode-blocks.h:46 ../mucharmap/unicode-scripts.h:39
+msgid "Georgian"
+msgstr "גאורגית"
+
+#: ../mucharmap/unicode-blocks.h:47
+msgid "Hangul Jamo"
+msgstr "האנגול ג׳מו"
+
+#: ../mucharmap/unicode-blocks.h:48 ../mucharmap/unicode-scripts.h:38
+msgid "Ethiopic"
+msgstr "אתיופית"
+
+#: ../mucharmap/unicode-blocks.h:49
+msgid "Ethiopic Supplement"
+msgstr "השלמה של אתיופית"
+
+#: ../mucharmap/unicode-blocks.h:50 ../mucharmap/unicode-scripts.h:29
+msgid "Cherokee"
+msgstr "צ׳רוקי"
+
+#: ../mucharmap/unicode-blocks.h:51
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "הבהרות קנדיות ילידיות מאוחדות"
+
+#: ../mucharmap/unicode-blocks.h:52 ../mucharmap/unicode-scripts.h:75
+msgid "Ogham"
+msgstr "אוגם"
+
+#: ../mucharmap/unicode-blocks.h:53 ../mucharmap/unicode-scripts.h:86
+msgid "Runic"
+msgstr "רונית"
+
+#: ../mucharmap/unicode-blocks.h:54 ../mucharmap/unicode-scripts.h:94
+msgid "Tagalog"
+msgstr "טגלוג"
+
+#: ../mucharmap/unicode-blocks.h:55 ../mucharmap/unicode-scripts.h:47
+msgid "Hanunoo"
+msgstr "הנונואו"
+
+#: ../mucharmap/unicode-blocks.h:56 ../mucharmap/unicode-scripts.h:25
+msgid "Buhid"
+msgstr "בוהיד"
+
+#: ../mucharmap/unicode-blocks.h:57 ../mucharmap/unicode-scripts.h:95
+msgid "Tagbanwa"
+msgstr "טגבאנווה"
+
+#: ../mucharmap/unicode-blocks.h:58 ../mucharmap/unicode-scripts.h:60
+msgid "Khmer"
+msgstr "ח'מר"
+
+#: ../mucharmap/unicode-blocks.h:59 ../mucharmap/unicode-scripts.h:71
+msgid "Mongolian"
+msgstr "מונגולית"
+
+#: ../mucharmap/unicode-blocks.h:60
+msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgstr "השלמה של סימניות קנדיות ילידות מאוחדות"
+
+#: ../mucharmap/unicode-blocks.h:61 ../mucharmap/unicode-scripts.h:64
+msgid "Limbu"
+msgstr "לימבו"
+
+#: ../mucharmap/unicode-blocks.h:62 ../mucharmap/unicode-scripts.h:96
+msgid "Tai Le"
+msgstr "טאי לה"
+
+#: ../mucharmap/unicode-blocks.h:63 ../mucharmap/unicode-scripts.h:74
+msgid "New Tai Lue"
+msgstr "טאי לו חדשה"
+
+#: ../mucharmap/unicode-blocks.h:64
+msgid "Khmer Symbols"
+msgstr "סמלים לח׳מר"
+
+#: ../mucharmap/unicode-blocks.h:65 ../mucharmap/unicode-scripts.h:24
+msgid "Buginese"
+msgstr "בוגית"
+
+#: ../mucharmap/unicode-blocks.h:66 ../mucharmap/unicode-scripts.h:97
+msgid "Tai Tham"
+msgstr "טאי תאם"
+
+#: ../mucharmap/unicode-blocks.h:67 ../mucharmap/unicode-scripts.h:19
+msgid "Balinese"
+msgstr "באלית"
+
+#: ../mucharmap/unicode-blocks.h:68 ../mucharmap/unicode-scripts.h:91
+msgid "Sundanese"
+msgstr "סונדית"
+
+#: ../mucharmap/unicode-blocks.h:69 ../mucharmap/unicode-scripts.h:63
+msgid "Lepcha"
+msgstr "לפצ׳ה"
+
+#: ../mucharmap/unicode-blocks.h:70 ../mucharmap/unicode-scripts.h:76
+msgid "Ol Chiki"
+msgstr "אול צ׳יקי"
+
+#: ../mucharmap/unicode-blocks.h:71
+msgid "Vedic Extensions"
+msgstr "הרחבות לוודית"
+
+#: ../mucharmap/unicode-blocks.h:72
+msgid "Phonetic Extensions"
+msgstr "הרחבות פונטיות"
+
+#: ../mucharmap/unicode-blocks.h:73
+msgid "Phonetic Extensions Supplement"
+msgstr "השלמת תוספות פונטיות"
+
+#: ../mucharmap/unicode-blocks.h:74
+msgid "Combining Diacritical Marks Supplement"
+msgstr "השלמות לסימנים דיאקריטיים מורכבים"
+
+#: ../mucharmap/unicode-blocks.h:75
+msgid "Latin Extended Additional"
+msgstr "לטיני הרחבות נוסף"
+
+#: ../mucharmap/unicode-blocks.h:76
+msgid "Greek Extended"
+msgstr "יווני הרחבות"
+
+#: ../mucharmap/unicode-blocks.h:77
+msgid "General Punctuation"
+msgstr "פיסוק כללי"
+
+#: ../mucharmap/unicode-blocks.h:78
+msgid "Superscripts and Subscripts"
+msgstr "כתוביות עיליות ותחתיות"
+
+#: ../mucharmap/unicode-blocks.h:79
+msgid "Currency Symbols"
+msgstr "סמלי מטבע"
+
+#: ../mucharmap/unicode-blocks.h:80
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "סימנים דיאקריטיים מורכבים לסמלים"
+
+#: ../mucharmap/unicode-blocks.h:81
+msgid "Letterlike Symbols"
+msgstr "סימנים דמויי אותיות"
+
+#: ../mucharmap/unicode-blocks.h:82
+msgid "Number Forms"
+msgstr "צורות מספר"
+
+#: ../mucharmap/unicode-blocks.h:83
+msgid "Arrows"
+msgstr "חצים"
+
+#: ../mucharmap/unicode-blocks.h:84
+msgid "Mathematical Operators"
+msgstr "סימנים מתמטיים"
+
+#: ../mucharmap/unicode-blocks.h:85
+msgid "Miscellaneous Technical"
+msgstr "סימנים טכניים שונים"
+
+#: ../mucharmap/unicode-blocks.h:86
+msgid "Control Pictures"
+msgstr "תמונות של תווי בקרה"
+
+#: ../mucharmap/unicode-blocks.h:87
+msgid "Optical Character Recognition"
+msgstr "סימנים לסורקי כתב"
+
+#: ../mucharmap/unicode-blocks.h:88
+msgid "Enclosed Alphanumerics"
+msgstr "סימנים אלפאנומריים מוסגרים"
+
+#: ../mucharmap/unicode-blocks.h:89
+msgid "Box Drawing"
+msgstr "סרטוט קופסאות"
+
+#: ../mucharmap/unicode-blocks.h:90
+msgid "Block Elements"
+msgstr "יסודות של בלוקים"
+
+#: ../mucharmap/unicode-blocks.h:91
+msgid "Geometric Shapes"
+msgstr "צורות הנדסיות"
+
+#: ../mucharmap/unicode-blocks.h:92
+msgid "Miscellaneous Symbols"
+msgstr "סמלים שונים"
+
+#: ../mucharmap/unicode-blocks.h:93
+msgid "Dingbats"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:94
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "סמלים מתמטיים שונות-א׳"
+
+#: ../mucharmap/unicode-blocks.h:95
+msgid "Supplemental Arrows-A"
+msgstr "חצים השלמות-א׳"
+
+#: ../mucharmap/unicode-blocks.h:96
+msgid "Braille Patterns"
+msgstr "תבניות ברייל"
+
+#: ../mucharmap/unicode-blocks.h:97
+msgid "Supplemental Arrows-B"
+msgstr "חצים השלמות-ב׳"
+
+#: ../mucharmap/unicode-blocks.h:98
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "סמלים מתמטיים שונות-ב׳"
+
+#: ../mucharmap/unicode-blocks.h:99
+msgid "Supplemental Mathematical Operators"
+msgstr "השלמה של פעולות מתמטיות"
+
+#: ../mucharmap/unicode-blocks.h:100
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "סמלים וחצים שונים"
+
+#: ../mucharmap/unicode-blocks.h:101 ../mucharmap/unicode-scripts.h:40
+msgid "Glagolitic"
+msgstr "גלגולית"
+
+#: ../mucharmap/unicode-blocks.h:102
+msgid "Latin Extended-C"
+msgstr "לטינית מורחבת-ג׳"
+
+#: ../mucharmap/unicode-blocks.h:103 ../mucharmap/unicode-scripts.h:31
+msgid "Coptic"
+msgstr "קופטי"
+
+#: ../mucharmap/unicode-blocks.h:104
+msgid "Georgian Supplement"
+msgstr "גרוזיני השלמות"
+
+#: ../mucharmap/unicode-blocks.h:105 ../mucharmap/unicode-scripts.h:104
+msgid "Tifinagh"
+msgstr "תיפינאג"
+
+#: ../mucharmap/unicode-blocks.h:106
+msgid "Ethiopic Extended"
+msgstr "אתיופי הרחבות"
+
+#: ../mucharmap/unicode-blocks.h:107
+msgid "Cyrillic Extended-A"
+msgstr "קירילי הרחבה-א׳"
+
+#: ../mucharmap/unicode-blocks.h:108
+msgid "Supplemental Punctuation"
+msgstr "השלמות פיסוק"
+
+#: ../mucharmap/unicode-blocks.h:109
+msgid "CJK Radicals Supplement"
+msgstr "רדיקלים נוספים לסינית, יפנית וקוריאנית"
+
+#: ../mucharmap/unicode-blocks.h:110
+msgid "Kangxi Radicals"
+msgstr "רדיקלים של קאנגשי"
+
+#: ../mucharmap/unicode-blocks.h:111
+msgid "Ideographic Description Characters"
+msgstr "תווי תיאור אידיאוגרפי"
+
+#: ../mucharmap/unicode-blocks.h:112
+msgid "CJK Symbols and Punctuation"
+msgstr "סמלים וסימני פיסוק סיניים, יפניים וקוריאניים"
+
+#: ../mucharmap/unicode-blocks.h:113 ../mucharmap/unicode-scripts.h:49
+msgid "Hiragana"
+msgstr "הירגאנה"
+
+#: ../mucharmap/unicode-blocks.h:114 ../mucharmap/unicode-scripts.h:57
+msgid "Katakana"
+msgstr "קטקאנה"
+
+#: ../mucharmap/unicode-blocks.h:115 ../mucharmap/unicode-scripts.h:22
+msgid "Bopomofo"
+msgstr "בופומופו"
+
+#: ../mucharmap/unicode-blocks.h:116
+msgid "Hangul Compatibility Jamo"
+msgstr "ג׳מו של האנגול לתאימות"
+
+#: ../mucharmap/unicode-blocks.h:117
+msgid "Kanbun"
+msgstr "קאנבון"
+
+#: ../mucharmap/unicode-blocks.h:118
+msgid "Bopomofo Extended"
+msgstr "בופומופו מורחב"
+
+#: ../mucharmap/unicode-blocks.h:119
+msgid "CJK Strokes"
+msgstr "קווים להרכבת אותיות בסינית, יפנית וקוריאנית"
+
+#: ../mucharmap/unicode-blocks.h:120
+msgid "Katakana Phonetic Extensions"
+msgstr "הרחבות פונטיות לקטקאנה"
+
+#: ../mucharmap/unicode-blocks.h:121
+msgid "Enclosed CJK Letters and Months"
+msgstr "תווים וחודשים מוסגרים לסינית, יפנית וקוריאנית"
+
+#: ../mucharmap/unicode-blocks.h:122
+msgid "CJK Compatibility"
+msgstr "תאימות לסינית, יפנית וקוריאנית"
+
+#: ../mucharmap/unicode-blocks.h:123
+msgid "CJK Unified Ideographs Extension A"
+msgstr "אידיאוגרמות סיניות מאוחדות, הרחבה א׳"
+
+#: ../mucharmap/unicode-blocks.h:124
+msgid "Yijing Hexagram Symbols"
+msgstr "סמלי הקסגרמה של ייג׳ינג"
+
+#: ../mucharmap/unicode-blocks.h:125
+msgid "CJK Unified Ideographs"
+msgstr "אידיאוגרמות סיניות מאוחדות"
+
+#: ../mucharmap/unicode-blocks.h:126
+msgid "Yi Syllables"
+msgstr "הברות יי"
+
+#: ../mucharmap/unicode-blocks.h:127
+msgid "Yi Radicals"
+msgstr "שורשי יי"
+
+#: ../mucharmap/unicode-blocks.h:128 ../mucharmap/unicode-scripts.h:66
+msgid "Lisu"
+msgstr "ליסו"
+
+#: ../mucharmap/unicode-blocks.h:129 ../mucharmap/unicode-scripts.h:106
+msgid "Vai"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:130
+msgid "Cyrillic Extended-B"
+msgstr "קירילי הרחבה-ב׳"
+
+#: ../mucharmap/unicode-blocks.h:131 ../mucharmap/unicode-scripts.h:20
+msgid "Bamum"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:132
+msgid "Modifier Tone Letters"
+msgstr "אותיות להחלפת טון"
+
+#: ../mucharmap/unicode-blocks.h:133
+msgid "Latin Extended-D"
+msgstr "לטיני הרחבה-ד׳"
+
+#: ../mucharmap/unicode-blocks.h:134 ../mucharmap/unicode-scripts.h:92
+msgid "Syloti Nagri"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:135
+msgid "Common Indic Number Forms"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:136
+msgid "Phags-pa"
+msgstr "פאגס-פה"
+
+#: ../mucharmap/unicode-blocks.h:137 ../mucharmap/unicode-scripts.h:88
+msgid "Saurashtra"
+msgstr "‫סורשטרה‬"
+
+#: ../mucharmap/unicode-blocks.h:138
+msgid "Devanagari Extended"
+msgstr "דוונגרי מורחב"
+
+#: ../mucharmap/unicode-blocks.h:139 ../mucharmap/unicode-scripts.h:58
+msgid "Kayah Li"
+msgstr "קאיה לי"
+
+#: ../mucharmap/unicode-blocks.h:140 ../mucharmap/unicode-scripts.h:85
+msgid "Rejang"
+msgstr "רג'אנג"
+
+#: ../mucharmap/unicode-blocks.h:141
+msgid "Hangul Jamo Extended-A"
+msgstr "האנגול ג׳מו הרחבה א׳"
+
+#: ../mucharmap/unicode-blocks.h:142 ../mucharmap/unicode-scripts.h:54
+msgid "Javanese"
+msgstr "ג'אוואנית"
+
+#: ../mucharmap/unicode-blocks.h:143 ../mucharmap/unicode-scripts.h:28
+msgid "Cham"
+msgstr "צ׳אם"
+
+#: ../mucharmap/unicode-blocks.h:144
+msgid "Myanmar Extended-A"
+msgstr "מיאנמר (בורמזית) הרחבה-א׳"
+
+#: ../mucharmap/unicode-blocks.h:145 ../mucharmap/unicode-scripts.h:98
+msgid "Tai Viet"
+msgstr "תאי וייט"
+
+#: ../mucharmap/unicode-blocks.h:146 ../mucharmap/unicode-scripts.h:70
+msgid "Meetei Mayek"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:147
+msgid "Hangul Syllables"
+msgstr "סימניות האנגול"
+
+#: ../mucharmap/unicode-blocks.h:148
+msgid "Hangul Jamo Extended-B"
+msgstr "האנגול ג׳מו הרחבה ב׳"
+
+#: ../mucharmap/unicode-blocks.h:149
+msgid "High Surrogates"
+msgstr "ממלאי מקום גבוהים"
+
+#: ../mucharmap/unicode-blocks.h:150
+msgid "High Private Use Surrogates"
+msgstr "ממלאי מקום גבוהים לשימוש פרטי"
+
+#: ../mucharmap/unicode-blocks.h:151
+msgid "Low Surrogates"
+msgstr "ממלאי מקום נמוכים"
+
+#: ../mucharmap/unicode-blocks.h:152
+msgid "Private Use Area"
+msgstr "אזור שימוש פרטי"
+
+#: ../mucharmap/unicode-blocks.h:153
+msgid "CJK Compatibility Ideographs"
+msgstr "אידיאוגרמות סיניות, יפניות וקוריאניות לתאימות"
+
+#: ../mucharmap/unicode-blocks.h:154
+msgid "Alphabetic Presentation Forms"
+msgstr "צורות תצוגה לאלפבית"
+
+#: ../mucharmap/unicode-blocks.h:155
+msgid "Arabic Presentation Forms-A"
+msgstr "צורות תצוגה לערבית א׳"
+
+#: ../mucharmap/unicode-blocks.h:156
+msgid "Variation Selectors"
+msgstr "בוררי צורות משנה"
+
+#: ../mucharmap/unicode-blocks.h:157
+msgid "Vertical Forms"
+msgstr "צורות אנכיות"
+
+#: ../mucharmap/unicode-blocks.h:158
+msgid "Combining Half Marks"
+msgstr "חצאי סימנים מתחברים"
+
+#: ../mucharmap/unicode-blocks.h:159
+msgid "CJK Compatibility Forms"
+msgstr "צורות להתאמה לשפות המזרח הרחוק"
+
+#: ../mucharmap/unicode-blocks.h:160
+msgid "Small Form Variants"
+msgstr "גרסאות שונות של צורות קטנות"
+
+#: ../mucharmap/unicode-blocks.h:161
+msgid "Arabic Presentation Forms-B"
+msgstr "צורות תצוגה לערבית ב׳"
+
+#: ../mucharmap/unicode-blocks.h:162
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "צורות לאורך חצוי ואורך מלא"
+
+#: ../mucharmap/unicode-blocks.h:163
+msgid "Specials"
+msgstr "מיוחדים"
+
+#: ../mucharmap/unicode-blocks.h:164
+msgid "Linear B Syllabary"
+msgstr "הברות של כתב לינארי ב׳"
+
+#: ../mucharmap/unicode-blocks.h:165
+msgid "Linear B Ideograms"
+msgstr "אידיאוגרמות של כתב לינארי ב׳"
+
+#: ../mucharmap/unicode-blocks.h:166
+msgid "Aegean Numbers"
+msgstr "מספרים אגאים"
+
+#: ../mucharmap/unicode-blocks.h:167
+msgid "Ancient Greek Numbers"
+msgstr "מספרים יווניים עתיקים"
+
+#: ../mucharmap/unicode-blocks.h:168
+msgid "Ancient Symbols"
+msgstr "סמלים עתיקים"
+
+#: ../mucharmap/unicode-blocks.h:169
+msgid "Phaistos Disc"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:170 ../mucharmap/unicode-scripts.h:67
+msgid "Lycian"
+msgstr "ליסיאנית"
+
+#: ../mucharmap/unicode-blocks.h:171 ../mucharmap/unicode-scripts.h:27
+msgid "Carian"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:172 ../mucharmap/unicode-scripts.h:77
+msgid "Old Italic"
+msgstr "איטאלית עתיקה"
+
+#: ../mucharmap/unicode-blocks.h:173 ../mucharmap/unicode-scripts.h:41
+msgid "Gothic"
+msgstr "גותי"
+
+#: ../mucharmap/unicode-blocks.h:174 ../mucharmap/unicode-scripts.h:105
+msgid "Ugaritic"
+msgstr "אוגריתי"
+
+#: ../mucharmap/unicode-blocks.h:175 ../mucharmap/unicode-scripts.h:78
+msgid "Old Persian"
+msgstr "פרסי עתיק"
+
+#: ../mucharmap/unicode-blocks.h:176 ../mucharmap/unicode-scripts.h:35
+msgid "Deseret"
+msgstr "דזרט"
+
+#: ../mucharmap/unicode-blocks.h:177 ../mucharmap/unicode-scripts.h:89
+msgid "Shavian"
+msgstr "שאוויאנית"
+
+#: ../mucharmap/unicode-blocks.h:178 ../mucharmap/unicode-scripts.h:82
+msgid "Osmanya"
+msgstr "אוסמאניה"
+
+#: ../mucharmap/unicode-blocks.h:179
+msgid "Cypriot Syllabary"
+msgstr "הברות קפריסאיות"
+
+#: ../mucharmap/unicode-blocks.h:180 ../mucharmap/unicode-scripts.h:50
+msgid "Imperial Aramaic"
+msgstr "ארמית ממלכתית"
+
+#: ../mucharmap/unicode-blocks.h:181 ../mucharmap/unicode-scripts.h:84
+msgid "Phoenician"
+msgstr "פיניקית"
+
+#: ../mucharmap/unicode-blocks.h:182 ../mucharmap/unicode-scripts.h:68
+msgid "Lydian"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:183 ../mucharmap/unicode-scripts.h:59
+msgid "Kharoshthi"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:184 ../mucharmap/unicode-scripts.h:79
+msgid "Old South Arabian"
+msgstr "דרום-ערבית עתיקה"
+
+#: ../mucharmap/unicode-blocks.h:185 ../mucharmap/unicode-scripts.h:18
+msgid "Avestan"
+msgstr "אווסטית"
+
+#: ../mucharmap/unicode-blocks.h:186 ../mucharmap/unicode-scripts.h:53
+msgid "Inscriptional Parthian"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:187 ../mucharmap/unicode-scripts.h:52
+msgid "Inscriptional Pahlavi"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:188 ../mucharmap/unicode-scripts.h:80
+msgid "Old Turkic"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:189
+msgid "Rumi Numeral Symbols"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:190 ../mucharmap/unicode-scripts.h:55
+msgid "Kaithi"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:191 ../mucharmap/unicode-scripts.h:32
+msgid "Cuneiform"
+msgstr "כתב יתדות"
+
+#: ../mucharmap/unicode-blocks.h:192
+msgid "Cuneiform Numbers and Punctuation"
+msgstr "פיסוק ומספרים בכתב יתדות"
+
+#: ../mucharmap/unicode-blocks.h:193 ../mucharmap/unicode-scripts.h:37
+msgid "Egyptian Hieroglyphs"
+msgstr "כתב חרטומים"
+
+#: ../mucharmap/unicode-blocks.h:194
+msgid "Byzantine Musical Symbols"
+msgstr "סמלים מוזיקליים ביזנטים"
+
+#: ../mucharmap/unicode-blocks.h:195
+msgid "Musical Symbols"
+msgstr "סמלים מוזיקליים"
+
+#: ../mucharmap/unicode-blocks.h:196
+msgid "Ancient Greek Musical Notation"
+msgstr "סמלים מוזיקליים יווניים עתיקים"
+
+#: ../mucharmap/unicode-blocks.h:197
+msgid "Tai Xuan Jing Symbols"
+msgstr "סמלי טאי שואן ג׳ינג"
+
+#: ../mucharmap/unicode-blocks.h:198
+msgid "Counting Rod Numerals"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:199
+msgid "Mathematical Alphanumeric Symbols"
+msgstr "סמלים מתמטיים אלפאנומריים"
+
+#: ../mucharmap/unicode-blocks.h:200
+msgid "Mahjong Tiles"
+msgstr "אריחי מה־ג׳ונג"
+
+#: ../mucharmap/unicode-blocks.h:201
+msgid "Domino Tiles"
+msgstr "אריחי דומינו"
+
+#: ../mucharmap/unicode-blocks.h:202
+msgid "Enclosed Alphanumeric Supplement"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:203
+msgid "Enclosed Ideographic Supplement"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:204
+msgid "CJK Unified Ideographs Extension B"
+msgstr "אידאוגרפיים מאוחדים לסינית, ליפנית ולקוריאנית הרחבה ב׳"
+
+#: ../mucharmap/unicode-blocks.h:205
+msgid "CJK Unified Ideographs Extension C"
+msgstr "אידאוגרפיים מאוחדים לסינית, ליפנית ולקוריאנית הרחבה ג׳"
+
+#: ../mucharmap/unicode-blocks.h:206
+msgid "CJK Compatibility Ideographs Supplement"
+msgstr "השלמת אידיאוגרמות תאימות לסינית, יפנית וקוריאנית"
+
+#: ../mucharmap/unicode-blocks.h:207
+msgid "Tags"
+msgstr "תגיות"
+
+#: ../mucharmap/unicode-blocks.h:208
+msgid "Variation Selectors Supplement"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:209
+msgid "Supplementary Private Use Area-A"
+msgstr "אזור שימוש פרטי משלים א׳"
+
+#: ../mucharmap/unicode-blocks.h:210
+msgid "Supplementary Private Use Area-B"
+msgstr "אזור שימוש פרטי משלים ב׳"
+
+#: ../mucharmap/unicode-scripts.h:23
+msgid "Braille"
+msgstr "ברייל"
+
+#: ../mucharmap/unicode-scripts.h:26
+msgid "Canadian Aboriginal"
+msgstr "קנדי ילידי"
+
+#: ../mucharmap/unicode-scripts.h:33
+msgid "Cypriot"
+msgstr "קפריסאי"
+
+#: ../mucharmap/unicode-scripts.h:42
+msgid "Greek"
+msgstr "יווני"
+
+#: ../mucharmap/unicode-scripts.h:45
+msgid "Han"
+msgstr "חאן"
+
+#: ../mucharmap/unicode-scripts.h:46
+msgid "Hangul"
+msgstr "האנגול"
+
+#: ../mucharmap/unicode-scripts.h:51
+msgid "Inherited"
+msgstr "ירושה"
+
+#: ../mucharmap/unicode-scripts.h:62
+msgid "Latin"
+msgstr "לטיני"
+
+#: ../mucharmap/unicode-scripts.h:65
+msgid "Linear B"
+msgstr "כתב לינארי ב׳"
+
+#: ../mucharmap/unicode-scripts.h:83
+msgid "Phags Pa"
+msgstr "פאגס פה"
+
+#: ../mucharmap/unicode-scripts.h:107
+msgid "Yi"
+msgstr "יי"
+
+#: ../mucharmap/mucharmap-search-dialog.c:569
+msgid "Information"
+msgstr "מידע"
+
+#. follow hig guidelines
+#: ../mucharmap/mucharmap-search-dialog.c:735
+msgid "Find"
+msgstr "חיפוש"
+
+#: ../mucharmap/mucharmap-search-dialog.c:753
+msgid "_Previous"
+msgstr "ה_קודם"
+
+#: ../mucharmap/mucharmap-search-dialog.c:764
+msgid "_Next"
+msgstr "ה_בא"
+
+#: ../mucharmap/mucharmap-search-dialog.c:779
+msgid "_Search:"
+msgstr "_חיפוש:"
+
+#: ../mucharmap/mucharmap-search-dialog.c:789
+msgid "Match _whole word"
+msgstr "חיפוש _כל המילה"
+
+#: ../mucharmap/mucharmap-search-dialog.c:794
+msgid "Search in character _details"
+msgstr "חיפוש בפרטי _התו"
+
+#: ../mucharmap/mucharmap-block-chapters-model.c:84
+msgid "All"
+msgstr "הכול"
+
+#: ../mucharmap/mucharmap-block-chapters-model.c:187
+msgid "Unicode Block"
+msgstr "מקטע יוניקוד"
+
+#: ../mucharmap/mucharmap-script-chapters-model.c:130
+msgid "Script"
+msgstr "כתב"
+
+#~ msgid "Sho_w only glyphs from this font"
+#~ msgstr "הצגת _גליפים מגופן זה בלבד"
+
+#~ msgid "Mucharmap"
+#~ msgstr "Mucharmap"
+
+#~ msgid "_Quit"
+#~ msgstr "_יציאה"
+
+#~ msgid "Zoom _In"
+#~ msgstr "_התקרב"
+
+#~ msgid "Zoom _Out"
+#~ msgstr "_התרחק"
+
+#~ msgid "_Normal Size"
+#~ msgstr "_גודל רגיל"
+
+#~ msgid "_Find..."
+#~ msgstr "_מצא..."

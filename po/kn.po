@@ -1,0 +1,1259 @@
+# translation of mucharmap.HEAD.kn.po to Kannada
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Shankar Prasad <svenkate@redhat.com>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: mucharmap.HEAD.kn\n"
+"Report-Msgid-Bugs-To: http://bugzilla.mate.org/enter_bug.cgi?product=mucharmap&component=general\n"
+"POT-Creation-Date: 2009-03-15 18:41+0000\n"
+"PO-Revision-Date: 2009-03-27 12:05+0530\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
+"Language-Team: Kannada <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Kannada\n"
+"X-Poedit-Country: INDIA\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#: ../mucharmap.desktop.in.in.h:1 ../mucharmap/mucharmap-window.c:905
+#: ../mucharmap/main.c:80
+msgid "Character Map"
+msgstr "ಅಕ್ಷರ ನಕ್ಷೆ"
+
+#: ../mucharmap.desktop.in.in.h:2
+msgid "Insert special characters into documents"
+msgstr "ವಿಶೇಷ ಅಕ್ಷರಗಳನ್ನು ದಸ್ತಾವೇಜಿನಲ್ಲಿ ಸೇರಿಸಿ"
+
+#: ../mucharmap/mucharmap-charmap.c:573
+msgid "Canonical decomposition:"
+msgstr "ಶಾಸ್ತ್ರೀಯ(ಕನಾನಿಕಲ್) ಡಿಕಂಪೋಸಿಶನ್:"
+
+#: ../mucharmap/mucharmap-charmap.c:616 ../mucharmap/mucharmap-chartable.c:568
+msgid "[not a printable character]"
+msgstr "[ಮುದ್ರಿಸಲಾಗದ ಅಕ್ಷರಗಳು]"
+
+#: ../mucharmap/mucharmap-charmap.c:630
+msgid "General Character Properties"
+msgstr "ಸಾಮಾನ್ಯ ಅಕ್ಷರಗಳ ಗುಣಲಕ್ಷಣಗಳು"
+
+#: ../mucharmap/mucharmap-charmap.c:636
+msgid "In Unicode since:"
+msgstr "ಯುನಿಕೋಡ್‌ನಲ್ಲಿ ಬಂದಿದ್ದು:"
+
+#. character category
+#: ../mucharmap/mucharmap-charmap.c:640
+msgid "Unicode category:"
+msgstr "ಯುನಿಕೋಡ್ ವರ್ಗ:"
+
+#: ../mucharmap/mucharmap-charmap.c:649
+msgid "Various Useful Representations"
+msgstr "ವಿವಿಧ ಉಪಯುಕ್ತ ನಿರೂಪಣೆಗಳು"
+
+#: ../mucharmap/mucharmap-charmap.c:659
+msgid "UTF-8:"
+msgstr "UTF-8:"
+
+#: ../mucharmap/mucharmap-charmap.c:667
+msgid "UTF-16:"
+msgstr "UTF-16:"
+
+#: ../mucharmap/mucharmap-charmap.c:678
+msgid "C octal escaped UTF-8:"
+msgstr "C ಅಷ್ಟದಿಂದ ಪಾರಾದ UTF-8:"
+
+#: ../mucharmap/mucharmap-charmap.c:688
+msgid "XML decimal entity:"
+msgstr "XML ದಶಾಂಶ ನಮೂದು:"
+
+#: ../mucharmap/mucharmap-charmap.c:699
+msgid "Annotations and Cross References"
+msgstr "ವ್ಯಾಖ್ಯಾನಗಳು (annotations) ಮತ್ತು ಪ್ರತ್ಯುಲ್ಲೇಖಗಳು (cross-references)"
+
+#: ../mucharmap/mucharmap-charmap.c:706
+msgid "Alias names:"
+msgstr "ಅಲಿಯಾಸ್ ಹೆಸರುಗಳು:"
+
+#: ../mucharmap/mucharmap-charmap.c:715
+msgid "Notes:"
+msgstr "ಟಿಪ್ಪಣಿಗಳು:"
+
+#: ../mucharmap/mucharmap-charmap.c:724
+msgid "See also:"
+msgstr "ಇದನ್ನೂ ಸಹ ನೋಡಿ:"
+
+#: ../mucharmap/mucharmap-charmap.c:733
+msgid "Approximate equivalents:"
+msgstr "ಅಂದಾಜಾಗಿ ಸಮಾನವುಳ್ಳ:"
+
+#: ../mucharmap/mucharmap-charmap.c:742
+msgid "Equivalents:"
+msgstr "ಸಮಾನವುಳ್ಳ:"
+
+#: ../mucharmap/mucharmap-charmap.c:758
+msgid "CJK Ideograph Information"
+msgstr "CJK ಭಾವಲಿಪಿ (ಈಡಿಯೋಗ್ರಾಫ್) ಮಾಹಿತಿ"
+
+#: ../mucharmap/mucharmap-charmap.c:763
+msgid "Definition in English:"
+msgstr "ಇಂಗ್ಲೀಷಿನಲ್ಲಿ ಅರ್ಥ:"
+
+#: ../mucharmap/mucharmap-charmap.c:768
+msgid "Mandarin Pronunciation:"
+msgstr "ಮಂಡಾರಿನ್ ಉಚ್ಚಾರಣೆ:"
+
+#: ../mucharmap/mucharmap-charmap.c:773
+msgid "Cantonese Pronunciation:"
+msgstr "ಕ್ಯಾಂಟೋನಿಸ್ ಉಚ್ಚಾರಣೆ:"
+
+#: ../mucharmap/mucharmap-charmap.c:778
+msgid "Japanese On Pronunciation:"
+msgstr "ಜಾಪನೀಸ್ ಓನ್ ಉಚ್ಚರಣೆ:"
+
+#: ../mucharmap/mucharmap-charmap.c:783
+msgid "Japanese Kun Pronunciation:"
+msgstr "ಜಾಪನೀಸ್ ಕುನ್ ಉಚ್ಚರಣೆ:"
+
+#: ../mucharmap/mucharmap-charmap.c:788
+msgid "Tang Pronunciation:"
+msgstr "ಟ್ಯಾಂಗ್ ಉಚ್ಚಾರಣೆ:"
+
+#: ../mucharmap/mucharmap-charmap.c:793
+msgid "Korean Pronunciation:"
+msgstr "ಕೊರಿಯನ್ ಉಚ್ಚಾರಣೆ:"
+
+#: ../mucharmap/mucharmap-charmap.c:1178
+msgid "Characte_r Table"
+msgstr "ಅಕ್ಷರಗಳ ಕೋಷ್ಟಕ(_r)"
+
+#: ../mucharmap/mucharmap-charmap.c:1224
+msgid "Character _Details"
+msgstr "ಅಕ್ಷರಗಳ ವಿವರಗಳು(_D)"
+
+#: ../mucharmap/mucharmap-chartable.c:1371
+msgid "Unknown character, unable to identify."
+msgstr "ತಿಳಿದಿಲ್ಲದ ಅಕ್ಷರ, ಗುರುತಿಸಲು ಆಗಲಿಲ್ಲ."
+
+#: ../mucharmap/mucharmap-chartable.c:1373
+#: ../mucharmap/mucharmap-search-dialog.c:585
+msgid "Not found."
+msgstr "ಕಂಡು ಬಂದಿಲ್ಲ."
+
+#: ../mucharmap/mucharmap-chartable.c:1376
+msgid "Character found."
+msgstr "ಅಕ್ಷರವು ಕಂಡು ಬಂದಿದೆ."
+
+#: ../mucharmap/mucharmap-chartable-accessible.c:771
+msgid "Character Table"
+msgstr "ಆಕ್ಷರಗಳ ಕೋಷ್ಟಕ"
+
+#: ../mucharmap/mucharmap-mini-fontsel.c:280
+msgid "Font"
+msgstr "ಅಕ್ಷರ ಶೈಲಿ"
+
+#: ../mucharmap/mucharmap-mini-fontsel.c:293
+msgid "Font Family"
+msgstr "ಆಕ್ಷರ ಶೈಲಿಯ ಪರಿವಾರ"
+
+#: ../mucharmap/mucharmap-mini-fontsel.c:311
+msgid "Font Size"
+msgstr "ಅಕ್ಷರಶೈಲಿ ಗಾತ್ರ"
+
+#: ../mucharmap/mucharmap-settings.c:71
+msgid "MateConf could not be initialized."
+msgstr "MateConf ಅನ್ನು ಆರಂಭಿಸಲು ಸಾಧ್ಯವಾಗಿಲ್ಲ."
+
+#. Unicode assigns "Common" as the script name for any character not
+#. * specifically listed in Scripts.txt
+#: ../mucharmap/mucharmap-script-codepoint-list.c:463
+#: ../mucharmap/unicode-scripts.h:28
+msgid "Common"
+msgstr "ಸಾಮಾನ್ಯ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:94
+msgid "<Non Private Use High Surrogate>"
+msgstr "<ಖಾಸಗಿ ಉಪಯೋಗಕ್ಕಲ್ಲದ ಉನ್ನತತರ ಪ್ರತಿನಿಧಿ (ಸರೋಗೇಟ್)>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:96
+msgid "<Private Use High Surrogate>"
+msgstr "<ಖಾಸಗಿ ಉಪಯೋಗ ಉನ್ನತತರ ಪ್ರತಿನಿಧಿ (ಸರೋಗೇಟ್)>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:98
+msgid "<Low Surrogate>"
+msgstr "<ನಿಮ್ನತರ ಪ್ರತಿನಿಧಿ (ಸರೋಗೇಟ್)>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:100
+msgid "<Private Use>"
+msgstr "<ಖಾಸಗಿ ಬಳಕೆ>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:102
+msgid "<Plane 15 Private Use>"
+msgstr "<ಸರಳ 15 ಖಾಸಗಿ ಬಳಕೆ>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:104
+msgid "<Plane 16 Private Use>"
+msgstr "<ಸರಳ 16 ಖಾಸಗಿ ಬಳಕೆ>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:109
+msgid "<not assigned>"
+msgstr "<ನಿಯೋಜಿಸಲಾಗಿರದ>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:122
+msgid "Other, Control"
+msgstr "ಇತರೆ, ನಿಯಂತ್ರಣ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:123
+msgid "Other, Format"
+msgstr "ಇತರೆ, ವಿನ್ಯಾಸ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:124
+msgid "Other, Not Assigned"
+msgstr "ಇತರೆ, ನಿಯೋಜಿಸಲಾಗಿರದ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:125
+msgid "Other, Private Use"
+msgstr "ಇತರೆ, ಖಾಸಗಿ ಬಳಕೆ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:126
+msgid "Other, Surrogate"
+msgstr "ಇತರೆ, ಪ್ರತಿನಿಧಿ (surrogate)"
+
+#: ../mucharmap/mucharmap-unicode-info.c:127
+msgid "Letter, Lowercase"
+msgstr "ಅಕ್ಷರ, ಕೆಳಸ್ತರ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:128
+msgid "Letter, Modifier"
+msgstr "ಅಕ್ಷರ, ಮಾರ್ಪಡಕ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:129
+msgid "Letter, Other"
+msgstr "ಅಕ್ಷರ, ಬೇರೆ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:130
+msgid "Letter, Titlecase"
+msgstr "ಅಕ್ಷರ, ಶೀರ್ಷಿಕಾಸ್ತರ (titlecase)"
+
+#: ../mucharmap/mucharmap-unicode-info.c:131
+msgid "Letter, Uppercase"
+msgstr "ಅಕ್ಷರ, ಮೇಲುಸ್ತರ (uppercase)"
+
+#: ../mucharmap/mucharmap-unicode-info.c:132
+msgid "Mark, Spacing Combining"
+msgstr "ಗುರುತು (mark), ಸ್ಥಳಕಲ್ಪನೆ (spacing) ಮತ್ತು ಮಿಶ್ರಣ (combining)"
+
+#: ../mucharmap/mucharmap-unicode-info.c:133
+msgid "Mark, Enclosing"
+msgstr "ಗುರುತು (mark), ಅಡಕಗೊಳಿಸುವುದು"
+
+#: ../mucharmap/mucharmap-unicode-info.c:134
+msgid "Mark, Non-Spacing"
+msgstr "ಗುರುತು (mark), ಸ್ಥಳಕಲ್ಪನೆಯದಲ್ಲದ್ದು"
+
+#: ../mucharmap/mucharmap-unicode-info.c:135
+msgid "Number, Decimal Digit"
+msgstr "ಸಂಖ್ಯೆ, ದಶಾಂಶ ಅಂಕೆ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:136
+msgid "Number, Letter"
+msgstr "ಸಂಖ್ಯೆ, ಅಕ್ಷರ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:137
+msgid "Number, Other"
+msgstr "ಸಂಖ್ಯೆ, ಇತರೆ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:138
+msgid "Punctuation, Connector"
+msgstr "ವಿರಾಮಚಿಹ್ನೆ, ಜೋಡಕ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:139
+msgid "Punctuation, Dash"
+msgstr "ವಿರಾಮಚಿಹ್ನೆ, ಡ್ಯಾಶ್"
+
+#: ../mucharmap/mucharmap-unicode-info.c:140
+msgid "Punctuation, Close"
+msgstr "ವಿರಾಮಚಿಹ್ನೆ, ಮುಚ್ಚು"
+
+#: ../mucharmap/mucharmap-unicode-info.c:141
+msgid "Punctuation, Final Quote"
+msgstr "ವಿರಾಮಚಿಹ್ನೆ, ಅಂತಿಮ ಕೋಟ್"
+
+#: ../mucharmap/mucharmap-unicode-info.c:142
+msgid "Punctuation, Initial Quote"
+msgstr "ವಿರಾಮಚಿಹ್ನೆ, ಆರಂಭಿಕ ಕೋಟ್"
+
+#: ../mucharmap/mucharmap-unicode-info.c:143
+msgid "Punctuation, Other"
+msgstr "ವಿರಾಮಚಿಹ್ನೆ, ಇತರೆ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:144
+msgid "Punctuation, Open"
+msgstr "ವಿರಾಮಚಿಹ್ನೆ, ಮುಕ್ತ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:145
+msgid "Symbol, Currency"
+msgstr "ಸಂಕೇತಗಳು, ಚಲಾವಣೆ ನಾಣ್ಯ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:146
+msgid "Symbol, Modifier"
+msgstr "ಸಂಕೇತಗಳು, ಮಾರ್ಪಡಕ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:147
+msgid "Symbol, Math"
+msgstr "ಸಂಕೇತಗಳು, ಮ್ಯಾತ್"
+
+#: ../mucharmap/mucharmap-unicode-info.c:148
+msgid "Symbol, Other"
+msgstr "ಸಂಕೇತಗಳು, ಇತರೆ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:149
+msgid "Separator, Line"
+msgstr "ವಿಭಜಕ, ರೇಖೆ"
+
+#: ../mucharmap/mucharmap-unicode-info.c:150
+msgid "Separator, Paragraph"
+msgstr "ವಿಭಜಕ, ಪ್ಯಾರಾಗ್ರಾಫ್"
+
+#: ../mucharmap/mucharmap-unicode-info.c:151
+msgid "Separator, Space"
+msgstr "ವಿಭಜಕ, ಸ್ಥಳ"
+
+#: ../mucharmap/mucharmap-window.c:246
+msgid "Searching…"
+msgstr "ಹುಡುಕುತ್ತಿದೆ ..."
+
+#: ../mucharmap/mucharmap-window.c:493
+msgid ""
+"Mucharmap is free software; you can redistribute it and/or modify it under "
+"the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+"Mucharmap is free software; you can redistribute it and/or modify it under "
+"the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+
+#: ../mucharmap/mucharmap-window.c:497
+msgid ""
+"Permission is hereby granted, free of charge, to any person obtaining a copy "
+"of the Unicode data files to deal in them without restriction, including "
+"without limitation the rights to use, copy, modify, merge, publish, "
+"distribute, and/or sell copies."
+msgstr ""
+"Permission is hereby granted, free of charge, to any person obtaining a copy "
+"of the Unicode data files to deal in them without restriction, including "
+"without limitation the rights to use, copy, modify, merge, publish, "
+"distribute, and/or sell copies."
+
+#: ../mucharmap/mucharmap-window.c:501
+msgid ""
+"Mucharmap and the Unicode data files are distributed in the hope that they "
+"will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty "
+"of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General "
+"Public License and Unicode Copyright for more details."
+msgstr ""
+"Mucharmap and the Unicode data files are distributed in the hope that they "
+"will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty "
+"of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General "
+"Public License and Unicode Copyright for more details."
+
+#: ../mucharmap/mucharmap-window.c:505
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"Mucharmap; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02110-1301  USA"
+msgstr ""
+"You should have received a copy of the GNU General Public License along with "
+"Mucharmap; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02110-1301  USA"
+
+#: ../mucharmap/mucharmap-window.c:508
+msgid ""
+"Also you should have received a copy of the Unicode Copyright along with "
+"Mucharmap; you can always find it at Unicode's website: http://www.unicode."
+"org/copyright.html"
+msgstr ""
+"Also you should have received a copy of the Unicode Copyright along with "
+"Mucharmap; you can always find it at Unicode's website: http://www.unicode."
+"org/copyright.html"
+
+#: ../mucharmap/mucharmap-window.c:521 ../mucharmap/main.c:37
+msgid "MATE Character Map"
+msgstr "MATE ಅಕ್ಷರ ನಕ್ಷೆ"
+
+#: ../mucharmap/mucharmap-window.c:523
+msgid "Based on the Unicode Character Database 5.1"
+msgstr "ಯುನಿಕೋಡ್ ಅಕ್ಷರ ದತ್ತಸಂಚಯ 5.1 ಆಧರಿತವಾದ"
+
+#: ../mucharmap/mucharmap-window.c:532
+msgid "translator-credits"
+msgstr ""
+"ಪ್ರಮೋದ್.ಆರ್‍ <pramodleo@yahoo.co.uk>;\n"
+"ಶಂಕರ್ ಪ್ರಸಾದ್ <svenkate@redhat.com>"
+
+#: ../mucharmap/mucharmap-window.c:607 ../mucharmap/mucharmap-window.c:874
+msgid "Next Script"
+msgstr "ಮುಂದಿನ ಸ್ಕ್ರಿಪ್ಟ್"
+
+#: ../mucharmap/mucharmap-window.c:607 ../mucharmap/mucharmap-window.c:876
+msgid "Previous Script"
+msgstr "ಹಿಂದಿನ ಸ್ಕ್ರಿಪ್ಟ್"
+
+#: ../mucharmap/mucharmap-window.c:612
+msgid "Next Block"
+msgstr "ಮುಂದಿನ ಬ್ಲಾಕ್"
+
+#: ../mucharmap/mucharmap-window.c:612
+msgid "Previous Block"
+msgstr "ಹಿಂದಿನ ಬ್ಲಾಕ್"
+
+#: ../mucharmap/mucharmap-window.c:837
+msgid "_File"
+msgstr "ಕಡತ(_F)"
+
+#: ../mucharmap/mucharmap-window.c:838
+msgid "_View"
+msgstr "ನೋಟ (_V)"
+
+#: ../mucharmap/mucharmap-window.c:839
+msgid "_Search"
+msgstr "ಹುಡುಕು(_S)"
+
+#: ../mucharmap/mucharmap-window.c:840
+msgid "_Go"
+msgstr "ತೆರಳು(_G)"
+
+#: ../mucharmap/mucharmap-window.c:841
+msgid "_Help"
+msgstr "ಸಹಾಯ(_H)"
+
+#: ../mucharmap/mucharmap-window.c:844
+msgid "Page _Setup"
+msgstr "ಪುಟದ ಸಂಯೋಜನೆ(_S)"
+
+#: ../mucharmap/mucharmap-window.c:865
+msgid "Find _Next"
+msgstr "ಮುಂದಿನದನ್ನು ಪತ್ತೆ ಹಚ್ಚು(_N)"
+
+#: ../mucharmap/mucharmap-window.c:867
+msgid "Find _Previous"
+msgstr "ಹಿಂದಿನದನ್ನು ಪತ್ತೆ ಹಚ್ಚು(_P)"
+
+#: ../mucharmap/mucharmap-window.c:870
+msgid "_Next Character"
+msgstr "ಮುಂದಿನ ಅಕ್ಷರ(_N)"
+
+#: ../mucharmap/mucharmap-window.c:872
+msgid "_Previous Character"
+msgstr "ಹಿಂದಿನ ಅಕ್ಷರ(_P)"
+
+#: ../mucharmap/mucharmap-window.c:879
+msgid "_Contents"
+msgstr "ವಿಷಯಗಳು(_C)"
+
+#: ../mucharmap/mucharmap-window.c:881
+msgid "_About"
+msgstr "ಇದರ ಬಗ್ಗೆ(_A)"
+
+#: ../mucharmap/mucharmap-window.c:891
+msgid "By _Script"
+msgstr "ಸ್ಕ್ರಿಪ್ಟಿನಿಂದ(_S)"
+
+#: ../mucharmap/mucharmap-window.c:893
+msgid "By _Unicode Block"
+msgstr "ಯುನಿಕೋಡ್ ಬ್ಲಾಕ್‌ನಿಂದ(_U)"
+
+#: ../mucharmap/mucharmap-window.c:898
+msgid "Snap _Columns to Power of Two"
+msgstr "ಲಂಬಸಾಲುಗಳನ್ನು ಎರಡರ ಘಾತಕ್ಕೆ ಸೆಳೆ(_C)"
+
+#: ../mucharmap/mucharmap-window.c:967
+msgid "_Text to copy:"
+msgstr "ಕಾಪಿ ಮಾಡಾಬೇಕಾದ ಪಠ್ಯಗಳು(_T):"
+
+#: ../mucharmap/mucharmap-window.c:974
+msgid "Copy to the clipboard."
+msgstr "ನಕಲುಫಲಕಕ್ಕೆ(ಕ್ಲಿಪ್‌ಬೋರ್ಡಿಗೆ) ಅಂಟಿಸಿ."
+
+#: ../mucharmap/main.c:55
+msgid "Font to start with; ex: 'Serif 27'"
+msgstr "ಆರಂಭಿಸಬೇಕಿರುವ ಅಕ್ಷರಶೈಲಿ; ಉದಾ: 'Serif 27'"
+
+#: ../mucharmap/main.c:55
+msgid "FONT"
+msgstr "FONT"
+
+#: ../mucharmap/unicode-blocks.h:14
+msgid "Basic Latin"
+msgstr "ಸಾಮಾನ್ಯ ಲ್ಯಾಟಿನ್"
+
+#: ../mucharmap/unicode-blocks.h:15
+msgid "Latin-1 Supplement"
+msgstr "ಲ್ಯಾಟಿನ್-೧ ಪೂರಕ"
+
+#: ../mucharmap/unicode-blocks.h:16
+msgid "Latin Extended-A"
+msgstr "ವಿಸ್ತರಿಸಿದ ಲ್ಯಾಟಿನ್-ಎ"
+
+#: ../mucharmap/unicode-blocks.h:17
+msgid "Latin Extended-B"
+msgstr "ವಿಸ್ತರಿಸಿದ ಲ್ಯಾಟಿನ್-ಬಿ"
+
+#: ../mucharmap/unicode-blocks.h:18
+msgid "IPA Extensions"
+msgstr "IPA ವಿಸ್ತರಣೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:19
+msgid "Spacing Modifier Letters"
+msgstr "ಸ್ಥಳ ಪರಿವರ್ತಕಾಕ್ಷರಗಳು (ಸ್ಪೇಸಿಂಗ್ ಮಾಡಿಫಯರ್ ಲೆಟರ್ಸ್)"
+
+#: ../mucharmap/unicode-blocks.h:20
+msgid "Combining Diacritical Marks"
+msgstr "ಉಚ್ಚಾರಣಾ ಚಿಹ್ನೆ (ಡಯಾಕ್ರಿಟಿಕಲ್) ಗುರುತುಗಳ ಬೆರೆಸುವಿಕೆ"
+
+#: ../mucharmap/unicode-blocks.h:21
+msgid "Greek and Coptic"
+msgstr "ಗ್ರೀಕ್ ಹಾಗು ಕೊಪ್ಟಿಕ್"
+
+#: ../mucharmap/unicode-blocks.h:22 ../mucharmap/unicode-scripts.h:32
+msgid "Cyrillic"
+msgstr "ಸಿರಿಲಿಕ್"
+
+#: ../mucharmap/unicode-blocks.h:23
+msgid "Cyrillic Supplement"
+msgstr "ಸಿರಿಲಿಕ್ ಪೂರಕಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:24 ../mucharmap/unicode-scripts.h:17
+msgid "Armenian"
+msgstr "ಅರ್ಮೇನಿಯನ್"
+
+#: ../mucharmap/unicode-blocks.h:25 ../mucharmap/unicode-scripts.h:45
+msgid "Hebrew"
+msgstr "ಹೀಬ್ರೂ"
+
+#: ../mucharmap/unicode-blocks.h:26 ../mucharmap/unicode-scripts.h:16
+msgid "Arabic"
+msgstr "ಅರೇಬಿಕ್"
+
+#: ../mucharmap/unicode-blocks.h:27 ../mucharmap/unicode-scripts.h:80
+msgid "Syriac"
+msgstr "ಸಿರಿಯಾಕ್"
+
+#: ../mucharmap/unicode-blocks.h:28
+msgid "Arabic Supplement"
+msgstr "ಅರೇಬಿಕ್ ಪೂರಕಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:29 ../mucharmap/unicode-scripts.h:86
+msgid "Thaana"
+msgstr "ಥಾನ"
+
+#: ../mucharmap/unicode-blocks.h:30 ../mucharmap/unicode-scripts.h:63
+msgid "N'Ko"
+msgstr "ಎನ್’ಕೊ"
+
+#: ../mucharmap/unicode-blocks.h:31 ../mucharmap/unicode-scripts.h:34
+msgid "Devanagari"
+msgstr "ದೇವನಾಗರಿ"
+
+#: ../mucharmap/unicode-blocks.h:32 ../mucharmap/unicode-scripts.h:19
+msgid "Bengali"
+msgstr "ಬೆಂಗಾಲಿ"
+
+#: ../mucharmap/unicode-blocks.h:33 ../mucharmap/unicode-scripts.h:41
+msgid "Gurmukhi"
+msgstr "ಗುರುಮುಖಿ"
+
+#: ../mucharmap/unicode-blocks.h:34 ../mucharmap/unicode-scripts.h:40
+msgid "Gujarati"
+msgstr "ಗುಜರಾತಿ"
+
+#: ../mucharmap/unicode-blocks.h:35 ../mucharmap/unicode-scripts.h:69
+msgid "Oriya"
+msgstr "ಒರಿಯ"
+
+#: ../mucharmap/unicode-blocks.h:36 ../mucharmap/unicode-scripts.h:84
+msgid "Tamil"
+msgstr "ತಮಿಳು"
+
+#: ../mucharmap/unicode-blocks.h:37 ../mucharmap/unicode-scripts.h:85
+msgid "Telugu"
+msgstr "ತೆಲುಗು"
+
+#: ../mucharmap/unicode-blocks.h:38 ../mucharmap/unicode-scripts.h:48
+msgid "Kannada"
+msgstr "ಕನ್ನಡ"
+
+#: ../mucharmap/unicode-blocks.h:39 ../mucharmap/unicode-scripts.h:60
+msgid "Malayalam"
+msgstr "ಮಲೆಯಾಳಂ"
+
+#: ../mucharmap/unicode-blocks.h:40 ../mucharmap/unicode-scripts.h:77
+msgid "Sinhala"
+msgstr "ಸಿಂಹಳ"
+
+#: ../mucharmap/unicode-blocks.h:41 ../mucharmap/unicode-scripts.h:87
+msgid "Thai"
+msgstr "ಥಾಯ್"
+
+#: ../mucharmap/unicode-blocks.h:42 ../mucharmap/unicode-scripts.h:53
+msgid "Lao"
+msgstr "ಲಾವೊ"
+
+#: ../mucharmap/unicode-blocks.h:43 ../mucharmap/unicode-scripts.h:88
+msgid "Tibetan"
+msgstr "ಟಿಬೆಟಿಯನ್"
+
+#: ../mucharmap/unicode-blocks.h:44 ../mucharmap/unicode-scripts.h:62
+msgid "Myanmar"
+msgstr "ಮ್ಯಾನ್ಮಾರ್"
+
+#: ../mucharmap/unicode-blocks.h:45 ../mucharmap/unicode-scripts.h:36
+msgid "Georgian"
+msgstr "ಜಾರ್ಜಿಯನ್"
+
+#: ../mucharmap/unicode-blocks.h:46
+msgid "Hangul Jamo"
+msgstr "ಹಂಗುಲ್ ಜಮೊ"
+
+#: ../mucharmap/unicode-blocks.h:47 ../mucharmap/unicode-scripts.h:35
+msgid "Ethiopic"
+msgstr "ಈಥಿಯೋಪಿಕ್"
+
+#: ../mucharmap/unicode-blocks.h:48
+msgid "Ethiopic Supplement"
+msgstr "ಈಥಿಯೋಪಿಕ್ ಪೂರಕ"
+
+#: ../mucharmap/unicode-blocks.h:49 ../mucharmap/unicode-scripts.h:27
+msgid "Cherokee"
+msgstr "ಚೆರೊಕೀ"
+
+#: ../mucharmap/unicode-blocks.h:50
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "ಯೂನಿಫೈಡ್ ಕೆನಡಿಯನ್ ಆದಿವಾಸಿ ಸಿಲ್ಯಾಬಿಕ್ಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:51 ../mucharmap/unicode-scripts.h:65
+msgid "Ogham"
+msgstr "ಒಘಮ್"
+
+#: ../mucharmap/unicode-blocks.h:52 ../mucharmap/unicode-scripts.h:74
+msgid "Runic"
+msgstr "ರುನಿಕ್"
+
+#: ../mucharmap/unicode-blocks.h:53 ../mucharmap/unicode-scripts.h:81
+msgid "Tagalog"
+msgstr "ಟಗಲೊಗ್"
+
+#: ../mucharmap/unicode-blocks.h:54 ../mucharmap/unicode-scripts.h:44
+msgid "Hanunoo"
+msgstr "ಹನುನೂ"
+
+#: ../mucharmap/unicode-blocks.h:55 ../mucharmap/unicode-scripts.h:23
+msgid "Buhid"
+msgstr "ಬುಹಿದ್"
+
+#: ../mucharmap/unicode-blocks.h:56 ../mucharmap/unicode-scripts.h:82
+msgid "Tagbanwa"
+msgstr "ಟಾಗ್ಬನ್ವ"
+
+#: ../mucharmap/unicode-blocks.h:57 ../mucharmap/unicode-scripts.h:52
+msgid "Khmer"
+msgstr "ಖಮೇರ್‍"
+
+#: ../mucharmap/unicode-blocks.h:58 ../mucharmap/unicode-scripts.h:61
+msgid "Mongolian"
+msgstr "ಮಂಗೋಲಿಯನ್"
+
+#: ../mucharmap/unicode-blocks.h:59 ../mucharmap/unicode-scripts.h:56
+msgid "Limbu"
+msgstr "ಲಿಂಬು"
+
+#: ../mucharmap/unicode-blocks.h:60 ../mucharmap/unicode-scripts.h:83
+msgid "Tai Le"
+msgstr "ಟಾಯಿ ಲೆ"
+
+#: ../mucharmap/unicode-blocks.h:61 ../mucharmap/unicode-scripts.h:64
+msgid "New Tai Lue"
+msgstr "ಹೊಸ ಟಾಯಿ ಲ್ಯು"
+
+#: ../mucharmap/unicode-blocks.h:62
+msgid "Khmer Symbols"
+msgstr "ಖಮೇರ್‍ ಸಂಕೇತಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:63 ../mucharmap/unicode-scripts.h:22
+msgid "Buginese"
+msgstr "ಬುಗಿನೀಸ್"
+
+#: ../mucharmap/unicode-blocks.h:64 ../mucharmap/unicode-scripts.h:18
+msgid "Balinese"
+msgstr "ಬಾಲಿನೀಸ್"
+
+#: ../mucharmap/unicode-blocks.h:65 ../mucharmap/unicode-scripts.h:78
+msgid "Sundanese"
+msgstr "ಸುಂಡನೀಸ್"
+
+#: ../mucharmap/unicode-blocks.h:66 ../mucharmap/unicode-scripts.h:55
+msgid "Lepcha"
+msgstr "ಲೆಪ್ಚ"
+
+#: ../mucharmap/unicode-blocks.h:67 ../mucharmap/unicode-scripts.h:66
+msgid "Ol Chiki"
+msgstr "ಒಲ್ ಚಿಕಿ"
+
+#: ../mucharmap/unicode-blocks.h:68
+msgid "Phonetic Extensions"
+msgstr "ಫೋನೆಟಿಕ್ ವಿಸ್ತರಣೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:69
+msgid "Phonetic Extensions Supplement"
+msgstr "ಫೋನೆಟಿಕ್ ವಿಸ್ತರಣೆಗಳ ಪೂರಕ"
+
+#: ../mucharmap/unicode-blocks.h:70
+msgid "Combining Diacritical Marks Supplement"
+msgstr "ಉಚ್ಚಾರಣಾ ಚಿಹ್ನೆ (ಡಯಾಕ್ರಿಟಿಕಲ್) ಗುರುತುಗಳ ಬೆರೆಸುವಿಕೆ ಪೂರಕ"
+
+#: ../mucharmap/unicode-blocks.h:71
+msgid "Latin Extended Additional"
+msgstr "ಹೆಚ್ಚುವರಿ ವಿಸ್ತರಿಸಿದ ಲ್ಯಾಟಿನ್"
+
+#: ../mucharmap/unicode-blocks.h:72
+msgid "Greek Extended"
+msgstr "ವಿಸ್ತರಿಸಿದ ಗ್ರೀಕ್"
+
+#: ../mucharmap/unicode-blocks.h:73
+msgid "General Punctuation"
+msgstr "ಸಾಮನ್ಯ ವಿರಾಮ ಚಿಹ್ನೆ"
+
+#: ../mucharmap/unicode-blocks.h:74
+msgid "Superscripts and Subscripts"
+msgstr "ಶಿರೋಲೇಖ ಹಾಗು ಅಡಿಲೇಖಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:75
+msgid "Currency Symbols"
+msgstr "ಚಲಾವಣೆ ನಾಣ್ಯದ ಚಿಹ್ನೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:76
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "ಉಚ್ಚಾರಣಾ ಚಿಹ್ನೆ (ಡಯಾಕ್ರಿಟಿಕಲ್) ಗುರುತುಗಳ ಬೆರೆಸುವಿಕೆ, ಸಂಜ್ಞೆಗಳಿಗಾಗಿ"
+
+#: ../mucharmap/unicode-blocks.h:77
+msgid "Letterlike Symbols"
+msgstr "ಅಕ್ಷರದಂತಹ ಚಿಹ್ನೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:78
+msgid "Number Forms"
+msgstr "ಸಂಖ್ಯೆಯ ರೂಪಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:79
+msgid "Arrows"
+msgstr "ಬಾಣಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:80
+msgid "Mathematical Operators"
+msgstr "ಗಣಿತೀಯ ಕ್ರಿಯಾಚಿಹ್ನೆಗಳು (ಆಪರೇಟರ್)"
+
+#: ../mucharmap/unicode-blocks.h:81
+msgid "Miscellaneous Technical"
+msgstr "ಇತರೆ ತಾಂತ್ರಿಕ"
+
+#: ../mucharmap/unicode-blocks.h:82
+msgid "Control Pictures"
+msgstr "ನಿಯಂತ್ರಣ ಚಿತ್ರಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:83
+msgid "Optical Character Recognition"
+msgstr "ಆಪ್ಟಿಕಲ್ ಅಕ್ಷರ ಗುರುತಿಸುವಿಕೆ"
+
+#: ../mucharmap/unicode-blocks.h:84
+msgid "Enclosed Alphanumerics"
+msgstr "ಅಡಕಗೊಳಿಸಲಾದ ಅಕ್ಷರಸಂಖ್ಯೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:85
+msgid "Box Drawing"
+msgstr "ಚೌಕ ಚಿತ್ರಣ"
+
+#: ../mucharmap/unicode-blocks.h:86
+msgid "Block Elements"
+msgstr "ಖಂಡಾಂಶಗಳು (ಬ್ಲಾಕ್ ಎಲಿಮೆಂಟ್ಸ್)"
+
+#: ../mucharmap/unicode-blocks.h:87
+msgid "Geometric Shapes"
+msgstr "ರೇಖಾಗಣಿತ ಆಕಾರಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:88
+msgid "Miscellaneous Symbols"
+msgstr "ಇತರೆ ಚಿಹ್ನೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:89
+msgid "Dingbats"
+msgstr "ಡಿಂಗ್‌ಬ್ಯಾಟ್ಸ್"
+
+#: ../mucharmap/unicode-blocks.h:90
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "ಇತರೆ ಗಣತೀಯ ಸಂಕೇತಗಳು-ಎ"
+
+#: ../mucharmap/unicode-blocks.h:91
+msgid "Supplemental Arrows-A"
+msgstr "ಪೂರಕ ಬಾಣಗಳು-ಎ"
+
+#: ../mucharmap/unicode-blocks.h:92
+msgid "Braille Patterns"
+msgstr "ಬ್ರೈಲ್ ವಿನ್ಯಾಸಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:93
+msgid "Supplemental Arrows-B"
+msgstr "ಪೂರಕ ಬಾಣಗಳು-ಬಿ"
+
+#: ../mucharmap/unicode-blocks.h:94
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "ಇತರೆ ಗಣತೀಯ ಸಂಕೇತಗಳು-ಬಿ"
+
+#: ../mucharmap/unicode-blocks.h:95
+msgid "Supplemental Mathematical Operators"
+msgstr "ಪೂರಕ ಗಣಿತೀಯ ಕ್ರಿಯಾಚಿಹ್ನೆಗಳು (ಆಪರೇಟರ್)"
+
+#: ../mucharmap/unicode-blocks.h:96
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "ಇತರೆ ಸಂಕೇತಗಳು ಹಾಗು ಬಾಣಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:97 ../mucharmap/unicode-scripts.h:37
+msgid "Glagolitic"
+msgstr "ಗ್ಲಾಗೊಲಿಟಿಕ್"
+
+#: ../mucharmap/unicode-blocks.h:98
+msgid "Latin Extended-C"
+msgstr "ವಿಸ್ತರಸಿದ ಲ್ಯಾಟಿನ್-ಸಿ"
+
+#: ../mucharmap/unicode-blocks.h:99 ../mucharmap/unicode-scripts.h:29
+msgid "Coptic"
+msgstr "ಕೊಪ್ಟಿಕ್"
+
+#: ../mucharmap/unicode-blocks.h:100
+msgid "Georgian Supplement"
+msgstr "ಜಾರ್ಜೀಯನ್ ಪೂರಕ"
+
+#: ../mucharmap/unicode-blocks.h:101 ../mucharmap/unicode-scripts.h:89
+msgid "Tifinagh"
+msgstr "ಟಿಫಿನಾಘ್"
+
+#: ../mucharmap/unicode-blocks.h:102
+msgid "Ethiopic Extended"
+msgstr "ವಿಸ್ತರಿಸಿದ ಈಥಿಯೋಪಿಕ್"
+
+#: ../mucharmap/unicode-blocks.h:103
+msgid "Cyrillic Extended-A"
+msgstr "ವಿಸ್ತರಸಿದ ಸಿರಿಲಿಕ್-ಎ"
+
+#: ../mucharmap/unicode-blocks.h:104
+msgid "Supplemental Punctuation"
+msgstr "ಪೂರಕ ವಿರಾಮಚಿಹ್ನೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:105
+msgid "CJK Radicals Supplement"
+msgstr "CJK ಮೂಲಾಕ್ಷರ (ರಾಡಿಕಲ್) ಪೂರಕ"
+
+#: ../mucharmap/unicode-blocks.h:106
+msgid "Kangxi Radicals"
+msgstr "ಕಾಂಗ್ಸಿ ಮೂಲಾಕ್ಷರಗಳು (ರಾಡಿಕಲ್)"
+
+#: ../mucharmap/unicode-blocks.h:107
+msgid "Ideographic Description Characters"
+msgstr "ಭಾವಲಿಪಿ (ಇಡಿಯೋಗ್ರಾಫಿಕ್) ವಿವರಣಾ ಲಿಪ್ಯಂಶಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:108
+msgid "CJK Symbols and Punctuation"
+msgstr "CJK ಸಂಜ್ಞೆಗಳು ಮತ್ತು ವಿರಾಮಚಿಹ್ನೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:109 ../mucharmap/unicode-scripts.h:46
+msgid "Hiragana"
+msgstr "ಹಿರಗಾನಾ"
+
+#: ../mucharmap/unicode-blocks.h:110 ../mucharmap/unicode-scripts.h:49
+msgid "Katakana"
+msgstr "ಕಟಕಾನ"
+
+#: ../mucharmap/unicode-blocks.h:111 ../mucharmap/unicode-scripts.h:20
+msgid "Bopomofo"
+msgstr "ಬೊಪೊಮೊಫೊ"
+
+#: ../mucharmap/unicode-blocks.h:112
+msgid "Hangul Compatibility Jamo"
+msgstr "ಹಂಗುಲ್ ಸಹವರ್ತನೀಯತೆಗಾಗಿ ಜಾಮೊ"
+
+#: ../mucharmap/unicode-blocks.h:113
+msgid "Kanbun"
+msgstr "ಕಣ್ಬುನ್"
+
+#: ../mucharmap/unicode-blocks.h:114
+msgid "Bopomofo Extended"
+msgstr "ವಿಸ್ತರಿಸಿದ ಬೊಪೊಮೊಫೊ"
+
+#: ../mucharmap/unicode-blocks.h:115
+msgid "CJK Strokes"
+msgstr "CJK ಗೆರೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:116
+msgid "Katakana Phonetic Extensions"
+msgstr "ಕಟಕಾನಾ ಫೋನೆಟಿಕ್ ವಿಸ್ತರಣೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:117
+msgid "Enclosed CJK Letters and Months"
+msgstr "ಆವೃತ (ಎನ್ಕ್ಲೋಸ್ಡ್) CJK ಅಕ್ಷರಗಳು ಮತ್ತು ತಿಂಗಳುಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:118
+msgid "CJK Compatibility"
+msgstr "CJK ಸಹವರ್ತನೀಯತೆ"
+
+#: ../mucharmap/unicode-blocks.h:119
+msgid "CJK Unified Ideographs Extension A"
+msgstr "CJK ಯೂನಿಫೈಡ್ ಭಾವಲಿಪಿಗಳ (ಈಡಿಯೋಗ್ರಾಫ್) ವಿಸ್ತರಣೆ ಎ"
+
+#: ../mucharmap/unicode-blocks.h:120
+msgid "Yijing Hexagram Symbols"
+msgstr "ಯಿಜಿಂಗ್ ಹೆಕ್ಸಾಗ್ರಾಮ್ ಸಂಜ್ಞೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:121
+msgid "CJK Unified Ideographs"
+msgstr "CJK ಏಕೀಕೃತ ಭಾವಲಿಪಿಗಳು (ಈಡಿಯೋಗ್ರಾಫ್)"
+
+#: ../mucharmap/unicode-blocks.h:122
+msgid "Yi Syllables"
+msgstr "ಯಿ ಅಕ್ಷರಗಳು (ಸಿಲಬೆಲ್)"
+
+#: ../mucharmap/unicode-blocks.h:123
+msgid "Yi Radicals"
+msgstr "ಯಿ ರಾಡಿಕಲ್‌ಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:124 ../mucharmap/unicode-scripts.h:91
+msgid "Vai"
+msgstr "ವೈ"
+
+#: ../mucharmap/unicode-blocks.h:125
+msgid "Cyrillic Extended-B"
+msgstr "ವಿಸ್ತರಿಸಿದ ಸಿರಿಲಿಕ್-ಬಿ"
+
+#: ../mucharmap/unicode-blocks.h:126
+msgid "Modifier Tone Letters"
+msgstr "ಪರಿವರ್ತಕ ಟೋನ್ ಅಕ್ಷರಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:127
+msgid "Latin Extended-D"
+msgstr "ವಿಸ್ತರಿಸಿದ ಲ್ಯಾಟಿನ್-ಡಿ"
+
+#: ../mucharmap/unicode-blocks.h:128 ../mucharmap/unicode-scripts.h:79
+msgid "Syloti Nagri"
+msgstr "ಸೈಲೋಟಿ ನಗ್ರಿ"
+
+#: ../mucharmap/unicode-blocks.h:129
+msgid "Phags-pa"
+msgstr "ಫಗ್ಸ್-ಪ"
+
+#: ../mucharmap/unicode-blocks.h:130 ../mucharmap/unicode-scripts.h:75
+msgid "Saurashtra"
+msgstr "ಸೌರಾಷ್ಟ್ರ"
+
+#: ../mucharmap/unicode-blocks.h:131 ../mucharmap/unicode-scripts.h:50
+msgid "Kayah Li"
+msgstr "ಕಾಯ್ಹ ಲಿ"
+
+#: ../mucharmap/unicode-blocks.h:132 ../mucharmap/unicode-scripts.h:73
+msgid "Rejang"
+msgstr "ರೆಜಂಗ್"
+
+#: ../mucharmap/unicode-blocks.h:133 ../mucharmap/unicode-scripts.h:26
+msgid "Cham"
+msgstr "ಚಮ್"
+
+#: ../mucharmap/unicode-blocks.h:134
+msgid "Hangul Syllables"
+msgstr "ಹಾನ್ಗುಲ್ ಅಕ್ಷರಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:135
+msgid "High Surrogates"
+msgstr "ಎತ್ತರದ ಬದಲಿಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:136
+msgid "High Private Use Surrogates"
+msgstr "ಉನ್ನತ ಖಾಸಗಿ ಉಪಯೋಗದ ಪರ್ಯಾಯಗಳು (ಸರೋಗೇಟ್)"
+
+#: ../mucharmap/unicode-blocks.h:137
+msgid "Low Surrogates"
+msgstr "ಕಡಿಮೆಯ ಬದಲಿಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:138
+msgid "Private Use Area"
+msgstr "ಖಾಸಗಿ ಬಳಕೆಯ ಜಾಗ"
+
+#: ../mucharmap/unicode-blocks.h:139
+msgid "CJK Compatibility Ideographs"
+msgstr "CJK ಸಹವರ್ತನಾ ಭಾವಲಿಪಿಗಳು (ಈಡಿಯೋಗ್ರಾಫ್)"
+
+#: ../mucharmap/unicode-blocks.h:140
+msgid "Alphabetic Presentation Forms"
+msgstr "ವರ್ಣಮಾಲೆಯ ಪ್ರದರ್ಶನ ಆಕಾರಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:141
+msgid "Arabic Presentation Forms-A"
+msgstr "ಅರೇಬಿಕ್ ಪ್ರದರ್ಶನ ಆಕಾರಗಳು-ಎ"
+
+#: ../mucharmap/unicode-blocks.h:142
+msgid "Variation Selectors"
+msgstr "ಪರಿವರ್ತನಾ ಆಯ್ಕೆಗಾರರು (ವೇರಿಯೋಶನ್ ಸೆಲೆಕ್ಟರ್ಸ್)"
+
+#: ../mucharmap/unicode-blocks.h:143
+msgid "Vertical Forms"
+msgstr "ಲಂಬ ಆಕಾರಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:144
+msgid "Combining Half Marks"
+msgstr "ಬೆರೆಕೆಯಾಗುವ ಅರ್ಧ ಗುರುತುಗಳು (ಕಂಬೈನಿಂಗ್ ಹಾಫ್ ಮಾರ್ಕ್ಸ್)"
+
+#: ../mucharmap/unicode-blocks.h:145
+msgid "CJK Compatibility Forms"
+msgstr "CJK ಸಹವರ್ತನೀಯತೆ ಆಕಾರಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:146
+msgid "Small Form Variants"
+msgstr "ಚಿಕ್ಕ ನಮೂನೆ ರೂಪಾಂತರಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:147
+msgid "Arabic Presentation Forms-B"
+msgstr "ಅರೇಬಿಕ್ ಪ್ರದರ್ಶನ ಆಕಾರಗಳು-ಬಿ"
+
+#: ../mucharmap/unicode-blocks.h:148
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "ಅರೆಅಗಲ ಮತ್ತು ಪೂರ್ಣ ಅಗಲದ ಆಕಾರಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:149
+msgid "Specials"
+msgstr "ವಿಶಿಷ್ಟಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:150
+msgid "Linear B Syllabary"
+msgstr "ರೇಖೀಯ B ಸಿಲ್ಯಾಬರಿ"
+
+#: ../mucharmap/unicode-blocks.h:151
+msgid "Linear B Ideograms"
+msgstr "ರೇಖೀಯ ಬಿ ಈಡಿಯೋಗ್ರಾಮ್‌ಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:152
+msgid "Aegean Numbers"
+msgstr "ಏಗೀಯಾನ್ ಸಂಖ್ಯೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:153
+msgid "Ancient Greek Numbers"
+msgstr "ಪ್ರಾಚೀನ ಗ್ರೀಕ್ ಸಂಖ್ಯೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:154
+msgid "Ancient Symbols"
+msgstr "ಪ್ರಾಚೀನ ಸಂಕೇತಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:155
+msgid "Phaistos Disc"
+msgstr "ಫೈಸ್ಟೋಸ್ ಡಿಸ್ಕ್"
+
+#: ../mucharmap/unicode-blocks.h:156 ../mucharmap/unicode-scripts.h:58
+msgid "Lycian"
+msgstr "ಲೀಸಿಯನ್"
+
+#: ../mucharmap/unicode-blocks.h:157 ../mucharmap/unicode-scripts.h:25
+msgid "Carian"
+msgstr "ಕರಿಯನ್"
+
+#: ../mucharmap/unicode-blocks.h:158 ../mucharmap/unicode-scripts.h:67
+msgid "Old Italic"
+msgstr "ಹಳೆಯ ಇಟಾಲಿಯನ್"
+
+#: ../mucharmap/unicode-blocks.h:159 ../mucharmap/unicode-scripts.h:38
+msgid "Gothic"
+msgstr "ಗೋತಿಕ್"
+
+#: ../mucharmap/unicode-blocks.h:160 ../mucharmap/unicode-scripts.h:90
+msgid "Ugaritic"
+msgstr "ಯುಗಾರಿಟಿಕ್"
+
+#: ../mucharmap/unicode-blocks.h:161 ../mucharmap/unicode-scripts.h:68
+msgid "Old Persian"
+msgstr "ಹಳೆಯ ಪರ್ಸಿಯನ್"
+
+#: ../mucharmap/unicode-blocks.h:162 ../mucharmap/unicode-scripts.h:33
+msgid "Deseret"
+msgstr "ಡೆಸೆರೆಟ್"
+
+#: ../mucharmap/unicode-blocks.h:163 ../mucharmap/unicode-scripts.h:76
+msgid "Shavian"
+msgstr "ಶಾವಿಯನ್"
+
+#: ../mucharmap/unicode-blocks.h:164 ../mucharmap/unicode-scripts.h:70
+msgid "Osmanya"
+msgstr "ಒಸ್ಮಾನ್ಯ"
+
+#: ../mucharmap/unicode-blocks.h:165
+msgid "Cypriot Syllabary"
+msgstr "ಸಿಪ್ರಿಯೊಟ್ ಸಿಲ್ಯಾಬರಿ"
+
+#: ../mucharmap/unicode-blocks.h:166 ../mucharmap/unicode-scripts.h:72
+msgid "Phoenician"
+msgstr "ಫೀನಿಸಿಯನ್"
+
+#: ../mucharmap/unicode-blocks.h:167 ../mucharmap/unicode-scripts.h:59
+msgid "Lydian"
+msgstr "ಲೀಡಿಯನ್"
+
+#: ../mucharmap/unicode-blocks.h:168 ../mucharmap/unicode-scripts.h:51
+msgid "Kharoshthi"
+msgstr "ಖರೊಶ್ಥಿ"
+
+#: ../mucharmap/unicode-blocks.h:169 ../mucharmap/unicode-scripts.h:30
+msgid "Cuneiform"
+msgstr "ಕ್ಯುನಿಫಾರ್ಮ್"
+
+#: ../mucharmap/unicode-blocks.h:170
+msgid "Cuneiform Numbers and Punctuation"
+msgstr "ಕ್ಯುನಿಫಾರ್ಮ್ ಅಂಕೆಗಳು ಹಾಗು ವಿರಾಮಚಿಹ್ನೆ"
+
+#: ../mucharmap/unicode-blocks.h:171
+msgid "Byzantine Musical Symbols"
+msgstr "ಬ್ಯಜೆಂಟೈನ್ ಸಂಗೀತದ ಚಿಹ್ನೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:172
+msgid "Musical Symbols"
+msgstr "ಸಂಗೀತದ ಚಿಹ್ನೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:173
+msgid "Ancient Greek Musical Notation"
+msgstr "ಪುರಾತನ ಗ್ರೀಕ್ ಸಂಗೀತದ (ಮ್ಯೂಸಿಕಲ್) ಸಂಕೇತಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:174
+msgid "Tai Xuan Jing Symbols"
+msgstr "ತಾಯ್‌ ಸುವಾನ್ ಜಿಂಗ್ ಚಿಹ್ನೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:175
+msgid "Counting Rod Numerals"
+msgstr "ಎಣಿಸುವ Rod ಅಂಕೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:176
+msgid "Mathematical Alphanumeric Symbols"
+msgstr "ಗಣಿತಶಾಸ್ತ್ರದ ಆಕ್ಷರಸಂಖ್ಯೆಗಳ ಚಿಹ್ನೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:177
+msgid "Mahjong Tiles"
+msgstr "ಮಾಹ್-ಜೊನ್ಗ್ ಇಟ್ಟಿಗೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:178
+msgid "Domino Tiles"
+msgstr "ಡೊಮಿನೊ ಇಟ್ಟಿಗೆಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:179
+msgid "CJK Unified Ideographs Extension B"
+msgstr "CJK ಒಗ್ಗೂಡಿಸಲಾದ ಭಾವಲಿಪಿಗಳ (ಈಡಿಯೋಗ್ರಾಫ್) ವಿಸ್ತರಣೆ ಬಿ"
+
+#: ../mucharmap/unicode-blocks.h:180
+msgid "CJK Compatibility Ideographs Supplement"
+msgstr "CJK ಹೊಂದಾಣಿಕೆ ಭಾವಲಿಪಿಗಳ (ಈಡಿಯೋಗ್ರಾಫ್) ಪೂರಕ"
+
+#: ../mucharmap/unicode-blocks.h:181
+msgid "Tags"
+msgstr "ಟ್ಯಾಗ್‍ಗಳು"
+
+#: ../mucharmap/unicode-blocks.h:182
+msgid "Variation Selectors Supplement"
+msgstr "ಬದಲಾವಣೆ ಆಯ್ಕೆಗಾರ ಪೂರಕ"
+
+#: ../mucharmap/unicode-blocks.h:183
+msgid "Supplementary Private Use Area-A"
+msgstr "ಪೂರಕ ಖಾಸಗಿ ಬಳಕೆ ಜಾಗ-ಎ"
+
+#: ../mucharmap/unicode-blocks.h:184
+msgid "Supplementary Private Use Area-B"
+msgstr "ಪೂರಕ ಖಾಸಗಿ ಬಳಕೆ ಜಾಗ-ಬಿ"
+
+#: ../mucharmap/unicode-scripts.h:21
+msgid "Braille"
+msgstr "ಬ್ರೈಲ್"
+
+#: ../mucharmap/unicode-scripts.h:24
+msgid "Canadian Aboriginal"
+msgstr "ಕೆನಡಿಯನ್ ಆದಿವಾಸಿ"
+
+#: ../mucharmap/unicode-scripts.h:31
+msgid "Cypriot"
+msgstr "ಸಿಪ್ರಿಯೊಟ್"
+
+#: ../mucharmap/unicode-scripts.h:39
+msgid "Greek"
+msgstr "ಗ್ರೀಕ್"
+
+#: ../mucharmap/unicode-scripts.h:42
+msgid "Han"
+msgstr "ಹನ್"
+
+#: ../mucharmap/unicode-scripts.h:43
+msgid "Hangul"
+msgstr "ಹಂಗುಲ್"
+
+#: ../mucharmap/unicode-scripts.h:47
+msgid "Inherited"
+msgstr "ಪಡೆದಿರುವ"
+
+#: ../mucharmap/unicode-scripts.h:54
+msgid "Latin"
+msgstr "ಲ್ಯಾಟಿನ್"
+
+#: ../mucharmap/unicode-scripts.h:57
+msgid "Linear B"
+msgstr "ಲಿನಿಯರ್‍ ಬಿ"
+
+#: ../mucharmap/unicode-scripts.h:71
+msgid "Phags Pa"
+msgstr "ಫಾಗ್ಸ ಪ"
+
+#: ../mucharmap/unicode-scripts.h:92
+msgid "Yi"
+msgstr "ಯಿ"
+
+#: ../mucharmap/mucharmap-search-dialog.c:565
+msgid "Information"
+msgstr "ಮಾಹಿತಿ"
+
+#. follow hig guidelines
+#: ../mucharmap/mucharmap-search-dialog.c:739
+msgid "Find"
+msgstr "ಪತ್ತೆ ಹಚ್ಚು"
+
+#: ../mucharmap/mucharmap-search-dialog.c:753
+msgid "_Previous"
+msgstr "ಹಿಂದಿನ(_P)"
+
+#: ../mucharmap/mucharmap-search-dialog.c:760
+msgid "_Next"
+msgstr "ಮುಂದಕ್ಕೆ (_N)"
+
+#: ../mucharmap/mucharmap-search-dialog.c:770
+msgid "_Search:"
+msgstr "ಹುಡುಕು(_S):"
+
+#: ../mucharmap/mucharmap-search-dialog.c:780
+msgid "Match _whole word"
+msgstr "ಕೇವಲ ಸಂಪೂರ್ಣ ಪದಕ್ಕಾಗಿ ಮಾತ್ರ ಹುಡುಕು (_e)"
+
+#: ../mucharmap/mucharmap-search-dialog.c:785
+msgid "Search in character _details"
+msgstr "ಅಕ್ಷರ ವಿವರಗಳಲ್ಲಿ ಹುಡುಕು(_d)"
+
+#: ../mucharmap/mucharmap-block-chapters-model.c:53
+msgid "All"
+msgstr "ಎಲ್ಲಾ"
+
+#: ../mucharmap/mucharmap-block-chapters-model.c:138
+msgid "Unicode Block"
+msgstr "ಯುನಿಕೋಡ್ ಬ್ಲಾಕ್"
+
+#: ../mucharmap/mucharmap-script-chapters-model.c:134
+msgid "Script"
+msgstr "ಸ್ಕ್ರಿಪ್ಟ್"
+

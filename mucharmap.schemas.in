@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<mateconfschemafile>
+  <schemalist>
+
+    <schema>
+      <key>/schemas/apps/mucharmap/chapters_mode</key>
+      <applyto>/apps/mucharmap/chapters_mode</applyto>
+      <owner>mucharmap</owner>
+      <type>string</type>
+      <locale name="C">
+        <short></short>
+        <long></long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/mucharmap/last_char</key>
+      <applyto>/apps/mucharmap/last_char</applyto>
+      <owner>mucharmap</owner>
+      <type>string</type>
+      <default>0</default>
+      <locale name="C">
+        <short></short>
+        <long></long>
+      </locale>
+    </schema>
+    
+    <schema>
+      <key>/schemas/apps/mucharmap/font</key>
+      <applyto>/apps/mucharmap/font</applyto>
+      <owner>mucharmap</owner>
+      <type>string</type>
+      <locale name="C">
+        <short></short>
+        <long></long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/mucharmap/height</key>
+      <applyto>/apps/mucharmap/height</applyto>
+      <owner>mucharmap</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short></short>
+        <long></long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/mucharmap/snap_cols_pow2</key>
+      <applyto>/apps/mucharmap/snap_cols_pow2</applyto>
+      <owner>mucharmap</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short></short>
+        <long></long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/mucharmap/width</key>
+      <applyto>/apps/mucharmap/width</applyto>
+      <owner>mucharmap</owner>
+      <type>int</type>
+      <default>0</default>
+      <locale name="C">
+        <short></short>
+        <long></long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/mucharmap/maximized</key>
+      <applyto>/apps/mucharmap/maximized</applyto>
+      <owner>mucharmap</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short></short>
+        <long></long>
+      </locale>
+    </schema>
+
+    <schema>
+      <key>/schemas/apps/mucharmap/fullscreen</key>
+      <applyto>/apps/mucharmap/fullscreen</applyto>
+      <owner>mucharmap</owner>
+      <type>bool</type>
+      <default>false</default>
+      <locale name="C">
+        <short></short>
+        <long></long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</mateconfschemafile>

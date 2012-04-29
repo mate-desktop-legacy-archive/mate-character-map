@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>MucharmapChaptersModel</title>
+<meta name="generator" content="DocBook XSL Stylesheets V1.75.2">
+<link rel="home" href="index.html" title="mucharmap Reference Manual">
+<link rel="up" href="ch01.html" title="[Insert title here]">
+<link rel="prev" href="MucharmapBlockChaptersModel.html" title="MucharmapBlockChaptersModel">
+<link rel="next" href="mucharmap-mucharmap-chartable.html" title="MucharmapChartable">
+<meta name="generator" content="GTK-Doc V1.15.1 (XML mode)">
+<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body bgcolor="white" text="black" link="#0000FF" vlink="#840084" alink="#0000FF">
+<table class="navigation" id="top" width="100%" summary="Navigation header" cellpadding="2" cellspacing="2">
+<tr valign="middle">
+<td><a accesskey="p" href="MucharmapBlockChaptersModel.html"><img src="left.png" width="24" height="24" border="0" alt="Prev"></a></td>
+<td><a accesskey="u" href="ch01.html"><img src="up.png" width="24" height="24" border="0" alt="Up"></a></td>
+<td><a accesskey="h" href="index.html"><img src="home.png" width="24" height="24" border="0" alt="Home"></a></td>
+<th width="100%" align="center">mucharmap Reference Manual</th>
+<td><a accesskey="n" href="mucharmap-mucharmap-chartable.html"><img src="right.png" width="24" height="24" border="0" alt="Next"></a></td>
+</tr>
+<tr><td colspan="5" class="shortcuts">
+<a href="#mucharmap-mucharmap-chapters-model.synopsis" class="shortcut">Top</a>
+                   | 
+                  <a href="#mucharmap-mucharmap-chapters-model.description" class="shortcut">Description</a>
+                   | 
+                  <a href="#mucharmap-mucharmap-chapters-model.object-hierarchy" class="shortcut">Object Hierarchy</a>
+                   | 
+                  <a href="#mucharmap-mucharmap-chapters-model.implemented-interfaces" class="shortcut">Implemented Interfaces</a>
+</td></tr>
+</table>
+<div class="refentry">
+<a name="mucharmap-mucharmap-chapters-model"></a><div class="titlepage"></div>
+<div class="refnamediv"><table width="100%"><tr>
+<td valign="top">
+<h2><span class="refentrytitle"><a name="mucharmap-mucharmap-chapters-model.top_of_page"></a>MucharmapChaptersModel</span></h2>
+<p>MucharmapChaptersModel</p>
+</td>
+<td valign="top" align="right"></td>
+</tr></table></div>
+<div class="refsynopsisdiv">
+<a name="mucharmap-mucharmap-chapters-model.synopsis"></a><h2>Synopsis</h2>
+<a name="MucharmapChaptersModel"></a><pre class="synopsis">                    <a class="link" href="mucharmap-mucharmap-chapters-model.html#MucharmapChaptersModelPrivate" title="MucharmapChaptersModelPrivate">MucharmapChaptersModelPrivate</a>;
+                    <a class="link" href="mucharmap-mucharmap-chapters-model.html#MucharmapChaptersModel-struct" title="MucharmapChaptersModel">MucharmapChaptersModel</a>;
+<a class="link" href="MucharmapCodepointList.html" title="MucharmapCodepointList"><span class="returnvalue">MucharmapCodepointList</span></a> *  <a class="link" href="mucharmap-mucharmap-chapters-model.html#mucharmap-chapters-model-get-codepoint-list" title="mucharmap_chapters_model_get_codepoint_list ()">mucharmap_chapters_model_get_codepoint_list</a>
+                                                        (<em class="parameter"><code><a class="link" href="mucharmap-mucharmap-chapters-model.html#MucharmapChaptersModel"><span class="type">MucharmapChaptersModel</span></a> *chapters</code></em>,
+                                                         <em class="parameter"><code><span class="type">GtkTreeIter</span> *iter</code></em>);
+const <span class="returnvalue">char</span> *              <a class="link" href="mucharmap-mucharmap-chapters-model.html#mucharmap-chapters-model-get-title" title="mucharmap_chapters_model_get_title ()">mucharmap_chapters_model_get_title</a>
+                                                        (<em class="parameter"><code><a class="link" href="mucharmap-mucharmap-chapters-model.html#MucharmapChaptersModel"><span class="type">MucharmapChaptersModel</span></a> *chapters</code></em>);
+<a class="link" href="MucharmapCodepointList.html" title="MucharmapCodepointList"><span class="returnvalue">MucharmapCodepointList</span></a> *  <a class="link" href="mucharmap-mucharmap-chapters-model.html#mucharmap-chapters-model-get-book-codepoint-list" title="mucharmap_chapters_model_get_book_codepoint_list ()">mucharmap_chapters_model_get_book_codepoint_list</a>
+                                                        (<em class="parameter"><code><a class="link" href="mucharmap-mucharmap-chapters-model.html#MucharmapChaptersModel"><span class="type">MucharmapChaptersModel</span></a> *chapters</code></em>);
+<a href="http://library.mate.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="mucharmap-mucharmap-chapters-model.html#mucharmap-chapters-model-character-to-iter" title="mucharmap_chapters_model_character_to_iter ()">mucharmap_chapters_model_character_to_iter</a>
+                                                        (<em class="parameter"><code><a class="link" href="mucharmap-mucharmap-chapters-model.html#MucharmapChaptersModel"><span class="type">MucharmapChaptersModel</span></a> *chapters</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.mate.org/devel/glib/unstable/glib-Unicode-Manipulation.html#gunichar"><span class="type">gunichar</span></a> wc</code></em>,
+                                                         <em class="parameter"><code><span class="type">GtkTreeIter</span> *iter</code></em>);
+<a href="http://library.mate.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            <a class="link" href="mucharmap-mucharmap-chapters-model.html#mucharmap-chapters-model-id-to-iter" title="mucharmap_chapters_model_id_to_iter ()">mucharmap_chapters_model_id_to_iter</a> (<em class="parameter"><code><a class="link" href="mucharmap-mucharmap-chapters-model.html#MucharmapChaptersModel"><span class="type">MucharmapChaptersModel</span></a> *model</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *id</code></em>,
+                                                         <em class="parameter"><code><span class="type">GtkTreeIter</span> *iter</code></em>);
+</pre>
+</div>
+<div class="refsect1">
+<a name="mucharmap-mucharmap-chapters-model.object-hierarchy"></a><h2>Object Hierarchy</h2>
+<pre class="synopsis">
+  <a href="http://library.mate.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#GObject">GObject</a>
+   +----GtkListStore
+         +----MucharmapChaptersModel
+               +----<a class="link" href="MucharmapBlockChaptersModel.html" title="MucharmapBlockChaptersModel">MucharmapBlockChaptersModel</a>
+               +----<a class="link" href="MucharmapScriptChaptersModel.html" title="MucharmapScriptChaptersModel">MucharmapScriptChaptersModel</a>
+</pre>
+</div>
+<div class="refsect1">
+<a name="mucharmap-mucharmap-chapters-model.implemented-interfaces"></a><h2>Implemented Interfaces</h2>
+<p>
+MucharmapChaptersModel implements
+ GtkTreeModel,  GtkTreeDragSource,  GtkTreeDragDest,  GtkTreeSortable and  GtkBuildable.</p>
+</div>
+<div class="refsect1">
+<a name="mucharmap-mucharmap-chapters-model.description"></a><h2>Description</h2>
+<p>
+</p>
+</div>
+<div class="refsect1">
+<a name="mucharmap-mucharmap-chapters-model.details"></a><h2>Details</h2>
+<div class="refsect2">
+<a name="MucharmapChaptersModelPrivate"></a><h3>MucharmapChaptersModelPrivate</h3>
+<pre class="programlisting">typedef struct _MucharmapChaptersModelPrivate MucharmapChaptersModelPrivate;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="MucharmapChaptersModel-struct"></a><h3>MucharmapChaptersModel</h3>
+<pre class="programlisting">typedef struct _MucharmapChaptersModel MucharmapChaptersModel;</pre>
+<p>
+</p>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mucharmap-chapters-model-get-codepoint-list"></a><h3>mucharmap_chapters_model_get_codepoint_list ()</h3>
+<pre class="programlisting"><a class="link" href="MucharmapCodepointList.html" title="MucharmapCodepointList"><span class="returnvalue">MucharmapCodepointList</span></a> *  mucharmap_chapters_model_get_codepoint_list
+                                                        (<em class="parameter"><code><a class="link" href="mucharmap-mucharmap-chapters-model.html#MucharmapChaptersModel"><span class="type">MucharmapChaptersModel</span></a> *chapters</code></em>,
+                                                         <em class="parameter"><code><span class="type">GtkTreeIter</span> *iter</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>chapters</code></em> :</span></p></td>
+<td>a <a class="link" href="mucharmap-mucharmap-chapters-model.html#MucharmapChaptersModel"><span class="type">MucharmapChaptersModel</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>iter</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> a reference to a <a class="link" href="MucharmapCodepointList.html" title="MucharmapCodepointList"><span class="type">MucharmapCodepointList</span></a> representing all the characters
+in all the chapters. It should not be modified, but must be <a href="http://library.mate.org/devel/gobject/unstable/gobject-The-Base-Object-Type.html#g-object-unref"><code class="function">g_object_unref()</code></a>'d after use.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mucharmap-chapters-model-get-title"></a><h3>mucharmap_chapters_model_get_title ()</h3>
+<pre class="programlisting">const <span class="returnvalue">char</span> *              mucharmap_chapters_model_get_title
+                                                        (<em class="parameter"><code><a class="link" href="mucharmap-mucharmap-chapters-model.html#MucharmapChaptersModel"><span class="type">MucharmapChaptersModel</span></a> *chapters</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>chapters</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mucharmap-chapters-model-get-book-codepoint-list"></a><h3>mucharmap_chapters_model_get_book_codepoint_list ()</h3>
+<pre class="programlisting"><a class="link" href="MucharmapCodepointList.html" title="MucharmapCodepointList"><span class="returnvalue">MucharmapCodepointList</span></a> *  mucharmap_chapters_model_get_book_codepoint_list
+                                                        (<em class="parameter"><code><a class="link" href="mucharmap-mucharmap-chapters-model.html#MucharmapChaptersModel"><span class="type">MucharmapChaptersModel</span></a> *chapters</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>chapters</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mucharmap-chapters-model-character-to-iter"></a><h3>mucharmap_chapters_model_character_to_iter ()</h3>
+<pre class="programlisting"><a href="http://library.mate.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            mucharmap_chapters_model_character_to_iter
+                                                        (<em class="parameter"><code><a class="link" href="mucharmap-mucharmap-chapters-model.html#MucharmapChaptersModel"><span class="type">MucharmapChaptersModel</span></a> *chapters</code></em>,
+                                                         <em class="parameter"><code><a href="http://library.mate.org/devel/glib/unstable/glib-Unicode-Manipulation.html#gunichar"><span class="type">gunichar</span></a> wc</code></em>,
+                                                         <em class="parameter"><code><span class="type">GtkTreeIter</span> *iter</code></em>);</pre>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>chapters</code></em> :</span></p></td>
+<td>a <a class="link" href="mucharmap-mucharmap-chapters-model.html#MucharmapChaptersModel"><span class="type">MucharmapChaptersModel</span></a>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>wc</code></em> :</span></p></td>
+<td>a character
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>iter</code></em> :</span></p></td>
+<td>a <span class="type">GtkTreeIter</span>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td> <a href="http://library.mate.org/devel/glib/unstable/glib-Standard-Macros.html#TRUE:CAPS"><code class="literal">TRUE</code></a> on success, <a href="http://library.mate.org/devel/glib/unstable/glib-Standard-Macros.html#FALSE:CAPS"><code class="literal">FALSE</code></a> on failure.
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<hr>
+<div class="refsect2">
+<a name="mucharmap-chapters-model-id-to-iter"></a><h3>mucharmap_chapters_model_id_to_iter ()</h3>
+<pre class="programlisting"><a href="http://library.mate.org/devel/glib/unstable/glib-Basic-Types.html#gboolean"><span class="returnvalue">gboolean</span></a>            mucharmap_chapters_model_id_to_iter (<em class="parameter"><code><a class="link" href="mucharmap-mucharmap-chapters-model.html#MucharmapChaptersModel"><span class="type">MucharmapChaptersModel</span></a> *model</code></em>,
+                                                         <em class="parameter"><code>const <span class="type">char</span> *id</code></em>,
+                                                         <em class="parameter"><code><span class="type">GtkTreeIter</span> *iter</code></em>);</pre>
+<p>
+</p>
+<div class="variablelist"><table border="0">
+<col align="left" valign="top">
+<tbody>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>model</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>id</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><em class="parameter"><code>iter</code></em> :</span></p></td>
+<td>
+</td>
+</tr>
+<tr>
+<td><p><span class="term"><span class="emphasis"><em>Returns</em></span> :</span></p></td>
+<td>
+</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+<div class="footer">
+<hr>
+          Generated by GTK-Doc V1.15.1</div>
+</body>
+</html>

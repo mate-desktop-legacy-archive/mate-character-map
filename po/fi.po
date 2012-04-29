@@ -1,0 +1,1386 @@
+# Finnish messages for mucharmap.
+# Copyright (C) 2003,2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the mucharmap package.
+# Suomennos: http://mate-fi.sourceforge.net/
+# Ilkka Tuohela <hile@iki.fi>, 2002 - 2003, 2009.
+# Sami Pesonen <sampeson@iki.fi>, 2003.
+# Tommi Vainikainen <Tommi.Vainikainen@iki.fi>, 2004-2005, 2010.
+#
+# Jukka Korpelan ehdotelmia lohkojen nimiksi:
+#   http://www.cs.tut.fi/~jkorpela/unicode/lohkot.html
+#   (näitä on käytetty todella monissa, ei ihan kaikissa)
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: mucharmap\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-03-22 16:04+0200\n"
+"PO-Revision-Date: 2010-03-22 16:04+0200\n"
+"Last-Translator: Tommi Vainikainen <thv@iki.fi>\n"
+"Language-Team: Finnish <mate-fi-laatu@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n == 1 ? 0 : 1;\n"
+
+#: ../mucharmap.desktop.in.in.h:1 ../mucharmap/mucharmap-window.c:905
+#: ../mucharmap/main.c:80
+msgid "Character Map"
+msgstr "Merkkikartta"
+
+#: ../mucharmap.desktop.in.in.h:2
+msgid "Insert special characters into documents"
+msgstr "Lisää erikoismerkkejä asiakirjoihin"
+
+#: ../mucharmap/mucharmap-charmap.c:573
+msgid "Canonical decomposition:"
+msgstr "Kanoninen erittely:"
+
+#: ../mucharmap/mucharmap-charmap.c:616 ../mucharmap/mucharmap-chartable.c:553
+msgid "[not a printable character]"
+msgstr "[ei tulostettava merkki]"
+
+#: ../mucharmap/mucharmap-charmap.c:630
+msgid "General Character Properties"
+msgstr "Yleiset merkkiominaisuudet"
+
+#: ../mucharmap/mucharmap-charmap.c:636
+msgid "In Unicode since:"
+msgstr "Unicodessa lähtien:"
+
+#. character category
+#: ../mucharmap/mucharmap-charmap.c:640
+msgid "Unicode category:"
+msgstr "Unicode-luokka:"
+
+#: ../mucharmap/mucharmap-charmap.c:649
+msgid "Various Useful Representations"
+msgstr "Muut käyttökelpoiset esitysmuodot"
+
+#: ../mucharmap/mucharmap-charmap.c:659
+msgid "UTF-8:"
+msgstr "UTF-8:"
+
+#: ../mucharmap/mucharmap-charmap.c:667
+msgid "UTF-16:"
+msgstr "UTF-16:"
+
+#: ../mucharmap/mucharmap-charmap.c:678
+msgid "C octal escaped UTF-8:"
+msgstr "Oktaalikoodattu UTF-8:"
+
+#: ../mucharmap/mucharmap-charmap.c:688
+msgid "XML decimal entity:"
+msgstr "XML-koodin kymmenkantainen entiteetti:"
+
+#: ../mucharmap/mucharmap-charmap.c:699
+msgid "Annotations and Cross References"
+msgstr "Merkinnät ja ristiviitteet"
+
+#: ../mucharmap/mucharmap-charmap.c:706
+msgid "Alias names:"
+msgstr "Aliasnimet:"
+
+#: ../mucharmap/mucharmap-charmap.c:715
+msgid "Notes:"
+msgstr "Huomautukset:"
+
+#: ../mucharmap/mucharmap-charmap.c:724
+msgid "See also:"
+msgstr "Katso myös:"
+
+#: ../mucharmap/mucharmap-charmap.c:733
+msgid "Approximate equivalents:"
+msgstr "Samankaltaiset merkit:"
+
+#: ../mucharmap/mucharmap-charmap.c:742
+msgid "Equivalents:"
+msgstr "Samankaltaiset:"
+
+#: ../mucharmap/mucharmap-charmap.c:758
+msgid "CJK Ideograph Information"
+msgstr "CJK-ideograafinen määrittely"
+
+#: ../mucharmap/mucharmap-charmap.c:763
+msgid "Definition in English:"
+msgstr "Määrittely englanniksi:"
+
+#: ../mucharmap/mucharmap-charmap.c:768
+msgid "Mandarin Pronunciation:"
+msgstr "Mandariini-ääntäminen:"
+
+#: ../mucharmap/mucharmap-charmap.c:773
+msgid "Cantonese Pronunciation:"
+msgstr "Kantonilainen ääntäminen:"
+
+#: ../mucharmap/mucharmap-charmap.c:778
+msgid "Japanese On Pronunciation:"
+msgstr "Japanilainen On-ääntäminen:"
+
+#: ../mucharmap/mucharmap-charmap.c:783
+msgid "Japanese Kun Pronunciation:"
+msgstr "Japanilainen Kun-ääntäminen:"
+
+#: ../mucharmap/mucharmap-charmap.c:788
+msgid "Tang Pronunciation:"
+msgstr "Tang-ääntäminen:"
+
+#: ../mucharmap/mucharmap-charmap.c:793
+msgid "Korean Pronunciation:"
+msgstr "Korealainen ääntäminen:"
+
+#: ../mucharmap/mucharmap-charmap.c:1178
+msgid "Characte_r Table"
+msgstr "Merkki_kartta"
+
+#: ../mucharmap/mucharmap-charmap.c:1224
+msgid "Character _Details"
+msgstr "Merkin _yksityiskohdat"
+
+#: ../mucharmap/mucharmap-chartable.c:1399
+msgid "Unknown character, unable to identify."
+msgstr "Tuntematon merkki, jota ei tunnisteta."
+
+#: ../mucharmap/mucharmap-chartable.c:1401
+#: ../mucharmap/mucharmap-search-dialog.c:585
+msgid "Not found."
+msgstr "Ei löytynyt."
+
+#: ../mucharmap/mucharmap-chartable.c:1404
+msgid "Character found."
+msgstr "Merkki löytyi."
+
+#: ../mucharmap/mucharmap-chartable-accessible.c:771
+msgid "Character Table"
+msgstr "Merkkikartta"
+
+#: ../mucharmap/mucharmap-mini-fontsel.c:280
+msgid "Font"
+msgstr "Kirjasin"
+
+#: ../mucharmap/mucharmap-mini-fontsel.c:293
+msgid "Font Family"
+msgstr "Kirjasinperhe"
+
+#: ../mucharmap/mucharmap-mini-fontsel.c:311
+msgid "Font Size"
+msgstr "Kirjasimen koko"
+
+#: ../mucharmap/mucharmap-settings.c:71
+msgid "MateConf could not be initialized."
+msgstr "MateConf:ia ei voitu alustaa."
+
+#. Unicode assigns "Common" as the script name for any character not
+#. * specifically listed in Scripts.txt
+#: ../mucharmap/mucharmap-script-codepoint-list.c:463
+#: ../mucharmap/unicode-scripts.h:30
+msgid "Common"
+msgstr "Yleinen"
+
+#: ../mucharmap/mucharmap-unicode-info.c:99
+msgid "<Non Private Use High Surrogate>"
+msgstr "<Laajennuskoodin ykkösosia yhteiskäyttöön>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:101
+msgid "<Private Use High Surrogate>"
+msgstr "<Laajennuskoodin ykkösosia erilliskäyttöön>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:103
+msgid "<Low Surrogate>"
+msgstr "<Laajennuskoodin kakkososa>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:105
+msgid "<Private Use>"
+msgstr "<Erilliskäyttö>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:107
+msgid "<Plane 15 Private Use>"
+msgstr "<Taso 15 erilliskäyttö>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:109
+msgid "<Plane 16 Private Use>"
+msgstr "<Taso 16 erilliskäyttö>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:114
+msgid "<not assigned>"
+msgstr "<ei määrätty>"
+
+#: ../mucharmap/mucharmap-unicode-info.c:127
+msgid "Other, Control"
+msgstr "Muut, hallinta"
+
+#: ../mucharmap/mucharmap-unicode-info.c:128
+msgid "Other, Format"
+msgstr "Muut, muoto"
+
+#: ../mucharmap/mucharmap-unicode-info.c:129
+msgid "Other, Not Assigned"
+msgstr "Muut, sijoittamaton"
+
+#: ../mucharmap/mucharmap-unicode-info.c:130
+msgid "Other, Private Use"
+msgstr "Muut, erilliskäyttö"
+
+#: ../mucharmap/mucharmap-unicode-info.c:131
+msgid "Other, Surrogate"
+msgstr "Muut, korvikemerkki"
+
+#: ../mucharmap/mucharmap-unicode-info.c:132
+msgid "Letter, Lowercase"
+msgstr "Kirjain, pieni"
+
+#: ../mucharmap/mucharmap-unicode-info.c:133
+msgid "Letter, Modifier"
+msgstr "Kirjain, määrite"
+
+#: ../mucharmap/mucharmap-unicode-info.c:134
+msgid "Letter, Other"
+msgstr "Kirjain, muut"
+
+#: ../mucharmap/mucharmap-unicode-info.c:135
+msgid "Letter, Titlecase"
+msgstr "Kirjain, päällekirjoitus"
+
+#: ../mucharmap/mucharmap-unicode-info.c:136
+msgid "Letter, Uppercase"
+msgstr "Kirjain, iso"
+
+#: ../mucharmap/mucharmap-unicode-info.c:137
+msgid "Mark, Spacing Combining"
+msgstr "Merkki, erillisiä tarkkeita"
+
+#: ../mucharmap/mucharmap-unicode-info.c:138
+msgid "Mark, Enclosing"
+msgstr "Merkki, ympäröivä"
+
+#: ../mucharmap/mucharmap-unicode-info.c:139
+msgid "Mark, Non-Spacing"
+msgstr "Merkki, ei-erillinen"
+
+#: ../mucharmap/mucharmap-unicode-info.c:140
+msgid "Number, Decimal Digit"
+msgstr "Numero, desimaalinumero"
+
+#: ../mucharmap/mucharmap-unicode-info.c:141
+msgid "Number, Letter"
+msgstr "Numero, kirjain"
+
+#: ../mucharmap/mucharmap-unicode-info.c:142
+msgid "Number, Other"
+msgstr "Numero, muut"
+
+#: ../mucharmap/mucharmap-unicode-info.c:143
+msgid "Punctuation, Connector"
+msgstr "Välimerkki, yhdistävä"
+
+#: ../mucharmap/mucharmap-unicode-info.c:144
+msgid "Punctuation, Dash"
+msgstr "Välimerkki, viiva"
+
+#: ../mucharmap/mucharmap-unicode-info.c:145
+msgid "Punctuation, Close"
+msgstr "Välimerkki, lopetus"
+
+#: ../mucharmap/mucharmap-unicode-info.c:146
+msgid "Punctuation, Final Quote"
+msgstr "Välimerkki, lainaus kiinni"
+
+#: ../mucharmap/mucharmap-unicode-info.c:147
+msgid "Punctuation, Initial Quote"
+msgstr "Välimerkki, lainaus alkaa"
+
+#: ../mucharmap/mucharmap-unicode-info.c:148
+msgid "Punctuation, Other"
+msgstr "Välimerkki, muut"
+
+#: ../mucharmap/mucharmap-unicode-info.c:149
+msgid "Punctuation, Open"
+msgstr "Välimerkki, alku"
+
+#: ../mucharmap/mucharmap-unicode-info.c:150
+msgid "Symbol, Currency"
+msgstr "Symboli, valuutta"
+
+#: ../mucharmap/mucharmap-unicode-info.c:151
+msgid "Symbol, Modifier"
+msgstr "Symboli, määrite"
+
+#: ../mucharmap/mucharmap-unicode-info.c:152
+msgid "Symbol, Math"
+msgstr "Symboli, matematiikka"
+
+#: ../mucharmap/mucharmap-unicode-info.c:153
+msgid "Symbol, Other"
+msgstr "Symboli, muut"
+
+#: ../mucharmap/mucharmap-unicode-info.c:154
+msgid "Separator, Line"
+msgstr "Erotinmerkki, viiva"
+
+#: ../mucharmap/mucharmap-unicode-info.c:155
+msgid "Separator, Paragraph"
+msgstr "Erotinmerkki, kappale"
+
+#: ../mucharmap/mucharmap-unicode-info.c:156
+msgid "Separator, Space"
+msgstr "Erotinmerkki, välilyönti"
+
+#: ../mucharmap/mucharmap-window.c:246
+msgid "Searching…"
+msgstr "Haetaan…"
+
+#: ../mucharmap/mucharmap-window.c:493
+msgid ""
+"Mucharmap is free software; you can redistribute it and/or modify it under "
+"the terms of the GNU General Public License as published by the Free "
+"Software Foundation; either version 2 of the License, or (at your option) "
+"any later version."
+msgstr ""
+"Mucharmap on vapaa ohjelma; sitä on sallittu levittää edelleen ja\n"
+"muuttaa GNU yleisen lisenssin (GPL lisenssin) ehtojen mukaan sellaisina kuin "
+"Free Software Foundation on ne julkaissut; joko Lisenssin version 2, tai "
+"(valinnan mukaan) minkä tahansa myöhemmän version mukaisesti."
+
+#: ../mucharmap/mucharmap-window.c:497
+msgid ""
+"Permission is hereby granted, free of charge, to any person obtaining a copy "
+"of the Unicode data files to deal in them without restriction, including "
+"without limitation the rights to use, copy, modify, merge, publish, "
+"distribute, and/or sell copies."
+msgstr ""
+"Unicoden käyttöoikeudet antavat kenelle tahansa, joka hankkii käyttöönsä "
+"Unicode-datatiedostot, oikeuden käyttää niitä rajoituksitta, mukaanlukien "
+"rajoittamattomat oikeudet käyttää, kopioida, muokata, liittää, julkaista, "
+"jakaa ja myydä kopioita."
+
+#: ../mucharmap/mucharmap-window.c:501
+msgid ""
+"Mucharmap and the Unicode data files are distributed in the hope that they "
+"will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty "
+"of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General "
+"Public License and Unicode Copyright for more details."
+msgstr ""
+"Mucharmapia ja Unicode-tiedostoja levitetään siinä toivossa, että ne "
+"olisivat hyödyllisiä, mutta ilman mitään takuuta; ilman edes hiljaista "
+"takuuta kaupallisesti hyväksyttävästä laadusta tai soveltuvuudesta tiettyyn "
+"tarkoitukseen.  Katso GPL lisenssistä ja Unicoden käyttöoikeuksista lisää "
+"yksityiskohtia."
+
+#: ../mucharmap/mucharmap-window.c:505
+msgid ""
+"You should have received a copy of the GNU General Public License along with "
+"Mucharmap; if not, write to the Free Software Foundation, Inc., 59 Temple "
+"Place, Suite 330, Boston, MA  02110-1301  USA"
+msgstr ""
+"Tämän ohjelman mukana pitäisi tulla kopio GPL lisenssistä; jos näin ei ole, "
+"kirjoita osoitteeseen Free Software Foundation Inc., 59 Temple Place, Suite "
+"330, Boston, MA 02111-1301, USA."
+
+#: ../mucharmap/mucharmap-window.c:508
+msgid ""
+"Also you should have received a copy of the Unicode Copyright along with "
+"Mucharmap; you can always find it at Unicode's website: http://www.unicode."
+"org/copyright.html"
+msgstr ""
+"Ohjelman mukana pitäisi myös tulla kopio Unicode-käyttöoikeudesta. Voit aina "
+"lukea sen Unicoden-sivuilta osoitteesta http://www.unicode.org/copyright.html"
+
+#: ../mucharmap/mucharmap-window.c:521 ../mucharmap/main.c:37
+msgid "MATE Character Map"
+msgstr "Maten merkkikartta"
+
+#: ../mucharmap/mucharmap-window.c:523
+msgid "Based on the Unicode Character Database 5.2"
+msgstr "Perustuu Unicode-merkkitietokannan versioon 5.2"
+
+#: ../mucharmap/mucharmap-window.c:532
+msgid "translator-credits"
+msgstr ""
+"Sami Pesonen, 2003\n"
+"Tommi Vainikainen, 2004, 2010\n"
+"Ilkka Tuohela, 2002-2009\n"
+"\n"
+"http://mate.fi/"
+
+#: ../mucharmap/mucharmap-window.c:607 ../mucharmap/mucharmap-window.c:874
+msgid "Next Script"
+msgstr "Seuraava kirjoitusjärjestelmä"
+
+#: ../mucharmap/mucharmap-window.c:607 ../mucharmap/mucharmap-window.c:876
+msgid "Previous Script"
+msgstr "Edellinen kirjoitusjärjestelmä"
+
+#: ../mucharmap/mucharmap-window.c:612
+msgid "Next Block"
+msgstr "Seuraava lohko"
+
+#: ../mucharmap/mucharmap-window.c:612
+msgid "Previous Block"
+msgstr "Edellinen lohko"
+
+#: ../mucharmap/mucharmap-window.c:837
+msgid "_File"
+msgstr "_Tiedosto"
+
+#: ../mucharmap/mucharmap-window.c:838
+msgid "_View"
+msgstr "_Näytä"
+
+#: ../mucharmap/mucharmap-window.c:839
+msgid "_Search"
+msgstr "_Etsi"
+
+#: ../mucharmap/mucharmap-window.c:840
+msgid "_Go"
+msgstr "_Siirry"
+
+#: ../mucharmap/mucharmap-window.c:841
+msgid "_Help"
+msgstr "O_hje"
+
+#: ../mucharmap/mucharmap-window.c:844
+msgid "Page _Setup"
+msgstr "Sivu_asetukset"
+
+#: ../mucharmap/mucharmap-window.c:865
+msgid "Find _Next"
+msgstr "Etsi _seuraava"
+
+#: ../mucharmap/mucharmap-window.c:867
+msgid "Find _Previous"
+msgstr "Etsi _edellinen"
+
+#: ../mucharmap/mucharmap-window.c:870
+msgid "_Next Character"
+msgstr "_Seuraava merkki"
+
+#: ../mucharmap/mucharmap-window.c:872
+msgid "_Previous Character"
+msgstr "_Edellinen merkki"
+
+#: ../mucharmap/mucharmap-window.c:879
+msgid "_Contents"
+msgstr "_Sisältö"
+
+#: ../mucharmap/mucharmap-window.c:881
+msgid "_About"
+msgstr "_Tietoja"
+
+#: ../mucharmap/mucharmap-window.c:891
+msgid "By _Script"
+msgstr "_Kirjoitusjärjestelmän mukaan"
+
+#: ../mucharmap/mucharmap-window.c:893
+msgid "By _Unicode Block"
+msgstr "_Unicode-lohkon mukaan"
+
+#: ../mucharmap/mucharmap-window.c:898
+msgid "Snap _Columns to Power of Two"
+msgstr "Tasaa _sarakkeet kahden potenssien mukaan"
+
+#: ../mucharmap/mucharmap-window.c:967
+msgid "_Text to copy:"
+msgstr "_Kopioitava teksti:"
+
+#: ../mucharmap/mucharmap-window.c:974
+msgid "Copy to the clipboard."
+msgstr "Kopioi leikepöydälle."
+
+#: ../mucharmap/main.c:55
+msgid "Font to start with; ex: 'Serif 27'"
+msgstr "Aloituskirjasin; esim. ”Serif 27”"
+
+#: ../mucharmap/main.c:55
+msgid "FONT"
+msgstr "KIRJASIN"
+
+#: ../mucharmap/unicode-blocks.h:14
+msgid "Basic Latin"
+msgstr "Latinalainen perusosa"
+
+#: ../mucharmap/unicode-blocks.h:15
+msgid "Latin-1 Supplement"
+msgstr "Latinalaisen merkistön täydennys"
+
+#: ../mucharmap/unicode-blocks.h:16
+msgid "Latin Extended-A"
+msgstr "Latinalaisen merkistön laajennusosa A"
+
+#: ../mucharmap/unicode-blocks.h:17
+msgid "Latin Extended-B"
+msgstr "Latinalaisen merkistön laajennusosa B"
+
+#: ../mucharmap/unicode-blocks.h:18
+msgid "IPA Extensions"
+msgstr "IPA-täydennys"
+
+#: ../mucharmap/unicode-blocks.h:19
+msgid "Spacing Modifier Letters"
+msgstr "Tarkkeenomaisia erillisiä merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:20
+msgid "Combining Diacritical Marks"
+msgstr "Tarkkeita"
+
+#: ../mucharmap/unicode-blocks.h:21
+msgid "Greek and Coptic"
+msgstr "Kreikkalaisia ja koptilaisia merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:22 ../mucharmap/unicode-scripts.h:34
+msgid "Cyrillic"
+msgstr "Kyrillisiä merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:23
+msgid "Cyrillic Supplement"
+msgstr "Lisää kyrillisiä merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:24 ../mucharmap/unicode-scripts.h:17
+msgid "Armenian"
+msgstr "Armenialaisia merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:25 ../mucharmap/unicode-scripts.h:48
+msgid "Hebrew"
+msgstr "Heprealaisia merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:26 ../mucharmap/unicode-scripts.h:16
+msgid "Arabic"
+msgstr "Arabialaisia merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:27 ../mucharmap/unicode-scripts.h:93
+msgid "Syriac"
+msgstr "Syyrialaisia merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:28
+msgid "Arabic Supplement"
+msgstr "Lisää arabialaisia merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:29 ../mucharmap/unicode-scripts.h:101
+msgid "Thaana"
+msgstr "Thaana"
+
+#: ../mucharmap/unicode-blocks.h:30 ../mucharmap/unicode-scripts.h:73
+msgid "N'Ko"
+msgstr "N'Ko"
+
+#: ../mucharmap/unicode-blocks.h:31 ../mucharmap/unicode-scripts.h:87
+msgid "Samaritan"
+msgstr "Samarialainen"
+
+#: ../mucharmap/unicode-blocks.h:32 ../mucharmap/unicode-scripts.h:36
+msgid "Devanagari"
+msgstr "Devanagari"
+
+#: ../mucharmap/unicode-blocks.h:33 ../mucharmap/unicode-scripts.h:21
+msgid "Bengali"
+msgstr "Bengali"
+
+#: ../mucharmap/unicode-blocks.h:34 ../mucharmap/unicode-scripts.h:44
+msgid "Gurmukhi"
+msgstr "Gurmukhi"
+
+#: ../mucharmap/unicode-blocks.h:35 ../mucharmap/unicode-scripts.h:43
+msgid "Gujarati"
+msgstr "Gujarati"
+
+#: ../mucharmap/unicode-blocks.h:36 ../mucharmap/unicode-scripts.h:81
+msgid "Oriya"
+msgstr "Oriya"
+
+#: ../mucharmap/unicode-blocks.h:37 ../mucharmap/unicode-scripts.h:99
+msgid "Tamil"
+msgstr "Tamil"
+
+#: ../mucharmap/unicode-blocks.h:38 ../mucharmap/unicode-scripts.h:100
+msgid "Telugu"
+msgstr "Telugu"
+
+#: ../mucharmap/unicode-blocks.h:39 ../mucharmap/unicode-scripts.h:56
+msgid "Kannada"
+msgstr "Kannada"
+
+#: ../mucharmap/unicode-blocks.h:40 ../mucharmap/unicode-scripts.h:69
+msgid "Malayalam"
+msgstr "Malayalam"
+
+#: ../mucharmap/unicode-blocks.h:41 ../mucharmap/unicode-scripts.h:90
+msgid "Sinhala"
+msgstr "Sinhala"
+
+#: ../mucharmap/unicode-blocks.h:42 ../mucharmap/unicode-scripts.h:102
+msgid "Thai"
+msgstr "Thai"
+
+#: ../mucharmap/unicode-blocks.h:43 ../mucharmap/unicode-scripts.h:61
+msgid "Lao"
+msgstr "Lao"
+
+#: ../mucharmap/unicode-blocks.h:44 ../mucharmap/unicode-scripts.h:103
+msgid "Tibetan"
+msgstr "Tiibettiläisiä merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:45 ../mucharmap/unicode-scripts.h:72
+msgid "Myanmar"
+msgstr "Myanmar"
+
+#: ../mucharmap/unicode-blocks.h:46 ../mucharmap/unicode-scripts.h:39
+msgid "Georgian"
+msgstr "Kartvelilaisia merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:47
+msgid "Hangul Jamo"
+msgstr "Hangulin jamo-merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:48 ../mucharmap/unicode-scripts.h:38
+msgid "Ethiopic"
+msgstr "Etiopialaisia merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:49
+msgid "Ethiopic Supplement"
+msgstr "Lisää etiopialaisia merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:50 ../mucharmap/unicode-scripts.h:29
+msgid "Cherokee"
+msgstr "Cherokee"
+
+#: ../mucharmap/unicode-blocks.h:51
+msgid "Unified Canadian Aboriginal Syllabics"
+msgstr "Kanadalaisia tavumerkkejä"
+
+#: ../mucharmap/unicode-blocks.h:52 ../mucharmap/unicode-scripts.h:75
+msgid "Ogham"
+msgstr "Ogham"
+
+#: ../mucharmap/unicode-blocks.h:53 ../mucharmap/unicode-scripts.h:86
+msgid "Runic"
+msgstr "Riimukirjaimia"
+
+#: ../mucharmap/unicode-blocks.h:54 ../mucharmap/unicode-scripts.h:94
+msgid "Tagalog"
+msgstr "Tagalog"
+
+#: ../mucharmap/unicode-blocks.h:55 ../mucharmap/unicode-scripts.h:47
+msgid "Hanunoo"
+msgstr "Hanunoo"
+
+#: ../mucharmap/unicode-blocks.h:56 ../mucharmap/unicode-scripts.h:25
+msgid "Buhid"
+msgstr "Buhid"
+
+#: ../mucharmap/unicode-blocks.h:57 ../mucharmap/unicode-scripts.h:95
+msgid "Tagbanwa"
+msgstr "Tagbanwa"
+
+#: ../mucharmap/unicode-blocks.h:58 ../mucharmap/unicode-scripts.h:60
+msgid "Khmer"
+msgstr "Khmer"
+
+#: ../mucharmap/unicode-blocks.h:59 ../mucharmap/unicode-scripts.h:71
+msgid "Mongolian"
+msgstr "Mongolialaisia merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:60
+msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgstr "Yhteinäistetyt kanadalaisten alkuasukkaiden tavumerkit laajennusosa"
+
+#: ../mucharmap/unicode-blocks.h:61 ../mucharmap/unicode-scripts.h:64
+msgid "Limbu"
+msgstr "Limbu"
+
+#: ../mucharmap/unicode-blocks.h:62 ../mucharmap/unicode-scripts.h:96
+msgid "Tai Le"
+msgstr "Tai Le"
+
+#: ../mucharmap/unicode-blocks.h:63 ../mucharmap/unicode-scripts.h:74
+msgid "New Tai Lue"
+msgstr "Uusi Tai Lue"
+
+#: ../mucharmap/unicode-blocks.h:64
+msgid "Khmer Symbols"
+msgstr "Khmer-symboleja"
+
+#: ../mucharmap/unicode-blocks.h:65 ../mucharmap/unicode-scripts.h:24
+msgid "Buginese"
+msgstr "Buginilainen"
+
+#: ../mucharmap/unicode-blocks.h:66 ../mucharmap/unicode-scripts.h:97
+msgid "Tai Tham"
+msgstr "Tai Tham"
+
+#: ../mucharmap/unicode-blocks.h:67 ../mucharmap/unicode-scripts.h:19
+msgid "Balinese"
+msgstr "Balilainen"
+
+#: ../mucharmap/unicode-blocks.h:68 ../mucharmap/unicode-scripts.h:91
+msgid "Sundanese"
+msgstr "Sundanilainen"
+
+#: ../mucharmap/unicode-blocks.h:69 ../mucharmap/unicode-scripts.h:63
+msgid "Lepcha"
+msgstr "Lepchalainen"
+
+#: ../mucharmap/unicode-blocks.h:70 ../mucharmap/unicode-scripts.h:76
+msgid "Ol Chiki"
+msgstr "Ol Chiki"
+
+#: ../mucharmap/unicode-blocks.h:71
+msgid "Vedic Extensions"
+msgstr "Veda-täydennys"
+
+#: ../mucharmap/unicode-blocks.h:72
+msgid "Phonetic Extensions"
+msgstr "Äänteellinen täydennys"
+
+#: ../mucharmap/unicode-blocks.h:73
+msgid "Phonetic Extensions Supplement"
+msgstr "Lisää äänteellisiä täydennyksiä"
+
+#: ../mucharmap/unicode-blocks.h:74
+msgid "Combining Diacritical Marks Supplement"
+msgstr "Lisää tarkkeita"
+
+#: ../mucharmap/unicode-blocks.h:75
+msgid "Latin Extended Additional"
+msgstr "Latinalaisen merkistön laajennusosa"
+
+#: ../mucharmap/unicode-blocks.h:76
+msgid "Greek Extended"
+msgstr "Kreikkalaisen merkistön laajennusosa"
+
+#: ../mucharmap/unicode-blocks.h:77
+msgid "General Punctuation"
+msgstr "Yleisiä välimerkkejä"
+
+#: ../mucharmap/unicode-blocks.h:78
+msgid "Superscripts and Subscripts"
+msgstr "Ylä- ja alaindeksejä"
+
+#: ../mucharmap/unicode-blocks.h:79
+msgid "Currency Symbols"
+msgstr "Valuuttamerkkejä"
+
+#: ../mucharmap/unicode-blocks.h:80
+msgid "Combining Diacritical Marks for Symbols"
+msgstr "Symbolien tarkkeita"
+
+#: ../mucharmap/unicode-blocks.h:81
+msgid "Letterlike Symbols"
+msgstr "Kirjainsymboleita"
+
+#: ../mucharmap/unicode-blocks.h:82
+msgid "Number Forms"
+msgstr "Lukuilmaisuja"
+
+#: ../mucharmap/unicode-blocks.h:83
+msgid "Arrows"
+msgstr "Nuolia"
+
+#: ../mucharmap/unicode-blocks.h:84
+msgid "Mathematical Operators"
+msgstr "Matemaattisia operaattoreita"
+
+#: ../mucharmap/unicode-blocks.h:85
+msgid "Miscellaneous Technical"
+msgstr "Sekalaisia teknisiä merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:86
+msgid "Control Pictures"
+msgstr "Ohjausmerkkien symboleita"
+
+#: ../mucharmap/unicode-blocks.h:87
+msgid "Optical Character Recognition"
+msgstr "Optisen luennan merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:88
+msgid "Enclosed Alphanumerics"
+msgstr "Ympäröityjä aakkosnumeerisia merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:89
+msgid "Box Drawing"
+msgstr "Viivapiirrosmerkkejä"
+
+#: ../mucharmap/unicode-blocks.h:90
+msgid "Block Elements"
+msgstr "Lohko-osia"
+
+#: ../mucharmap/unicode-blocks.h:91
+msgid "Geometric Shapes"
+msgstr "Geometrisia muotoja"
+
+#: ../mucharmap/unicode-blocks.h:92
+msgid "Miscellaneous Symbols"
+msgstr "Sekalaisia symboleja"
+
+#: ../mucharmap/unicode-blocks.h:93
+msgid "Dingbats"
+msgstr "Kuvamerkkejä"
+
+#: ../mucharmap/unicode-blocks.h:94
+msgid "Miscellaneous Mathematical Symbols-A"
+msgstr "Sekalaisia matemaattisia symboleja A"
+
+#: ../mucharmap/unicode-blocks.h:95
+msgid "Supplemental Arrows-A"
+msgstr "Lisää nuolia A"
+
+#: ../mucharmap/unicode-blocks.h:96
+msgid "Braille Patterns"
+msgstr "Braille-merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:97
+msgid "Supplemental Arrows-B"
+msgstr "Lisää nuolia B"
+
+#: ../mucharmap/unicode-blocks.h:98
+msgid "Miscellaneous Mathematical Symbols-B"
+msgstr "Sekalaisia matemaattisia symboleja B"
+
+#: ../mucharmap/unicode-blocks.h:99
+msgid "Supplemental Mathematical Operators"
+msgstr "Lisää matemaattisia operaattoreita"
+
+#: ../mucharmap/unicode-blocks.h:100
+msgid "Miscellaneous Symbols and Arrows"
+msgstr "Sekalaisia symboleja ja nuolia"
+
+#: ../mucharmap/unicode-blocks.h:101 ../mucharmap/unicode-scripts.h:40
+msgid "Glagolitic"
+msgstr "Glagoliittinen"
+
+#: ../mucharmap/unicode-blocks.h:102
+msgid "Latin Extended-C"
+msgstr "Latinalaisen merkistön laajennusosa C"
+
+#: ../mucharmap/unicode-blocks.h:103 ../mucharmap/unicode-scripts.h:31
+msgid "Coptic"
+msgstr "Koptilainen"
+
+#: ../mucharmap/unicode-blocks.h:104
+msgid "Georgian Supplement"
+msgstr "Lisää Kartvelilaisia merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:105 ../mucharmap/unicode-scripts.h:104
+msgid "Tifinagh"
+msgstr "Tifinagh"
+
+#: ../mucharmap/unicode-blocks.h:106
+msgid "Ethiopic Extended"
+msgstr "Etiopialainen laajennusosa"
+
+#: ../mucharmap/unicode-blocks.h:107
+msgid "Cyrillic Extended-A"
+msgstr "Kyrillisen merkistön laajennusosa A"
+
+#: ../mucharmap/unicode-blocks.h:108
+msgid "Supplemental Punctuation"
+msgstr "Lissä Yleisiä välimerkkejä"
+
+#: ../mucharmap/unicode-blocks.h:109
+msgid "CJK Radicals Supplement"
+msgstr "Lisää CJK-radikaaleja"
+
+#: ../mucharmap/unicode-blocks.h:110
+msgid "Kangxi Radicals"
+msgstr "Kangxi-radikaaleja"
+
+#: ../mucharmap/unicode-blocks.h:111
+msgid "Ideographic Description Characters"
+msgstr "Ideogrammien kuvailumerkkejä"
+
+#: ../mucharmap/unicode-blocks.h:112
+msgid "CJK Symbols and Punctuation"
+msgstr "CJK-symboleita ja -välimerkkejä"
+
+#: ../mucharmap/unicode-blocks.h:113 ../mucharmap/unicode-scripts.h:49
+msgid "Hiragana"
+msgstr "Hiragana"
+
+#: ../mucharmap/unicode-blocks.h:114 ../mucharmap/unicode-scripts.h:57
+msgid "Katakana"
+msgstr "Katakana"
+
+#: ../mucharmap/unicode-blocks.h:115 ../mucharmap/unicode-scripts.h:22
+msgid "Bopomofo"
+msgstr "Bopomofo"
+
+#: ../mucharmap/unicode-blocks.h:116
+msgid "Hangul Compatibility Jamo"
+msgstr "Hangulin jamo-erillismerkkejä"
+
+#: ../mucharmap/unicode-blocks.h:117
+msgid "Kanbun"
+msgstr "Kanbun"
+
+#: ../mucharmap/unicode-blocks.h:118
+msgid "Bopomofo Extended"
+msgstr "Bopomofon laajennusosa"
+
+#: ../mucharmap/unicode-blocks.h:119
+msgid "CJK Strokes"
+msgstr "CJK-piirtomerkit"
+
+#: ../mucharmap/unicode-blocks.h:120
+msgid "Katakana Phonetic Extensions"
+msgstr "Katakana-äänteellinen täydennys"
+
+#: ../mucharmap/unicode-blocks.h:121
+msgid "Enclosed CJK Letters and Months"
+msgstr "Ympäröityjä CJK-kirjaimia ja -kuukausimerkkejä"
+
+#: ../mucharmap/unicode-blocks.h:122
+msgid "CJK Compatibility"
+msgstr "CJK-yhteensopivia merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:123
+msgid "CJK Unified Ideographs Extension A"
+msgstr "Yhtenäistettyjen CJK-ideogrammien laajennus A"
+
+#: ../mucharmap/unicode-blocks.h:124
+msgid "Yijing Hexagram Symbols"
+msgstr "Yijing-heksagrammisymboleja"
+
+#: ../mucharmap/unicode-blocks.h:125
+msgid "CJK Unified Ideographs"
+msgstr "Yhtenäistettyjä CJK-ideogrammeja"
+
+#: ../mucharmap/unicode-blocks.h:126
+msgid "Yi Syllables"
+msgstr "Yi-tavumerkkejä"
+
+#: ../mucharmap/unicode-blocks.h:127
+msgid "Yi Radicals"
+msgstr "Yi-juurimerkkejä"
+
+#: ../mucharmap/unicode-blocks.h:128 ../mucharmap/unicode-scripts.h:66
+msgid "Lisu"
+msgstr "Lisu"
+
+#: ../mucharmap/unicode-blocks.h:129 ../mucharmap/unicode-scripts.h:106
+msgid "Vai"
+msgstr "Vai"
+
+#: ../mucharmap/unicode-blocks.h:130
+msgid "Cyrillic Extended-B"
+msgstr "Kyrillisen merkistön laajennusosa B"
+
+#: ../mucharmap/unicode-blocks.h:131 ../mucharmap/unicode-scripts.h:20
+msgid "Bamum"
+msgstr "Bamum"
+
+#: ../mucharmap/unicode-blocks.h:132
+msgid "Modifier Tone Letters"
+msgstr "Tarkkeenomaisia erillisiä merkkejä"
+
+#: ../mucharmap/unicode-blocks.h:133
+msgid "Latin Extended-D"
+msgstr "Latinalaisen merkistön laajennusosa D"
+
+#: ../mucharmap/unicode-blocks.h:134 ../mucharmap/unicode-scripts.h:92
+msgid "Syloti Nagri"
+msgstr "Syloti Nagri"
+
+#: ../mucharmap/unicode-blocks.h:135
+msgid "Common Indic Number Forms"
+msgstr "Yleiset intialaiset numeromuodot"
+
+#: ../mucharmap/unicode-blocks.h:136
+msgid "Phags-pa"
+msgstr "Phags-pa"
+
+#: ../mucharmap/unicode-blocks.h:137 ../mucharmap/unicode-scripts.h:88
+msgid "Saurashtra"
+msgstr "Saurashtra"
+
+#: ../mucharmap/unicode-blocks.h:138
+msgid "Devanagari Extended"
+msgstr "Devanagari laajennusosa"
+
+#: ../mucharmap/unicode-blocks.h:139 ../mucharmap/unicode-scripts.h:58
+msgid "Kayah Li"
+msgstr "Kayah Li"
+
+#: ../mucharmap/unicode-blocks.h:140 ../mucharmap/unicode-scripts.h:85
+msgid "Rejang"
+msgstr "Rejang"
+
+#: ../mucharmap/unicode-blocks.h:141
+msgid "Hangul Jamo Extended-A"
+msgstr "Hangul Jamo laajennusosa A"
+
+#: ../mucharmap/unicode-blocks.h:142 ../mucharmap/unicode-scripts.h:54
+msgid "Javanese"
+msgstr "Jaavalainen"
+
+#: ../mucharmap/unicode-blocks.h:143 ../mucharmap/unicode-scripts.h:28
+msgid "Cham"
+msgstr "Cham"
+
+#: ../mucharmap/unicode-blocks.h:144
+msgid "Myanmar Extended-A"
+msgstr "Myanmarin laajennusosa A"
+
+#: ../mucharmap/unicode-blocks.h:145 ../mucharmap/unicode-scripts.h:98
+msgid "Tai Viet"
+msgstr "Tai Viet"
+
+#: ../mucharmap/unicode-blocks.h:146 ../mucharmap/unicode-scripts.h:70
+msgid "Meetei Mayek"
+msgstr "Meetei Mayek"
+
+#: ../mucharmap/unicode-blocks.h:147
+msgid "Hangul Syllables"
+msgstr "Hangul-tavumerkkejä"
+
+#: ../mucharmap/unicode-blocks.h:148
+msgid "Hangul Jamo Extended-B"
+msgstr "Hangul Jamo laajennusosa B"
+
+#: ../mucharmap/unicode-blocks.h:149
+msgid "High Surrogates"
+msgstr "Laajennuskoodien ykkösosia"
+
+#: ../mucharmap/unicode-blocks.h:150
+msgid "High Private Use Surrogates"
+msgstr "Laajennuskoodien ykkösosia erilliskäyttöön"
+
+#: ../mucharmap/unicode-blocks.h:151
+msgid "Low Surrogates"
+msgstr "Laajennuskoodien kakkososia"
+
+#: ../mucharmap/unicode-blocks.h:152
+msgid "Private Use Area"
+msgstr "Erilliskäytön lohko"
+
+#: ../mucharmap/unicode-blocks.h:153
+msgid "CJK Compatibility Ideographs"
+msgstr "CJK-yhteensopivia ideogrammeja"
+
+#: ../mucharmap/unicode-blocks.h:154
+msgid "Alphabetic Presentation Forms"
+msgstr "Kirjainten tulostusmuotoja"
+
+#: ../mucharmap/unicode-blocks.h:155
+msgid "Arabic Presentation Forms-A"
+msgstr "Arabialaisten merkkien esitysmuotoja A"
+
+#: ../mucharmap/unicode-blocks.h:156
+msgid "Variation Selectors"
+msgstr "Muunnelman valitsimia"
+
+#: ../mucharmap/unicode-blocks.h:157
+msgid "Vertical Forms"
+msgstr "Pystysuorat muodot"
+
+#: ../mucharmap/unicode-blocks.h:158
+msgid "Combining Half Marks"
+msgstr "Tarkkeiden puolikkaita"
+
+#: ../mucharmap/unicode-blocks.h:159
+msgid "CJK Compatibility Forms"
+msgstr "CJK-yhteensopivia merkkien muotoja"
+
+#: ../mucharmap/unicode-blocks.h:160
+msgid "Small Form Variants"
+msgstr "Pienikokoisia muunnelmia"
+
+#: ../mucharmap/unicode-blocks.h:161
+msgid "Arabic Presentation Forms-B"
+msgstr "Arabialaisten merkkien esitysmuotoja B"
+
+#: ../mucharmap/unicode-blocks.h:162
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "Puoli- ja täyslevyisiä esitysmuotoja"
+
+#: ../mucharmap/unicode-blocks.h:163
+msgid "Specials"
+msgstr "Erikoismerkkejä"
+
+#: ../mucharmap/unicode-blocks.h:164
+msgid "Linear B Syllabary"
+msgstr "Linear B -tavustoa"
+
+#: ../mucharmap/unicode-blocks.h:165
+msgid "Linear B Ideograms"
+msgstr "Linear B -ideogrammeja"
+
+#: ../mucharmap/unicode-blocks.h:166
+msgid "Aegean Numbers"
+msgstr "Aigealaisia numeroita"
+
+#: ../mucharmap/unicode-blocks.h:167
+msgid "Ancient Greek Numbers"
+msgstr "Antiikkisia kreikkalaisia numeroita"
+
+#: ../mucharmap/unicode-blocks.h:168
+msgid "Ancient Symbols"
+msgstr "Antiikkiset merkit"
+
+#: ../mucharmap/unicode-blocks.h:169
+msgid "Phaistos Disc"
+msgstr "Phaistos-levy"
+
+#: ../mucharmap/unicode-blocks.h:170 ../mucharmap/unicode-scripts.h:67
+msgid "Lycian"
+msgstr "Lyykialainen"
+
+#: ../mucharmap/unicode-blocks.h:171 ../mucharmap/unicode-scripts.h:27
+msgid "Carian"
+msgstr "Kaarialainen"
+
+#: ../mucharmap/unicode-blocks.h:172 ../mucharmap/unicode-scripts.h:77
+msgid "Old Italic"
+msgstr "Vanhaa italiaa"
+
+#: ../mucharmap/unicode-blocks.h:173 ../mucharmap/unicode-scripts.h:41
+msgid "Gothic"
+msgstr "Goottilainen"
+
+#: ../mucharmap/unicode-blocks.h:174 ../mucharmap/unicode-scripts.h:105
+msgid "Ugaritic"
+msgstr "Ugaritilainen"
+
+#: ../mucharmap/unicode-blocks.h:175 ../mucharmap/unicode-scripts.h:78
+msgid "Old Persian"
+msgstr "Vanha Persia"
+
+#: ../mucharmap/unicode-blocks.h:176 ../mucharmap/unicode-scripts.h:35
+msgid "Deseret"
+msgstr "Deseret"
+
+#: ../mucharmap/unicode-blocks.h:177 ../mucharmap/unicode-scripts.h:89
+msgid "Shavian"
+msgstr "Shavian"
+
+#: ../mucharmap/unicode-blocks.h:178 ../mucharmap/unicode-scripts.h:82
+msgid "Osmanya"
+msgstr "Osmanya"
+
+#: ../mucharmap/unicode-blocks.h:179
+msgid "Cypriot Syllabary"
+msgstr "Cypriot-tavustoa"
+
+#: ../mucharmap/unicode-blocks.h:180 ../mucharmap/unicode-scripts.h:50
+msgid "Imperial Aramaic"
+msgstr "Imperiaalinen aramea"
+
+#: ../mucharmap/unicode-blocks.h:181 ../mucharmap/unicode-scripts.h:84
+msgid "Phoenician"
+msgstr "Foinikialaiset"
+
+#: ../mucharmap/unicode-blocks.h:182 ../mucharmap/unicode-scripts.h:68
+msgid "Lydian"
+msgstr "Lyydialainen"
+
+#: ../mucharmap/unicode-blocks.h:183 ../mucharmap/unicode-scripts.h:59
+msgid "Kharoshthi"
+msgstr "Kharoshthi"
+
+#: ../mucharmap/unicode-blocks.h:184 ../mucharmap/unicode-scripts.h:79
+msgid "Old South Arabian"
+msgstr "Vanha eteläarabia"
+
+#: ../mucharmap/unicode-blocks.h:185 ../mucharmap/unicode-scripts.h:18
+msgid "Avestan"
+msgstr "Avestan"
+
+#: ../mucharmap/unicode-blocks.h:186 ../mucharmap/unicode-scripts.h:53
+msgid "Inscriptional Parthian"
+msgstr "Esittävä partialainen"
+
+#: ../mucharmap/unicode-blocks.h:187 ../mucharmap/unicode-scripts.h:52
+msgid "Inscriptional Pahlavi"
+msgstr "Esittävä pahlavi"
+
+#: ../mucharmap/unicode-blocks.h:188 ../mucharmap/unicode-scripts.h:80
+msgid "Old Turkic"
+msgstr "Vanhaa turkkia"
+
+#: ../mucharmap/unicode-blocks.h:189
+msgid "Rumi Numeral Symbols"
+msgstr "Rumi-numerosymboleja"
+
+#: ../mucharmap/unicode-blocks.h:190 ../mucharmap/unicode-scripts.h:55
+msgid "Kaithi"
+msgstr "Kaithi"
+
+#: ../mucharmap/unicode-blocks.h:191 ../mucharmap/unicode-scripts.h:32
+msgid "Cuneiform"
+msgstr "Cuneiform"
+
+#: ../mucharmap/unicode-blocks.h:192
+msgid "Cuneiform Numbers and Punctuation"
+msgstr "Cuneiform-numeroita ja -välimerkkejä"
+
+#: ../mucharmap/unicode-blocks.h:193 ../mucharmap/unicode-scripts.h:37
+msgid "Egyptian Hieroglyphs"
+msgstr "Egyptiläisiä hieroglyfejä"
+
+#: ../mucharmap/unicode-blocks.h:194
+msgid "Byzantine Musical Symbols"
+msgstr "Bysanttilaisia musiikkisymboleja"
+
+#: ../mucharmap/unicode-blocks.h:195
+msgid "Musical Symbols"
+msgstr "Musiikkisymboleja"
+
+#: ../mucharmap/unicode-blocks.h:196
+msgid "Ancient Greek Musical Notation"
+msgstr "Antiikin kreikan musiikkisymboleja"
+
+#: ../mucharmap/unicode-blocks.h:197
+msgid "Tai Xuan Jing Symbols"
+msgstr "Tai Xuan Jing -symboleja"
+
+#: ../mucharmap/unicode-blocks.h:198
+msgid "Counting Rod Numerals"
+msgstr "Laskutikun numeroita"
+
+#: ../mucharmap/unicode-blocks.h:199
+msgid "Mathematical Alphanumeric Symbols"
+msgstr "Matemaattisia aakkosnumeerisia symboleja"
+
+#: ../mucharmap/unicode-blocks.h:200
+msgid "Mahjong Tiles"
+msgstr "Mahjong-nappulat"
+
+#: ../mucharmap/unicode-blocks.h:201
+msgid "Domino Tiles"
+msgstr "Domino-palikat"
+
+#: ../mucharmap/unicode-blocks.h:202
+msgid "Enclosed Alphanumeric Supplement"
+msgstr "Ympäröidyt aakkosnumeeriset täydennysosa"
+
+#: ../mucharmap/unicode-blocks.h:203
+msgid "Enclosed Ideographic Supplement"
+msgstr "Ympyröidyt ideamuodot täydennysosa"
+
+#: ../mucharmap/unicode-blocks.h:204
+msgid "CJK Unified Ideographs Extension B"
+msgstr "Yhtenäistettyjen CJK-ideogrammien laajennus B"
+
+#: ../mucharmap/unicode-blocks.h:205
+msgid "CJK Unified Ideographs Extension C"
+msgstr "Yhtenäistettyjen CJK-ideogrammien laajennus C"
+
+#: ../mucharmap/unicode-blocks.h:206
+msgid "CJK Compatibility Ideographs Supplement"
+msgstr "Lisää CJK-yhteensopivia ideogrammeja"
+
+#: ../mucharmap/unicode-blocks.h:207
+msgid "Tags"
+msgstr "Tageja"
+
+#: ../mucharmap/unicode-blocks.h:208
+msgid "Variation Selectors Supplement"
+msgstr "Lisää muunnelman valitsimia"
+
+#: ../mucharmap/unicode-blocks.h:209
+msgid "Supplementary Private Use Area-A"
+msgstr "Erilliskäytön lisäalue A"
+
+#: ../mucharmap/unicode-blocks.h:210
+msgid "Supplementary Private Use Area-B"
+msgstr "Erilliskäytön lisäalue B"
+
+#: ../mucharmap/unicode-scripts.h:23
+msgid "Braille"
+msgstr "Braille"
+
+#: ../mucharmap/unicode-scripts.h:26
+msgid "Canadian Aboriginal"
+msgstr "Kanadalainen alkuasukas"
+
+#: ../mucharmap/unicode-scripts.h:33
+msgid "Cypriot"
+msgstr "Cypriot"
+
+#: ../mucharmap/unicode-scripts.h:42
+msgid "Greek"
+msgstr "Kreikkalainen"
+
+#: ../mucharmap/unicode-scripts.h:45
+msgid "Han"
+msgstr "Han"
+
+#: ../mucharmap/unicode-scripts.h:46
+msgid "Hangul"
+msgstr "Hangulin"
+
+#: ../mucharmap/unicode-scripts.h:51
+msgid "Inherited"
+msgstr "Peritty"
+
+#: ../mucharmap/unicode-scripts.h:62
+msgid "Latin"
+msgstr "Latinalainen"
+
+#: ../mucharmap/unicode-scripts.h:65
+msgid "Linear B"
+msgstr "Linear B"
+
+#: ../mucharmap/unicode-scripts.h:83
+msgid "Phags Pa"
+msgstr "Phags Pa"
+
+#: ../mucharmap/unicode-scripts.h:107
+msgid "Yi"
+msgstr "Yi"
+
+#: ../mucharmap/mucharmap-search-dialog.c:565
+msgid "Information"
+msgstr "Tietoja"
+
+#. follow hig guidelines
+#: ../mucharmap/mucharmap-search-dialog.c:729
+msgid "Find"
+msgstr "Etsi"
+
+#: ../mucharmap/mucharmap-search-dialog.c:743
+msgid "_Previous"
+msgstr "_Edellinen"
+
+#: ../mucharmap/mucharmap-search-dialog.c:750
+msgid "_Next"
+msgstr "Seu_raava"
+
+#: ../mucharmap/mucharmap-search-dialog.c:765
+msgid "_Search:"
+msgstr "_Etsi:"
+
+#: ../mucharmap/mucharmap-search-dialog.c:775
+msgid "Match _whole word"
+msgstr "Täsmää _koko sanaan"
+
+#: ../mucharmap/mucharmap-search-dialog.c:780
+msgid "Search in character _details"
+msgstr "Etsi merkkien _yksityiskohdista"
+
+#: ../mucharmap/mucharmap-block-chapters-model.c:84
+msgid "All"
+msgstr "Kaikki"
+
+#: ../mucharmap/mucharmap-block-chapters-model.c:190
+msgid "Unicode Block"
+msgstr "Unicode-lohko"
+
+#: ../mucharmap/mucharmap-script-chapters-model.c:134
+msgid "Script"
+msgstr "Kirjoitusjärjestelmä"
+
+#~ msgid "Mucharmap"
+#~ msgstr "Mucharmap"
+
+#~ msgid "_Quit"
+#~ msgstr "_Lopeta"
+
+#~ msgid "Zoom _In"
+#~ msgstr "_Lähennä"
+
+#~ msgid "Zoom _Out"
+#~ msgstr "L_oitonna"
+
+#~ msgid "_Normal Size"
+#~ msgstr "_Normaali koko"
+
+#~ msgid "Nko"
+#~ msgstr "Nko"
