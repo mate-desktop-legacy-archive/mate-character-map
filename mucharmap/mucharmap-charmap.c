@@ -240,7 +240,7 @@
 		  g_signal_new (I_("link-clicked"), mucharmap_charmap_get_type (),
 		                G_SIGNAL_RUN_FIRST,
 		                G_STRUCT_OFFSET (MucharmapCharmapClass, link_clicked),
-		                NULL, NULL, _mucharmap_marshal_VOID__UINT_UINT, G_TYPE_NONE, 
+		                NULL, NULL, _mucharmap_marshal_VOID__UINT_UINT, G_TYPE_NONE,
 		                2, G_TYPE_UINT, G_TYPE_UINT);
 
 	#if !GTK_CHECK_VERSION (2, 15, 0)
@@ -359,7 +359,7 @@
 	}
 
 	static void
-	mucharmap_charmap_set_font_desc_internal (MucharmapCharmap *charmap, 
+	mucharmap_charmap_set_font_desc_internal (MucharmapCharmap *charmap,
 		                                      PangoFontDescription *font_desc /* adopting */,
 		                                      gboolean in_notification)
 	{
@@ -390,7 +390,7 @@
 	}
 
 	static void
-	insert_vanilla_detail (MucharmapCharmap *charmap, 
+	insert_vanilla_detail (MucharmapCharmap *charmap,
 		                   GtkTextBuffer *buffer,
 		                   GtkTextIter *iter,
 		                   const gchar *name,
@@ -416,9 +416,9 @@
 	  str = g_strdup_printf ("U+%4.4X %s", uc,
 		                     mucharmap_get_unicode_name (uc));
 
-	  tag = gtk_text_buffer_create_tag (buffer, NULL, 
-		                                "foreground", "blue", 
-		                                "underline", PANGO_UNDERLINE_SINGLE, 
+	  tag = gtk_text_buffer_create_tag (buffer, NULL,
+		                                "foreground", "blue",
+		                                "underline", PANGO_UNDERLINE_SINGLE,
 		                                NULL);
 	  /* add one so that zero is the "nothing" value, since U+0000 is a character */
 	  g_object_set_data (G_OBJECT (tag), "link-character", GUINT_TO_POINTER (uc + 1));
@@ -453,7 +453,7 @@
 	#define is_hex_digit(c) (((c) >= '0' && (c) <= '9') \
 		                     || ((c) >= 'A' && (c) <= 'F'))
 
-	/* - "XXXX-YYYY" used in annotation of U+003D 
+	/* - "XXXX-YYYY" used in annotation of U+003D
 	 * - Annotation of U+03C0 uses ".XXXX" as a fractional number,
 	 *   so don't add "." to the list.
 	 * Add here if you know more. */
@@ -477,7 +477,7 @@
 	  for (i = 0;  i + 3 < len;  i++)
 		{
 		  if ( ( !(i > 0) || is_blank(str[i-1]) )
-		  && is_hex_digit (str[i+0]) && is_hex_digit (str[i+1]) 
+		  && is_hex_digit (str[i+0]) && is_hex_digit (str[i+1])
 		  && is_hex_digit (str[i+2]) && is_hex_digit (str[i+3])
 		  && is_blank_or_hex_or(i+4,    is_blank_or_hex_or(i+5,
 				  (i+6 < len) || !is_hex_digit (str[i+6]))) )
@@ -543,19 +543,19 @@
 
 
 	static void
-	insert_heading (MucharmapCharmap *charmap, 
+	insert_heading (MucharmapCharmap *charmap,
 		            GtkTextBuffer *buffer,
 		            GtkTextIter *iter,
 		            const gchar *heading)
 	{
 	  gtk_text_buffer_insert (buffer, iter, "\n", -1);
-	  gtk_text_buffer_insert_with_tags_by_name (buffer, iter, heading, -1, 
+	  gtk_text_buffer_insert_with_tags_by_name (buffer, iter, heading, -1,
 		                                        "bold", NULL);
 	  gtk_text_buffer_insert (buffer, iter, "\n\n", -1);
 	}
 
 	static void
-	conditionally_insert_canonical_decomposition (MucharmapCharmap *charmap, 
+	conditionally_insert_canonical_decomposition (MucharmapCharmap *charmap,
 		                                          GtkTextBuffer *buffer,
 		                                          GtkTextIter *iter,
 		                                          gunichar uc)
@@ -617,13 +617,13 @@
 		gtk_text_buffer_insert (
 		        buffer, &iter, _("[not a printable character]"), -1);
 	  else
-		gtk_text_buffer_insert_with_tags_by_name (buffer, &iter, buf, n, 
+		gtk_text_buffer_insert_with_tags_by_name (buffer, &iter, buf, n,
 		                                          "gimongous", NULL);
 
 	  gtk_text_buffer_insert (buffer, &iter, "\n\n", -1);
-		                                         
+
 	  /* character name */
-	  temp = g_strdup_printf ("U+%4.4X %s\n", 
+	  temp = g_strdup_printf ("U+%4.4X %s\n",
 		                      uc, mucharmap_get_unicode_name (uc));
 	  gtk_text_buffer_insert_with_tags_by_name (buffer, &iter, temp, -1,
 		                                        "big", "bold", NULL);
@@ -676,7 +676,7 @@
 		  gstemp = g_string_new (NULL);
 		  for (i = 0;  i < n;  i++)
 		g_string_append_printf (gstemp, "\\%3.3o", utf8[i]);
-		  insert_vanilla_detail (charmap, buffer, &iter, 
+		  insert_vanilla_detail (charmap, buffer, &iter,
 					 _("C octal escaped UTF-8:"), gstemp->str);
 		  g_string_free (gstemp, TRUE);
 
@@ -686,7 +686,7 @@
 		  (0x10000 <= uc && uc <= 0x10FFFF))
 		{
 		  temp = g_strdup_printf ("&#%d;", uc);
-		  insert_vanilla_detail (charmap, buffer, &iter, 
+		  insert_vanilla_detail (charmap, buffer, &iter,
 					 _("XML decimal entity:"), temp);
 		  g_free (temp);
 		}
@@ -697,7 +697,7 @@
 	  /* annotations */
 	  if (_mucharmap_unicode_has_nameslist_entry (uc))
 		{
-		  insert_heading (charmap, buffer, &iter, 
+		  insert_heading (charmap, buffer, &iter,
 		                  _("Annotations and Cross References"));
 
 		  /* nameslist equals (alias names) */
@@ -763,32 +763,32 @@
 		  if (csp)
 		    insert_vanilla_detail (charmap, buffer, &iter,
 		                           _("Definition in English:"), csp);
-		
+
 		  csp = mucharmap_get_unicode_kMandarin (uc);
 		  if (csp)
 		    insert_vanilla_detail (charmap, buffer, &iter,
 		                           _("Mandarin Pronunciation:"), csp);
-		
+
 		  csp = mucharmap_get_unicode_kCantonese (uc);
 		  if (csp)
 		    insert_vanilla_detail (charmap, buffer, &iter,
 		                           _("Cantonese Pronunciation:"), csp);
-		
+
 		  csp = mucharmap_get_unicode_kJapaneseOn (uc);
 		  if (csp)
 		    insert_vanilla_detail (charmap, buffer, &iter,
 		                           _("Japanese On Pronunciation:"), csp);
-		
+
 		  csp = mucharmap_get_unicode_kJapaneseKun (uc);
 		  if (csp)
 		    insert_vanilla_detail (charmap, buffer, &iter,
 		                           _("Japanese Kun Pronunciation:"), csp);
-		
+
 		  csp = mucharmap_get_unicode_kTang (uc);
 		  if (csp)
 		    insert_vanilla_detail (charmap, buffer, &iter,
 		                           _("Tang Pronunciation:"), csp);
-		
+
 		  csp = mucharmap_get_unicode_kKorean (uc);
 		  if (csp)
 		    insert_vanilla_detail (charmap, buffer, &iter,
@@ -801,7 +801,7 @@
 	chartable_status_message (MucharmapCharmap *charmap,
 		                      const gchar *message)
 	{
-	  g_signal_emit (charmap, mucharmap_charmap_signals[STATUS_MESSAGE], 
+	  g_signal_emit (charmap, mucharmap_charmap_signals[STATUS_MESSAGE],
 		             0, message);
 	}
 
@@ -826,7 +826,7 @@
 		set_details (charmap, wc);
 
 	  gs = g_string_sized_new (256);
-	  g_string_append_printf (gs, "U+%4.4X %s", wc, 
+	  g_string_append_printf (gs, "U+%4.4X %s", wc,
 		                      mucharmap_get_unicode_name (wc));
 
 	#if ENABLE_UNIHAN
@@ -864,7 +864,7 @@
 	{
 	  MucharmapCharmapPrivate *priv = charmap->priv;
 	  PangoFontDescription *font_desc;
-	  
+
 	  font_desc = mucharmap_chartable_get_font_desc (chartable);
 	  mucharmap_charmap_set_font_desc_internal (charmap,
 		                                        pango_font_description_copy (font_desc),
@@ -907,9 +907,9 @@
 		   * "link-character" */
 		  uc = GPOINTER_TO_UINT (g_object_get_data (G_OBJECT (tag), "link-character")) - 1;
 
-		  if (uc != (gunichar)(-1)) 
+		  if (uc != (gunichar)(-1))
 		    {
-		      g_signal_emit (charmap, mucharmap_charmap_signals[LINK_CLICKED], 0, 
+		      g_signal_emit (charmap, mucharmap_charmap_signals[LINK_CLICKED], 0,
 		                     mucharmap_chartable_get_active_character (priv->chartable),
 		                     uc);
 		      mucharmap_charmap_set_active_character (charmap, uc);
@@ -917,7 +917,7 @@
 		    }
 		}
 
-	  if (tags) 
+	  if (tags)
 		g_slist_free (tags);
 	}
 
@@ -943,7 +943,7 @@
 		  case GDK_ISO_Enter:
 		  case GDK_KP_Enter:
 		    buffer = gtk_text_view_get_buffer (GTK_TEXT_VIEW (text_view));
-		    gtk_text_buffer_get_iter_at_mark (buffer, &iter, 
+		    gtk_text_buffer_get_iter_at_mark (buffer, &iter,
 		                                      gtk_text_buffer_get_insert (buffer));
 		    follow_if_link (charmap, &iter);
 		    break;
@@ -980,7 +980,7 @@
 	  if (gtk_text_iter_get_offset (&start) != gtk_text_iter_get_offset (&end))
 		return FALSE;
 
-	  gtk_text_view_window_to_buffer_coords (GTK_TEXT_VIEW (text_view), 
+	  gtk_text_view_window_to_buffer_coords (GTK_TEXT_VIEW (text_view),
 		                                     GTK_TEXT_WINDOW_WIDGET,
 		                                     event->x, event->y, &x, &y);
 
@@ -1017,7 +1017,7 @@
 		   * "link-character" */
 		  uc = GPOINTER_TO_UINT (g_object_get_data (G_OBJECT (tag), "link-character")) - 1;
 
-		  if (uc != (gunichar)(-1)) 
+		  if (uc != (gunichar)(-1))
 		    {
 		      hovering_over_link = TRUE;
 		      break;
@@ -1034,7 +1034,7 @@
 		    gdk_window_set_cursor (gtk_text_view_get_window (priv->details_view, GTK_TEXT_WINDOW_TEXT), priv->regular_cursor);
 		}
 
-	  if (tags) 
+	  if (tags)
 		g_slist_free (tags);
 	}
 
@@ -1045,7 +1045,7 @@
 	{
 	  gint x, y;
 
-	  gtk_text_view_window_to_buffer_coords (GTK_TEXT_VIEW (text_view), 
+	  gtk_text_view_window_to_buffer_coords (GTK_TEXT_VIEW (text_view),
 		                                     GTK_TEXT_WINDOW_WIDGET,
 		                                     event->x, event->y, &x, &y);
 
@@ -1064,7 +1064,7 @@
 
 	  gdk_window_get_pointer (gtk_widget_get_window (text_view), &wx, &wy, NULL);
 
-	  gtk_text_view_window_to_buffer_coords (GTK_TEXT_VIEW (text_view), 
+	  gtk_text_view_window_to_buffer_coords (GTK_TEXT_VIEW (text_view),
 		                                     GTK_TEXT_WINDOW_WIDGET,
 		                                     wx, wy, &bx, &by);
 
@@ -1189,8 +1189,8 @@
 	  scrolled_window = gtk_scrolled_window_new (NULL, NULL);
 	  gtk_scrolled_window_set_policy (GTK_SCROLLED_WINDOW (scrolled_window),
 		                              GTK_POLICY_AUTOMATIC, GTK_POLICY_AUTOMATIC);
-	  gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolled_window), 
-		                                   GTK_SHADOW_NONE);
+	  gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolled_window),
+		                                   GTK_SHADOW_ETCHED_IN);
 
 	  textview = gtk_text_view_new ();
 	  priv->details_view = GTK_TEXT_VIEW (textview);

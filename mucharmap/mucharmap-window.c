@@ -1036,7 +1036,6 @@
 		gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (guw->status), TRUE);
 		gtk_box_pack_start (GTK_BOX (hbox), guw->status, TRUE, TRUE, 0);
 		gtk_widget_show(guw->status);
-		g_signal_connect (guw->status, "realize", G_CALLBACK (status_realize), guw);
 	#endif
 
 	  gtk_widget_show_all (hbox);
