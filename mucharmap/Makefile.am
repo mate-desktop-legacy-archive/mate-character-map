@@ -277,4 +277,6 @@ gsettings_SCHEMAS = org.mate.mucharmap.gschema.xml
 
 @GSETTINGS_RULES@
 
+EXTRA_DIST += $(gsettings_SCHEMAS)
+
 -include $(top_srcdir)/git.mk
