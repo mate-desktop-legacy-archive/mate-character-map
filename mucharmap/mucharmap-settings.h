@@ -16,8 +16,8 @@
  * 51 Franklin St, Fifth Floor, Boston, MA 02110-1301  USA
  */
 
-#ifndef GUCHARMAP_SETTINGS_H
-#define GUCHARMAP_SETTINGS_H
+#ifndef MUCHARMAP_SETTINGS_H
+#define MUCHARMAP_SETTINGS_H
 
 #include <glib.h>
 #include <gtk/gtk.h>
@@ -26,8 +26,8 @@
 G_BEGIN_DECLS
 
 typedef enum {
-	GUCHARMAP_CHAPTERS_SCRIPT = 0,
-	GUCHARMAP_CHAPTERS_BLOCK  = 1
+	MUCHARMAP_CHAPTERS_SCRIPT = 0,
+	MUCHARMAP_CHAPTERS_BLOCK  = 1
 } MucharmapChaptersMode;
 
 void
@@ -65,4 +65,4 @@ mucharmap_settings_add_window(GtkWindow* window);
 
 G_END_DECLS
 
-#endif  /* GUCHARMAP_SETTINGS_H */
+#endif  /* MUCHARMAP_SETTINGS_H */

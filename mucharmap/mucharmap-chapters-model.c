@@ -39,13 +39,13 @@
 	static void
 	mucharmap_chapters_model_init (MucharmapChaptersModel *model)
 	{
-	  model->priv = G_TYPE_INSTANCE_GET_PRIVATE (model, GUCHARMAP_TYPE_CHAPTERS_MODEL, MucharmapChaptersModelPrivate);
+	  model->priv = G_TYPE_INSTANCE_GET_PRIVATE (model, MUCHARMAP_TYPE_CHAPTERS_MODEL, MucharmapChaptersModelPrivate);
 	}
 
 	static void
 	mucharmap_chapters_model_finalize (GObject *object)
 	{
-	  MucharmapChaptersModel *model = GUCHARMAP_CHAPTERS_MODEL (object);
+	  MucharmapChaptersModel *model = MUCHARMAP_CHAPTERS_MODEL (object);
 	  MucharmapChaptersModelPrivate *priv = model->priv;
 
 	  if (priv->book_list)
@@ -82,9 +82,9 @@
 	mucharmap_chapters_model_get_codepoint_list (MucharmapChaptersModel *chapters,
 		                                   GtkTreeIter       *iter)
 	{
-	  g_return_val_if_fail (GUCHARMAP_IS_CHAPTERS_MODEL (chapters), NULL);
+	  g_return_val_if_fail (MUCHARMAP_IS_CHAPTERS_MODEL (chapters), NULL);
 
-	  return GUCHARMAP_CHAPTERS_MODEL_GET_CLASS (chapters)->get_codepoint_list (chapters, iter);
+	  return MUCHARMAP_CHAPTERS_MODEL_GET_CLASS (chapters)->get_codepoint_list (chapters, iter);
 	}
 
 	/**
@@ -97,9 +97,9 @@
 	MucharmapCodepointList *
 	mucharmap_chapters_model_get_book_codepoint_list (MucharmapChaptersModel *chapters)
 	{
-	  g_return_val_if_fail (GUCHARMAP_IS_CHAPTERS_MODEL (chapters), NULL);
+	  g_return_val_if_fail (MUCHARMAP_IS_CHAPTERS_MODEL (chapters), NULL);
 
-	  return GUCHARMAP_CHAPTERS_MODEL_GET_CLASS (chapters)->get_book_codepoint_list (chapters);
+	  return MUCHARMAP_CHAPTERS_MODEL_GET_CLASS (chapters)->get_book_codepoint_list (chapters);
 	}
 
 	/**
@@ -115,17 +115,17 @@
 		                                        gunichar           wc,
 		                                        GtkTreeIter       *iter)
 	{
-	  g_return_val_if_fail (GUCHARMAP_IS_CHAPTERS_MODEL (chapters), FALSE);
+	  g_return_val_if_fail (MUCHARMAP_IS_CHAPTERS_MODEL (chapters), FALSE);
 
-	  return GUCHARMAP_CHAPTERS_MODEL_GET_CLASS (chapters)->character_to_iter (chapters, wc, iter);
+	  return MUCHARMAP_CHAPTERS_MODEL_GET_CLASS (chapters)->character_to_iter (chapters, wc, iter);
 	}
 
 	const char *
 	mucharmap_chapters_model_get_title (MucharmapChaptersModel *chapters)
 	{
-	  g_return_val_if_fail (GUCHARMAP_IS_CHAPTERS_MODEL (chapters), NULL);
+	  g_return_val_if_fail (MUCHARMAP_IS_CHAPTERS_MODEL (chapters), NULL);
 
-	  return GUCHARMAP_CHAPTERS_MODEL_GET_CLASS (chapters)->title;
+	  return MUCHARMAP_CHAPTERS_MODEL_GET_CLASS (chapters)->title;
 	}
 
 	gboolean
@@ -138,7 +138,7 @@
 	  char *str;
 	  int match;
 
-	  g_return_val_if_fail (GUCHARMAP_IS_CHAPTERS_MODEL (model), FALSE);
+	  g_return_val_if_fail (MUCHARMAP_IS_CHAPTERS_MODEL (model), FALSE);
 
 	  if (!id)
 		return FALSE;
@@ -147,7 +147,7 @@
 		return FALSE;
 
 	  do {
-		gtk_tree_model_get(model, &iter, GUCHARMAP_CHAPTERS_MODEL_COLUMN_ID, &str, -1);
+		gtk_tree_model_get(model, &iter, MUCHARMAP_CHAPTERS_MODEL_COLUMN_ID, &str, -1);
 		match = strcmp (id, str);
 		g_free(str);
 		if (0 == match) {

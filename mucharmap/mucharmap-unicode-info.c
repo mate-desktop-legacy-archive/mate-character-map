@@ -219,7 +219,7 @@ MucharmapUnicodeVersion mucharmap_get_unicode_version(gunichar uc)
 
 	if (uc < unicode_versions[0].start || uc > unicode_versions[max].end)
 	{
-		return GUCHARMAP_UNICODE_VERSION_UNASSIGNED;
+		return MUCHARMAP_UNICODE_VERSION_UNASSIGNED;
 	}
 
 	while (max >= min)
@@ -240,14 +240,14 @@ MucharmapUnicodeVersion mucharmap_get_unicode_version(gunichar uc)
 		}
 	}
 
-	return GUCHARMAP_UNICODE_VERSION_UNASSIGNED;
+	return MUCHARMAP_UNICODE_VERSION_UNASSIGNED;
 }
 
 const gchar* mucharmap_unicode_version_to_string(MucharmapUnicodeVersion version)
 {
-	g_return_val_if_fail(version >= GUCHARMAP_UNICODE_VERSION_UNASSIGNED && version <= GUCHARMAP_UNICODE_VERSION_LATEST, NULL);
+	g_return_val_if_fail(version >= MUCHARMAP_UNICODE_VERSION_UNASSIGNED && version <= MUCHARMAP_UNICODE_VERSION_LATEST, NULL);
 
-	if (G_UNLIKELY(version == GUCHARMAP_UNICODE_VERSION_UNASSIGNED))
+	if (G_UNLIKELY(version == MUCHARMAP_UNICODE_VERSION_UNASSIGNED))
 	{
 		return NULL;
 	}

@@ -42,14 +42,14 @@
 #define WINDOW_STATE_TIMEOUT    1000 /* ms */
 
 #define MATECONF_PREFIX    "/apps/mucharmap"
-#define GUCHARMAP_GSETTINGS_SCHEME    "org.mate.mucharmap"
+#define MUCHARMAP_GSETTINGS_SCHEME    "org.mate.mucharmap"
 
 static MucharmapChaptersMode
 get_default_chapters_mode(void)
 {
 	/* XXX: In the future, do something based on chapters mode and locale
 	 * or something. */
-	return GUCHARMAP_CHAPTERS_SCRIPT;
+	return MUCHARMAP_CHAPTERS_SCRIPT;
 }
 
 static gchar*
@@ -79,9 +79,9 @@ mucharmap_settings_initialize(void)
 
 			while (list_schemas[i] != NULL)
 			{
-				if (strcmp (list_schemas[i], GUCHARMAP_GSETTINGS_SCHEME) == 0)
+				if (strcmp (list_schemas[i], MUCHARMAP_GSETTINGS_SCHEME) == 0)
 				{
-					client = g_settings_new(GUCHARMAP_GSETTINGS_SCHEME);
+					client = g_settings_new(MUCHARMAP_GSETTINGS_SCHEME);
 				}
 
 				i++;
@@ -151,11 +151,11 @@ mucharmap_settings_get_chapters_mode(void)
 
 	if (strcmp (mode, "script") == 0)
 	{
-		ret = GUCHARMAP_CHAPTERS_SCRIPT;
+		ret = MUCHARMAP_CHAPTERS_SCRIPT;
 	}
 	else if (strcmp (mode, "block") == 0)
 	{
-		ret = GUCHARMAP_CHAPTERS_BLOCK;
+		ret = MUCHARMAP_CHAPTERS_BLOCK;
 	}
 	else
 	{
@@ -177,7 +177,7 @@ mucharmap_settings_set_chapters_mode(MucharmapChaptersMode mode)
 
 	switch (mode)
 	{
-		case GUCHARMAP_CHAPTERS_SCRIPT:
+		case MUCHARMAP_CHAPTERS_SCRIPT:
 
 			#ifdef HAVE_MATECONF
 				mateconf_client_set_string(client, MATECONF_PREFIX"/chapters_mode", "script", NULL);
@@ -187,7 +187,7 @@ mucharmap_settings_set_chapters_mode(MucharmapChaptersMode mode)
 
 			break;
 
-		case GUCHARMAP_CHAPTERS_BLOCK:
+		case MUCHARMAP_CHAPTERS_BLOCK:
 
 			#ifdef HAVE_MATECONF
 				mateconf_client_set_string(client, MATECONF_PREFIX"/chapters_mode", "block", NULL);

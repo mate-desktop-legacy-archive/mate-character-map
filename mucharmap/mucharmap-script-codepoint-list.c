@@ -43,7 +43,7 @@
 	static void mucharmap_script_codepoint_list_class_init (MucharmapScriptCodepointListClass *klass);
 	static void mucharmap_script_codepoint_list_init       (MucharmapScriptCodepointList      *list);
 
-	G_DEFINE_TYPE (MucharmapScriptCodepointList, mucharmap_script_codepoint_list, GUCHARMAP_TYPE_CODEPOINT_LIST)
+	G_DEFINE_TYPE (MucharmapScriptCodepointList, mucharmap_script_codepoint_list, MUCHARMAP_TYPE_CODEPOINT_LIST)
 
 	static gint
 	find_script (const gchar *script)
@@ -171,7 +171,7 @@
 	get_char (MucharmapCodepointList *list,
 		      gint                    index)
 	{
-	  MucharmapScriptCodepointList *guscl = GUCHARMAP_SCRIPT_CODEPOINT_LIST (list);
+	  MucharmapScriptCodepointList *guscl = MUCHARMAP_SCRIPT_CODEPOINT_LIST (list);
 	  MucharmapScriptCodepointListPrivate *priv = guscl->priv;
 	  gint min, mid, max;
 
@@ -203,7 +203,7 @@
 	get_index (MucharmapCodepointList *list,
 		       gunichar                wc)
 	{
-	  MucharmapScriptCodepointList *guscl = GUCHARMAP_SCRIPT_CODEPOINT_LIST (list);
+	  MucharmapScriptCodepointList *guscl = MUCHARMAP_SCRIPT_CODEPOINT_LIST (list);
 	  MucharmapScriptCodepointListPrivate *priv = guscl->priv;
 	  gint i;
 
@@ -222,7 +222,7 @@
 	static gint
 	get_last_index (MucharmapCodepointList *list)
 	{
-	  MucharmapScriptCodepointList *guscl = GUCHARMAP_SCRIPT_CODEPOINT_LIST (list);
+	  MucharmapScriptCodepointList *guscl = MUCHARMAP_SCRIPT_CODEPOINT_LIST (list);
 	  MucharmapScriptCodepointListPrivate *priv = guscl->priv;
 	  UnicodeRange *last_range;
 
@@ -248,7 +248,7 @@
 	static void
 	mucharmap_script_codepoint_list_finalize (GObject *object)
 	{
-	  MucharmapScriptCodepointList *guscl = GUCHARMAP_SCRIPT_CODEPOINT_LIST (object);
+	  MucharmapScriptCodepointList *guscl = MUCHARMAP_SCRIPT_CODEPOINT_LIST (object);
 	  MucharmapScriptCodepointListPrivate *priv = guscl->priv;
 
 	  if (priv->ranges)
@@ -263,7 +263,7 @@
 	static void
 	mucharmap_script_codepoint_list_class_init (MucharmapScriptCodepointListClass *clazz)
 	{
-	  MucharmapCodepointListClass *codepoint_list_class = GUCHARMAP_CODEPOINT_LIST_CLASS (clazz);
+	  MucharmapCodepointListClass *codepoint_list_class = MUCHARMAP_CODEPOINT_LIST_CLASS (clazz);
 	  GObjectClass *gobject_class = G_OBJECT_CLASS (clazz);
 
 	  _mucharmap_intl_ensure_initialized ();
@@ -280,7 +280,7 @@
 	static void
 	mucharmap_script_codepoint_list_init (MucharmapScriptCodepointList *guscl)
 	{
-	  guscl->priv = G_TYPE_INSTANCE_GET_PRIVATE (guscl, GUCHARMAP_TYPE_SCRIPT_CODEPOINT_LIST, MucharmapScriptCodepointListPrivate);
+	  guscl->priv = G_TYPE_INSTANCE_GET_PRIVATE (guscl, MUCHARMAP_TYPE_SCRIPT_CODEPOINT_LIST, MucharmapScriptCodepointListPrivate);
 	}
 
 	/**
@@ -294,7 +294,7 @@
 	MucharmapCodepointList *
 	mucharmap_script_codepoint_list_new (void)
 	{
-	  return GUCHARMAP_CODEPOINT_LIST (g_object_new (mucharmap_script_codepoint_list_get_type (), NULL));
+	  return MUCHARMAP_CODEPOINT_LIST (g_object_new (mucharmap_script_codepoint_list_get_type (), NULL));
 	}
 
 	/**

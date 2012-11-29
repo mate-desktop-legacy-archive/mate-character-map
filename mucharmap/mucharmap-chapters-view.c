@@ -58,13 +58,13 @@
 	  GtkTreeViewColumn *column;
 	  GtkTreeSelection *selection;
 
-	  priv = view->priv = G_TYPE_INSTANCE_GET_PRIVATE (view, GUCHARMAP_TYPE_CHAPTERS_VIEW, MucharmapChaptersViewPrivate);
+	  priv = view->priv = G_TYPE_INSTANCE_GET_PRIVATE (view, MUCHARMAP_TYPE_CHAPTERS_VIEW, MucharmapChaptersViewPrivate);
 
 	  cell = gtk_cell_renderer_text_new ();
 	  column = priv->column = gtk_tree_view_column_new ();
 	  gtk_tree_view_column_pack_start (column, cell, FALSE);
-	  gtk_tree_view_column_add_attribute (column, cell, "text", GUCHARMAP_CHAPTERS_MODEL_COLUMN_LABEL);
-	  gtk_tree_view_column_set_sort_column_id (column, GUCHARMAP_CHAPTERS_MODEL_COLUMN_LABEL);
+	  gtk_tree_view_column_add_attribute (column, cell, "text", MUCHARMAP_CHAPTERS_MODEL_COLUMN_LABEL);
+	  gtk_tree_view_column_set_sort_column_id (column, MUCHARMAP_CHAPTERS_MODEL_COLUMN_LABEL);
 	  gtk_tree_view_append_column (tree_view, column);
 
 	  selection = gtk_tree_view_get_selection (tree_view);
@@ -109,11 +109,11 @@
 
 	  gtk_tree_view_column_set_title (priv->column, mucharmap_chapters_model_get_title (model));
 	  gtk_tree_sortable_set_sort_column_id (GTK_TREE_SORTABLE (model),
-		                                    GUCHARMAP_CHAPTERS_MODEL_COLUMN_LABEL,
+		                                    MUCHARMAP_CHAPTERS_MODEL_COLUMN_LABEL,
 		                                    GTK_SORT_ASCENDING);
 
 	  /* Need to re-set this here since it's set to -1 when the tree view model changes! */
-	  gtk_tree_view_set_search_column (tree_view, GUCHARMAP_CHAPTERS_MODEL_COLUMN_LABEL);
+	  gtk_tree_view_set_search_column (tree_view, MUCHARMAP_CHAPTERS_MODEL_COLUMN_LABEL);
 	}
 
 	/**
@@ -183,7 +183,7 @@
 	  gchar *name = NULL;
 
 	  if (gtk_tree_selection_get_selected (selection, &model, &iter))
-		gtk_tree_model_get(model, &iter, GUCHARMAP_CHAPTERS_MODEL_COLUMN_ID, &name, -1);
+		gtk_tree_model_get(model, &iter, MUCHARMAP_CHAPTERS_MODEL_COLUMN_ID, &name, -1);
 
 	  return name;
 	}
@@ -224,7 +224,7 @@
 	  MucharmapChaptersViewPrivate *priv = view->priv;
 	  GtkTreeIter iter;
 
-	  g_return_val_if_fail (GUCHARMAP_IS_CHAPTERS_VIEW (view), FALSE);
+	  g_return_val_if_fail (MUCHARMAP_IS_CHAPTERS_VIEW (view), FALSE);
 
 	  if (wc > UNICHAR_MAX)
 		return FALSE;
@@ -254,7 +254,7 @@
 	  GtkTreeSelection *selection;
 	  GtkTreeIter iter;
 	  
-	  g_return_val_if_fail (GUCHARMAP_IS_CHAPTERS_VIEW (view), NULL);
+	  g_return_val_if_fail (MUCHARMAP_IS_CHAPTERS_VIEW (view), NULL);
 
 	  selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (view));
 	  if (!gtk_tree_selection_get_selected (selection, NULL, &iter))
@@ -275,7 +275,7 @@
 	{
 	  MucharmapChaptersViewPrivate *priv = view->priv;
 
-	  g_return_val_if_fail (GUCHARMAP_IS_CHAPTERS_VIEW (view), NULL);
+	  g_return_val_if_fail (MUCHARMAP_IS_CHAPTERS_VIEW (view), NULL);
 
 	  return mucharmap_chapters_model_get_book_codepoint_list (priv->model);
 	}

@@ -159,7 +159,7 @@
 		#ifdef ENABLE_PROGRESSBAR_ON_STATUSBAR
 	  gdouble fraction_completed;
 
-	  fraction_completed = mucharmap_search_dialog_get_completed (GUCHARMAP_SEARCH_DIALOG (guw->search_dialog));
+	  fraction_completed = mucharmap_search_dialog_get_completed (MUCHARMAP_SEARCH_DIALOG (guw->search_dialog));
 
 	  if (fraction_completed < 0 || fraction_completed > 1)
 		{
@@ -284,7 +284,7 @@
 	search_find (GtkAction       *action,
 		         MucharmapWindow *guw)
 	{
-		g_assert (GUCHARMAP_IS_WINDOW (guw));
+		g_assert (MUCHARMAP_IS_WINDOW (guw));
 
 		if (guw->search_dialog == NULL)
 		{
@@ -294,7 +294,7 @@
 			g_signal_connect (guw->search_dialog, "search-finish", G_CALLBACK (search_finish), guw);
 		}
 
-		mucharmap_search_dialog_present (GUCHARMAP_SEARCH_DIALOG (guw->search_dialog));
+		mucharmap_search_dialog_present (MUCHARMAP_SEARCH_DIALOG (guw->search_dialog));
 	}
 
 	static void
@@ -302,7 +302,7 @@
 		              MucharmapWindow *guw)
 	{
 	  if (guw->search_dialog)
-		mucharmap_search_dialog_start_search (GUCHARMAP_SEARCH_DIALOG (guw->search_dialog), GUCHARMAP_DIRECTION_FORWARD);
+		mucharmap_search_dialog_start_search (MUCHARMAP_SEARCH_DIALOG (guw->search_dialog), MUCHARMAP_DIRECTION_FORWARD);
 	  else
 		search_find (action, guw);
 	}
@@ -312,7 +312,7 @@
 		              MucharmapWindow *guw)
 	{
 	  if (guw->search_dialog)
-		mucharmap_search_dialog_start_search (GUCHARMAP_SEARCH_DIALOG (guw->search_dialog), GUCHARMAP_DIRECTION_BACKWARD);
+		mucharmap_search_dialog_start_search (MUCHARMAP_SEARCH_DIALOG (guw->search_dialog), MUCHARMAP_DIRECTION_BACKWARD);
 	  else
 		search_find (action, guw);
 	}
@@ -371,7 +371,7 @@
 	font_bigger (GtkAction       *action,
 		         MucharmapWindow *guw)
 	{
-	  mucharmap_mini_font_selection_change_font_size (GUCHARMAP_MINI_FONT_SELECTION (guw->fontsel),
+	  mucharmap_mini_font_selection_change_font_size (MUCHARMAP_MINI_FONT_SELECTION (guw->fontsel),
 		                                              FONT_CHANGE_FACTOR);
 	}
 
@@ -379,7 +379,7 @@
 	font_smaller (GtkAction       *action,
 		          MucharmapWindow *guw)
 	{
-	  mucharmap_mini_font_selection_change_font_size (GUCHARMAP_MINI_FONT_SELECTION (guw->fontsel),
+	  mucharmap_mini_font_selection_change_font_size (MUCHARMAP_MINI_FONT_SELECTION (guw->fontsel),
 		                                              1.0f / FONT_CHANGE_FACTOR);
 	}
 
@@ -387,7 +387,7 @@
 	font_default (GtkAction       *action,
 		          MucharmapWindow *guw)
 	{
-	  mucharmap_mini_font_selection_reset_font_size (GUCHARMAP_MINI_FONT_SELECTION (guw->fontsel));
+	  mucharmap_mini_font_selection_reset_font_size (MUCHARMAP_MINI_FONT_SELECTION (guw->fontsel));
 	}
 
 	static void
@@ -537,7 +537,7 @@
 			"documenters", documenters,
 			"license", license_trans,
 			"wrap-license", TRUE,
-			"logo-icon-name", GUCHARMAP_ICON_NAME,
+			"logo-icon-name", MUCHARMAP_ICON_NAME,
 			"authors", authors,
 			"translator-credits", _("translator-credits"),
 			"website", "http://mate-desktop.org/",
@@ -568,7 +568,7 @@
 		}
 
 		chartable = mucharmap_charmap_get_chartable (guw->charmap);
-		klass = GUCHARMAP_CHARTABLE_GET_CLASS (chartable);
+		klass = MUCHARMAP_CHARTABLE_GET_CLASS (chartable);
 		binding_set = gtk_binding_set_by_class (klass);
 		gtk_binding_set_activate (gtk_binding_set_by_class (klass),
 		                          keyval,
@@ -614,12 +614,12 @@
 
 	  switch (mode)
 		{
-		  case GUCHARMAP_CHAPTERS_SCRIPT:
+		  case MUCHARMAP_CHAPTERS_SCRIPT:
 		  	model = mucharmap_script_chapters_model_new ();
 		chapters_set_labels (_("Next Script"), _("Previous Script"), guw);
 		break;
 
-		  case GUCHARMAP_CHAPTERS_BLOCK:
+		  case MUCHARMAP_CHAPTERS_BLOCK:
 		  	model = mucharmap_block_chapters_model_new ();
 		chapters_set_labels (_("Next Block"), _("Previous Block"), guw);
 		break;
@@ -642,11 +642,11 @@
 	  switch (gtk_radio_action_get_current_value (radioaction))
 		{
 		  case VIEW_BY_SCRIPT:
-		    mode = GUCHARMAP_CHAPTERS_SCRIPT;
+		    mode = MUCHARMAP_CHAPTERS_SCRIPT;
 		break;
 
 		  case VIEW_BY_BLOCK:
-		    mode = GUCHARMAP_CHAPTERS_BLOCK;
+		    mode = MUCHARMAP_CHAPTERS_BLOCK;
 		break;
 
 		  default:
@@ -832,7 +832,7 @@
 	  font_desc = mucharmap_charmap_get_font_desc (charmap);
 
 	  guw->in_notification = TRUE;
-	  mucharmap_mini_font_selection_set_font_desc (GUCHARMAP_MINI_FONT_SELECTION (guw->fontsel),
+	  mucharmap_mini_font_selection_set_font_desc (MUCHARMAP_MINI_FONT_SELECTION (guw->fontsel),
 		                                           font_desc);
 	  guw->in_notification = FALSE;
 	}
@@ -925,7 +925,7 @@
 	  GtkAction *action;
 
 	  gtk_window_set_title (GTK_WINDOW (guw), _("Character Map"));
-	  gtk_window_set_icon_name (GTK_WINDOW (guw), GUCHARMAP_ICON_NAME);
+	  gtk_window_set_icon_name (GTK_WINDOW (guw), MUCHARMAP_ICON_NAME);
 
 	  /* UI manager setup */
 	  guw->uimanager = gtk_ui_manager_new();
@@ -972,7 +972,7 @@
 	  gtk_widget_show (GTK_WIDGET (guw->fontsel));
 
 	  /* The charmap */
-	  guw->charmap = GUCHARMAP_CHARMAP (mucharmap_charmap_new ());
+	  guw->charmap = MUCHARMAP_CHARMAP (mucharmap_charmap_new ());
 	  g_signal_connect (guw->charmap, "notify::active-character",
 		                G_CALLBACK (charmap_sync_active_character), guw);
 	  g_signal_connect (guw->charmap, "notify::font-desc",
@@ -1059,7 +1059,7 @@
 	static void
 	mucharmap_window_finalize (GObject *object)
 	{
-	  MucharmapWindow *guw = GUCHARMAP_WINDOW (object);
+	  MucharmapWindow *guw = MUCHARMAP_WINDOW (object);
 
 	  if (guw->save_last_char_idle_id != 0)
 		g_source_remove (guw->save_last_char_idle_id);
@@ -1094,7 +1094,7 @@
 	{
 		PangoFontDescription* font_desc;
 
-		g_return_if_fail(GUCHARMAP_IS_WINDOW(guw));
+		g_return_if_fail(MUCHARMAP_IS_WINDOW(guw));
 
 		#if GTK_CHECK_VERSION (2,20,0)
 			g_assert(!gtk_widget_get_realized(GTK_WIDGET(guw)));

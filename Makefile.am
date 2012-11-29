@@ -42,7 +42,7 @@ gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 @GSETTINGS_RULES@
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = mucharmap-$(GUCHARMAP_API_PC_VERSION).pc
+pkgconfig_DATA = mucharmap-$(MUCHARMAP_API_PC_VERSION).pc
 
 EXTRA_DIST = \
 	ChangeLog.pre-2-23 \

@@ -18,8 +18,8 @@
 
 /* MucharmapSearchDialog handles all aspects of searching */
 
-#ifndef GUCHARMAP_SEARCH_DIALOG_H
-#define GUCHARMAP_SEARCH_DIALOG_H
+#ifndef MUCHARMAP_SEARCH_DIALOG_H
+#define MUCHARMAP_SEARCH_DIALOG_H
 
 #include <gtk/gtk.h>
 #include <mucharmap/mucharmap.h>
@@ -29,12 +29,12 @@ G_BEGIN_DECLS
 
 //class MucharmapSearchDialog
 //{
-	#define GUCHARMAP_TYPE_SEARCH_DIALOG             (mucharmap_search_dialog_get_type ())
-	#define GUCHARMAP_SEARCH_DIALOG(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), GUCHARMAP_TYPE_SEARCH_DIALOG, MucharmapSearchDialog))
-	#define GUCHARMAP_SEARCH_DIALOG_CLASS(k) (G_TYPE_CHECK_CLASS_CAST((k), GUCHARMAP_TYPE_SEARCH_DIALOG, MucharmapSearchDialogClass))
-	#define GUCHARMAP_IS_SEARCH_DIALOG(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), GUCHARMAP_TYPE_SEARCH_DIALOG))
-	#define GUCHARMAP_IS_SEARCH_DIALOG_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), GUCHARMAP_TYPE_SEARCH_DIALOG))
-	#define GUCHARMAP_SEARCH_DIALOG_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), GUCHARMAP_TYPE_SEARCH_DIALOG, MucharmapSearchDialogClass))
+	#define MUCHARMAP_TYPE_SEARCH_DIALOG             (mucharmap_search_dialog_get_type ())
+	#define MUCHARMAP_SEARCH_DIALOG(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_SEARCH_DIALOG, MucharmapSearchDialog))
+	#define MUCHARMAP_SEARCH_DIALOG_CLASS(k) (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_SEARCH_DIALOG, MucharmapSearchDialogClass))
+	#define MUCHARMAP_IS_SEARCH_DIALOG(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_SEARCH_DIALOG))
+	#define MUCHARMAP_IS_SEARCH_DIALOG_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_SEARCH_DIALOG))
+	#define MUCHARMAP_SEARCH_DIALOG_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_SEARCH_DIALOG, MucharmapSearchDialogClass))
 
 	typedef struct _MucharmapSearchDialog MucharmapSearchDialog;
 	typedef struct _MucharmapSearchDialogClass MucharmapSearchDialogClass;
@@ -55,8 +55,8 @@ G_BEGIN_DECLS
 
 	typedef enum
 	{
-	  GUCHARMAP_DIRECTION_BACKWARD = -1,
-	  GUCHARMAP_DIRECTION_FORWARD = 1
+	  MUCHARMAP_DIRECTION_BACKWARD = -1,
+	  MUCHARMAP_DIRECTION_FORWARD = 1
 	}
 	MucharmapDirection;
 
@@ -70,4 +70,4 @@ G_BEGIN_DECLS
 
 G_END_DECLS
 
-#endif /* #ifndef GUCHARMAP_SEARCH_DIALOG_H */
+#endif /* #ifndef MUCHARMAP_SEARCH_DIALOG_H */

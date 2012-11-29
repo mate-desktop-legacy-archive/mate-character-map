@@ -13,7 +13,7 @@
 #
 # You should have received a copy of the GNU General Public License along
 # with this program; if not, write to the Free Software Foundation, Inc.,
-# 59 Temple Place, Suite 330, Boston, MA 02110-1301  USA
+# 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
 
 m4_define([mucharmap_version_major],[1])
 m4_define([mucharmap_version_minor],[3])
@@ -93,28 +93,28 @@ AC_MSG_RESULT([$with_gtk])
 case "$with_gtk" in
   2.0) GTK_API_VERSION=2.0
        GTK_REQUIRED=2.14.0
-       GUCHARMAP_API_VERSION=2.0
-       GUCHARMAP_API_MAJOR_VERSION=2
-       GUCHARMAP_API_MINOR_VERSION=0
-       GUCHARMAP_API_PC_VERSION=2
-       GUCHARMAP_LIBRARY_SUFFIX=
+       MUCHARMAP_API_VERSION=2.0
+       MUCHARMAP_API_MAJOR_VERSION=2
+       MUCHARMAP_API_MINOR_VERSION=0
+       MUCHARMAP_API_PC_VERSION=2
+       MUCHARMAP_LIBRARY_SUFFIX=
        ;;
   3.0) GTK_API_VERSION=3.0
        GTK_REQUIRED=2.90.0
-       GUCHARMAP_API_VERSION=2.90
-       GUCHARMAP_API_MAJOR_VERSION=2
-       GUCHARMAP_API_MINOR_VERSION=90
-       GUCHARMAP_API_PC_VERSION=2.90
-       GUCHARMAP_LIBRARY_SUFFIX="-$GUCHARMAP_API_VERSION"
+       MUCHARMAP_API_VERSION=2.90
+       MUCHARMAP_API_MAJOR_VERSION=2
+       MUCHARMAP_API_MINOR_VERSION=90
+       MUCHARMAP_API_PC_VERSION=2.90
+       MUCHARMAP_LIBRARY_SUFFIX="-$MUCHARMAP_API_VERSION"
        ;;
 esac
 
 AC_SUBST([GTK_API_VERSION])
-AC_SUBST([GUCHARMAP_API_VERSION])
-AC_SUBST([GUCHARMAP_API_MAJOR_VERSION])
-AC_SUBST([GUCHARMAP_API_MINOR_VERSION])
-AC_SUBST([GUCHARMAP_API_PC_VERSION])
-AC_SUBST([GUCHARMAP_LIBRARY_SUFFIX_U],[AS_TR_SH([$GUCHARMAP_LIBRARY_SUFFIX])])
+AC_SUBST([MUCHARMAP_API_VERSION])
+AC_SUBST([MUCHARMAP_API_MAJOR_VERSION])
+AC_SUBST([MUCHARMAP_API_MINOR_VERSION])
+AC_SUBST([MUCHARMAP_API_PC_VERSION])
+AC_SUBST([MUCHARMAP_LIBRARY_SUFFIX_U],[AS_TR_SH([$MUCHARMAP_LIBRARY_SUFFIX])])
 
 AM_CONDITIONAL([HAVE_GTK_2],[test "$with_gtk" = "2.0"])
 AM_CONDITIONAL([HAVE_GTK_3],[test "$with_gtk" = "3.0"])
@@ -132,7 +132,7 @@ GLIB_MKENUMS="$($PKG_CONFIG --variable=glib_mkenums glib-2.0)"
 AC_SUBST([GLIB_MKENUMS])
 
 AC_ARG_ENABLE([mateconf],
-    [AS_HELP_STRING([--disable-mateconf],[do not build with mateconf support])],
+    [AS_HELP_STRING([--disable-mateconf],[don't build with mateconf support])],
     [],[enable_mateconf=yes])
 
 if test "$enable_mateconf" = "yes"; then
@@ -317,11 +317,11 @@ GTK_DOC_CHECK([1.0])
 
 # *****************************************************************************
 
-AC_SUBST([GUCHARMAP_VERSION_MAJOR],[mucharmap_version_major])
-AC_SUBST([GUCHARMAP_VERSION_MINOR],[mucharmap_version_minor])
-AC_SUBST([GUCHARMAP_VERSION_MICRO],[mucharmap_version_micro])
-AC_SUBST([LIBGUCHARMAP_LT_VERSION],[mucharmap_lt_version_info])
-AC_SUBST([LIBGUCHARMAP_LT_CURRENT_MINUS_AGE],[mucharmap_lt_current_minus_age])
+AC_SUBST([MUCHARMAP_VERSION_MAJOR],[mucharmap_version_major])
+AC_SUBST([MUCHARMAP_VERSION_MINOR],[mucharmap_version_minor])
+AC_SUBST([MUCHARMAP_VERSION_MICRO],[mucharmap_version_micro])
+AC_SUBST([LIBMUCHARMAP_LT_VERSION],[mucharmap_lt_version_info])
+AC_SUBST([LIBMUCHARMAP_LT_CURRENT_MINUS_AGE],[mucharmap_lt_current_minus_age])
 
 AC_SUBST([AM_CPPFLAGS])
 AC_SUBST([AM_CFLAGS])
@@ -348,6 +348,6 @@ pixmaps/Makefile
 po/Makefile.in
 ])
 
-AC_CONFIG_FILES([mucharmap-${GUCHARMAP_API_PC_VERSION}.pc:mucharmap.pc.in],[GUCHARMAP_API_PC_VERSION=$GUCHARMAP_API_PC_VERSION])
+AC_CONFIG_FILES([mucharmap-${MUCHARMAP_API_PC_VERSION}.pc:mucharmap.pc.in],[MUCHARMAP_API_PC_VERSION=$MUCHARMAP_API_PC_VERSION])
 
 AC_OUTPUT

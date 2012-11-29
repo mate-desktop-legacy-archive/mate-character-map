@@ -17,19 +17,19 @@
  * 59 Temple Place, Suite 330, Boston, MA 02110-1301  USA
  */
 
-#ifndef GUCHARMAP_H
-#define GUCHARMAP_H
+#ifndef MUCHARMAP_H
+#define MUCHARMAP_H
 
-#define __GUCHARMAP_GUCHARMAP_H_INSIDE__
+#define __MUCHARMAP_MUCHARMAP_H_INSIDE__
 
-#define GUCHARMAP_VERSION_MAJOR    (@GUCHARMAP_VERSION_MAJOR@)
-#define GUCHARMAP_VERSION_MINOR    (@GUCHARMAP_VERSION_MINOR@)
-#define GUCHARMAP_VERSION_MICRO    (@GUCHARMAP_VERSION_MICRO@)
+#define MUCHARMAP_VERSION_MAJOR    (@MUCHARMAP_VERSION_MAJOR@)
+#define MUCHARMAP_VERSION_MINOR    (@MUCHARMAP_VERSION_MINOR@)
+#define MUCHARMAP_VERSION_MICRO    (@MUCHARMAP_VERSION_MICRO@)
 
-#define GUCHARMAP_CHECK_VERSION(major, minor, micro) \
-	(GUCHARMAP_VERSION_MAJOR > (major) || \
-	(GUCHARMAP_VERSION_MAJOR == (major) && GUCHARMAP_VERSION_MINOR > (minor)) || \
-	(GUCHARMAP_VERSION_MAJOR == (major) && GUCHARMAP_VERSION_MINOR == (minor) && GUCHARMAP_VERSION_MICRO >= (micro)))
+#define MUCHARMAP_CHECK_VERSION(major, minor, micro) \
+	(MUCHARMAP_VERSION_MAJOR > (major) || \
+	(MUCHARMAP_VERSION_MAJOR == (major) && MUCHARMAP_VERSION_MINOR > (minor)) || \
+	(MUCHARMAP_VERSION_MAJOR == (major) && MUCHARMAP_VERSION_MINOR == (minor) && MUCHARMAP_VERSION_MICRO >= (micro)))
 
 #include <mucharmap/mucharmap-codepoint-list.h>
 #include <mucharmap/mucharmap-block-codepoint-list.h>
@@ -46,6 +46,6 @@
 
 #include <mucharmap/mucharmap-unicode-info.h>
 
-#undef __GUCHARMAP_GUCHARMAP_H_INSIDE__
+#undef __MUCHARMAP_MUCHARMAP_H_INSIDE__
 
-#endif /* GUCHARMAP_H */
+#endif /* MUCHARMAP_H */

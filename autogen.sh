@@ -12,7 +12,7 @@ PKG_NAME="mucharmap"
     exit 1
 }
 
-which mate-autogen.sh || {
+which mate-autogen || {
     echo "You need to install mate-common from MATE git and make"
     echo "sure the mate-autogen.sh script is in your \$PATH."
     exit 1

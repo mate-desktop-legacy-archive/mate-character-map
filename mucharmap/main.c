@@ -71,7 +71,7 @@ int main (int argc, char* argv[])
 	mucharmap_settings_initialize();
 
 	g_set_application_name(_("Character Map"));
-	gtk_window_set_default_icon_name(GUCHARMAP_ICON_NAME);
+	gtk_window_set_default_icon_name(MUCHARMAP_ICON_NAME);
 
 	window = mucharmap_window_new();
 	g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
@@ -89,7 +89,7 @@ int main (int argc, char* argv[])
 
 	if (font)
 	{
-		mucharmap_window_set_font(GUCHARMAP_WINDOW(window), font);
+		mucharmap_window_set_font(MUCHARMAP_WINDOW(window), font);
 		g_free(font);
 	}
 

@@ -26,7 +26,7 @@
 
 //class MucharmapSearchDialog
 //{
-	#define GUCHARMAP_SEARCH_DIALOG_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), mucharmap_search_dialog_get_type (), MucharmapSearchDialogPrivate))
+	#define MUCHARMAP_SEARCH_DIALOG_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), mucharmap_search_dialog_get_type (), MucharmapSearchDialogPrivate))
 
 	#define I_(string) g_intern_static_string (string)
 
@@ -41,8 +41,8 @@
 
 	enum
 	{
-	  GUCHARMAP_RESPONSE_PREVIOUS,
-	  GUCHARMAP_RESPONSE_NEXT
+	  MUCHARMAP_RESPONSE_PREVIOUS,
+	  MUCHARMAP_RESPONSE_NEXT
 	};
 
 	typedef struct _MucharmapSearchDialogPrivate MucharmapSearchDialogPrivate;
@@ -132,7 +132,7 @@
 		     const gchar           *search_string_nfd,
 		     const gboolean         annotations)
 	{
-	  MucharmapSearchDialogPrivate *priv = GUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
+	  MucharmapSearchDialogPrivate *priv = MUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
 	  const gchar *haystack;
 	  const gchar **haystack_arr;
 	  gchar *haystack_nfd;
@@ -381,7 +381,7 @@
 	static gboolean
 	idle_search (MucharmapSearchDialog *search_dialog)
 	{
-	  MucharmapSearchDialogPrivate *priv = GUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
+	  MucharmapSearchDialogPrivate *priv = MUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
 	  gunichar wc;
 	  GTimer *timer;
 
@@ -488,7 +488,7 @@
 	  MucharmapSearchState *search_state;
 	  gchar *p, *q, *r;
 
-	  g_assert (direction == GUCHARMAP_DIRECTION_BACKWARD || direction == GUCHARMAP_DIRECTION_FORWARD);
+	  g_assert (direction == MUCHARMAP_DIRECTION_BACKWARD || direction == MUCHARMAP_DIRECTION_FORWARD);
 
 	  search_state = g_slice_new (MucharmapSearchState);
 
@@ -554,7 +554,7 @@
 	information_dialog (MucharmapSearchDialog *search_dialog,
 		                const gchar           *message)
 	{
-	  MucharmapSearchDialogPrivate *priv = GUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
+	  MucharmapSearchDialogPrivate *priv = MUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
 	  GtkWidget *dialog;
 
 	#if GTK_CHECK_VERSION (2,18,0)
@@ -569,7 +569,7 @@
 		                               GTK_BUTTONS_OK,
 		                               "%s", message);
 	  gtk_window_set_title (GTK_WINDOW (dialog), _("Information"));
-	  gtk_window_set_icon_name (GTK_WINDOW (dialog), GUCHARMAP_ICON_NAME);
+	  gtk_window_set_icon_name (GTK_WINDOW (dialog), MUCHARMAP_ICON_NAME);
 	  gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
 	  g_signal_connect (dialog, "response", G_CALLBACK (gtk_widget_destroy), NULL);
 
@@ -579,7 +579,7 @@
 	static void
 	search_completed (MucharmapSearchDialog *search_dialog)
 	{
-	  MucharmapSearchDialogPrivate *priv = GUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
+	  MucharmapSearchDialogPrivate *priv = MUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
 	  gunichar found_char = mucharmap_search_state_get_found_char (priv->search_state);
 
 	  priv->search_state->searching = FALSE;
@@ -613,7 +613,7 @@
 	_mucharmap_search_dialog_fire_search (MucharmapSearchDialog *search_dialog,
 		                                  MucharmapDirection     direction)
 	{
-	  MucharmapSearchDialogPrivate *priv = GUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
+	  MucharmapSearchDialogPrivate *priv = MUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
 	  MucharmapCodepointList *list;
 	  gunichar start_char;
 	  gint start_index;
@@ -666,7 +666,7 @@
 	mucharmap_search_dialog_start_search (MucharmapSearchDialog *search_dialog,
 		                                  MucharmapDirection     direction)
 	{
-	  MucharmapSearchDialogPrivate *priv = GUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
+	  MucharmapSearchDialogPrivate *priv = MUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
 
 	  if (priv->search_state != NULL && !_entry_is_empty (GTK_ENTRY (priv->entry)))
 		_mucharmap_search_dialog_fire_search (search_dialog, direction);
@@ -678,17 +678,17 @@
 	search_find_response (GtkDialog *dialog,
 		                  gint       response)
 	{
-	  MucharmapSearchDialog *search_dialog = GUCHARMAP_SEARCH_DIALOG (dialog);
-	  MucharmapSearchDialogPrivate *priv = GUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
+	  MucharmapSearchDialog *search_dialog = MUCHARMAP_SEARCH_DIALOG (dialog);
+	  MucharmapSearchDialogPrivate *priv = MUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
 
 	  switch (response)
 		{
-		  case GUCHARMAP_RESPONSE_PREVIOUS:
-		    _mucharmap_search_dialog_fire_search (search_dialog, GUCHARMAP_DIRECTION_BACKWARD);
+		  case MUCHARMAP_RESPONSE_PREVIOUS:
+		    _mucharmap_search_dialog_fire_search (search_dialog, MUCHARMAP_DIRECTION_BACKWARD);
 		    break;
 
-		  case GUCHARMAP_RESPONSE_NEXT:
-		    _mucharmap_search_dialog_fire_search (search_dialog, GUCHARMAP_DIRECTION_FORWARD);
+		  case MUCHARMAP_RESPONSE_NEXT:
+		    _mucharmap_search_dialog_fire_search (search_dialog, MUCHARMAP_DIRECTION_FORWARD);
 		    break;
 
 		  default:
@@ -703,7 +703,7 @@
 	entry_changed (GtkObject             *object,
 		           MucharmapSearchDialog *search_dialog)
 	{
-	  MucharmapSearchDialogPrivate *priv = GUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
+	  MucharmapSearchDialogPrivate *priv = MUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
 	  gboolean is_empty;
 
 	  is_empty = _entry_is_empty (GTK_ENTRY (priv->entry));
@@ -728,7 +728,7 @@
 	static void
 	mucharmap_search_dialog_init (MucharmapSearchDialog *search_dialog)
 	{
-	  MucharmapSearchDialogPrivate *priv = GUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
+	  MucharmapSearchDialogPrivate *priv = MUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
 	  GtkWidget *hbox, *label, *content_area;
 
 	  content_area = gtk_dialog_get_content_area (GTK_DIALOG (search_dialog));
@@ -753,7 +753,7 @@
 	  GTK_WIDGET_SET_FLAGS (priv->prev_button, GTK_CAN_DEFAULT);
 	#endif
 	  set_button_stock_image_and_label (GTK_BUTTON (priv->prev_button), GTK_STOCK_GO_BACK, _("_Previous"));
-	  gtk_dialog_add_action_widget (GTK_DIALOG (search_dialog), priv->prev_button, GUCHARMAP_RESPONSE_PREVIOUS);
+	  gtk_dialog_add_action_widget (GTK_DIALOG (search_dialog), priv->prev_button, MUCHARMAP_RESPONSE_PREVIOUS);
 	  gtk_widget_show (priv->prev_button);
 
 	  priv->next_button = gtk_button_new ();
@@ -764,12 +764,12 @@
 	#endif
 	  gtk_widget_show (priv->next_button);
 	  set_button_stock_image_and_label (GTK_BUTTON (priv->next_button), GTK_STOCK_GO_FORWARD, _("_Next"));
-	  gtk_dialog_add_action_widget (GTK_DIALOG (search_dialog), priv->next_button, GUCHARMAP_RESPONSE_NEXT);
+	  gtk_dialog_add_action_widget (GTK_DIALOG (search_dialog), priv->next_button, MUCHARMAP_RESPONSE_NEXT);
 
-	  gtk_dialog_set_default_response (GTK_DIALOG (search_dialog), GUCHARMAP_RESPONSE_NEXT);
+	  gtk_dialog_set_default_response (GTK_DIALOG (search_dialog), MUCHARMAP_RESPONSE_NEXT);
 	  gtk_dialog_set_alternative_button_order (GTK_DIALOG (search_dialog),
-		                                       GUCHARMAP_RESPONSE_PREVIOUS,
-		                                       GUCHARMAP_RESPONSE_NEXT,
+		                                       MUCHARMAP_RESPONSE_PREVIOUS,
+		                                       MUCHARMAP_RESPONSE_NEXT,
 		                                       GTK_RESPONSE_CLOSE,
 		                                       -1);
 
@@ -813,8 +813,8 @@
 	static void
 	mucharmap_search_dialog_finalize (GObject *object)
 	{
-	  MucharmapSearchDialog *search_dialog = GUCHARMAP_SEARCH_DIALOG (object);
-	  MucharmapSearchDialogPrivate *priv = GUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
+	  MucharmapSearchDialog *search_dialog = MUCHARMAP_SEARCH_DIALOG (object);
+	  MucharmapSearchDialogPrivate *priv = MUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
 
 	  if (priv->search_state)
 		mucharmap_search_state_free (priv->search_state);
@@ -846,7 +846,7 @@
 	mucharmap_search_dialog_new (MucharmapWindow *guw)
 	{
 	  MucharmapSearchDialog *search_dialog = g_object_new (mucharmap_search_dialog_get_type (), NULL);
-	  MucharmapSearchDialogPrivate *priv = GUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
+	  MucharmapSearchDialogPrivate *priv = MUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
 
 	  priv->guw = guw;
 
@@ -861,14 +861,14 @@
 	void
 	mucharmap_search_dialog_present (MucharmapSearchDialog *search_dialog)
 	{
-	  gtk_widget_grab_focus (GUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog)->entry);
+	  gtk_widget_grab_focus (MUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog)->entry);
 	  gtk_window_present (GTK_WINDOW (search_dialog));
 	}
 
 	gdouble
 	mucharmap_search_dialog_get_completed (MucharmapSearchDialog *search_dialog)
 	{
-	  MucharmapSearchDialogPrivate *priv = GUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
+	  MucharmapSearchDialogPrivate *priv = MUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
 
 	  if (priv->search_state == NULL || !priv->search_state->searching)
 		return -1.0;

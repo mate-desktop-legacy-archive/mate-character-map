@@ -18,12 +18,12 @@
 
 /* block means unicode block */
 
-#if !defined (__GUCHARMAP_GUCHARMAP_H_INSIDE__) && !defined (GUCHARMAP_COMPILATION)
+#if !defined (__MUCHARMAP_MUCHARMAP_H_INSIDE__) && !defined (MUCHARMAP_COMPILATION)
 #error "Only <mucharmap/mucharmap.h> can be included directly."
 #endif
 
-#ifndef GUCHARMAP_CHAPTERS_VIEW_H
-#define GUCHARMAP_CHAPTERS_VIEW_H
+#ifndef MUCHARMAP_CHAPTERS_VIEW_H
+#define MUCHARMAP_CHAPTERS_VIEW_H
 
 #include <gtk/gtk.h>
 
@@ -33,12 +33,12 @@ G_BEGIN_DECLS
 
 //class MucharmapChaptersView extends GtkTreeView
 //{
-	#define GUCHARMAP_TYPE_CHAPTERS_VIEW             (mucharmap_chapters_view_get_type ())
-	#define GUCHARMAP_CHAPTERS_VIEW(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), GUCHARMAP_TYPE_CHAPTERS_VIEW, MucharmapChaptersView))
-	#define GUCHARMAP_CHAPTERS_VIEW_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), GUCHARMAP_TYPE_CHAPTERS_VIEW, MucharmapChaptersViewClass))
-	#define GUCHARMAP_IS_CHAPTERS_VIEW(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), GUCHARMAP_TYPE_CHAPTERS_VIEW))
-	#define GUCHARMAP_IS_CHAPTERS_VIEW_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), GUCHARMAP_TYPE_CHAPTERS_VIEW))
-	#define GUCHARMAP_CHAPTERS_VIEW_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), GUCHARMAP_TYPE_CHAPTERS_VIEW, MucharmapChaptersViewClass))
+	#define MUCHARMAP_TYPE_CHAPTERS_VIEW             (mucharmap_chapters_view_get_type ())
+	#define MUCHARMAP_CHAPTERS_VIEW(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_CHAPTERS_VIEW, MucharmapChaptersView))
+	#define MUCHARMAP_CHAPTERS_VIEW_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_CHAPTERS_VIEW, MucharmapChaptersViewClass))
+	#define MUCHARMAP_IS_CHAPTERS_VIEW(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_CHAPTERS_VIEW))
+	#define MUCHARMAP_IS_CHAPTERS_VIEW_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_CHAPTERS_VIEW))
+	#define MUCHARMAP_CHAPTERS_VIEW_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_CHAPTERS_VIEW, MucharmapChaptersViewClass))
 
 	typedef struct _MucharmapChaptersView         MucharmapChaptersView;
 	typedef struct _MucharmapChaptersViewPrivate  MucharmapChaptersViewPrivate;
@@ -82,4 +82,4 @@ G_BEGIN_DECLS
 
 G_END_DECLS
 
-#endif /* #ifndef GUCHARMAP_CHAPTERS_VIEW_H */
+#endif /* #ifndef MUCHARMAP_CHAPTERS_VIEW_H */

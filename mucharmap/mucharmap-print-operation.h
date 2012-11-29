@@ -16,8 +16,8 @@
 *  Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA.
 */
 
-#ifndef GUCHARMAP_PRINT_OPERATION_H
-#define GUCHARMAP_PRINT_OPERATION_H
+#ifndef MUCHARMAP_PRINT_OPERATION_H
+#define MUCHARMAP_PRINT_OPERATION_H
 
 #include <gtk/gtk.h>
 
@@ -27,12 +27,12 @@ G_BEGIN_DECLS
 
 //class MucharmapPrintOperation
 //{
-	#define GUCHARMAP_TYPE_PRINT_OPERATION          (mucharmap_print_operation_get_type ())
-	#define GUCHARMAP_PRINT_OPERATION(o)            (G_TYPE_CHECK_INSTANCE_CAST ((o), GUCHARMAP_TYPE_PRINT_OPERATION, MucharmapPrintOperation))
-	#define GUCHARMAP_PRINT_OPERATION_CLASS(k)      (G_TYPE_CHECK_CLASS_CAST((k), GUCHARMAP_TYPE_PRINT_OPERATION, MucharmapPrintOperationClass))
-	#define GUCHARMAP_IS_PRINT_OPERATION(o)         (G_TYPE_CHECK_INSTANCE_TYPE ((o), GUCHARMAP_TYPE_PRINT_OPERATION))
-	#define GUCHARMAP_IS_PRINT_OPERATION_CLASS(k)   (G_TYPE_CHECK_CLASS_TYPE ((k), GUCHARMAP_TYPE_PRINT_OPERATION))
-	#define GUCHARMAP_PRINT_OPERATION_GET_CLASS(o)  (G_TYPE_INSTANCE_GET_CLASS ((o), GUCHARMAP_TYPE_PRINT_OPERATION, MucharmapPrintOperationClass))
+	#define MUCHARMAP_TYPE_PRINT_OPERATION          (mucharmap_print_operation_get_type ())
+	#define MUCHARMAP_PRINT_OPERATION(o)            (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_PRINT_OPERATION, MucharmapPrintOperation))
+	#define MUCHARMAP_PRINT_OPERATION_CLASS(k)      (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_PRINT_OPERATION, MucharmapPrintOperationClass))
+	#define MUCHARMAP_IS_PRINT_OPERATION(o)         (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_PRINT_OPERATION))
+	#define MUCHARMAP_IS_PRINT_OPERATION_CLASS(k)   (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_PRINT_OPERATION))
+	#define MUCHARMAP_PRINT_OPERATION_GET_CLASS(o)  (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_PRINT_OPERATION, MucharmapPrintOperationClass))
 
 	typedef struct _MucharmapPrintOperation         MucharmapPrintOperation;
 	typedef struct _MucharmapPrintOperationClass    MucharmapPrintOperationClass;
@@ -59,4 +59,4 @@ G_BEGIN_DECLS
 
 G_END_DECLS
 
-#endif /* !GUCHARMAP_PRINT_OPERATION_H */
+#endif /* !MUCHARMAP_PRINT_OPERATION_H */
