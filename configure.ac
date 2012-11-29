@@ -315,7 +315,6 @@ AC_CONFIG_FILES([
 Makefile
 mucharmap.desktop.in
 mucharmap.nsi
-mucharmap.spec
 bindings/Makefile
 bindings/python/Makefile
 docs/Makefile
