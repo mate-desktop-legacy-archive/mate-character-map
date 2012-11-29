@@ -56,6 +56,7 @@ AC_PROG_CC
 AC_DISABLE_STATIC
 AC_PROG_LIBTOOL
 IT_PROG_INTLTOOL([0.40.0])
+GLIB_GSETTINGS
 
 AM_PROG_CC_C_O
 
@@ -64,7 +65,10 @@ MATE_COMMON_INIT
 MATE_DEBUG_CHECK
 MATE_COMPILE_WARNINGS([maximum])
 #MATE_MAINTAINER_MODE_DEFINES
-GLIB_GSETTINGS
+
+GLIB_REQUIRED=2.16.3
+GIO_REQUIRED=2.25.5
+
 
 # check for win32
 case "$host" in
@@ -119,10 +123,10 @@ AC_SUBST([MUCHARMAP_LIBRARY_SUFFIX_U],[AS_TR_SH([$MUCHARMAP_LIBRARY_SUFFIX])])
 AM_CONDITIONAL([HAVE_GTK_2],[test "$with_gtk" = "2.0"])
 AM_CONDITIONAL([HAVE_GTK_3],[test "$with_gtk" = "3.0"])
 
-GLIB_REQUIRED=2.16.3
 
 PKG_CHECK_MODULES([GTK],[
   glib-2.0 >= $GLIB_REQUIRED
+  gio-2.0 >= $GIO_REQUIRED
   gtk+-$GTK_API_VERSION >= $GTK_REQUIRED
 ])
 
@@ -131,24 +135,7 @@ AC_SUBST([GLIB_GENMARSHAL])
 GLIB_MKENUMS="$($PKG_CONFIG --variable=glib_mkenums glib-2.0)"
 AC_SUBST([GLIB_MKENUMS])
 
-AC_ARG_ENABLE([mateconf],
-    [AS_HELP_STRING([--disable-mateconf],[don't build with mateconf support])],
-    [],[enable_mateconf=yes])
-
-if test "$enable_mateconf" = "yes"; then
-    MATECONFPKGS="mateconf-2.0 gthread-2.0"
-    PKG_CHECK_MODULES([MATECONF],[$MATECONFPKGS])
-
-    AC_DEFINE([HAVE_MATECONF], [1], [Define if have mateconf])
-else
-    MATECONFPKGS=
-    AC_MSG_NOTICE([MATECONF support disabled with --disable-mateconf])
-    AM_CONDITIONAL([MATECONF_SCHEMAS_INSTALL], false)
-fi
-AC_SUBST([MATECONFPKGS])
-
-AM_MATECONF_SOURCE_2
-AC_PATH_PROG([MATECONFTOOL],[mateconftool-2],[no])
+GLIB_GSETTINGS
 
 AC_MSG_CHECKING([whether to build the charmap programme])
 AC_ARG_ENABLE([charmap],
@@ -163,9 +150,6 @@ AC_CHECK_FUNCS([bind_textdomain_codeset])
 
 AC_SUBST(GTK_CFLAGS)
 AC_SUBST(GTK_LIBS)
-
-AC_SUBST(MATECONF_CFLAGS)
-AC_SUBST(MATECONF_LIBS)
 
 AH_TEMPLATE([ENABLE_UNIHAN], [Define if you want CJK ideograph information])
 AC_ARG_ENABLE(unihan,
@@ -332,7 +316,6 @@ Makefile
 mucharmap.desktop.in
 mucharmap.nsi
 mucharmap.spec
-org.mate.mucharmap.gschema.xml
 bindings/Makefile
 bindings/python/Makefile
 docs/Makefile

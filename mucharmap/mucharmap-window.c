@@ -396,7 +396,7 @@
 	{
 	  gboolean is_active = gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action));
 	  mucharmap_charmap_set_snap_pow2 (guw->charmap, is_active);
-	  mucharmap_settings_set_snap_pow2 (is_active);
+	  g_settings_set_boolean (guw->settings, "snap-cols-pow2", is_active);
 	}
 
 	static void
@@ -654,7 +654,7 @@
 		}
 
 	  mucharmap_window_set_chapters_model (guw, mode);
-	  mucharmap_settings_set_chapters_mode (mode);
+	  g_settings_set_enum (guw->settings, "group-by", mode);
 	}
 
 	#ifdef DEBUG_chpe
@@ -787,12 +787,17 @@
 	static gboolean
 	save_last_char_idle_cb (MucharmapWindow *guw)
 	{
+	  gchar outbuf[10];
 	  gunichar wc;
+	  gint len;
 
 	  guw->save_last_char_idle_id = 0;
 
 	  wc = mucharmap_charmap_get_active_character (guw->charmap);
-	  mucharmap_settings_set_last_char (wc);
+	  len = g_unichar_to_utf8 (wc, outbuf);
+	  outbuf[len] = '\0';
+
+	  g_settings_set_string (guw->settings, "last-char", outbuf);
 
 	  return FALSE;
 	}
@@ -815,7 +820,7 @@
 	  guw->in_notification = FALSE;
 
 	  font = pango_font_description_to_string (font_desc);
-	  mucharmap_settings_set_font (font);
+	  g_settings_set (guw->settings, "font", "ms", font);
 	  g_free (font);
 	}
 
@@ -918,11 +923,14 @@
 	  const GtkToggleActionEntry toggle_menu_entries[] =
 	  {
 		{ "SnapColumns", NULL, N_("Snap _Columns to Power of Two"), NULL,
-		  NULL,
-		  G_CALLBACK (snap_cols_pow2), FALSE },
+		  NULL, NULL, FALSE },
 	  };
 	  GtkWidget *menubar;
 	  GtkAction *action;
+	  gchar *active;
+	  gchar *font;
+
+	  guw->settings = g_settings_new ("org.mate.mucharmap");
 
 	  gtk_window_set_title (GTK_WINDOW (guw), _("Character Map"));
 	  gtk_window_set_icon_name (GTK_WINDOW (guw), MUCHARMAP_ICON_NAME);
@@ -943,7 +951,7 @@
 	  gtk_action_group_add_radio_actions (guw->action_group,
 	  				      radio_menu_entries,
 						  G_N_ELEMENTS (radio_menu_entries),
-						  mucharmap_settings_get_chapters_mode(),
+						  g_settings_get_enum (guw->settings, "group-by"),
 						  G_CALLBACK (view_by),
 						  guw);
 	  gtk_action_group_add_toggle_actions (guw->action_group,
@@ -966,15 +974,11 @@
 
 	  /* The font selector */
 	  guw->fontsel = mucharmap_mini_font_selection_new ();
-	  g_signal_connect (guw->fontsel, "notify::font-desc",
-		                G_CALLBACK (fontsel_sync_font_desc), guw);
 	  gtk_box_pack_start (GTK_BOX (big_vbox), guw->fontsel, FALSE, FALSE, 0);
 	  gtk_widget_show (GTK_WIDGET (guw->fontsel));
 
 	  /* The charmap */
 	  guw->charmap = MUCHARMAP_CHARMAP (mucharmap_charmap_new ());
-	  g_signal_connect (guw->charmap, "notify::active-character",
-		                G_CALLBACK (charmap_sync_active_character), guw);
 	  g_signal_connect (guw->charmap, "notify::font-desc",
 		                G_CALLBACK (charmap_sync_font_desc), guw);
 
@@ -1044,16 +1048,42 @@
 
 	  gtk_widget_show (big_vbox);
 
-	  action = gtk_action_group_get_action (guw->action_group, "SnapColumns");
-	  gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
-		                            mucharmap_settings_get_snap_pow2 ());
-
-	  mucharmap_window_set_chapters_model (guw, mucharmap_settings_get_chapters_mode ());
-
-	  mucharmap_charmap_set_active_character (guw->charmap,
-		                                      mucharmap_settings_get_last_char ());
-
 	  gtk_widget_grab_focus (GTK_WIDGET (mucharmap_charmap_get_chartable (guw->charmap)));
+
+	  /* connect these only after applying the initial settings in order to
+	  * avoid unnecessary writes to GSettings.
+	  */
+	  g_signal_connect (guw->charmap, "notify::active-character",
+	  G_CALLBACK (charmap_sync_active_character), guw);
+	  g_signal_connect (guw->fontsel, "notify::font-desc",
+	  G_CALLBACK (fontsel_sync_font_desc), guw);
+	  g_signal_connect (action, "activate",
+	  G_CALLBACK (snap_cols_pow2), guw);
+
+	  /* read initial settings */
+	  /* font */
+	  g_settings_get (guw->settings, "font", "ms", &font);
+	  if (font != NULL)
+		{
+		  mucharmap_window_set_font (guw, font);
+		  g_free (font);
+		}
+
+	  /* snap-to-power-of-two */
+
+	  action = gtk_action_group_get_action (guw->action_group, "SnapColumns");
+	  gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), g_settings_get_boolean (guw->settings, "snap-cols-pow2"));
+
+	  /* group by */
+	  mucharmap_window_set_chapters_model (guw, g_settings_get_enum (guw->settings, "group-by"));
+
+	  /* active character */
+	  active = g_settings_get_string (guw->settings, "last-char");
+	  mucharmap_charmap_set_active_character (guw->charmap, g_utf8_get_char (active));
+	  g_free (active);
+
+	  /* window geometry */
+	  mucharmap_settings_add_window (GTK_WINDOW (guw));
 	}
 
 	static void

@@ -149,7 +149,6 @@ mucharmap_CPPFLAGS = \
 
 mucharmap_CFLAGS = \
 	$(GTK_CFLAGS)	\
-	$(MATECONF_CFLAGS)	\
 	$(WARN_CFLAGS)	\
 	$(AM_CFLAGS)
 
@@ -159,7 +158,6 @@ mucharmap_LDFLAGS = \
 mucharmap_LDADD = \
 	libmucharmap@MUCHARMAP_LIBRARY_SUFFIX_U@.la	\
 	$(GTK_LIBS)	\
-	$(MATECONF_LIBS)	\
 	$(INTL_LIBS)
 
 if OS_WIN32
@@ -272,5 +270,11 @@ uninstall-local:
 endif # !OS_WIN32
 
 endif # ENABLE_CHARMAP
+
+gsettings_ENUM_NAMESPACE = org.mate.mucharmap
+gsettings_ENUM_FILES = mucharmap-settings.h
+gsettings_SCHEMAS = org.mate.mucharmap.gschema.xml
+
+@GSETTINGS_RULES@
 
 -include $(top_srcdir)/git.mk

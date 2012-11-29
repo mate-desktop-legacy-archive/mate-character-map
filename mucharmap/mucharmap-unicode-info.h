@@ -76,9 +76,6 @@ const gchar* mucharmap_unicode_get_script_for_char(gunichar wc);
 
 const gchar* mucharmap_unicode_version_to_string(MucharmapUnicodeVersion version);
 
-/* doesn't really belong here, but no better place was available */
-gunichar mucharmap_unicode_get_locale_character(void);
-
 G_END_DECLS
 
 #endif  /* #ifndef MUCHARMAP_UNICODE_INFO_H */

@@ -26,8 +26,6 @@
 
 G_BEGIN_DECLS
 
-//class MucharmapWindow extends GtkWindow
-//{
 	#define MUCHARMAP_TYPE_WINDOW             (mucharmap_window_get_type ())
 	#define MUCHARMAP_WINDOW(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_WINDOW, MucharmapWindow))
 	#define MUCHARMAP_WINDOW_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_WINDOW, MucharmapWindowClass))
@@ -41,6 +39,7 @@ G_BEGIN_DECLS
 	struct _MucharmapWindow {
 		GtkWindow parent;
 
+		GSettings *settings;
 		MucharmapCharmap *charmap;
 		GtkWidget* status;
 
@@ -77,7 +76,6 @@ G_BEGIN_DECLS
 		                                    const char*      font);
 
 	GdkCursor* _mucharmap_window_progress_cursor (void);
-//}
 
 G_END_DECLS
 

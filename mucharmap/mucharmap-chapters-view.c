@@ -25,8 +25,6 @@
 
 #include "unicode-blocks.h"
 
-//class MucharmapChaptersView extends GtkTreeView
-//{
 	struct _MucharmapChaptersViewPrivate {
 	  GtkTreeViewColumn *column;
 	  MucharmapChaptersModel *model;
@@ -280,10 +278,3 @@
 	  return mucharmap_chapters_model_get_book_codepoint_list (priv->model);
 	}
 
-	gboolean
-	mucharmap_chapters_view_select_locale (MucharmapChaptersView *view)
-	{
-	  return mucharmap_chapters_view_select_character (view,
-		                                               mucharmap_unicode_get_locale_character ());
-	}
-//}

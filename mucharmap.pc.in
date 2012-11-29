@@ -7,6 +7,5 @@ Name: mucharmap
 Description: GTK+ Unicode Character Map
 Version: @VERSION@
 Requires: gtk+-@GTK_API_VERSION@ glib-2.0
-Requires.private: @MATECONFPKGS@
 Libs: -L${libdir} -lmucharmap@MUCHARMAP_LIBRARY_SUFFIX_U@
 Cflags: -I${includedir}/mucharmap-@MUCHARMAP_API_VERSION@

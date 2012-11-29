@@ -31,8 +31,6 @@
 
 G_BEGIN_DECLS
 
-//class MucharmapChaptersView extends GtkTreeView
-//{
 	#define MUCHARMAP_TYPE_CHAPTERS_VIEW             (mucharmap_chapters_view_get_type ())
 	#define MUCHARMAP_CHAPTERS_VIEW(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_CHAPTERS_VIEW, MucharmapChaptersView))
 	#define MUCHARMAP_CHAPTERS_VIEW_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_CHAPTERS_VIEW, MucharmapChaptersViewClass))
@@ -76,10 +74,6 @@ G_BEGIN_DECLS
 	gchar *            mucharmap_chapters_view_get_selected  (MucharmapChaptersView *view);
 	gboolean           mucharmap_chapters_view_set_selected  (MucharmapChaptersView *view,
 		                                                      const gchar       *name);
-
-	gboolean           mucharmap_chapters_view_select_locale (MucharmapChaptersView *view);
-//}
-
 G_END_DECLS
 
 #endif /* #ifndef MUCHARMAP_CHAPTERS_VIEW_H */

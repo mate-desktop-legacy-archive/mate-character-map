@@ -23,24 +23,6 @@ desktopdir = $(datadir)/applications
 desktop_in_files = mucharmap.desktop.in.in
 desktop_DATA 	 = $(desktop_in_files:.desktop.in.in=.desktop)
 
-schemadir         = $(MATECONF_SCHEMA_FILE_DIR)
-schema_in_files   = mucharmap.schemas.in
-schema_DATA       = $(schema_in_files:.schemas.in=.schemas)
-
-#
-# GSettings schema
-#
-gsettingsschema_in_files = org.mate.mucharmap.gschema.xml.in
-# gsettings_SCHEMAS is a list of all the schemas you want to install
-gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
-
-.PRECIOUS: $(gsettings_SCHEMAS)
-
-@INTLTOOL_XML_NOMERGE_RULE@
-
-# include the appropriate makefile rules for schema handling
-@GSETTINGS_RULES@
-
 pkgconfigdir = $(libdir)/pkgconfig
 pkgconfig_DATA = mucharmap-$(MUCHARMAP_API_PC_VERSION).pc
 
@@ -50,8 +32,7 @@ EXTRA_DIST = \
 	autogen.sh \
 	gtkrc.win32 \
 	mate-doc-utils.make \
-	$(schema_in_files) \
-	$(gsettingsschema_in_files) \
+	org.mate.mucharmap.schema.xml.in \
 	COPYING.UNICODE \
 	$(NULL)
 
@@ -62,12 +43,9 @@ DISTCHECK_CONFIGURE_FLAGS = \
 	--disable-introspection \
 	--with-gtk=2.0
 
-DISTCLEANFILES = \
-	$(gsettings_SCHEMAS)
-
 CLEANFILES = \
 	$(desktop_DATA) \
-	$(schema_DATA) \
+	$(gsettings_schema) \
 	$(NULL)
 
 MAINTAINERCLEANFILES = \
@@ -90,17 +68,6 @@ MAINTAINERCLEANFILES = \
 	$(srcdir)/mate-doc-utils.make \
 	`find "$(srcdir)" -type f -name Makefile.in -print`
 
-if ENABLE_CHARMAP
-install-data-local: $(schema_DATA)
-if MATECONF_SCHEMAS_INSTALL
-	if test -z "$(DESTDIR)" ; then \
-		for p in $^ ; do \
-			MATECONF_CONFIG_SOURCE=$(MATECONF_SCHEMA_CONFIG_SOURCE) $(MATECONFTOOL) --makefile-install-rule $$p 2>&1 > /dev/null; \
-		done \
-	fi
-endif # MATECONF_SCHEMAS_INSTALL
-endif # ENABLE_CHARMAP
-
 ChangeLog:
 	$(AM_V_GEN) if test -f $(top_srcdir)/.git/HEAD; then \
 		git log --stat > $@; \
@@ -111,6 +78,5 @@ dist: ChangeLog
 .PHONY: ChangeLog
 
 @INTLTOOL_DESKTOP_RULE@
-@INTLTOOL_SCHEMAS_RULE@
 
 -include $(top_srcdir)/git.mk
