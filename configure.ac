@@ -16,7 +16,7 @@
 # 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301  USA
 
 m4_define([mucharmap_version_major],[1])
-m4_define([mucharmap_version_minor],[3])
+m4_define([mucharmap_version_minor],[5])
 m4_define([mucharmap_version_micro],[0])
 m4_define([mucharmap_version_extra],[])
 m4_define([mucharmap_version],[mucharmap_version_major.mucharmap_version_minor.mucharmap_version_micro()mucharmap_version_extra])
