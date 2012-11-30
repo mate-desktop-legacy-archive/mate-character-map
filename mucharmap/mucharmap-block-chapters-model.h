@@ -19,12 +19,12 @@
 
 /* block means unicode block */
 
-#if !defined(__GUCHARMAP_GUCHARMAP_H_INSIDE__) && !defined(GUCHARMAP_COMPILATION)
+#if !defined(__MUCHARMAP_MUCHARMAP_H_INSIDE__) && !defined(MUCHARMAP_COMPILATION)
 #error "Only <mucharmap/mucharmap.h> can be included directly."
 #endif
 
-#ifndef GUCHARMAP_BLOCK_CHAPTERS_MODEL_H
-#define GUCHARMAP_BLOCK_CHAPTERS_MODEL_H
+#ifndef MUCHARMAP_BLOCK_CHAPTERS_MODEL_H
+#define MUCHARMAP_BLOCK_CHAPTERS_MODEL_H
 
 #include <mucharmap/mucharmap-chapters-model.h>
 
@@ -32,12 +32,12 @@ G_BEGIN_DECLS
 
 //class MucharmapBlockChaptersModel extends MucharmapChaptersModel
 //{
-	#define GUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL             (mucharmap_block_chapters_model_get_type ())
-	#define GUCHARMAP_BLOCK_CHAPTERS_MODEL(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), GUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL, MucharmapBlockChaptersModel))
-	#define GUCHARMAP_BLOCK_CHAPTERS_MODEL_CLASS(k) (G_TYPE_CHECK_CLASS_CAST((k), GUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL, MucharmapBlockChaptersModelClass))
-	#define GUCHARMAP_IS_BLOCK_CHAPTERS_MODEL(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), GUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL))
-	#define GUCHARMAP_IS_BLOCK_CHAPTERS_MODEL_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), GUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL))
-	#define GUCHARMAP_BLOCK_CHAPTERS_MODEL_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), GUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL, MucharmapBlockChaptersModelClass))
+	#define MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL             (mucharmap_block_chapters_model_get_type ())
+	#define MUCHARMAP_BLOCK_CHAPTERS_MODEL(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL, MucharmapBlockChaptersModel))
+	#define MUCHARMAP_BLOCK_CHAPTERS_MODEL_CLASS(k) (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL, MucharmapBlockChaptersModelClass))
+	#define MUCHARMAP_IS_BLOCK_CHAPTERS_MODEL(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL))
+	#define MUCHARMAP_IS_BLOCK_CHAPTERS_MODEL_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL))
+	#define MUCHARMAP_BLOCK_CHAPTERS_MODEL_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL, MucharmapBlockChaptersModelClass))
 
 	typedef struct _MucharmapBlockChaptersModel MucharmapBlockChaptersModel;
 	typedef struct _MucharmapBlockChaptersModelPrivate MucharmapBlockChaptersModelPrivate;
@@ -60,4 +60,4 @@ G_BEGIN_DECLS
 
 G_END_DECLS
 
-#endif /* #ifndef GUCHARMAP_BLOCK_CHAPTERS_MODEL_H */
+#endif /* #ifndef MUCHARMAP_BLOCK_CHAPTERS_MODEL_H */

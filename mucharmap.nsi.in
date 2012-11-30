@@ -65,7 +65,7 @@
   LangString DESC_SecCopyUI ${LANG_ENGLISH} "Copy ${MUI_PRODUCT} files to application folder."
 
   ;Folder-selection page
-  ;DirText "Select the directory where you want to install GUCharMap"
+  ;DirText "Select the directory where you want to install MUCharMap"
   InstallDir "$PROGRAMFILES\${MUI_PRODUCT}-${MUI_VERSION}"
 
 ;--------------------------------

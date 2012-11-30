@@ -48,9 +48,9 @@
 	mucharmap_codepoint_list_get_char (MucharmapCodepointList *list, 
 		                               gint                    index)
 	{
-	  g_return_val_if_fail (GUCHARMAP_IS_CODEPOINT_LIST (list), (gunichar)(-1));
+	  g_return_val_if_fail (MUCHARMAP_IS_CODEPOINT_LIST (list), (gunichar)(-1));
 
-	  return GUCHARMAP_CODEPOINT_LIST_GET_CLASS (list)->get_char (list, index);
+	  return MUCHARMAP_CODEPOINT_LIST_GET_CLASS (list)->get_char (list, index);
 	}
 
 	/**
@@ -65,9 +65,9 @@
 	mucharmap_codepoint_list_get_index (MucharmapCodepointList *list, 
 		                                gunichar                wc)
 	{
-	  g_return_val_if_fail (GUCHARMAP_IS_CODEPOINT_LIST (list), -1);
+	  g_return_val_if_fail (MUCHARMAP_IS_CODEPOINT_LIST (list), -1);
 
-	  return GUCHARMAP_CODEPOINT_LIST_GET_CLASS (list)->get_index (list, wc);
+	  return MUCHARMAP_CODEPOINT_LIST_GET_CLASS (list)->get_index (list, wc);
 	}
 
 	/**
@@ -79,9 +79,9 @@
 	gint
 	mucharmap_codepoint_list_get_last_index (MucharmapCodepointList *list)
 	{
-	  g_return_val_if_fail (GUCHARMAP_IS_CODEPOINT_LIST (list), -1);
+	  g_return_val_if_fail (MUCHARMAP_IS_CODEPOINT_LIST (list), -1);
 
-	  return GUCHARMAP_CODEPOINT_LIST_GET_CLASS (list)->get_last_index (list);
+	  return MUCHARMAP_CODEPOINT_LIST_GET_CLASS (list)->get_last_index (list);
 	}
 //}
 

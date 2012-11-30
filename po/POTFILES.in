@@ -1,17 +1,16 @@
 [encoding: UTF-8]
 mucharmap.desktop.in.in
-mucharmap.schemas.in
+gucharmap/mucharmap-block-chapters-model.c
 mucharmap/mucharmap-charmap.c
-mucharmap/mucharmap-chartable.c
 mucharmap/mucharmap-chartable-accessible.c
+mucharmap/mucharmap-chartable.c
 mucharmap/mucharmap-mini-fontsel.c
-mucharmap/mucharmap-settings.c
+mucharmap/mucharmap-script-chapters-model.c
 mucharmap/mucharmap-script-codepoint-list.c
+mucharmap/mucharmap-search-dialog.c
+mucharmap/mucharmap-settings.c
 mucharmap/mucharmap-unicode-info.c
 mucharmap/mucharmap-window.c
 mucharmap/main.c
 mucharmap/unicode-blocks.h
 mucharmap/unicode-scripts.h
-mucharmap/mucharmap-search-dialog.c
-mucharmap/mucharmap-block-chapters-model.c
-mucharmap/mucharmap-script-chapters-model.c

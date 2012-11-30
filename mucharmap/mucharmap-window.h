@@ -17,8 +17,8 @@
  * 51 Franklin St, Fifth Floor, Boston, MA 02110-1301  USA
  */
  
-#ifndef GUCHARMAP_WINDOW_H
-#define GUCHARMAP_WINDOW_H
+#ifndef MUCHARMAP_WINDOW_H
+#define MUCHARMAP_WINDOW_H
 
 #include <gtk/gtk.h>
 #include <mucharmap/mucharmap.h>
@@ -26,14 +26,12 @@
 
 G_BEGIN_DECLS
 
-//class MucharmapWindow extends GtkWindow
-//{
-	#define GUCHARMAP_TYPE_WINDOW             (mucharmap_window_get_type ())
-	#define GUCHARMAP_WINDOW(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), GUCHARMAP_TYPE_WINDOW, MucharmapWindow))
-	#define GUCHARMAP_WINDOW_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), GUCHARMAP_TYPE_WINDOW, MucharmapWindowClass))
-	#define GUCHARMAP_IS_WINDOW(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), GUCHARMAP_TYPE_WINDOW))
-	#define GUCHARMAP_IS_WINDOW_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), GUCHARMAP_TYPE_WINDOW))
-	#define GUCHARMAP_WINDOW_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), GUCHARMAP_TYPE_WINDOW, MucharmapWindowClass))
+	#define MUCHARMAP_TYPE_WINDOW             (mucharmap_window_get_type ())
+	#define MUCHARMAP_WINDOW(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_WINDOW, MucharmapWindow))
+	#define MUCHARMAP_WINDOW_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_WINDOW, MucharmapWindowClass))
+	#define MUCHARMAP_IS_WINDOW(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_WINDOW))
+	#define MUCHARMAP_IS_WINDOW_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_WINDOW))
+	#define MUCHARMAP_WINDOW_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_WINDOW, MucharmapWindowClass))
 
 	typedef struct _MucharmapWindow MucharmapWindow;
 	typedef struct _MucharmapWindowClass MucharmapWindowClass;
@@ -41,6 +39,7 @@ G_BEGIN_DECLS
 	struct _MucharmapWindow {
 		GtkWindow parent;
 
+		GSettings *settings;
 		MucharmapCharmap *charmap;
 		GtkWidget* status;
 
@@ -67,7 +66,7 @@ G_BEGIN_DECLS
 		GtkWindowClass parent_class;
 	};
 
-	#define GUCHARMAP_ICON_NAME "accessories-character-map"
+	#define MUCHARMAP_ICON_NAME "accessories-character-map"
 
 	GType       mucharmap_window_get_type  (void);
 
@@ -77,8 +76,7 @@ G_BEGIN_DECLS
 		                                    const char*      font);
 
 	GdkCursor* _mucharmap_window_progress_cursor (void);
-//}
 
 G_END_DECLS
 
-#endif /* #ifndef GUCHARMAP_WINDOW_H */
+#endif /* #ifndef MUCHARMAP_WINDOW_H */

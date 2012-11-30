@@ -16,12 +16,12 @@
  * 51 Franklin St, Fifth Floor, Boston, MA 02110-1301  USA
  */
 
-#if !defined (__GUCHARMAP_GUCHARMAP_H_INSIDE__) && !defined (GUCHARMAP_COMPILATION)
+#if !defined (__MUCHARMAP_MUCHARMAP_H_INSIDE__) && !defined (MUCHARMAP_COMPILATION)
 #error "Only <mucharmap/mucharmap.h> can be included directly."
 #endif
 
-#ifndef GUCHARMAP_SCRIPT_CODEPOINT_LIST_H
-#define GUCHARMAP_SCRIPT_CODEPOINT_LIST_H
+#ifndef MUCHARMAP_SCRIPT_CODEPOINT_LIST_H
+#define MUCHARMAP_SCRIPT_CODEPOINT_LIST_H
 
 #include <glib-object.h>
 
@@ -31,12 +31,12 @@ G_BEGIN_DECLS
 
 //class MucharmapScriptCodepointList
 //{
-	#define GUCHARMAP_TYPE_SCRIPT_CODEPOINT_LIST             (mucharmap_script_codepoint_list_get_type ())
-	#define GUCHARMAP_SCRIPT_CODEPOINT_LIST(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), GUCHARMAP_TYPE_SCRIPT_CODEPOINT_LIST, MucharmapScriptCodepointList))
-	#define GUCHARMAP_SCRIPT_CODEPOINT_LIST_CLASS(k) (G_TYPE_CHECK_CLASS_CAST((k), GUCHARMAP_TYPE_SCRIPT_CODEPOINT_LIST, MucharmapScriptCodepointListClass))
-	#define GUCHARMAP_IS_SCRIPT_CODEPOINT_LIST(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), GUCHARMAP_TYPE_SCRIPT_CODEPOINT_LIST))
-	#define GUCHARMAP_IS_SCRIPT_CODEPOINT_LIST_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), GUCHARMAP_TYPE_SCRIPT_CODEPOINT_LIST))
-	#define GUCHARMAP_SCRIPT_CODEPOINT_LIST_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), GUCHARMAP_TYPE_SCRIPT_CODEPOINT_LIST, MucharmapScriptCodepointListClass))
+	#define MUCHARMAP_TYPE_SCRIPT_CODEPOINT_LIST             (mucharmap_script_codepoint_list_get_type ())
+	#define MUCHARMAP_SCRIPT_CODEPOINT_LIST(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_SCRIPT_CODEPOINT_LIST, MucharmapScriptCodepointList))
+	#define MUCHARMAP_SCRIPT_CODEPOINT_LIST_CLASS(k) (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_SCRIPT_CODEPOINT_LIST, MucharmapScriptCodepointListClass))
+	#define MUCHARMAP_IS_SCRIPT_CODEPOINT_LIST(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_SCRIPT_CODEPOINT_LIST))
+	#define MUCHARMAP_IS_SCRIPT_CODEPOINT_LIST_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_SCRIPT_CODEPOINT_LIST))
+	#define MUCHARMAP_SCRIPT_CODEPOINT_LIST_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_SCRIPT_CODEPOINT_LIST, MucharmapScriptCodepointListClass))
 
 	typedef struct _MucharmapScriptCodepointList        MucharmapScriptCodepointList;
 	typedef struct _MucharmapScriptCodepointListPrivate MucharmapScriptCodepointListPrivate;
@@ -68,4 +68,4 @@ G_BEGIN_DECLS
 
 G_END_DECLS
 
-#endif /* #ifndef GUCHARMAP_SCRIPT_CODEPOINT_LIST_H */
+#endif /* #ifndef MUCHARMAP_SCRIPT_CODEPOINT_LIST_H */

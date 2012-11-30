@@ -59,7 +59,7 @@
 	static gint
 	mucharmap_chartable_cell_accessible_get_index_in_parent (AtkObject *obj)
 	{
-	  MucharmapChartableCellAccessible *cell = GUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (obj);
+	  MucharmapChartableCellAccessible *cell = MUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (obj);
 
 	  return cell->index;
 	}
@@ -68,7 +68,7 @@
 	static AtkStateSet *
 	mucharmap_chartable_cell_accessible_ref_state_set (AtkObject *obj)
 	{
-	  MucharmapChartableCellAccessible *cell = GUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (obj);
+	  MucharmapChartableCellAccessible *cell = MUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (obj);
 	  g_return_val_if_fail (cell->state_set, NULL);
 
 	  g_object_ref(cell->state_set);
@@ -90,14 +90,14 @@
 	  gint real_x, real_y, real_width, real_height;
 	  gint row, column;
 
-	  cell = GUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (component);
+	  cell = MUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (component);
 
 	  cell_parent = atk_object_get_parent (ATK_OBJECT (cell));
 
 	  /*
 	   * Is the cell visible on the screen
 	   */
-	  chartable = GUCHARMAP_CHARTABLE (cell->widget);
+	  chartable = MUCHARMAP_CHARTABLE (cell->widget);
 	  chartable_priv = chartable->priv;
 
 	  if (cell->index >= chartable_priv->page_first_cell && cell->index < chartable_priv->page_first_cell + chartable_priv->rows * chartable_priv->cols)
@@ -123,10 +123,10 @@
 	static gboolean
 	mucharmap_chartable_cell_accessible_grab_focus (AtkComponent *component)
 	{
-	  MucharmapChartableCellAccessible *cell = GUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (component);
+	  MucharmapChartableCellAccessible *cell = MUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (component);
 	  MucharmapChartable *chartable;
 
-	  chartable = GUCHARMAP_CHARTABLE (cell->widget);
+	  chartable = MUCHARMAP_CHARTABLE (cell->widget);
 	  /* FIXME: this looks wrong, index is the index in the codepoint list, not the character itself */
 	  mucharmap_chartable_set_active_character (chartable, cell->index);
 
@@ -147,9 +147,9 @@
 	  MucharmapChartableCellAccessible *cell;
 	  MucharmapChartable *chartable;
 
-	  cell = GUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (data);
+	  cell = MUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (data);
 
-	  chartable = GUCHARMAP_CHARTABLE (cell->widget);
+	  chartable = MUCHARMAP_CHARTABLE (cell->widget);
 	  mucharmap_chartable_set_active_character (chartable, cell->index);
 	  g_signal_emit_by_name (chartable, "activate");
 	  return FALSE;
@@ -162,7 +162,7 @@
 	{
 	  MucharmapChartableCellAccessible *cell;
 
-	  cell = GUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (action);
+	  cell = MUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (action);
 	  if (index == 0)
 		{
 		  if (cell->action_idle_handler)
@@ -192,7 +192,7 @@
 	{
 		MucharmapChartableCellAccessible* cell;
 
-		cell = GUCHARMAP_CHARTABLE_CELL_ACCESSIBLE(action);
+		cell = MUCHARMAP_CHARTABLE_CELL_ACCESSIBLE(action);
 
 		if (index == 0)
 		{
@@ -212,7 +212,7 @@
 	{
 	  MucharmapChartableCellAccessible *cell;
 
-	  cell = GUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (action);
+	  cell = MUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (action);
 	  if (index == 0)
 		{
 		  g_free (cell->activate_description);
@@ -238,7 +238,7 @@
 	static void
 	mucharmap_chartable_cell_accessible_object_finalize (GObject *obj)
 	{
-	  MucharmapChartableCellAccessible *cell = GUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (obj);
+	  MucharmapChartableCellAccessible *cell = MUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (obj);
 
 	  g_free (cell->activate_description);
 

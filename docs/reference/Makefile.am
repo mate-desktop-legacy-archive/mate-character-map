@@ -4,7 +4,7 @@ NULL =
 DOC_MODULE = mucharmap
 
 # Uncomment for versioned docs and specify the version of the module, e.g. '2'.
-DOC_MODULE_VERSION = $(GUCHARMAP_API_VERSION)
+DOC_MODULE_VERSION = $(MUCHARMAP_API_VERSION)
 
 # The top-level SGML file.
 DOC_MAIN_SGML_FILE = mucharmap-docs.sgml
@@ -50,7 +50,7 @@ INCLUDES = \
 	$(GTK_CFLAGS)
 
 GTKDOC_LIBS = \
-	$(top_builddir)/mucharmap/libmucharmap@GUCHARMAP_LIBRARY_SUFFIX_U@.la \
+	$(top_builddir)/mucharmap/libmucharmap@MUCHARMAP_LIBRARY_SUFFIX_U@.la \
 	$(GTK_LIBS) \
 	$(INTL_LIBS)
 

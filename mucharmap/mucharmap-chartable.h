@@ -17,12 +17,12 @@
  * 51 Franklin St, Fifth Floor, Boston, MA 02110-1301  USA
  */
 
-#if !defined (__GUCHARMAP_GUCHARMAP_H_INSIDE__) && !defined (GUCHARMAP_COMPILATION)
+#if !defined (__MUCHARMAP_MUCHARMAP_H_INSIDE__) && !defined (MUCHARMAP_COMPILATION)
 #error "Only <mucharmap/mucharmap.h> can be included directly."
 #endif
 
-#ifndef GUCHARMAP_CHARTABLE_H
-#define GUCHARMAP_CHARTABLE_H
+#ifndef MUCHARMAP_CHARTABLE_H
+#define MUCHARMAP_CHARTABLE_H
 
 #include <gtk/gtk.h>
 
@@ -32,12 +32,12 @@ G_BEGIN_DECLS
 
 //class MucharmapChartable extends GtkDrawingArea
 //{
-	#define GUCHARMAP_TYPE_CHARTABLE             (mucharmap_chartable_get_type ())
-	#define GUCHARMAP_CHARTABLE(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), GUCHARMAP_TYPE_CHARTABLE, MucharmapChartable))
-	#define GUCHARMAP_CHARTABLE_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), GUCHARMAP_TYPE_CHARTABLE, MucharmapChartableClass))
-	#define GUCHARMAP_IS_CHARTABLE(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), GUCHARMAP_TYPE_CHARTABLE))
-	#define GUCHARMAP_IS_CHARTABLE_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), GUCHARMAP_TYPE_CHARTABLE))
-	#define GUCHARMAP_CHARTABLE_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), GUCHARMAP_TYPE_CHARTABLE, MucharmapChartableClass))
+	#define MUCHARMAP_TYPE_CHARTABLE             (mucharmap_chartable_get_type ())
+	#define MUCHARMAP_CHARTABLE(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_CHARTABLE, MucharmapChartable))
+	#define MUCHARMAP_CHARTABLE_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_CHARTABLE, MucharmapChartableClass))
+	#define MUCHARMAP_IS_CHARTABLE(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_CHARTABLE))
+	#define MUCHARMAP_IS_CHARTABLE_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_CHARTABLE))
+	#define MUCHARMAP_CHARTABLE_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_CHARTABLE, MucharmapChartableClass))
 
 	typedef struct _MucharmapChartable        MucharmapChartable;
 	typedef struct _MucharmapChartablePrivate MucharmapChartablePrivate;
@@ -90,4 +90,4 @@ G_BEGIN_DECLS
 
 G_END_DECLS
 
-#endif  /* #ifndef GUCHARMAP_CHARTABLE_H */
+#endif  /* #ifndef MUCHARMAP_CHARTABLE_H */

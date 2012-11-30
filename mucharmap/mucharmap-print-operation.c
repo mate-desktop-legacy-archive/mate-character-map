@@ -24,7 +24,7 @@
 
 //class MucharmapPrintOperation
 //{
-	#define GUCHARMAP_PRINT_OPERATION_GET_PRIVATE(print_operation)(G_TYPE_INSTANCE_GET_PRIVATE ((print_operation), GUCHARMAP_TYPE_PRINT_OPERATION, MucharmapPrintOperationPrivate))
+	#define MUCHARMAP_PRINT_OPERATION_GET_PRIVATE(print_operation)(G_TYPE_INSTANCE_GET_PRIVATE ((print_operation), MUCHARMAP_TYPE_PRINT_OPERATION, MucharmapPrintOperationPrivate))
 
 	#define GRID_LINE_WIDTH (0.25)
 
@@ -142,7 +142,7 @@
 	mucharmap_print_operation_begin_print (GtkPrintOperation *operation,
 		                                   GtkPrintContext   *context)
 	{
-	  MucharmapPrintOperation *print_operation = GUCHARMAP_PRINT_OPERATION (operation);
+	  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (operation);
 	  MucharmapPrintOperationPrivate *priv = print_operation->priv;
 	  PangoFontDescription *info_font_desc;
 	  double width, height;
@@ -212,7 +212,7 @@
 		                                 GtkPrintContext   *context,
 		                                 int                page_nr)
 	{
-	  MucharmapPrintOperation *print_operation = GUCHARMAP_PRINT_OPERATION (operation);
+	  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (operation);
 	  MucharmapPrintOperationPrivate *priv = print_operation->priv;
 	  cairo_t *cr;
 	  int row, col, page_size;
@@ -246,7 +246,7 @@
 	mucharmap_print_operation_end_print (GtkPrintOperation *operation,
 		                                 GtkPrintContext   *context)
 	{
-	  MucharmapPrintOperation *print_operation = GUCHARMAP_PRINT_OPERATION (operation);
+	  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (operation);
 	  MucharmapPrintOperationPrivate *priv = print_operation->priv;
 
 	  g_object_unref (priv->character_layout);
@@ -259,7 +259,7 @@
 	static GtkWidget *
 	mucharmap_print_operation_create_custom_widget (GtkPrintOperation *operation)
 	{
-	/*  MucharmapPrintOperation *print_operation = GUCHARMAP_PRINT_OPERATION (operation);
+	/*  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (operation);
 	  MucharmapPrintOperationPrivate *priv = print_operation->priv;*/
 	  return GTK_PRINT_OPERATION_CLASS (mucharmap_print_operation_parent_class)->create_custom_widget (operation);
 	}
@@ -268,7 +268,7 @@
 	mucharmap_print_operation_custom_widget_apply (GtkPrintOperation *operation,
 		                                           GtkWidget *widget)
 	{
-	/*  MucharmapPrintOperation *print_operation = GUCHARMAP_PRINT_OPERATION (operation);
+	/*  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (operation);
 	  MucharmapPrintOperationPrivate *priv = print_operation->priv;*/
 	}
 
@@ -279,7 +279,7 @@
 	{
 	  MucharmapPrintOperationPrivate *priv;
 
-	  priv = print_operation->priv = GUCHARMAP_PRINT_OPERATION_GET_PRIVATE (print_operation);
+	  priv = print_operation->priv = MUCHARMAP_PRINT_OPERATION_GET_PRIVATE (print_operation);
 	}
 
 	static GObject *
@@ -294,7 +294,7 @@
 	  object = G_OBJECT_CLASS (mucharmap_print_operation_parent_class)->constructor
 		         (type, n_construct_properties, construct_params);
 
-	  print_operation = GUCHARMAP_PRINT_OPERATION (object);
+	  print_operation = MUCHARMAP_PRINT_OPERATION (object);
 	  priv = print_operation->priv;
 
 	  g_assert (priv->codepoint_list != NULL);
@@ -306,7 +306,7 @@
 	static void
 	mucharmap_print_operation_finalize (GObject *object)
 	{
-	//   MucharmapPrintOperation *print_operation = GUCHARMAP_PRINT_OPERATION (object);
+	//   MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (object);
 	//   MucharmapPrintOperationPrivate *priv = print_operation->priv;
 
 	  G_OBJECT_CLASS (mucharmap_print_operation_parent_class)->finalize (object);
@@ -318,7 +318,7 @@
 				   const GValue *value,
 				   GParamSpec *pspec)
 	{
-	  MucharmapPrintOperation *print_operation = GUCHARMAP_PRINT_OPERATION (object);
+	  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (object);
 	  MucharmapPrintOperationPrivate *priv = print_operation->priv;
 
 	  switch (prop_id) {
@@ -354,7 +354,7 @@
 		(gobject_class,
 		 PROP_CODEPOINT_LIST,
 		 g_param_spec_object ("codepoint-list", NULL, NULL,
-		                      GUCHARMAP_TYPE_CODEPOINT_LIST,
+		                      MUCHARMAP_TYPE_CODEPOINT_LIST,
 		                      G_PARAM_WRITABLE | G_PARAM_STATIC_NAME | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB |
 		                      G_PARAM_CONSTRUCT_ONLY));
 
@@ -375,7 +375,7 @@
 	mucharmap_print_operation_new (MucharmapCodepointList *codepoint_list,
 		                           PangoFontDescription *font_desc)
 	{
-	  return g_object_new (GUCHARMAP_TYPE_PRINT_OPERATION,
+	  return g_object_new (MUCHARMAP_TYPE_PRINT_OPERATION,
 		                   "codepoint-list", codepoint_list,
 		                   "font-desc", font_desc,
 		                   NULL);

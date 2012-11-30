@@ -100,7 +100,7 @@
 	static AtkObject*
 	mucharmap_chartable_accessible_factory_create_accessible (GObject *obj)
 	{
-	  return mucharmap_chartable_accessible_new (GUCHARMAP_CHARTABLE (obj));
+	  return mucharmap_chartable_accessible_new (MUCHARMAP_CHARTABLE (obj));
 	}
 
 	static GType
@@ -1330,7 +1330,7 @@
 	mucharmap_chartable_button_press (GtkWidget *widget,
 		                              GdkEventButton *event)
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (widget);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
 	  MucharmapChartablePrivate *priv = chartable->priv;
 
 	  /* in case we lost keyboard focus and are clicking to get it back */
@@ -1382,7 +1382,7 @@
 	mucharmap_chartable_button_release (GtkWidget *widget,
 		                                GdkEventButton *event)
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (widget);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
 	  gboolean (* button_press_event) (GtkWidget *, GdkEventButton *) =
 		GTK_WIDGET_CLASS (mucharmap_chartable_parent_class)->button_release_event;
 
@@ -1398,7 +1398,7 @@
 	mucharmap_chartable_drag_begin (GtkWidget *widget,
 		                            GdkDragContext *context)
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (widget);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
 	  GdkPixmap *drag_icon;
 	  double scale;
 	  int font_size_px, screen_height;
@@ -1428,7 +1428,7 @@
 		                               guint time)
 
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (widget);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
 	  MucharmapChartablePrivate *priv = chartable->priv;
 	  gchar buf[7];
 	  gint n;
@@ -1447,7 +1447,7 @@
 		                                    guint info,
 		                                    guint time)
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (widget);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
 	  MucharmapChartablePrivate *priv = chartable->priv;
 	  gchar *text;
 	  gunichar wc;
@@ -1483,7 +1483,7 @@
 	mucharmap_chartable_expose_event (GtkWidget *widget,
 		                              GdkEventExpose *event)
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (widget);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
 	  MucharmapChartablePrivate *priv = chartable->priv;
 	#if GTK_CHECK_VERSION(2,90,5)
 	  cairo_rectangle_int_t *rect;
@@ -1562,7 +1562,7 @@
 	mucharmap_chartable_focus_in_event (GtkWidget *widget,
 		                                GdkEventFocus *event)
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (widget);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
 	  MucharmapChartablePrivate *priv = chartable->priv;
 
 	  if (priv->pixmap != NULL)
@@ -1575,7 +1575,7 @@
 	mucharmap_chartable_focus_out_event (GtkWidget *widget,
 		                                 GdkEventFocus *event)
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (widget);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
 	  MucharmapChartablePrivate *priv = chartable->priv;
 
 	  mucharmap_chartable_hide_zoom (chartable);
@@ -1592,7 +1592,7 @@
 	mucharmap_chartable_key_press_event (GtkWidget *widget,
 		                                 GdkEventKey *event)
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (widget);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
 
 	  if (event->state & (GDK_MOD1_MASK | GDK_CONTROL_MASK))
 		return GTK_WIDGET_CLASS (mucharmap_chartable_parent_class)->key_press_event (widget, event);
@@ -1615,7 +1615,7 @@
 	mucharmap_chartable_key_release_event (GtkWidget *widget,
 		                                   GdkEventKey *event)
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (widget);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
 
 	  switch (event->keyval)
 		{
@@ -1637,7 +1637,7 @@
 	mucharmap_chartable_motion_notify (GtkWidget *widget,
 		                               GdkEventMotion *event)
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (widget);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
 	  MucharmapChartablePrivate *priv = chartable->priv;
 	  gboolean (* motion_notify_event) (GtkWidget *, GdkEventMotion *) =
 		GTK_WIDGET_CLASS (mucharmap_chartable_parent_class)->motion_notify_event;
@@ -1678,7 +1678,7 @@
 	static void
 	mucharmap_chartable_realize (GtkWidget *widget)
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (widget);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
 	  MucharmapChartablePrivate *priv = chartable->priv;
 
 	  GTK_WIDGET_CLASS (mucharmap_chartable_parent_class)->realize (widget);
@@ -1698,7 +1698,7 @@
 	mucharmap_chartable_size_allocate (GtkWidget *widget,
 		                               GtkAllocation *allocation)
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (widget);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
 	  MucharmapChartablePrivate *priv = chartable->priv;
 	  int old_rows, old_cols;
 	  int total_extra_pixels;
@@ -1777,7 +1777,7 @@
 	mucharmap_chartable_size_request (GtkWidget *widget,
 		                              GtkRequisition *requisition)
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (widget);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
 	  int font_size_px;
 
 	  font_size_px = get_font_size_px (chartable);
@@ -1790,7 +1790,7 @@
 	mucharmap_chartable_style_set (GtkWidget *widget,
 		                           GtkStyle *previous_style)
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (widget);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
 	  MucharmapChartablePrivate *priv = chartable->priv;
 
 	  GTK_WIDGET_CLASS (mucharmap_chartable_parent_class)->style_set (widget, previous_style);
@@ -1850,7 +1850,7 @@
 		   * type of the accessible object which would be created for
 		   * the parent type of MucharmapChartable.
 		   */
-		  derived_type = g_type_parent (GUCHARMAP_TYPE_CHARTABLE);
+		  derived_type = g_type_parent (MUCHARMAP_TYPE_CHARTABLE);
 
 		  registry = atk_get_default_registry ();
 		  factory = atk_registry_get_factory (registry,
@@ -1858,7 +1858,7 @@
 		  derived_atk_type = atk_object_factory_get_accessible_type (factory);
 		  if (g_type_is_a (derived_atk_type, GTK_TYPE_ACCESSIBLE))
 		atk_registry_set_factory_type (registry,
-						   GUCHARMAP_TYPE_CHARTABLE,
+						   MUCHARMAP_TYPE_CHARTABLE,
 						   mucharmap_chartable_accessible_factory_get_type ());
 		  first_time = FALSE;
 		}
@@ -2107,7 +2107,7 @@
 	  GtkWidget *widget = GTK_WIDGET (chartable);
 	  MucharmapChartablePrivate *priv;
 
-	  priv = chartable->priv = G_TYPE_INSTANCE_GET_PRIVATE (chartable, GUCHARMAP_TYPE_CHARTABLE, MucharmapChartablePrivate);
+	  priv = chartable->priv = G_TYPE_INSTANCE_GET_PRIVATE (chartable, MUCHARMAP_TYPE_CHARTABLE, MucharmapChartablePrivate);
 
 	  priv->page_first_cell = 0;
 	  priv->active_cell = 0;
@@ -2149,7 +2149,7 @@
 	static void
 	mucharmap_chartable_finalize (GObject *object)
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (object);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (object);
 	  MucharmapChartablePrivate *priv = chartable->priv;
 
 	  if (priv->font_desc)
@@ -2174,7 +2174,7 @@
 		                              const GValue *value,
 		                              GParamSpec *pspec)
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (object);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (object);
 
 	  switch (prop_id) {
 		case PROP_ACTIVE_CHAR:
@@ -2207,7 +2207,7 @@
 		                              GValue *value,
 		                              GParamSpec *pspec)
 	{
-	  MucharmapChartable *chartable = GUCHARMAP_CHARTABLE (object);
+	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (object);
 	  MucharmapChartablePrivate *priv = chartable->priv;
 
 	  switch (prop_id) {
@@ -2529,7 +2529,7 @@
 	  MucharmapChartablePrivate *priv;
 	  GObject *object;
 
-	  g_return_if_fail (GUCHARMAP_IS_CHARTABLE (chartable));
+	  g_return_if_fail (MUCHARMAP_IS_CHARTABLE (chartable));
 
 	  priv = chartable->priv;
 
@@ -2557,7 +2557,7 @@
 	gboolean
 	mucharmap_chartable_get_zoom_enabled (MucharmapChartable *chartable)
 	{
-	  g_return_val_if_fail (GUCHARMAP_IS_CHARTABLE (chartable), FALSE);
+	  g_return_val_if_fail (MUCHARMAP_IS_CHARTABLE (chartable), FALSE);
 
 	  return chartable->priv->zoom_mode_enabled;
 	}
@@ -2575,7 +2575,7 @@
 	{
 	  MucharmapChartablePrivate *priv;
 
-	  g_return_if_fail (GUCHARMAP_IS_CHARTABLE (chartable));
+	  g_return_if_fail (MUCHARMAP_IS_CHARTABLE (chartable));
 	  g_return_if_fail (font_desc != NULL);
 
 	  priv = chartable->priv;
@@ -2598,7 +2598,7 @@
 	PangoFontDescription *
 	mucharmap_chartable_get_font_desc (MucharmapChartable *chartable)
 	{
-	  g_return_val_if_fail (GUCHARMAP_IS_CHARTABLE (chartable), NULL);
+	  g_return_val_if_fail (MUCHARMAP_IS_CHARTABLE (chartable), NULL);
 
 	  return chartable->priv->font_desc;
 	}

@@ -159,7 +159,7 @@
 		#ifdef ENABLE_PROGRESSBAR_ON_STATUSBAR
 	  gdouble fraction_completed;
 
-	  fraction_completed = mucharmap_search_dialog_get_completed (GUCHARMAP_SEARCH_DIALOG (guw->search_dialog));
+	  fraction_completed = mucharmap_search_dialog_get_completed (MUCHARMAP_SEARCH_DIALOG (guw->search_dialog));
 
 	  if (fraction_completed < 0 || fraction_completed > 1)
 		{
@@ -238,7 +238,7 @@
 
 	  cursor = _mucharmap_window_progress_cursor ();
 	  gdk_window_set_cursor (gtk_widget_get_window (GTK_WIDGET (guw)), cursor);
-	  gdk_cursor_unref (cursor);
+	  g_object_unref (cursor);
 
 	  action = gtk_action_group_get_action (guw->action_group, "Find");
 	  gtk_action_set_sensitive (action, FALSE);
@@ -284,7 +284,7 @@
 	search_find (GtkAction       *action,
 		         MucharmapWindow *guw)
 	{
-		g_assert (GUCHARMAP_IS_WINDOW (guw));
+		g_assert (MUCHARMAP_IS_WINDOW (guw));
 
 		if (guw->search_dialog == NULL)
 		{
@@ -294,7 +294,7 @@
 			g_signal_connect (guw->search_dialog, "search-finish", G_CALLBACK (search_finish), guw);
 		}
 
-		mucharmap_search_dialog_present (GUCHARMAP_SEARCH_DIALOG (guw->search_dialog));
+		mucharmap_search_dialog_present (MUCHARMAP_SEARCH_DIALOG (guw->search_dialog));
 	}
 
 	static void
@@ -302,7 +302,7 @@
 		              MucharmapWindow *guw)
 	{
 	  if (guw->search_dialog)
-		mucharmap_search_dialog_start_search (GUCHARMAP_SEARCH_DIALOG (guw->search_dialog), GUCHARMAP_DIRECTION_FORWARD);
+		mucharmap_search_dialog_start_search (MUCHARMAP_SEARCH_DIALOG (guw->search_dialog), MUCHARMAP_DIRECTION_FORWARD);
 	  else
 		search_find (action, guw);
 	}
@@ -312,7 +312,7 @@
 		              MucharmapWindow *guw)
 	{
 	  if (guw->search_dialog)
-		mucharmap_search_dialog_start_search (GUCHARMAP_SEARCH_DIALOG (guw->search_dialog), GUCHARMAP_DIRECTION_BACKWARD);
+		mucharmap_search_dialog_start_search (MUCHARMAP_SEARCH_DIALOG (guw->search_dialog), MUCHARMAP_DIRECTION_BACKWARD);
 	  else
 		search_find (action, guw);
 	}
@@ -371,7 +371,7 @@
 	font_bigger (GtkAction       *action,
 		         MucharmapWindow *guw)
 	{
-	  mucharmap_mini_font_selection_change_font_size (GUCHARMAP_MINI_FONT_SELECTION (guw->fontsel),
+	  mucharmap_mini_font_selection_change_font_size (MUCHARMAP_MINI_FONT_SELECTION (guw->fontsel),
 		                                              FONT_CHANGE_FACTOR);
 	}
 
@@ -379,7 +379,7 @@
 	font_smaller (GtkAction       *action,
 		          MucharmapWindow *guw)
 	{
-	  mucharmap_mini_font_selection_change_font_size (GUCHARMAP_MINI_FONT_SELECTION (guw->fontsel),
+	  mucharmap_mini_font_selection_change_font_size (MUCHARMAP_MINI_FONT_SELECTION (guw->fontsel),
 		                                              1.0f / FONT_CHANGE_FACTOR);
 	}
 
@@ -387,7 +387,7 @@
 	font_default (GtkAction       *action,
 		          MucharmapWindow *guw)
 	{
-	  mucharmap_mini_font_selection_reset_font_size (GUCHARMAP_MINI_FONT_SELECTION (guw->fontsel));
+	  mucharmap_mini_font_selection_reset_font_size (MUCHARMAP_MINI_FONT_SELECTION (guw->fontsel));
 	}
 
 	static void
@@ -396,7 +396,7 @@
 	{
 	  gboolean is_active = gtk_toggle_action_get_active (GTK_TOGGLE_ACTION (action));
 	  mucharmap_charmap_set_snap_pow2 (guw->charmap, is_active);
-	  mucharmap_settings_set_snap_pow2 (is_active);
+	  g_settings_set_boolean (guw->settings, "snap-cols-pow2", is_active);
 	}
 
 	static void
@@ -537,7 +537,7 @@
 			"documenters", documenters,
 			"license", license_trans,
 			"wrap-license", TRUE,
-			"logo-icon-name", GUCHARMAP_ICON_NAME,
+			"logo-icon-name", MUCHARMAP_ICON_NAME,
 			"authors", authors,
 			"translator-credits", _("translator-credits"),
 			"website", "http://mate-desktop.org/",
@@ -552,7 +552,6 @@
 	{
 		MucharmapChartable* chartable;
 		MucharmapChartableClass* klass;
-		GtkBindingSet* binding_set;
 		const char* name;
 		guint keyval = 0;
 
@@ -568,8 +567,7 @@
 		}
 
 		chartable = mucharmap_charmap_get_chartable (guw->charmap);
-		klass = GUCHARMAP_CHARTABLE_GET_CLASS (chartable);
-		binding_set = gtk_binding_set_by_class (klass);
+		klass = MUCHARMAP_CHARTABLE_GET_CLASS (chartable);
 		gtk_binding_set_activate (gtk_binding_set_by_class (klass),
 		                          keyval,
 		                          0,
@@ -614,12 +612,12 @@
 
 	  switch (mode)
 		{
-		  case GUCHARMAP_CHAPTERS_SCRIPT:
+		  case MUCHARMAP_CHAPTERS_SCRIPT:
 		  	model = mucharmap_script_chapters_model_new ();
 		chapters_set_labels (_("Next Script"), _("Previous Script"), guw);
 		break;
 
-		  case GUCHARMAP_CHAPTERS_BLOCK:
+		  case MUCHARMAP_CHAPTERS_BLOCK:
 		  	model = mucharmap_block_chapters_model_new ();
 		chapters_set_labels (_("Next Block"), _("Previous Block"), guw);
 		break;
@@ -642,11 +640,11 @@
 	  switch (gtk_radio_action_get_current_value (radioaction))
 		{
 		  case VIEW_BY_SCRIPT:
-		    mode = GUCHARMAP_CHAPTERS_SCRIPT;
+		    mode = MUCHARMAP_CHAPTERS_SCRIPT;
 		break;
 
 		  case VIEW_BY_BLOCK:
-		    mode = GUCHARMAP_CHAPTERS_BLOCK;
+		    mode = MUCHARMAP_CHAPTERS_BLOCK;
 		break;
 
 		  default:
@@ -654,7 +652,7 @@
 		}
 
 	  mucharmap_window_set_chapters_model (guw, mode);
-	  mucharmap_settings_set_chapters_mode (mode);
+	  g_settings_set_enum (guw->settings, "group-by", mode);
 	}
 
 	#ifdef DEBUG_chpe
@@ -787,12 +785,17 @@
 	static gboolean
 	save_last_char_idle_cb (MucharmapWindow *guw)
 	{
+	  gchar outbuf[10];
 	  gunichar wc;
+	  gint len;
 
 	  guw->save_last_char_idle_id = 0;
 
 	  wc = mucharmap_charmap_get_active_character (guw->charmap);
-	  mucharmap_settings_set_last_char (wc);
+	  len = g_unichar_to_utf8 (wc, outbuf);
+	  outbuf[len] = '\0';
+
+	  g_settings_set_string (guw->settings, "last-char", outbuf);
 
 	  return FALSE;
 	}
@@ -815,7 +818,7 @@
 	  guw->in_notification = FALSE;
 
 	  font = pango_font_description_to_string (font_desc);
-	  mucharmap_settings_set_font (font);
+	  g_settings_set (guw->settings, "font", "ms", font);
 	  g_free (font);
 	}
 
@@ -832,7 +835,7 @@
 	  font_desc = mucharmap_charmap_get_font_desc (charmap);
 
 	  guw->in_notification = TRUE;
-	  mucharmap_mini_font_selection_set_font_desc (GUCHARMAP_MINI_FONT_SELECTION (guw->fontsel),
+	  mucharmap_mini_font_selection_set_font_desc (MUCHARMAP_MINI_FONT_SELECTION (guw->fontsel),
 		                                           font_desc);
 	  guw->in_notification = FALSE;
 	}
@@ -918,14 +921,17 @@
 	  const GtkToggleActionEntry toggle_menu_entries[] =
 	  {
 		{ "SnapColumns", NULL, N_("Snap _Columns to Power of Two"), NULL,
-		  NULL,
-		  G_CALLBACK (snap_cols_pow2), FALSE },
+		  NULL, NULL, FALSE },
 	  };
 	  GtkWidget *menubar;
 	  GtkAction *action;
+	  gchar *active;
+	  gchar *font;
+
+	  guw->settings = g_settings_new ("org.mate.mucharmap");
 
 	  gtk_window_set_title (GTK_WINDOW (guw), _("Character Map"));
-	  gtk_window_set_icon_name (GTK_WINDOW (guw), GUCHARMAP_ICON_NAME);
+	  gtk_window_set_icon_name (GTK_WINDOW (guw), MUCHARMAP_ICON_NAME);
 
 	  /* UI manager setup */
 	  guw->uimanager = gtk_ui_manager_new();
@@ -943,7 +949,7 @@
 	  gtk_action_group_add_radio_actions (guw->action_group,
 	  				      radio_menu_entries,
 						  G_N_ELEMENTS (radio_menu_entries),
-						  mucharmap_settings_get_chapters_mode(),
+						  g_settings_get_enum (guw->settings, "group-by"),
 						  G_CALLBACK (view_by),
 						  guw);
 	  gtk_action_group_add_toggle_actions (guw->action_group,
@@ -966,15 +972,11 @@
 
 	  /* The font selector */
 	  guw->fontsel = mucharmap_mini_font_selection_new ();
-	  g_signal_connect (guw->fontsel, "notify::font-desc",
-		                G_CALLBACK (fontsel_sync_font_desc), guw);
 	  gtk_box_pack_start (GTK_BOX (big_vbox), guw->fontsel, FALSE, FALSE, 0);
 	  gtk_widget_show (GTK_WIDGET (guw->fontsel));
 
 	  /* The charmap */
-	  guw->charmap = GUCHARMAP_CHARMAP (mucharmap_charmap_new ());
-	  g_signal_connect (guw->charmap, "notify::active-character",
-		                G_CALLBACK (charmap_sync_active_character), guw);
+	  guw->charmap = MUCHARMAP_CHARMAP (mucharmap_charmap_new ());
 	  g_signal_connect (guw->charmap, "notify::font-desc",
 		                G_CALLBACK (charmap_sync_font_desc), guw);
 
@@ -1044,22 +1046,48 @@
 
 	  gtk_widget_show (big_vbox);
 
-	  action = gtk_action_group_get_action (guw->action_group, "SnapColumns");
-	  gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action),
-		                            mucharmap_settings_get_snap_pow2 ());
-
-	  mucharmap_window_set_chapters_model (guw, mucharmap_settings_get_chapters_mode ());
-
-	  mucharmap_charmap_set_active_character (guw->charmap,
-		                                      mucharmap_settings_get_last_char ());
-
 	  gtk_widget_grab_focus (GTK_WIDGET (mucharmap_charmap_get_chartable (guw->charmap)));
+
+	  /* connect these only after applying the initial settings in order to
+	  * avoid unnecessary writes to GSettings.
+	  */
+	  g_signal_connect (guw->charmap, "notify::active-character",
+	  G_CALLBACK (charmap_sync_active_character), guw);
+	  g_signal_connect (guw->fontsel, "notify::font-desc",
+	  G_CALLBACK (fontsel_sync_font_desc), guw);
+	  g_signal_connect (action, "activate",
+	  G_CALLBACK (snap_cols_pow2), guw);
+
+	  /* read initial settings */
+	  /* font */
+	  g_settings_get (guw->settings, "font", "ms", &font);
+	  if (font != NULL)
+		{
+		  mucharmap_window_set_font (guw, font);
+		  g_free (font);
+		}
+
+	  /* snap-to-power-of-two */
+
+	  action = gtk_action_group_get_action (guw->action_group, "SnapColumns");
+	  gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), g_settings_get_boolean (guw->settings, "snap-cols-pow2"));
+
+	  /* group by */
+	  mucharmap_window_set_chapters_model (guw, g_settings_get_enum (guw->settings, "group-by"));
+
+	  /* active character */
+	  active = g_settings_get_string (guw->settings, "last-char");
+	  mucharmap_charmap_set_active_character (guw->charmap, g_utf8_get_char (active));
+	  g_free (active);
+
+	  /* window geometry */
+	  mucharmap_settings_add_window (GTK_WINDOW (guw));
 	}
 
 	static void
 	mucharmap_window_finalize (GObject *object)
 	{
-	  MucharmapWindow *guw = GUCHARMAP_WINDOW (object);
+	  MucharmapWindow *guw = MUCHARMAP_WINDOW (object);
 
 	  if (guw->save_last_char_idle_id != 0)
 		g_source_remove (guw->save_last_char_idle_id);
@@ -1094,7 +1122,7 @@
 	{
 		PangoFontDescription* font_desc;
 
-		g_return_if_fail(GUCHARMAP_IS_WINDOW(guw));
+		g_return_if_fail(MUCHARMAP_IS_WINDOW(guw));
 
 		#if GTK_CHECK_VERSION (2,20,0)
 			g_assert(!gtk_widget_get_realized(GTK_WIDGET(guw)));

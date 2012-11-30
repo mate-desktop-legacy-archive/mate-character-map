@@ -17,8 +17,8 @@
  * 51 Franklin St, Fifth Floor, Boston, MA 02110-1301  USA
  */
 
-#ifndef GUCHARMAP_MINI_FONTSEL_H
-#define GUCHARMAP_MINI_FONTSEL_H
+#ifndef MUCHARMAP_MINI_FONTSEL_H
+#define MUCHARMAP_MINI_FONTSEL_H
 
 #include <gtk/gtk.h>
 
@@ -26,12 +26,12 @@ G_BEGIN_DECLS
 
 //class MucharmapMiniFontSelection
 //{
-	#define GUCHARMAP_TYPE_MINI_FONT_SELECTION             (mucharmap_mini_font_selection_get_type ())
-	#define GUCHARMAP_MINI_FONT_SELECTION(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), GUCHARMAP_TYPE_MINI_FONT_SELECTION, MucharmapMiniFontSelection))
-	#define GUCHARMAP_MINI_FONT_SELECTION_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), GUCHARMAP_TYPE_MINI_FONT_SELECTION, MucharmapMiniFontSelectionClass))
-	#define GUCHARMAP_IS_MINI_FONT_SELECTION(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), GUCHARMAP_TYPE_MINI_FONT_SELECTION))
-	#define GUCHARMAP_IS_MINI_FONT_SELECTION_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), GUCHARMAP_TYPE_MINI_FONT_SELECTION))
-	#define GUCHARMAP_MINI_FONT_SELECTION_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), GUCHARMAP_TYPE_MINI_FONT_SELECTION, MucharmapMiniFontSelectionClass))
+	#define MUCHARMAP_TYPE_MINI_FONT_SELECTION             (mucharmap_mini_font_selection_get_type ())
+	#define MUCHARMAP_MINI_FONT_SELECTION(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_MINI_FONT_SELECTION, MucharmapMiniFontSelection))
+	#define MUCHARMAP_MINI_FONT_SELECTION_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_MINI_FONT_SELECTION, MucharmapMiniFontSelectionClass))
+	#define MUCHARMAP_IS_MINI_FONT_SELECTION(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_MINI_FONT_SELECTION))
+	#define MUCHARMAP_IS_MINI_FONT_SELECTION_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_MINI_FONT_SELECTION))
+	#define MUCHARMAP_MINI_FONT_SELECTION_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_MINI_FONT_SELECTION, MucharmapMiniFontSelectionClass))
 
 	typedef struct _MucharmapMiniFontSelection MucharmapMiniFontSelection;
 	typedef struct _MucharmapMiniFontSelectionClass MucharmapMiniFontSelectionClass;
@@ -75,4 +75,4 @@ G_BEGIN_DECLS
 //}
 G_END_DECLS
 
-#endif /* #ifndef GUCHARMAP_MINI_FONTSEL_H */
+#endif /* #ifndef MUCHARMAP_MINI_FONTSEL_H */

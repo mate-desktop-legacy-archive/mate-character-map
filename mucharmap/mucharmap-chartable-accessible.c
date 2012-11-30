@@ -75,7 +75,7 @@
 	  MucharmapChartableAccessible *accessible;
 
 	  parent = atk_object_get_parent (ATK_OBJECT (cell));
-	  accessible = GUCHARMAP_CHARTABLE_ACCESSIBLE (parent);
+	  accessible = MUCHARMAP_CHARTABLE_ACCESSIBLE (parent);
 	  priv = GET_PRIVATE (accessible);
 
 	  cells = priv->cells;
@@ -119,7 +119,7 @@
 	  if (index > UNICHAR_MAX)
 		return NULL;
 
-	  table = GUCHARMAP_CHARTABLE_ACCESSIBLE (obj);
+	  table = MUCHARMAP_CHARTABLE_ACCESSIBLE (obj);
 	  priv = GET_PRIVATE (table);
 
 	  /* Check whether the child is cached */
@@ -134,16 +134,16 @@
 		}
 
 	  /* Not cached, create a new cell accessible */
-	  chartable = GUCHARMAP_CHARTABLE (widget);
+	  chartable = MUCHARMAP_CHARTABLE (widget);
 
 	  child = mucharmap_chartable_cell_accessible_new ();
-	  mucharmap_chartable_cell_accessible_initialise (GUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (child),
+	  mucharmap_chartable_cell_accessible_initialise (MUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (child),
 		                        GTK_WIDGET (chartable), obj, index);
 	  /* Set the name of the cell */
 	  name = g_strdup_printf("U+%4.4X %s", index, mucharmap_get_unicode_name (index));
 	  atk_object_set_name (child, name);
 	  g_free (name);
-	  set_cell_visibility (chartable, GUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (child), FALSE);
+	  set_cell_visibility (chartable, MUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (child), FALSE);
 
 	  /* Store the cell in our cache */
 	  g_ptr_array_add (priv->cells, child);
@@ -174,7 +174,7 @@
 		/* State is defunct */
 		return NULL;
 
-	  chartable = GUCHARMAP_CHARTABLE (widget);
+	  chartable = MUCHARMAP_CHARTABLE (widget);
 	  chartable_priv = chartable->priv;
 
 	  index =  row * chartable_priv->cols + column;
@@ -205,7 +205,7 @@
 		/* State is defunct */
 		return NULL;
 
-	  chartable = GUCHARMAP_CHARTABLE (widget);
+	  chartable = MUCHARMAP_CHARTABLE (widget);
 	  chartable_priv = chartable->priv;
 
 	  atk_component_get_extents (component, &x_pos, &y_pos,
@@ -300,7 +300,7 @@
 	static void
 	mucharmap_chartable_accessible_finalize (GObject *obj)
 	{
-	  MucharmapChartableAccessible *accessible = GUCHARMAP_CHARTABLE_ACCESSIBLE (obj);
+	  MucharmapChartableAccessible *accessible = MUCHARMAP_CHARTABLE_ACCESSIBLE (obj);
 	  MucharmapChartableAccessiblePrivate *priv = GET_PRIVATE (accessible);
 	  GPtrArray *cells;
 	  guint n_cells, n;
@@ -344,10 +344,10 @@
 		/* Widget is being deleted */
 		return;
 	  
-	  accessible = GUCHARMAP_CHARTABLE_ACCESSIBLE (obj);
+	  accessible = MUCHARMAP_CHARTABLE_ACCESSIBLE (obj);
 	  priv = GET_PRIVATE (accessible);
 
-	  chartable = GUCHARMAP_CHARTABLE (widget);
+	  chartable = MUCHARMAP_CHARTABLE (widget);
 
 	  cells = priv->cells;
 	  n_cells = cells->len;
@@ -355,7 +355,7 @@
 		{
 		  MucharmapChartableCellAccessible *cell = g_ptr_array_index (cells, n);
 
-		  set_cell_visibility (chartable, GUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (cell), TRUE);
+		  set_cell_visibility (chartable, MUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (cell), TRUE);
 		}
 
 	  g_signal_emit_by_name (obj, "visible-data-changed");
@@ -407,9 +407,9 @@
 	  if (focus_obj != child)
 		{
 		  if (focus_obj)
-		    mucharmap_chartable_cell_accessible_remove_state (GUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (focus_obj), ATK_STATE_FOCUSED, FALSE);
+		    mucharmap_chartable_cell_accessible_remove_state (MUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (focus_obj), ATK_STATE_FOCUSED, FALSE);
 
-		  mucharmap_chartable_cell_accessible_add_state (GUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (child), ATK_STATE_FOCUSED, FALSE);
+		  mucharmap_chartable_cell_accessible_add_state (MUCHARMAP_CHARTABLE_CELL_ACCESSIBLE (child), ATK_STATE_FOCUSED, FALSE);
 		}
 
 	  if (focus_obj)
@@ -426,7 +426,7 @@
 		                                                   GtkAdjustment *vadjustment,
 		                                                   AtkObject *obj)
 	{
-	  MucharmapChartableAccessible *accessible = GUCHARMAP_CHARTABLE_ACCESSIBLE (obj);
+	  MucharmapChartableAccessible *accessible = MUCHARMAP_CHARTABLE_ACCESSIBLE (obj);
 	  MucharmapChartableAccessiblePrivate *priv = GET_PRIVATE (accessible);
 
 	  if (priv->vadjustment != vadjustment)
@@ -459,9 +459,9 @@
 	  ATK_OBJECT_CLASS (mucharmap_chartable_accessible_parent_class)->initialize (obj, data);
 
 	  widget = GTK_WIDGET (data);
-	  accessible = GUCHARMAP_CHARTABLE_ACCESSIBLE (obj);
+	  accessible = MUCHARMAP_CHARTABLE_ACCESSIBLE (obj);
 	  priv = GET_PRIVATE (accessible);
-	  chartable = GUCHARMAP_CHARTABLE (widget);
+	  chartable = MUCHARMAP_CHARTABLE (widget);
 	  chartable_priv = chartable->priv;
 
 	  if (chartable_priv->vadjustment)
@@ -494,7 +494,7 @@
 	mucharmap_chartable_accessible_destroyed (GtkWidget *widget,
 		                                      AtkObject *obj)
 	{
-	  MucharmapChartableAccessible *accessible = GUCHARMAP_CHARTABLE_ACCESSIBLE (obj);
+	  MucharmapChartableAccessible *accessible = MUCHARMAP_CHARTABLE_ACCESSIBLE (obj);
 	  MucharmapChartableAccessiblePrivate *priv = GET_PRIVATE (accessible);
 
 	  if (priv->vadjustment)
@@ -578,7 +578,7 @@
 		/* State is defunct */
 		return 0;
 
-	  chartable = GUCHARMAP_CHARTABLE (widget);
+	  chartable = MUCHARMAP_CHARTABLE (widget);
 	  chartable_priv = chartable->priv;
 
 	  return chartable_priv->cols;
@@ -622,7 +622,7 @@
 		/* State is defunct */
 		return 0;
 
-	  chartable = GUCHARMAP_CHARTABLE (widget);
+	  chartable = MUCHARMAP_CHARTABLE (widget);
 	  chartable_priv = chartable->priv;
 
 	  n_rows = UNICHAR_MAX / chartable_priv->cols + 1;
@@ -669,7 +669,7 @@
 		/* State is defunct */
 		return -1;
 
-	  chartable = GUCHARMAP_CHARTABLE (widget);
+	  chartable = MUCHARMAP_CHARTABLE (widget);
 	  chartable_priv = chartable->priv;
 
 	  return row * chartable_priv->cols + column;
@@ -693,7 +693,7 @@
 		/* State is defunct */
 		return -1;
 
-	  chartable = GUCHARMAP_CHARTABLE (widget);
+	  chartable = MUCHARMAP_CHARTABLE (widget);
 	  chartable_priv = chartable->priv;
 
 	  return index % chartable_priv->cols;
@@ -717,7 +717,7 @@
 		/* State is defunct */
 		return -1;
 
-	  chartable = GUCHARMAP_CHARTABLE (widget);
+	  chartable = MUCHARMAP_CHARTABLE (widget);
 	  chartable_priv = chartable->priv;
 
 	  return index / chartable_priv->cols;
@@ -743,7 +743,7 @@
 
 	ATK_DEFINE_TYPE_WITH_CODE (MucharmapChartableAccessible,
 		                       mucharmap_chartable_accessible,
-		                       GUCHARMAP_TYPE_CHARTABLE,
+		                       MUCHARMAP_TYPE_CHARTABLE,
 		                       G_IMPLEMENT_INTERFACE (ATK_TYPE_TABLE,
 		                                              mucharmap_chartable_accessible_table_interface_init)
 		                       G_IMPLEMENT_INTERFACE (ATK_TYPE_COMPONENT,
@@ -790,7 +790,7 @@
 		  GType type;
 
 		  /* Figure out the size of the class and instance we are deriving from */
-		  derived_type = g_type_parent (GUCHARMAP_TYPE_CHARTABLE);
+		  derived_type = g_type_parent (MUCHARMAP_TYPE_CHARTABLE);
 		  factory = atk_registry_get_factory (atk_get_default_registry (), 
 		                                      derived_type);
 		  derived_atk_type = atk_object_factory_get_accessible_type (factory);

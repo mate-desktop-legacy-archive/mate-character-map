@@ -17,12 +17,12 @@
  * 51 Franklin St, Fifth Floor, Boston, MA 02110-1301  USA
  */
 
-#if !defined (__GUCHARMAP_GUCHARMAP_H_INSIDE__) && !defined (GUCHARMAP_COMPILATION)
+#if !defined (__MUCHARMAP_MUCHARMAP_H_INSIDE__) && !defined (MUCHARMAP_COMPILATION)
 #error "Only <mucharmap/mucharmap.h> can be included directly."
 #endif
 
-#ifndef GUCHARMAP_SCRIPT_CHAPTERS_MODEL_H
-#define GUCHARMAP_SCRIPT_CHAPTERS_MODEL_H
+#ifndef MUCHARMAP_SCRIPT_CHAPTERS_MODEL_H
+#define MUCHARMAP_SCRIPT_CHAPTERS_MODEL_H
 
 #include <mucharmap/mucharmap-chapters-model.h>
 
@@ -30,12 +30,12 @@ G_BEGIN_DECLS
 
 //class MucharmapScriptChaptersModel
 //{
-	#define GUCHARMAP_TYPE_SCRIPT_CHAPTERS_MODEL             (mucharmap_script_chapters_model_get_type ())
-	#define GUCHARMAP_SCRIPT_CHAPTERS_MODEL(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), GUCHARMAP_TYPE_SCRIPT_CHAPTERS_MODEL, MucharmapScriptChaptersModel))
-	#define GUCHARMAP_SCRIPT_CHAPTERS_MODEL_CLASS(k) (G_TYPE_CHECK_CLASS_CAST((k), GUCHARMAP_TYPE_SCRIPT_CHAPTERS_MODEL, MucharmapScriptChaptersModelClass))
-	#define GUCHARMAP_IS_SCRIPT_CHAPTERS_MODEL(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), GUCHARMAP_TYPE_SCRIPT_CHAPTERS_MODEL))
-	#define GUCHARMAP_IS_SCRIPT_CHAPTERS_MODEL_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), GUCHARMAP_TYPE_SCRIPT_CHAPTERS_MODEL))
-	#define GUCHARMAP_SCRIPT_CHAPTERS_MODEL_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), GUCHARMAP_TYPE_SCRIPT_CHAPTERS_MODEL, MucharmapScriptChaptersModelClass))
+	#define MUCHARMAP_TYPE_SCRIPT_CHAPTERS_MODEL             (mucharmap_script_chapters_model_get_type ())
+	#define MUCHARMAP_SCRIPT_CHAPTERS_MODEL(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_SCRIPT_CHAPTERS_MODEL, MucharmapScriptChaptersModel))
+	#define MUCHARMAP_SCRIPT_CHAPTERS_MODEL_CLASS(k) (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_SCRIPT_CHAPTERS_MODEL, MucharmapScriptChaptersModelClass))
+	#define MUCHARMAP_IS_SCRIPT_CHAPTERS_MODEL(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_SCRIPT_CHAPTERS_MODEL))
+	#define MUCHARMAP_IS_SCRIPT_CHAPTERS_MODEL_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_SCRIPT_CHAPTERS_MODEL))
+	#define MUCHARMAP_SCRIPT_CHAPTERS_MODEL_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_SCRIPT_CHAPTERS_MODEL, MucharmapScriptChaptersModelClass))
 
 	typedef struct _MucharmapScriptChaptersModel        MucharmapScriptChaptersModel;
 	typedef struct _MucharmapScriptChaptersModelPrivate MucharmapScriptChaptersModelPrivate;
@@ -60,4 +60,4 @@ G_BEGIN_DECLS
 
 G_END_DECLS
 
-#endif /* #ifndef GUCHARMAP_SCRIPT_CHAPTERS_MODEL_H */
+#endif /* #ifndef MUCHARMAP_SCRIPT_CHAPTERS_MODEL_H */

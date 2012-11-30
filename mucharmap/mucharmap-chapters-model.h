@@ -17,12 +17,12 @@
  * 51 Franklin St, Fifth Floor, Boston, MA 02110-1301  USA
  */
 
-#if !defined (__GUCHARMAP_GUCHARMAP_H_INSIDE__) && !defined (GUCHARMAP_COMPILATION)
+#if !defined (__MUCHARMAP_MUCHARMAP_H_INSIDE__) && !defined (MUCHARMAP_COMPILATION)
 #error "Only <mucharmap/mucharmap.h> can be included directly."
 #endif
 
-#ifndef GUCHARMAP_CHAPTERS_MODEL_H
-#define GUCHARMAP_CHAPTERS_MODEL_H
+#ifndef MUCHARMAP_CHAPTERS_MODEL_H
+#define MUCHARMAP_CHAPTERS_MODEL_H
 
 #include <gtk/gtk.h>
 
@@ -32,12 +32,12 @@ G_BEGIN_DECLS
 
 //class MucharmapChaptersModel extends GtkListStore
 //{
-	#define GUCHARMAP_TYPE_CHAPTERS_MODEL             (mucharmap_chapters_model_get_type ())
-	#define GUCHARMAP_CHAPTERS_MODEL(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), GUCHARMAP_TYPE_CHAPTERS_MODEL, MucharmapChaptersModel))
-	#define GUCHARMAP_CHAPTERS_MODEL_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), GUCHARMAP_TYPE_CHAPTERS_MODEL, MucharmapChaptersModelClass))
-	#define GUCHARMAP_IS_CHAPTERS_MODEL(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), GUCHARMAP_TYPE_CHAPTERS_MODEL))
-	#define GUCHARMAP_IS_CHAPTERS_MODEL_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), GUCHARMAP_TYPE_CHAPTERS_MODEL))
-	#define GUCHARMAP_CHAPTERS_MODEL_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), GUCHARMAP_TYPE_CHAPTERS_MODEL, MucharmapChaptersModelClass))
+	#define MUCHARMAP_TYPE_CHAPTERS_MODEL             (mucharmap_chapters_model_get_type ())
+	#define MUCHARMAP_CHAPTERS_MODEL(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_CHAPTERS_MODEL, MucharmapChaptersModel))
+	#define MUCHARMAP_CHAPTERS_MODEL_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_CHAPTERS_MODEL, MucharmapChaptersModelClass))
+	#define MUCHARMAP_IS_CHAPTERS_MODEL(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_CHAPTERS_MODEL))
+	#define MUCHARMAP_IS_CHAPTERS_MODEL_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_CHAPTERS_MODEL))
+	#define MUCHARMAP_CHAPTERS_MODEL_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_CHAPTERS_MODEL, MucharmapChaptersModelClass))
 
 	typedef struct _MucharmapChaptersModel        MucharmapChaptersModel;
 	typedef struct _MucharmapChaptersModelPrivate MucharmapChaptersModelPrivate;
@@ -66,8 +66,8 @@ G_BEGIN_DECLS
 
 
 	enum {
-	  GUCHARMAP_CHAPTERS_MODEL_COLUMN_ID    = 0,
-	  GUCHARMAP_CHAPTERS_MODEL_COLUMN_LABEL = 1
+	  MUCHARMAP_CHAPTERS_MODEL_COLUMN_ID    = 0,
+	  MUCHARMAP_CHAPTERS_MODEL_COLUMN_LABEL = 1
 	};
 
 	GType                    mucharmap_chapters_model_get_type                (void);
@@ -85,4 +85,4 @@ G_BEGIN_DECLS
 
 G_END_DECLS
 
-#endif /* #ifndef GUCHARMAP_CHAPTERS_MODEL_H */
+#endif /* #ifndef MUCHARMAP_CHAPTERS_MODEL_H */

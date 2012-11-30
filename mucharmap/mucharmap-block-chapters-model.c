@@ -28,8 +28,8 @@
 //class MucharmapBlockChaptersModel extends MucharmapChaptersModel
 //{
 	enum {
-		BLOCK_CHAPTERS_MODEL_ID = GUCHARMAP_CHAPTERS_MODEL_COLUMN_ID,
-		BLOCK_CHAPTERS_MODEL_LABEL = GUCHARMAP_CHAPTERS_MODEL_COLUMN_LABEL,
+		BLOCK_CHAPTERS_MODEL_ID = MUCHARMAP_CHAPTERS_MODEL_COLUMN_ID,
+		BLOCK_CHAPTERS_MODEL_LABEL = MUCHARMAP_CHAPTERS_MODEL_COLUMN_LABEL,
 		BLOCK_CHAPTERS_MODEL_UNICODE_BLOCK_PTR = 2,
 		BLOCK_CHAPTERS_MODEL_NUM_COLUMNS
 	};
@@ -99,7 +99,7 @@
 		}
 
 		gtk_tree_sortable_set_sort_func(GTK_TREE_SORTABLE (model),
-			GUCHARMAP_CHAPTERS_MODEL_COLUMN_LABEL,
+			MUCHARMAP_CHAPTERS_MODEL_COLUMN_LABEL,
 			(GtkTreeIterCompareFunc) compare_iters,
 			NULL, NULL);
 	}
@@ -179,7 +179,7 @@
 	static void
 	mucharmap_block_chapters_model_class_init (MucharmapBlockChaptersModelClass* clazz)
 	{
-		MucharmapChaptersModelClass* chapters_class = GUCHARMAP_CHAPTERS_MODEL_CLASS(clazz);
+		MucharmapChaptersModelClass* chapters_class = MUCHARMAP_CHAPTERS_MODEL_CLASS(clazz);
 
 		_mucharmap_intl_ensure_initialized();
 
@@ -189,7 +189,7 @@
 		chapters_class->get_book_codepoint_list = get_book_codepoint_list;
 	}
 
-	G_DEFINE_TYPE(MucharmapBlockChaptersModel, mucharmap_block_chapters_model, GUCHARMAP_TYPE_CHAPTERS_MODEL)
+	G_DEFINE_TYPE(MucharmapBlockChaptersModel, mucharmap_block_chapters_model, MUCHARMAP_TYPE_CHAPTERS_MODEL)
 
 	MucharmapChaptersModel*
 	mucharmap_block_chapters_model_new (void)

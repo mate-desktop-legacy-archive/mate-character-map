@@ -48,8 +48,8 @@
 		{
 		  gtk_list_store_append (store, &iter);
 		  gtk_list_store_set (store, &iter,
-		                      GUCHARMAP_CHAPTERS_MODEL_COLUMN_ID, unicode_scripts[i],
-		                      GUCHARMAP_CHAPTERS_MODEL_COLUMN_LABEL, _(unicode_scripts[i]),
+		                      MUCHARMAP_CHAPTERS_MODEL_COLUMN_ID, unicode_scripts[i],
+		                      MUCHARMAP_CHAPTERS_MODEL_COLUMN_LABEL, _(unicode_scripts[i]),
 		                      -1);
 		}
 	  g_free (unicode_scripts);
@@ -63,10 +63,10 @@
 	  MucharmapCodepointList *list;
 	  gchar *script_untranslated;
 
-	  gtk_tree_model_get (model, iter, GUCHARMAP_CHAPTERS_MODEL_COLUMN_ID, &script_untranslated, -1);
+	  gtk_tree_model_get (model, iter, MUCHARMAP_CHAPTERS_MODEL_COLUMN_ID, &script_untranslated, -1);
 
 	  list = mucharmap_script_codepoint_list_new ();
-	  if (!mucharmap_script_codepoint_list_set_script (GUCHARMAP_SCRIPT_CODEPOINT_LIST (list), script_untranslated))
+	  if (!mucharmap_script_codepoint_list_set_script (MUCHARMAP_SCRIPT_CODEPOINT_LIST (list), script_untranslated))
 		{
 		  g_error ("mucharmap_script_codepoint_list_set_script (\"%s\") failed\n", script_untranslated);
 		  /* not reached */
@@ -85,7 +85,7 @@
 	{
 	  gchar *script_untranslated;
 
-	  gtk_tree_model_get (model, iter, GUCHARMAP_CHAPTERS_MODEL_COLUMN_ID, &script_untranslated, -1);
+	  gtk_tree_model_get (model, iter, MUCHARMAP_CHAPTERS_MODEL_COLUMN_ID, &script_untranslated, -1);
 
 	  mucharmap_script_codepoint_list_append_script (list, script_untranslated);
 
@@ -125,7 +125,7 @@
 	static void
 	mucharmap_script_chapters_model_class_init (MucharmapScriptChaptersModelClass *clazz)
 	{
-	  MucharmapChaptersModelClass *chapters_class = GUCHARMAP_CHAPTERS_MODEL_CLASS (clazz);
+	  MucharmapChaptersModelClass *chapters_class = MUCHARMAP_CHAPTERS_MODEL_CLASS (clazz);
 
 	  _mucharmap_intl_ensure_initialized ();
 
@@ -135,7 +135,7 @@
 	  chapters_class->get_book_codepoint_list = get_book_codepoint_list;
 	}
 
-	G_DEFINE_TYPE (MucharmapScriptChaptersModel, mucharmap_script_chapters_model, GUCHARMAP_TYPE_CHAPTERS_MODEL)
+	G_DEFINE_TYPE (MucharmapScriptChaptersModel, mucharmap_script_chapters_model, MUCHARMAP_TYPE_CHAPTERS_MODEL)
 
 	MucharmapChaptersModel *
 	mucharmap_script_chapters_model_new (void)
