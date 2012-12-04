@@ -18,7 +18,7 @@
 
 NULL =
 
-lib_LTLIBRARIES = libmucharmap@GUCHARMAP_LIBRARY_SUFFIX_U@.la
+lib_LTLIBRARIES = libmucharmap@MUCHARMAP_LIBRARY_SUFFIX_U@.la
 
 BUILT_SOURCES = \
 	mucharmap-marshal.c \
@@ -27,7 +27,7 @@ BUILT_SOURCES = \
 	mucharmap-type-builtins.h \
 	$(NULL)
 
-libmucharmap@GUCHARMAP_LIBRARY_SUFFIX_U@_la_SOURCES = \
+libmucharmap@MUCHARMAP_LIBRARY_SUFFIX_U@_la_SOURCES = \
 	mucharmap-block-chapters-model.c \
 	mucharmap-block-chapters-model.h \
 	mucharmap-block-codepoint-list.c \
@@ -63,11 +63,11 @@ libmucharmap@GUCHARMAP_LIBRARY_SUFFIX_U@_la_SOURCES = \
 	unicode-versions.h \
 	$(NULL)
 
-nodist_libmucharmap@GUCHARMAP_LIBRARY_SUFFIX_U@_la_SOURCES = $(BUILT_SOURCES)
+nodist_libmucharmap@MUCHARMAP_LIBRARY_SUFFIX_U@_la_SOURCES = $(BUILT_SOURCES)
 
-libmucharmap@GUCHARMAP_LIBRARY_SUFFIX_U@_la_CPPFLAGS = \
+libmucharmap@MUCHARMAP_LIBRARY_SUFFIX_U@_la_CPPFLAGS = \
 	-I$(top_srcdir) \
-	-DGUCHARMAP_COMPILATION \
+	-DMUCHARMAP_COMPILATION \
 	-DDATADIR=\"$(datadir)\" \
 	-DLOCALEDIR=\"$(datadir)/locale\" \
 	-DHELPDIR=\"$(HELP_DIR)\" \
@@ -80,21 +80,21 @@ libmucharmap@GUCHARMAP_LIBRARY_SUFFIX_U@_la_CPPFLAGS = \
 	$(DISABLE_DEPRECATED) \
 	$(AM_CPPFLAGS)
 
-libmucharmap@GUCHARMAP_LIBRARY_SUFFIX_U@_la_CFLAGS = \
+libmucharmap@MUCHARMAP_LIBRARY_SUFFIX_U@_la_CFLAGS = \
 	$(GTK_CFLAGS)	\
 	$(WARN_CFLAGS)	\
 	$(AM_CFLAGS)
 
-libmucharmap@GUCHARMAP_LIBRARY_SUFFIX_U@_la_LDFLAGS = \
-	-version-info $(LIBGUCHARMAP_LT_VERSION)	\
+libmucharmap@MUCHARMAP_LIBRARY_SUFFIX_U@_la_LDFLAGS = \
+	-version-info $(LIBMUCHARMAP_LT_VERSION)	\
 	-export-symbols-regex "^mucharmap_*"		\
 	$(AM_LDFLAGS)
 
-libmucharmap@GUCHARMAP_LIBRARY_SUFFIX_U@_la_LIBADD = \
+libmucharmap@MUCHARMAP_LIBRARY_SUFFIX_U@_la_LIBADD = \
 	$(GTK_LIBS)	\
 	$(INTLLIBS)
 
-libmucharmapincludedir = $(includedir)/mucharmap-$(GUCHARMAP_API_VERSION)/mucharmap
+libmucharmapincludedir = $(includedir)/mucharmap-$(MUCHARMAP_API_VERSION)/mucharmap
 libmucharmapinclude_HEADERS = \
 	mucharmap-block-chapters-model.h \
 	mucharmap-block-codepoint-list.h \
@@ -149,7 +149,6 @@ mucharmap_CPPFLAGS = \
 
 mucharmap_CFLAGS = \
 	$(GTK_CFLAGS)	\
-	$(MATECONF_CFLAGS)	\
 	$(WARN_CFLAGS)	\
 	$(AM_CFLAGS)
 
@@ -157,9 +156,8 @@ mucharmap_LDFLAGS = \
 	$(AM_LDFLAGS)
 
 mucharmap_LDADD = \
-	libmucharmap@GUCHARMAP_LIBRARY_SUFFIX_U@.la	\
+	libmucharmap@MUCHARMAP_LIBRARY_SUFFIX_U@.la	\
 	$(GTK_LIBS)	\
-	$(MATECONF_LIBS)	\
 	$(INTL_LIBS)
 
 if OS_WIN32
@@ -208,27 +206,27 @@ mucharmap-type-builtins.c: mucharmap-type-builtins.c.template $(libmucharmapincl
 if ENABLE_INTROSPECTION
 
 girdir = $(GIRDIR)
-gir_DATA = Mucharmap-$(GUCHARMAP_API_VERSION).gir
+gir_DATA = Mucharmap-$(MUCHARMAP_API_VERSION).gir
 
 typelibdir = $(GIRTYPELIBDIR)
-typelib_DATA = Mucharmap-$(GUCHARMAP_API_VERSION).typelib
+typelib_DATA = Mucharmap-$(MUCHARMAP_API_VERSION).typelib
 
-Mucharmap-$(GUCHARMAP_API_VERSION).gir: $(G_IR_SCANNER) libmucharmap@GUCHARMAP_LIBRARY_SUFFIX_U@.la $(libmucharmapinclude_HEADERS) Makefile
+Mucharmap-$(MUCHARMAP_API_VERSION).gir: $(G_IR_SCANNER) libmucharmap@MUCHARMAP_LIBRARY_SUFFIX_U@.la $(libmucharmapinclude_HEADERS) Makefile
 	$(AM_V_GEN) PKG_CONFIG_PATH=$(top_builddir):$$PKG_CONFIG_PATH \
 	$(G_IR_SCANNER) \
 		--verbose \
 		--namespace=Mucharmap \
-		--nsversion=$(GUCHARMAP_API_VERSION) \
+		--nsversion=$(MUCHARMAP_API_VERSION) \
 		--include=GLib-2.0 \
 		--include=GObject-2.0 \
 		--include=Gtk-$(GTK_API_VERSION) \
-		--library=mucharmap@GUCHARMAP_LIBRARY_SUFFIX_U@ \
+		--library=mucharmap@MUCHARMAP_LIBRARY_SUFFIX_U@ \
 		--libtool="$(LIBTOOL)" \
 		--output $@ \
-		--pkg mucharmap-$(GUCHARMAP_API_PC_VERSION) \
+		--pkg mucharmap-$(MUCHARMAP_API_PC_VERSION) \
 		-I$(top_srcdir) \
 		-I$(top_builddir) \
-		-DGUCHARMAP_COMPILATION \
+		-DMUCHARMAP_COMPILATION \
 		$(filter %.h,$^)
 
 %.typelib: %.gir $(G_IR_COMPILER)
@@ -272,5 +270,13 @@ uninstall-local:
 endif # !OS_WIN32
 
 endif # ENABLE_CHARMAP
+
+gsettings_ENUM_NAMESPACE = org.mate.mucharmap
+gsettings_ENUM_FILES = mucharmap-settings.h
+gsettings_SCHEMAS = org.mate.mucharmap.gschema.xml
+
+@GSETTINGS_RULES@
+
+EXTRA_DIST += $(gsettings_SCHEMAS)
 
 -include $(top_srcdir)/git.mk

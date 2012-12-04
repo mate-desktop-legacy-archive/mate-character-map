@@ -35,13 +35,13 @@
 		PROP_LAST_CODEPOINT
 	};
 
-	G_DEFINE_TYPE (MucharmapBlockCodepointList, mucharmap_block_codepoint_list, GUCHARMAP_TYPE_CODEPOINT_LIST)
+	G_DEFINE_TYPE (MucharmapBlockCodepointList, mucharmap_block_codepoint_list, MUCHARMAP_TYPE_CODEPOINT_LIST)
 
 	static gunichar
 	get_char (MucharmapCodepointList *list,
 		      gint                    index)
 	{
-	  MucharmapBlockCodepointList *block_list = GUCHARMAP_BLOCK_CODEPOINT_LIST (list);
+	  MucharmapBlockCodepointList *block_list = MUCHARMAP_BLOCK_CODEPOINT_LIST (list);
 	  MucharmapBlockCodepointListPrivate *priv = block_list->priv;
 
 	  if (index > (gint)priv->end - priv->start)
@@ -54,7 +54,7 @@
 	get_index (MucharmapCodepointList *list,
 		       gunichar                wc)
 	{
-	  MucharmapBlockCodepointList *block_list = GUCHARMAP_BLOCK_CODEPOINT_LIST (list);
+	  MucharmapBlockCodepointList *block_list = MUCHARMAP_BLOCK_CODEPOINT_LIST (list);
 	  MucharmapBlockCodepointListPrivate *priv = block_list->priv;
 
 	  if (wc < priv->start || wc > priv->end)
@@ -66,7 +66,7 @@
 	static gint
 	get_last_index (MucharmapCodepointList *list)
 	{
-	  MucharmapBlockCodepointList *block_list = GUCHARMAP_BLOCK_CODEPOINT_LIST (list);
+	  MucharmapBlockCodepointList *block_list = MUCHARMAP_BLOCK_CODEPOINT_LIST (list);
 	  MucharmapBlockCodepointListPrivate *priv = block_list->priv;
 
 	  return priv->end - priv->start;
@@ -75,7 +75,7 @@
 	static void
 	mucharmap_block_codepoint_list_init (MucharmapBlockCodepointList *list)
 	{
-	  list->priv = G_TYPE_INSTANCE_GET_PRIVATE (list, GUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST, MucharmapBlockCodepointListPrivate);
+	  list->priv = G_TYPE_INSTANCE_GET_PRIVATE (list, MUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST, MucharmapBlockCodepointListPrivate);
 	}
 
 	static GObject *
@@ -90,7 +90,7 @@
 	  object = G_OBJECT_CLASS (mucharmap_block_codepoint_list_parent_class)->constructor
 		         (type, n_construct_properties, construct_params);
 
-	  block_codepoint_list = GUCHARMAP_BLOCK_CODEPOINT_LIST (object);
+	  block_codepoint_list = MUCHARMAP_BLOCK_CODEPOINT_LIST (object);
 	  priv = block_codepoint_list->priv;
 
 	  g_assert (priv->start <= priv->end);
@@ -104,7 +104,7 @@
 		                                         const GValue *value,
 		                                         GParamSpec *pspec)
 	{
-	  MucharmapBlockCodepointList *block_codepoint_list = GUCHARMAP_BLOCK_CODEPOINT_LIST (object);
+	  MucharmapBlockCodepointList *block_codepoint_list = MUCHARMAP_BLOCK_CODEPOINT_LIST (object);
 	  MucharmapBlockCodepointListPrivate *priv = block_codepoint_list->priv;
 
 	  switch (prop_id) {
@@ -126,7 +126,7 @@
 		                                         GValue *value,
 		                                         GParamSpec *pspec)
 	{
-	  MucharmapBlockCodepointList *block_codepoint_list = GUCHARMAP_BLOCK_CODEPOINT_LIST (object);
+	  MucharmapBlockCodepointList *block_codepoint_list = MUCHARMAP_BLOCK_CODEPOINT_LIST (object);
 	  MucharmapBlockCodepointListPrivate *priv = block_codepoint_list->priv;
 
 	  switch (prop_id) {
@@ -145,7 +145,7 @@
 	mucharmap_block_codepoint_list_class_init (MucharmapBlockCodepointListClass *klass)
 	{
 	  GObjectClass *object_class = G_OBJECT_CLASS (klass);
-	  MucharmapCodepointListClass *codepoint_list_class = GUCHARMAP_CODEPOINT_LIST_CLASS (klass);
+	  MucharmapCodepointListClass *codepoint_list_class = MUCHARMAP_CODEPOINT_LIST_CLASS (klass);
 
 	  object_class->get_property = mucharmap_block_codepoint_list_get_property;
 	  object_class->set_property = mucharmap_block_codepoint_list_set_property;
@@ -203,7 +203,7 @@
 	{
 	  g_return_val_if_fail (start <= end, NULL);
 
-	  return g_object_new (GUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST,
+	  return g_object_new (MUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST,
 		                   "first-codepoint", (guint) start,
 		                   "last-codepoint", (guint) end,
 		                   NULL);

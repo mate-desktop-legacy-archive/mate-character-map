@@ -179,7 +179,7 @@
 	static void
 	mucharmap_mini_font_selection_finalize (GObject *object)
 	{
-	  MucharmapMiniFontSelection *fontsel = GUCHARMAP_MINI_FONT_SELECTION (object);
+	  MucharmapMiniFontSelection *fontsel = MUCHARMAP_MINI_FONT_SELECTION (object);
 	  pango_font_description_free (fontsel->font_desc);
 
 	  G_OBJECT_CLASS (mucharmap_mini_font_selection_parent_class)->finalize (object);
@@ -191,7 +191,7 @@
 		                                        const GValue *value,
 		                                        GParamSpec *pspec)
 	{
-	  MucharmapMiniFontSelection *mini_fontsel = GUCHARMAP_MINI_FONT_SELECTION (object);
+	  MucharmapMiniFontSelection *mini_fontsel = MUCHARMAP_MINI_FONT_SELECTION (object);
 
 	  switch (prop_id) {
 		case PROP_FONT_DESC:
@@ -209,7 +209,7 @@
 		                                        GValue *value,
 		                                        GParamSpec *pspec)
 	{
-	  MucharmapMiniFontSelection*mini_fontsel = GUCHARMAP_MINI_FONT_SELECTION (object);
+	  MucharmapMiniFontSelection*mini_fontsel = MUCHARMAP_MINI_FONT_SELECTION (object);
 
 	  switch (prop_id) {
 		case PROP_FONT_DESC:
@@ -351,7 +351,7 @@
 	  PangoFontDescription *new_font_desc;
 	  const char *new_font_family;
 
-	  g_return_if_fail (GUCHARMAP_IS_MINI_FONT_SELECTION (fontsel));
+	  g_return_if_fail (MUCHARMAP_IS_MINI_FONT_SELECTION (fontsel));
 	  g_return_if_fail (font_desc != NULL);
 
 	  g_object_freeze_notify (object);
@@ -392,7 +392,7 @@
 	PangoFontDescription *
 	mucharmap_mini_font_selection_get_font_desc (MucharmapMiniFontSelection *fontsel)
 	{
-	  g_return_val_if_fail (GUCHARMAP_IS_MINI_FONT_SELECTION (fontsel), NULL);
+	  g_return_val_if_fail (MUCHARMAP_IS_MINI_FONT_SELECTION (fontsel), NULL);
 
 	  return fontsel->font_desc;
 	}

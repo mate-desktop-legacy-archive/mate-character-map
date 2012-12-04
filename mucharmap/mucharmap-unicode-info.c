@@ -219,7 +219,7 @@ MucharmapUnicodeVersion mucharmap_get_unicode_version(gunichar uc)
 
 	if (uc < unicode_versions[0].start || uc > unicode_versions[max].end)
 	{
-		return GUCHARMAP_UNICODE_VERSION_UNASSIGNED;
+		return MUCHARMAP_UNICODE_VERSION_UNASSIGNED;
 	}
 
 	while (max >= min)
@@ -240,14 +240,14 @@ MucharmapUnicodeVersion mucharmap_get_unicode_version(gunichar uc)
 		}
 	}
 
-	return GUCHARMAP_UNICODE_VERSION_UNASSIGNED;
+	return MUCHARMAP_UNICODE_VERSION_UNASSIGNED;
 }
 
 const gchar* mucharmap_unicode_version_to_string(MucharmapUnicodeVersion version)
 {
-	g_return_val_if_fail(version >= GUCHARMAP_UNICODE_VERSION_UNASSIGNED && version <= GUCHARMAP_UNICODE_VERSION_LATEST, NULL);
+	g_return_val_if_fail(version >= MUCHARMAP_UNICODE_VERSION_UNASSIGNED && version <= MUCHARMAP_UNICODE_VERSION_LATEST, NULL);
 
-	if (G_UNLIKELY(version == GUCHARMAP_UNICODE_VERSION_UNASSIGNED))
+	if (G_UNLIKELY(version == MUCHARMAP_UNICODE_VERSION_UNASSIGNED))
 	{
 		return NULL;
 	}
@@ -687,40 +687,3 @@ mucharmap_unichar_isgraph (gunichar uc)
           && t != G_UNICODE_SPACE_SEPARATOR);
 }
 
-static gunichar
-get_first_non_underscore_char (const char *str)
-{
-  const char *p;
-
-  if (!str)
-    return 0;
-
-  for (p = str; p && *p; p = g_utf8_find_next_char (p, NULL))
-    {
-      gunichar ch;
-
-      ch = g_utf8_get_char (p);
-      if (g_unichar_isalpha (ch))
-        return ch;
-    }
-
-  return 0;
-}
-
-/**
- * mucharmap_unicode_get_locale_character:
- *
- * Determines a character that's commonly used in the current
- * locale's script.
- *
- * Returns: a unicode character
- */
-gunichar
-mucharmap_unicode_get_locale_character (void)
-{
-  GtkStockItem item;
-  if (!gtk_stock_lookup (GTK_STOCK_FIND, &item))
-    return 0;
-
-  return get_first_non_underscore_char (item.label);
-}

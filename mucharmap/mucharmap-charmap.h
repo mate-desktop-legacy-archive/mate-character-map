@@ -16,12 +16,12 @@
  * 51 Franklin St, Fifth Floor, Boston, MA 02110-1301  USA
  */
 
-#if !defined (__GUCHARMAP_GUCHARMAP_H_INSIDE__) && !defined (GUCHARMAP_COMPILATION)
+#if !defined (__MUCHARMAP_MUCHARMAP_H_INSIDE__) && !defined (MUCHARMAP_COMPILATION)
 #error "Only <mucharmap/mucharmap.h> can be included directly."
 #endif
 
-#ifndef GUCHARMAP_CHARMAP_H
-#define GUCHARMAP_CHARMAP_H
+#ifndef MUCHARMAP_CHARMAP_H
+#define MUCHARMAP_CHARMAP_H
 
 #include <gtk/gtk.h>
 
@@ -33,12 +33,12 @@ G_BEGIN_DECLS
 
 //class MucharmapCharmap extends GtkPaned
 //{
-	#define GUCHARMAP_TYPE_CHARMAP             (mucharmap_charmap_get_type ())
-	#define GUCHARMAP_CHARMAP(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), GUCHARMAP_TYPE_CHARMAP, MucharmapCharmap))
-	#define GUCHARMAP_CHARMAP_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), GUCHARMAP_TYPE_CHARMAP, MucharmapCharmapClass))
-	#define GUCHARMAP_IS_CHARMAP(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), GUCHARMAP_TYPE_CHARMAP))
-	#define GUCHARMAP_IS_CHARMAP_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), GUCHARMAP_TYPE_CHARMAP))
-	#define GUCHARMAP_CHARMAP_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), GUCHARMAP_TYPE_CHARMAP, MucharmapCharmapClass))
+	#define MUCHARMAP_TYPE_CHARMAP             (mucharmap_charmap_get_type ())
+	#define MUCHARMAP_CHARMAP(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_CHARMAP, MucharmapCharmap))
+	#define MUCHARMAP_CHARMAP_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_CHARMAP, MucharmapCharmapClass))
+	#define MUCHARMAP_IS_CHARMAP(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_CHARMAP))
+	#define MUCHARMAP_IS_CHARMAP_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_CHARMAP))
+	#define MUCHARMAP_CHARMAP_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_CHARMAP, MucharmapCharmapClass))
 
 	typedef struct _MucharmapCharmap        MucharmapCharmap;
 	typedef struct _MucharmapCharmapPrivate MucharmapCharmapPrivate;
@@ -70,7 +70,7 @@ G_BEGIN_DECLS
 
 	GtkWidget *           mucharmap_charmap_new                (void);
 
-	#ifndef GUCHARMAP_DISABLE_DEPRECATED
+	#ifndef MUCHARMAP_DISABLE_DEPRECATED
 	void           mucharmap_charmap_set_orientation (MucharmapCharmap *charmap,
 		                                              GtkOrientation orientation);
 	GtkOrientation mucharmap_charmap_get_orientation (MucharmapCharmap *charmap);
@@ -109,8 +109,8 @@ G_BEGIN_DECLS
 	gboolean mucharmap_charmap_get_chapters_visible (MucharmapCharmap *charmap);
 
 	typedef enum {
-	  GUCHARMAP_CHARMAP_PAGE_CHARTABLE,
-	  GUCHARMAP_CHARMAP_PAGE_DETAILS
+	  MUCHARMAP_CHARMAP_PAGE_CHARTABLE,
+	  MUCHARMAP_CHARMAP_PAGE_DETAILS
 	} MucharmapCharmapPageType;
 
 	void     mucharmap_charmap_set_page_visible (MucharmapCharmap *charmap,
@@ -135,4 +135,4 @@ G_BEGIN_DECLS
 
 G_END_DECLS
 
-#endif  /* #ifndef GUCHARMAP_CHARMAP_H */
+#endif  /* #ifndef MUCHARMAP_CHARMAP_H */

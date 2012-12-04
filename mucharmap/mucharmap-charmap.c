@@ -87,7 +87,7 @@
 	static void
 	mucharmap_charmap_finalize (GObject *object)
 	{
-	  MucharmapCharmap *charmap = GUCHARMAP_CHARMAP (object);
+	  MucharmapCharmap *charmap = MUCHARMAP_CHARMAP (object);
 	  MucharmapCharmapPrivate *priv = charmap->priv;
 
 	  gdk_cursor_unref (priv->hand_cursor);
@@ -109,7 +109,7 @@
 		                            GValue *value,
 		                            GParamSpec *pspec)
 	{
-	  MucharmapCharmap *charmap = GUCHARMAP_CHARMAP (object);
+	  MucharmapCharmap *charmap = MUCHARMAP_CHARMAP (object);
 	  MucharmapCharmapPrivate *priv = charmap->priv;
 
 	  switch (prop_id) {
@@ -151,7 +151,7 @@
 		                            const GValue *value,
 		                            GParamSpec *pspec)
 	{
-	  MucharmapCharmap *charmap = GUCHARMAP_CHARMAP (object);
+	  MucharmapCharmap *charmap = MUCHARMAP_CHARMAP (object);
 	  MucharmapCharmapPrivate *priv = charmap->priv;
 
 	  switch (prop_id) {
@@ -192,7 +192,7 @@
 	mucharmap_charmap_size_request (GtkWidget *widget,
 		                            GtkRequisition *requisition)
 	{
-	  MucharmapCharmap *charmap = GUCHARMAP_CHARMAP (widget);
+	  MucharmapCharmap *charmap = MUCHARMAP_CHARMAP (widget);
 	  MucharmapCharmapPrivate *priv = charmap->priv;
 
 	  priv->paned_class->size_request (widget, requisition);
@@ -202,7 +202,7 @@
 	mucharmap_charmap_size_allocate (GtkWidget *widget,
 		                             GtkAllocation  *allocation)
 	{
-	  MucharmapCharmap *charmap = GUCHARMAP_CHARMAP (widget);
+	  MucharmapCharmap *charmap = MUCHARMAP_CHARMAP (widget);
 	  MucharmapCharmapPrivate *priv = charmap->priv;
 
 	  priv->paned_class->size_allocate (widget, allocation);
@@ -261,7 +261,7 @@
 		(object_class,
 		 PROP_CHAPTERS_MODEL,
 		 g_param_spec_object ("chapters-model", NULL, NULL,
-		                     GUCHARMAP_TYPE_CHAPTERS_MODEL,
+		                     MUCHARMAP_TYPE_CHAPTERS_MODEL,
 		                     G_PARAM_WRITABLE |
 		                     G_PARAM_CONSTRUCT |
 		                     G_PARAM_STATIC_NAME |
@@ -294,7 +294,7 @@
 		(object_class,
 		 PROP_ACTIVE_CODEPOINT_LIST,
 		 g_param_spec_object ("active-codepoint-list", NULL, NULL,
-		                      GUCHARMAP_TYPE_CODEPOINT_LIST,
+		                      MUCHARMAP_TYPE_CODEPOINT_LIST,
 		                      G_PARAM_READABLE |
 		                      G_PARAM_STATIC_NAME |
 		                      G_PARAM_STATIC_NICK |
@@ -633,7 +633,7 @@
 
 	  /* Unicode version */
 	  version = mucharmap_get_unicode_version (uc);
-	  if (version != GUCHARMAP_UNICODE_VERSION_UNASSIGNED)
+	  if (version != MUCHARMAP_UNICODE_VERSION_UNASSIGNED)
 		insert_vanilla_detail (charmap, buffer, &iter,
 		                       _("In Unicode since:"),
 		                       mucharmap_unicode_version_to_string (version));
@@ -822,7 +822,7 @@
 	  /* Forward the notification */
 	  g_object_notify (G_OBJECT (charmap), "active-character");
 
-	  if (priv->active_page == GUCHARMAP_CHARMAP_PAGE_DETAILS)
+	  if (priv->active_page == MUCHARMAP_CHARMAP_PAGE_DETAILS)
 		set_details (charmap, wc);
 
 	  gs = g_string_sized_new (256);
@@ -1087,9 +1087,9 @@
 
 	  priv->active_page = page_num;
 
-	  if (page_num == GUCHARMAP_CHARMAP_PAGE_DETAILS)
+	  if (page_num == MUCHARMAP_CHARMAP_PAGE_DETAILS)
 		set_details (charmap, mucharmap_chartable_get_active_character (priv->chartable));
-	  else if (page_num == GUCHARMAP_CHARMAP_PAGE_CHARTABLE)
+	  else if (page_num == MUCHARMAP_CHARMAP_PAGE_CHARTABLE)
 		{
 		  GtkTextBuffer *buffer;
 
@@ -1127,7 +1127,7 @@
 	  GtkTextBuffer *buffer;
 	  int page;
 
-	  priv = charmap->priv = G_TYPE_INSTANCE_GET_PRIVATE (charmap, GUCHARMAP_TYPE_CHARMAP, MucharmapCharmapPrivate);
+	  priv = charmap->priv = G_TYPE_INSTANCE_GET_PRIVATE (charmap, MUCHARMAP_TYPE_CHARMAP, MucharmapCharmapPrivate);
 
 	  /* FIXME: move this to realize */
 	  priv->hand_cursor = gdk_cursor_new (GDK_HAND2);
@@ -1142,7 +1142,7 @@
 		                                   GTK_SHADOW_ETCHED_IN);
 
 	  view = mucharmap_chapters_view_new ();
-	  priv->chapters_view = GUCHARMAP_CHAPTERS_VIEW (view);
+	  priv->chapters_view = MUCHARMAP_CHAPTERS_VIEW (view);
 	  selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (view));
 	  g_signal_connect (selection, "changed",
 		                G_CALLBACK (chapters_view_selection_changed_cb), charmap);
@@ -1163,7 +1163,7 @@
 		                                   GTK_SHADOW_NONE);
 
 	  chartable = mucharmap_chartable_new ();
-	  priv->chartable = GUCHARMAP_CHARTABLE (chartable);
+	  priv->chartable = MUCHARMAP_CHARTABLE (chartable);
 
 	  g_signal_connect_swapped (chartable, "status-message",
 		                        G_CALLBACK (chartable_status_message), charmap);
@@ -1182,7 +1182,7 @@
 	  page = gtk_notebook_append_page (GTK_NOTEBOOK (priv->notebook),
 		                               scrolled_window,
 		                               gtk_label_new_with_mnemonic (_("Characte_r Table")));
-	  g_assert (page == GUCHARMAP_CHARMAP_PAGE_CHARTABLE);
+	  g_assert (page == MUCHARMAP_CHARMAP_PAGE_CHARTABLE);
 	  gtk_widget_show (scrolled_window);
 
 	  /* Details page */
@@ -1228,7 +1228,7 @@
 	  page = gtk_notebook_append_page (GTK_NOTEBOOK (priv->notebook),
 		                               scrolled_window,
 		                               gtk_label_new_with_mnemonic (_("Character _Details")));
-	  g_assert (page == GUCHARMAP_CHARMAP_PAGE_DETAILS);
+	  g_assert (page == MUCHARMAP_CHARMAP_PAGE_DETAILS);
 	  gtk_widget_show (scrolled_window);
 
 	  priv->active_page = 0;
@@ -1243,12 +1243,12 @@
 	GtkWidget *
 	mucharmap_charmap_new (void)
 	{
-	  return g_object_new (GUCHARMAP_TYPE_CHARMAP,
+	  return g_object_new (MUCHARMAP_TYPE_CHARMAP,
 		                   "orientation", GTK_ORIENTATION_HORIZONTAL,
 		                   NULL);
 	}
 
-	#ifndef GUCHARMAP_DISABLE_DEPRECATED_SOURCE
+	#ifndef MUCHARMAP_DISABLE_DEPRECATED_SOURCE
 
 	/**
 	 * mucharmap_charmap_set_orientation:
@@ -1267,7 +1267,7 @@
 	  MucharmapCharmapPrivate *priv;
 	  GtkPaned *paned = GTK_PANED (charmap);
 
-	  g_return_if_fail (GUCHARMAP_IS_CHARMAP (charmap));
+	  g_return_if_fail (MUCHARMAP_IS_CHARMAP (charmap));
 	  priv = charmap->priv;
 
 	  priv->orientation = orientation;
@@ -1303,7 +1303,7 @@
 	GtkOrientation
 	mucharmap_charmap_get_orientation (MucharmapCharmap *charmap)
 	{
-	  g_return_val_if_fail (GUCHARMAP_IS_CHARMAP (charmap), GTK_ORIENTATION_HORIZONTAL);
+	  g_return_val_if_fail (MUCHARMAP_IS_CHARMAP (charmap), GTK_ORIENTATION_HORIZONTAL);
 
 	#if GTK_CHECK_VERSION (2, 15, 0)
 	  return gtk_orientable_get_orientation (GTK_ORIENTABLE (charmap));
@@ -1312,7 +1312,7 @@
 	#endif
 	}
 
-	#endif /* !GUCHARMAP_DISABLE_DEPRECATED_SOURCE */
+	#endif /* !MUCHARMAP_DISABLE_DEPRECATED_SOURCE */
 
 	/**
 	 * mucharmap_charmap_set_font_desc:
@@ -1327,7 +1327,7 @@
 	{
 	  MucharmapCharmapPrivate *priv;
 
-	  g_return_if_fail (GUCHARMAP_IS_CHARMAP (charmap));
+	  g_return_if_fail (MUCHARMAP_IS_CHARMAP (charmap));
 	  g_return_if_fail (font_desc != NULL);
 
 	  priv = charmap->priv;
@@ -1350,7 +1350,7 @@
 	PangoFontDescription *
 	mucharmap_charmap_get_font_desc (MucharmapCharmap *charmap)
 	{
-	  g_return_val_if_fail (GUCHARMAP_IS_CHARMAP (charmap), NULL);
+	  g_return_val_if_fail (MUCHARMAP_IS_CHARMAP (charmap), NULL);
 
 	  return charmap->priv->font_desc;
 	}

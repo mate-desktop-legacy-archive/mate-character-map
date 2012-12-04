@@ -25,7 +25,6 @@
 #include <gtk/gtk.h>
 
 #include <mucharmap/mucharmap.h>
-#include "mucharmap-settings.h"
 #include "mucharmap-window.h"
  
 static gboolean option_version_cb(const gchar* option_name, const gchar* value, gpointer data, GError** error)
@@ -68,10 +67,8 @@ int main (int argc, char* argv[])
 		exit(1);
 	}
 
-	mucharmap_settings_initialize();
-
 	g_set_application_name(_("Character Map"));
-	gtk_window_set_default_icon_name(GUCHARMAP_ICON_NAME);
+	gtk_window_set_default_icon_name(MUCHARMAP_ICON_NAME);
 
 	window = mucharmap_window_new();
 	g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
@@ -81,25 +78,15 @@ int main (int argc, char* argv[])
 	gdk_screen_get_monitor_geometry(screen, monitor, &rect);
 	gtk_window_set_default_size(GTK_WINDOW(window), rect.width * 9/16, rect.height * 9/16);
 
-	/* No --font argument, use the stored font (if any) */
-	if (!font)
-	{
-		font = mucharmap_settings_get_font();
-	}
-
 	if (font)
 	{
-		mucharmap_window_set_font(GUCHARMAP_WINDOW(window), font);
+		mucharmap_window_set_font(MUCHARMAP_WINDOW(window), font);
 		g_free(font);
 	}
-
-	mucharmap_settings_add_window(GTK_WINDOW(window));
 
 	gtk_window_present(GTK_WINDOW(window));
 
 	gtk_main();
-
-	mucharmap_settings_shutdown();
 
 	return 0;
 }
