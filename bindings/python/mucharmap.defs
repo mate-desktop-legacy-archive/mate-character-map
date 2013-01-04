@@ -4,63 +4,63 @@
   (in-module "Mucharmap")
   (parent "GtkListStore")
   (c-name "MucharmapChaptersModel")
-  (gtype-id "GUCHARMAP_TYPE_CHAPTERS_MODEL")
+  (gtype-id "MUCHARMAP_TYPE_CHAPTERS_MODEL")
 )
 
 (define-object BlockChaptersModel
   (in-module "Mucharmap")
   (parent "MucharmapChaptersModel")
   (c-name "MucharmapBlockChaptersModel")
-  (gtype-id "GUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL")
+  (gtype-id "MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL")
 )
 
 (define-object ChaptersView
   (in-module "Mucharmap")
   (parent "GtkTreeView")
   (c-name "MucharmapChaptersView")
-  (gtype-id "GUCHARMAP_TYPE_CHAPTERS_VIEW")
+  (gtype-id "MUCHARMAP_TYPE_CHAPTERS_VIEW")
 )
 
 (define-object Charmap
   (in-module "Mucharmap")
   (parent "GtkHPaned")
   (c-name "MucharmapCharmap")
-  (gtype-id "GUCHARMAP_TYPE_CHARMAP")
+  (gtype-id "MUCHARMAP_TYPE_CHARMAP")
 )
 
 (define-object Chartable
   (in-module "Mucharmap")
   (parent "GtkDrawingArea")
   (c-name "MucharmapChartable")
-  (gtype-id "GUCHARMAP_TYPE_CHARTABLE")
+  (gtype-id "MUCHARMAP_TYPE_CHARTABLE")
 )
 
 (define-object CodepointList
   (in-module "Mucharmap")
   (parent "GObject")
   (c-name "MucharmapCodepointList")
-  (gtype-id "GUCHARMAP_TYPE_CODEPOINT_LIST")
+  (gtype-id "MUCHARMAP_TYPE_CODEPOINT_LIST")
 )
 
 (define-object BlockCodepointList
   (in-module "Mucharmap")
   (parent "MucharmapCodepointList")
   (c-name "MucharmapBlockCodepointList")
-  (gtype-id "GUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST")
+  (gtype-id "MUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST")
 )
 
 (define-object ScriptChaptersModel
   (in-module "Mucharmap")
   (parent "MucharmapChaptersModel")
   (c-name "MucharmapScriptChaptersModel")
-  (gtype-id "GUCHARMAP_TYPE_SCRIPT_CHAPTERS_MODEL")
+  (gtype-id "MUCHARMAP_TYPE_SCRIPT_CHAPTERS_MODEL")
 )
 
 (define-object ScriptCodepointList
   (in-module "Mucharmap")
   (parent "MucharmapCodepointList")
   (c-name "MucharmapScriptCodepointList")
-  (gtype-id "GUCHARMAP_TYPE_SCRIPT_CODEPOINT_LIST")
+  (gtype-id "MUCHARMAP_TYPE_SCRIPT_CODEPOINT_LIST")
 )
 
 ;; Enumerations and flags ...
@@ -68,30 +68,34 @@
 (define-enum CharmapPageType
   (in-module "Mucharmap")
   (c-name "MucharmapCharmapPageType")
-  (gtype-id "GUCHARMAP_TYPE_CHARMAP_PAGE_TYPE")
+  (gtype-id "MUCHARMAP_TYPE_CHARMAP_PAGE_TYPE")
   (values
-    '("chartable" "GUCHARMAP_CHARMAP_PAGE_CHARTABLE")
-    '("details" "GUCHARMAP_CHARMAP_PAGE_DETAILS")
+    '("chartable" "MUCHARMAP_CHARMAP_PAGE_CHARTABLE")
+    '("details" "MUCHARMAP_CHARMAP_PAGE_DETAILS")
   )
 )
 
 (define-enum UnicodeVersion
   (in-module "Mucharmap")
   (c-name "MucharmapUnicodeVersion")
-  (gtype-id "GUCHARMAP_TYPE_UNICODE_VERSION")
+  (gtype-id "MUCHARMAP_TYPE_UNICODE_VERSION")
   (values
-    '("unassigned" "GUCHARMAP_UNICODE_VERSION_UNASSIGNED")
-    '("1-1" "GUCHARMAP_UNICODE_VERSION_1_1")
-    '("2-0" "GUCHARMAP_UNICODE_VERSION_2_0")
-    '("2-1" "GUCHARMAP_UNICODE_VERSION_2_1")
-    '("3-0" "GUCHARMAP_UNICODE_VERSION_3_0")
-    '("3-1" "GUCHARMAP_UNICODE_VERSION_3_1")
-    '("3-2" "GUCHARMAP_UNICODE_VERSION_3_2")
-    '("4-0" "GUCHARMAP_UNICODE_VERSION_4_0")
-    '("4-1" "GUCHARMAP_UNICODE_VERSION_4_1")
-    '("5-0" "GUCHARMAP_UNICODE_VERSION_5_0")
-    '("5-1" "GUCHARMAP_UNICODE_VERSION_5_1")
-    '("latest" "GUCHARMAP_UNICODE_VERSION_LATEST")
+    '("unassigned" "MUCHARMAP_UNICODE_VERSION_UNASSIGNED")
+    '("1-1" "MUCHARMAP_UNICODE_VERSION_1_1")
+    '("2-0" "MUCHARMAP_UNICODE_VERSION_2_0")
+    '("2-1" "MUCHARMAP_UNICODE_VERSION_2_1")
+    '("3-0" "MUCHARMAP_UNICODE_VERSION_3_0")
+    '("3-1" "MUCHARMAP_UNICODE_VERSION_3_1")
+    '("3-2" "MUCHARMAP_UNICODE_VERSION_3_2")
+    '("4-0" "MUCHARMAP_UNICODE_VERSION_4_0")
+    '("4-1" "MUCHARMAP_UNICODE_VERSION_4_1")
+    '("5-0" "MUCHARMAP_UNICODE_VERSION_5_0")
+    '("5-1" "MUCHARMAP_UNICODE_VERSION_5_1")
+    '("5-2" "MUCHARMAP_UNICODE_VERSION_5_2")
+    '("6-0" "MUCHARMAP_UNICODE_VERSION_6_0")
+    '("6-1" "MUCHARMAP_UNICODE_VERSION_6_1")
+    '("6-2" "MUCHARMAP_UNICODE_VERSION_6_2")
+    '("latest" "MUCHARMAP_UNICODE_VERSION_LATEST")
   )
 )
 
