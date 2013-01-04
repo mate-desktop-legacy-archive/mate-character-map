@@ -252,10 +252,8 @@ if ENABLE_CHARMAP
 
 # don't do the symlink stuff if this is windows
 if !OS_WIN32
-# install a symlink to the binary called "charmap"
+# install a symlink to the binary called "mate-character-map"
 install-exec-hook:
-	test -e "$(DESTDIR)$(bindir)/charmap" \
-        || (cd "$(DESTDIR)$(bindir)" && $(LN_S) mucharmap charmap) ; \
 	test -e "$(DESTDIR)$(bindir)/mate-character-map" \
         || (cd "$(DESTDIR)$(bindir)" && $(LN_S) mucharmap mate-character-map)
 
