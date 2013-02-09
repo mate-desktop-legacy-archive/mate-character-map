@@ -172,6 +172,8 @@
 		  gtk_progress_bar_set_fraction (GTK_PROGRESS_BAR (guw->progress), fraction_completed);
 		  return TRUE;
 		}
+		#else
+	  return FALSE;
 		#endif
 	}
 
