@@ -1,11 +1,12 @@
 [Desktop Entry]
-_Name=Character Map
+_Name=MATE Character Map
+_GenericName=Character Map
 _Comment=Insert special characters into documents
 Exec=mucharmap
 Icon=accessories-character-map
 Terminal=false
 Type=Application
-Categories=MATE;GTK;Utility;
+Categories=GTK;Utility;
 X-MATE-Bugzilla-Bugzilla=MATE
 X-MATE-Bugzilla-Product=mucharmap
 X-MATE-Bugzilla-Component=general
