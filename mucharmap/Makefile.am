@@ -88,6 +88,7 @@ libmucharmap@MUCHARMAP_LIBRARY_SUFFIX_U@_la_CFLAGS = \
 libmucharmap@MUCHARMAP_LIBRARY_SUFFIX_U@_la_LDFLAGS = \
 	-version-info $(LIBMUCHARMAP_LT_VERSION)	\
 	-export-symbols-regex "^mucharmap_*"		\
+	-no-undefined					\
 	$(AM_LDFLAGS)
 
 libmucharmap@MUCHARMAP_LIBRARY_SUFFIX_U@_la_LIBADD = \
