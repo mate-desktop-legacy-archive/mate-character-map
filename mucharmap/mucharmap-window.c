@@ -487,7 +487,7 @@
 			"Noah Levitt <nlevitt@columbia.edu>",
 			"Daniel Elstner <daniel.elstner@gmx.net>",
 			"Padraig O'Briain <Padraig.Obriain@sun.com>",
-			"Christian Persch <" "chpe" "\100" "mate" "." "org" ">",
+			"Christian Persch <" "chpe" "\100" "gnome" "." "org" ">",
 			NULL
 		};
 
@@ -532,7 +532,7 @@
 		gtk_show_about_dialog(GTK_WINDOW(guw),
 			"program-name", _("MATE Character Map"),
 			"version", VERSION,
-			"comments", _("Based on the Unicode Character Database 5.2"),
+			"comments", _("Based on the Unicode Character Database 6.2"),
 			"copyright", "Copyright © 2004 Noah Levitt\n"
 				"Copyright © 1991–2009 Unicode, Inc.\n"
 				"Copyright © 2007–2010 Christian Persch",
@@ -542,7 +542,7 @@
 			"logo-icon-name", MUCHARMAP_ICON_NAME,
 			"authors", authors,
 			"translator-credits", _("translator-credits"),
-			"website", "http://mate-desktop.org/",
+			"website", "http://www.mate-desktop.org/",
 			NULL);
 
 		g_free (license_trans);
