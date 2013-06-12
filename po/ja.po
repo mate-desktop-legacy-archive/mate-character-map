@@ -900,7 +900,7 @@ msgstr "カタカナ"
 
 #: ../mucharmap/unicode-blocks.h:115 ../mucharmap/unicode-scripts.h:22
 msgid "Bopomofo"
-msgstr "中音字母"
+msgstr "注音字母"
 
 #: ../mucharmap/unicode-blocks.h:116
 msgid "Hangul Compatibility Jamo"
@@ -912,7 +912,7 @@ msgstr "漢文"
 
 #: ../mucharmap/unicode-blocks.h:118
 msgid "Bopomofo Extended"
-msgstr "中音字母拡張"
+msgstr "注音字母拡張"
 
 #: ../mucharmap/unicode-blocks.h:119
 msgid "CJK Strokes"
