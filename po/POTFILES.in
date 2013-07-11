@@ -1,6 +1,6 @@
 [encoding: UTF-8]
 mucharmap.desktop.in.in
-gucharmap/mucharmap-block-chapters-model.c
+mucharmap/mucharmap-block-chapters-model.c
 mucharmap/mucharmap-charmap.c
 mucharmap/mucharmap-chartable-accessible.c
 mucharmap/mucharmap-chartable.c
