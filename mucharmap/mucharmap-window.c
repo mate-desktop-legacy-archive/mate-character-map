@@ -1057,8 +1057,6 @@
 	  G_CALLBACK (charmap_sync_active_character), guw);
 	  g_signal_connect (guw->fontsel, "notify::font-desc",
 	  G_CALLBACK (fontsel_sync_font_desc), guw);
-	  g_signal_connect (action, "activate",
-	  G_CALLBACK (snap_cols_pow2), guw);
 
 	  /* read initial settings */
 	  /* font */
@@ -1070,9 +1068,9 @@
 		}
 
 	  /* snap-to-power-of-two */
-
 	  action = gtk_action_group_get_action (guw->action_group, "SnapColumns");
 	  gtk_toggle_action_set_active (GTK_TOGGLE_ACTION (action), g_settings_get_boolean (guw->settings, "snap-cols-pow2"));
+	  g_signal_connect (action, "activate", G_CALLBACK (snap_cols_pow2), guw);
 
 	  /* group by */
 	  mucharmap_window_set_chapters_model (guw, g_settings_get_enum (guw->settings, "group-by"));
