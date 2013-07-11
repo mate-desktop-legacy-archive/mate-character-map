@@ -240,7 +240,7 @@
 
 	  cursor = _mucharmap_window_progress_cursor ();
 	  gdk_window_set_cursor (gtk_widget_get_window (GTK_WIDGET (guw)), cursor);
-	  g_object_unref (cursor);
+	  gdk_cursor_unref (cursor);
 
 	  action = gtk_action_group_get_action (guw->action_group, "Find");
 	  gtk_action_set_sensitive (action, FALSE);

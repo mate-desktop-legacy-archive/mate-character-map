@@ -623,7 +623,7 @@
 
 	  GdkCursor *cursor = _mucharmap_window_progress_cursor ();
 	  gdk_window_set_cursor (gtk_widget_get_window (GTK_WIDGET (search_dialog)), cursor);
-	  g_object_unref (cursor);
+	  gdk_cursor_unref (cursor);
 
 	  list = mucharmap_charmap_get_book_codepoint_list (priv->guw->charmap);
 	  if (!list)
