@@ -6,7 +6,7 @@ HELP_FILES = index.docbook legal.xml
 HELP_LINGUAS = bg ca cs de el en_GB es fi fr ko oc pt_BR ru sv vi zh_CN
 
 # These should be converted to use mate-doc-utils
-# http://live.mate.org/MateDocUtilsTranslationMigration
+# http://live.gnome.org/GnomeDocUtilsTranslationMigration
 # Please remember also to remove help/langcode/Makefile from toplevel
 # configure.ac's AC_CONFIG_FILES, and remove your directory from
 # the SUBDIRS below.
