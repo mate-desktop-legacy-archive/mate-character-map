@@ -114,7 +114,7 @@
 
     <legalnotice> 
       <title>フィードバック</title>
-      <para><application>&app;</application> アプリケーションまたはこのマニュアルに関してバグやご意見をご報告いただく場合は、『<ulink url="ghelp:mate-feedback" type="help">MATE Feedback Page</ulink>』を参照してください。
+      <para><application>&app;</application> アプリケーションまたはこのマニュアルに関してバグやご意見をご報告いただく場合は、『<ulink url="help:mate-feedback" type="help">MATE Feedback Page</ulink>』を参照してください。
       </para>
 <!-- Translators may also add here feedback address for translations -->
     </legalnotice>

@@ -114,7 +114,7 @@
 
     <legalnotice>  
         <title>Commenti</title>
-      <para> Per segnalare un problema o inviare suggerimenti sull'applicazione <application>&app;</application> o su questo manuale, seguire le istruzioni presenti alla <ulink url="ghelp:mate-feedback" type="help">Pagina di commenti su MATE</ulink>. 
+      <para> Per segnalare un problema o inviare suggerimenti sull'applicazione <application>&app;</application> o su questo manuale, seguire le istruzioni presenti alla <ulink url="help:mate-feedback" type="help">Pagina di commenti su MATE</ulink>. 
       </para>
 <!-- Translators may also add here feedback address for translations -->
     </legalnotice>
