@@ -80,7 +80,7 @@
     </releaseinfo>
 
     <legalnotice><title>意見反應</title>
-      <para>如果要對 <application>&app;</application> 應用程式或本手冊提出相關錯誤報告或建議，請遵照 <ulink url="ghelp:mate-feedback" type="help">MATE Feedback Page</ulink> 的指示。
+      <para>如果要對 <application>&app;</application> 應用程式或本手冊提出相關錯誤報告或建議，請遵照 <ulink url="help:mate-feedback" type="help">MATE Feedback Page</ulink> 的指示。
       </para>
 <!-- Translators may also add here feedback address for translations -->
     </legalnotice>
