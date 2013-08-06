@@ -1,492 +1,508 @@
-# Hungarian translation of mucharmap.
-# Copyright (C) 2003-2004, 2005, 2006, 2007, 2008, 2009, 2010 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mucharmap package.
-#
-# Andras Timar <timar at fsf dot hu>, 2003-2004.
-# Laszlo Dvornik <dvornikl at mailbox dot hu>, 2004.
-# Gabor Kelemen <kelemeng at mate dot hu>, 2005, 2006, 2007, 2008, 2009, 2010.
-# Mate ORY <orymate at gmail d0t com>, 2006, 2008, 2009.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Gabor Kelemen <kelemeng at mate dot hu>, 2005-2010
+# Laszlo Dvornik <dvornikl at mailbox dot hu>, 2004
+# Mate ORY <orymate at gmail d0t com>, 2006,2008-2009
 msgid ""
 msgstr ""
-"Project-Id-Version: mucharmap master\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-08-31 00:58+0200\n"
-"PO-Revision-Date: 2010-08-31 00:56+0200\n"
-"Last-Translator: Gabor Kelemen <kelemeng at mate dot hu>\n"
-"Language-Team: Hungarian <mate at fsf dot hu>\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2013-06-12 17:20+0200\n"
+"PO-Revision-Date: 2013-07-12 08:49+0000\n"
+"Last-Translator: Rezső Páder <rezso@rezso.net>\n"
+"Language-Team: Hungarian (http://www.transifex.com/projects/p/MATE/language/hu/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
-"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+"Language: hu\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../mucharmap.desktop.in.in.h:1 ../mucharmap/mucharmap-window.c:915
-#: ../mucharmap/main.c:80
+#: ../mucharmap.desktop.in.in.h:1 ../mucharmap/mucharmap-window.c:533
+#: ../mucharmap/main.c:32
+msgid "MATE Character Map"
+msgstr "MATE Karaktertábla"
+
+#: ../mucharmap.desktop.in.in.h:2 ../mucharmap/mucharmap-window.c:935
+#: ../mucharmap/main.c:70
 msgid "Character Map"
 msgstr "Karaktertábla"
 
-#: ../mucharmap.desktop.in.in.h:2
+#: ../mucharmap.desktop.in.in.h:3
 msgid "Insert special characters into documents"
 msgstr "Különleges karakterek dokumentumokba illesztése"
 
-#: ../mucharmap/mucharmap-charmap.c:573
+#: ../mucharmap/mucharmap-block-chapters-model.c:83
+msgid "All"
+msgstr "Összes"
+
+#: ../mucharmap/mucharmap-block-chapters-model.c:186
+msgid "Unicode Block"
+msgstr "Unicode-blokk"
+
+#: ../mucharmap/mucharmap-charmap.c:575
 msgid "Canonical decomposition:"
 msgstr "Kanonikus dekompozíció:"
 
-#: ../mucharmap/mucharmap-charmap.c:616 ../mucharmap/mucharmap-chartable.c:553
+#: ../mucharmap/mucharmap-charmap.c:618 ../mucharmap/mucharmap-chartable.c:555
 msgid "[not a printable character]"
 msgstr "[nem nyomtatható karakter]"
 
-#: ../mucharmap/mucharmap-charmap.c:630
+#: ../mucharmap/mucharmap-charmap.c:632
 msgid "General Character Properties"
 msgstr "Általános karaktertulajdonságok"
 
-#: ../mucharmap/mucharmap-charmap.c:636
+#: ../mucharmap/mucharmap-charmap.c:638
 msgid "In Unicode since:"
 msgstr "Unicode-ba került:"
 
 #. character category
-#: ../mucharmap/mucharmap-charmap.c:640
+#: ../mucharmap/mucharmap-charmap.c:642
 msgid "Unicode category:"
 msgstr "Unicode-kategória:"
 
-#: ../mucharmap/mucharmap-charmap.c:649
+#: ../mucharmap/mucharmap-charmap.c:651
 msgid "Various Useful Representations"
 msgstr "Néhány hasznos reprezentáció"
 
-#: ../mucharmap/mucharmap-charmap.c:659
+#: ../mucharmap/mucharmap-charmap.c:661
 msgid "UTF-8:"
 msgstr "UTF-8:"
 
-#: ../mucharmap/mucharmap-charmap.c:667
+#: ../mucharmap/mucharmap-charmap.c:669
 msgid "UTF-16:"
 msgstr "UTF-16:"
 
-#: ../mucharmap/mucharmap-charmap.c:678
+#: ../mucharmap/mucharmap-charmap.c:680
 msgid "C octal escaped UTF-8:"
 msgstr "C oktális escape-elt UTF-8:"
 
-#: ../mucharmap/mucharmap-charmap.c:688
+#: ../mucharmap/mucharmap-charmap.c:690
 msgid "XML decimal entity:"
 msgstr "XML decimális entitás:"
 
-#: ../mucharmap/mucharmap-charmap.c:699
+#: ../mucharmap/mucharmap-charmap.c:701
 msgid "Annotations and Cross References"
 msgstr "Magyarázó jegyzetek és kereszthivatkozások"
 
-#: ../mucharmap/mucharmap-charmap.c:706
+#: ../mucharmap/mucharmap-charmap.c:708
 msgid "Alias names:"
 msgstr "Álnevek:"
 
-#: ../mucharmap/mucharmap-charmap.c:715
+#: ../mucharmap/mucharmap-charmap.c:717
 msgid "Notes:"
 msgstr "Megjegyzés:"
 
-#: ../mucharmap/mucharmap-charmap.c:724
+#: ../mucharmap/mucharmap-charmap.c:726
 msgid "See also:"
 msgstr "Lásd még:"
 
-#: ../mucharmap/mucharmap-charmap.c:733
+#: ../mucharmap/mucharmap-charmap.c:735
 msgid "Approximate equivalents:"
 msgstr "Nagyjából egyenértékű:"
 
-#: ../mucharmap/mucharmap-charmap.c:742
+#: ../mucharmap/mucharmap-charmap.c:744
 msgid "Equivalents:"
 msgstr "Egyenértékű:"
 
-#: ../mucharmap/mucharmap-charmap.c:758
+#: ../mucharmap/mucharmap-charmap.c:760
 msgid "CJK Ideograph Information"
 msgstr "CJK képírásjel-információ"
 
-#: ../mucharmap/mucharmap-charmap.c:763
+#: ../mucharmap/mucharmap-charmap.c:765
 msgid "Definition in English:"
 msgstr "Angol definíció:"
 
-#: ../mucharmap/mucharmap-charmap.c:768
+#: ../mucharmap/mucharmap-charmap.c:770
 msgid "Mandarin Pronunciation:"
 msgstr "Mandarin kiejtés:"
 
-#: ../mucharmap/mucharmap-charmap.c:773
+#: ../mucharmap/mucharmap-charmap.c:775
 msgid "Cantonese Pronunciation:"
 msgstr "Kantoni kiejtés:"
 
-#: ../mucharmap/mucharmap-charmap.c:778
+#: ../mucharmap/mucharmap-charmap.c:780
 msgid "Japanese On Pronunciation:"
 msgstr "Japán on kiejtés:"
 
-#: ../mucharmap/mucharmap-charmap.c:783
+#: ../mucharmap/mucharmap-charmap.c:785
 msgid "Japanese Kun Pronunciation:"
 msgstr "Japán kun kiejtés:"
 
-#: ../mucharmap/mucharmap-charmap.c:788
+#: ../mucharmap/mucharmap-charmap.c:790
 msgid "Tang Pronunciation:"
 msgstr "Tang kiejtés:"
 
-#: ../mucharmap/mucharmap-charmap.c:793
+#: ../mucharmap/mucharmap-charmap.c:795
 msgid "Korean Pronunciation:"
 msgstr "Koreai kiejtés:"
 
-#: ../mucharmap/mucharmap-charmap.c:1182
+#: ../mucharmap/mucharmap-charmap.c:1184
 msgid "Characte_r Table"
 msgstr "Karakte_rtábla"
 
-#: ../mucharmap/mucharmap-charmap.c:1228
+#: ../mucharmap/mucharmap-charmap.c:1230
 msgid "Character _Details"
 msgstr "Karakter _adatai"
 
-#: ../mucharmap/mucharmap-chartable.c:1452
-msgid "Unknown character, unable to identify."
-msgstr "Ismeretlen karakter, nem azonosítható."
-
-#: ../mucharmap/mucharmap-chartable.c:1454
-#: ../mucharmap/mucharmap-search-dialog.c:589
-msgid "Not found."
-msgstr "Nem található."
-
-#: ../mucharmap/mucharmap-chartable.c:1457
-msgid "Character found."
-msgstr "Karakter megtalálva."
-
-#: ../mucharmap/mucharmap-chartable-accessible.c:829
+#: ../mucharmap/mucharmap-chartable-accessible.c:831
 msgid "Character Table"
 msgstr "Karaktertábla"
 
-#: ../mucharmap/mucharmap-mini-fontsel.c:282
+#: ../mucharmap/mucharmap-chartable.c:1467
+msgid "Unknown character, unable to identify."
+msgstr "Ismeretlen karakter, nem azonosítható."
+
+#: ../mucharmap/mucharmap-chartable.c:1469
+#: ../mucharmap/mucharmap-search-dialog.c:591
+msgid "Not found."
+msgstr "Nem található."
+
+#: ../mucharmap/mucharmap-chartable.c:1472
+msgid "Character found."
+msgstr "Karakter megtalálva."
+
+#: ../mucharmap/mucharmap-mini-fontsel.c:284
 msgid "Font"
 msgstr "Betűkészlet"
 
-#: ../mucharmap/mucharmap-mini-fontsel.c:295
+#: ../mucharmap/mucharmap-mini-fontsel.c:297
 msgid "Font Family"
 msgstr "Betűcsalád"
 
-#: ../mucharmap/mucharmap-mini-fontsel.c:313
+#: ../mucharmap/mucharmap-mini-fontsel.c:315
 msgid "Font Size"
 msgstr "Betűméret"
 
-#: ../mucharmap/mucharmap-settings.c:71
-msgid "MateConf could not be initialized."
-msgstr "A MateConf nem inicializálható."
+#: ../mucharmap/mucharmap-script-chapters-model.c:132
+msgid "Script"
+msgstr "Írásrendszer"
 
 #. Unicode assigns "Common" as the script name for any character not
 #. * specifically listed in Scripts.txt
-#: ../mucharmap/mucharmap-script-codepoint-list.c:463
-#: ../mucharmap/unicode-scripts.h:30
+#: ../mucharmap/mucharmap-script-codepoint-list.c:473
+#: ../mucharmap/unicode-scripts.h:33
 msgid "Common"
 msgstr "Közös"
 
-#: ../mucharmap/mucharmap-unicode-info.c:99
+#: ../mucharmap/mucharmap-search-dialog.c:571
+msgid "Information"
+msgstr "Információ"
+
+#. follow hig guidelines
+#: ../mucharmap/mucharmap-search-dialog.c:737
+msgid "Find"
+msgstr "Keresés"
+
+#: ../mucharmap/mucharmap-search-dialog.c:755
+msgid "_Previous"
+msgstr "_Előző"
+
+#: ../mucharmap/mucharmap-search-dialog.c:766
+msgid "_Next"
+msgstr "Kö_vetkező"
+
+#: ../mucharmap/mucharmap-search-dialog.c:781
+msgid "_Search:"
+msgstr "_Keresés:"
+
+#: ../mucharmap/mucharmap-search-dialog.c:791
+msgid "Match _whole word"
+msgstr "_Teljes szó"
+
+#: ../mucharmap/mucharmap-search-dialog.c:796
+msgid "Search in character _details"
+msgstr "Keresés a karakter _adatai közt"
+
+#: ../mucharmap/mucharmap-unicode-info.c:98
 msgid "<Non Private Use High Surrogate>"
 msgstr "<Felső pótlás nem személyes felhasználásra>"
 
-#: ../mucharmap/mucharmap-unicode-info.c:101
+#: ../mucharmap/mucharmap-unicode-info.c:102
 msgid "<Private Use High Surrogate>"
 msgstr "<Felső pótlás személyes felhasználásra>"
 
-#: ../mucharmap/mucharmap-unicode-info.c:103
+#: ../mucharmap/mucharmap-unicode-info.c:106
 msgid "<Low Surrogate>"
 msgstr "<Alsó pótlás>"
 
-#: ../mucharmap/mucharmap-unicode-info.c:105
+#: ../mucharmap/mucharmap-unicode-info.c:110
 msgid "<Private Use>"
 msgstr "<Személyes felhasználásra>"
 
-#: ../mucharmap/mucharmap-unicode-info.c:107
+#: ../mucharmap/mucharmap-unicode-info.c:114
 msgid "<Plane 15 Private Use>"
 msgstr "<15. sík személyes felhasználásra>"
 
-#: ../mucharmap/mucharmap-unicode-info.c:109
+#: ../mucharmap/mucharmap-unicode-info.c:118
 msgid "<Plane 16 Private Use>"
 msgstr "<16. sík személyes felhasználásra>"
 
-#: ../mucharmap/mucharmap-unicode-info.c:114
+#: ../mucharmap/mucharmap-unicode-info.c:126
 msgid "<not assigned>"
 msgstr "<nincs hozzárendelve>"
 
-#: ../mucharmap/mucharmap-unicode-info.c:127
+#: ../mucharmap/mucharmap-unicode-info.c:141
 msgid "Other, Control"
 msgstr "Egyéb, vezérlő"
 
-#: ../mucharmap/mucharmap-unicode-info.c:128
+#: ../mucharmap/mucharmap-unicode-info.c:142
 msgid "Other, Format"
 msgstr "Egyéb, formátum"
 
-#: ../mucharmap/mucharmap-unicode-info.c:129
+#: ../mucharmap/mucharmap-unicode-info.c:143
 msgid "Other, Not Assigned"
 msgstr "Egyéb, nem hozzárendelt"
 
-#: ../mucharmap/mucharmap-unicode-info.c:130
+#: ../mucharmap/mucharmap-unicode-info.c:144
 msgid "Other, Private Use"
 msgstr "Egyéb, személyes felhasználásra"
 
-#: ../mucharmap/mucharmap-unicode-info.c:131
+#: ../mucharmap/mucharmap-unicode-info.c:145
 msgid "Other, Surrogate"
 msgstr "Egyéb, pótlás"
 
-#: ../mucharmap/mucharmap-unicode-info.c:132
+#: ../mucharmap/mucharmap-unicode-info.c:146
 msgid "Letter, Lowercase"
 msgstr "Betű, kisbetű"
 
-#: ../mucharmap/mucharmap-unicode-info.c:133
+#: ../mucharmap/mucharmap-unicode-info.c:147
 msgid "Letter, Modifier"
 msgstr "Betű, módosító"
 
-#: ../mucharmap/mucharmap-unicode-info.c:134
+#: ../mucharmap/mucharmap-unicode-info.c:148
 msgid "Letter, Other"
 msgstr "Betű, egyéb"
 
-#: ../mucharmap/mucharmap-unicode-info.c:135
+#: ../mucharmap/mucharmap-unicode-info.c:149
 msgid "Letter, Titlecase"
 msgstr "Betű, nagy kezdőbetű"
 
-#: ../mucharmap/mucharmap-unicode-info.c:136
+#: ../mucharmap/mucharmap-unicode-info.c:150
 msgid "Letter, Uppercase"
 msgstr "Betű, nagybetű"
 
-#: ../mucharmap/mucharmap-unicode-info.c:137
+#: ../mucharmap/mucharmap-unicode-info.c:151
 msgid "Mark, Spacing Combining"
 msgstr "Jel, kombinált elválasztó"
 
-#: ../mucharmap/mucharmap-unicode-info.c:138
+#: ../mucharmap/mucharmap-unicode-info.c:152
 msgid "Mark, Enclosing"
 msgstr "Jel, lezárt"
 
-#: ../mucharmap/mucharmap-unicode-info.c:139
+#: ../mucharmap/mucharmap-unicode-info.c:153
 msgid "Mark, Non-Spacing"
 msgstr "Jel, nem-elválasztó"
 
-#: ../mucharmap/mucharmap-unicode-info.c:140
+#: ../mucharmap/mucharmap-unicode-info.c:154
 msgid "Number, Decimal Digit"
 msgstr "Szám, decimális számjegy"
 
-#: ../mucharmap/mucharmap-unicode-info.c:141
+#: ../mucharmap/mucharmap-unicode-info.c:155
 msgid "Number, Letter"
 msgstr "Szám, betű"
 
-#: ../mucharmap/mucharmap-unicode-info.c:142
+#: ../mucharmap/mucharmap-unicode-info.c:156
 msgid "Number, Other"
 msgstr "Szám, egyéb"
 
-#: ../mucharmap/mucharmap-unicode-info.c:143
+#: ../mucharmap/mucharmap-unicode-info.c:157
 msgid "Punctuation, Connector"
 msgstr "Központozás, összekötő"
 
-#: ../mucharmap/mucharmap-unicode-info.c:144
+#: ../mucharmap/mucharmap-unicode-info.c:158
 msgid "Punctuation, Dash"
 msgstr "Központozás, kötőjel"
 
-#: ../mucharmap/mucharmap-unicode-info.c:145
+#: ../mucharmap/mucharmap-unicode-info.c:159
 msgid "Punctuation, Close"
 msgstr "Központozás, lezáró"
 
-#: ../mucharmap/mucharmap-unicode-info.c:146
+#: ../mucharmap/mucharmap-unicode-info.c:160
 msgid "Punctuation, Final Quote"
 msgstr "Központozás, záró idézőjel"
 
-#: ../mucharmap/mucharmap-unicode-info.c:147
+#: ../mucharmap/mucharmap-unicode-info.c:161
 msgid "Punctuation, Initial Quote"
 msgstr "Központozás, nyitó idézőjel"
 
-#: ../mucharmap/mucharmap-unicode-info.c:148
+#: ../mucharmap/mucharmap-unicode-info.c:162
 msgid "Punctuation, Other"
 msgstr "Központozás, egyéb"
 
-#: ../mucharmap/mucharmap-unicode-info.c:149
+#: ../mucharmap/mucharmap-unicode-info.c:163
 msgid "Punctuation, Open"
 msgstr "Központozás, nyitó"
 
-#: ../mucharmap/mucharmap-unicode-info.c:150
+#: ../mucharmap/mucharmap-unicode-info.c:164
 msgid "Symbol, Currency"
 msgstr "Szimbólum, pénznem"
 
-#: ../mucharmap/mucharmap-unicode-info.c:151
+#: ../mucharmap/mucharmap-unicode-info.c:165
 msgid "Symbol, Modifier"
 msgstr "Szimbólum, módosító"
 
-#: ../mucharmap/mucharmap-unicode-info.c:152
+#: ../mucharmap/mucharmap-unicode-info.c:166
 msgid "Symbol, Math"
 msgstr "Szimbólum, matematikai"
 
-#: ../mucharmap/mucharmap-unicode-info.c:153
+#: ../mucharmap/mucharmap-unicode-info.c:167
 msgid "Symbol, Other"
 msgstr "Szimbólum, egyéb"
 
-#: ../mucharmap/mucharmap-unicode-info.c:154
+#: ../mucharmap/mucharmap-unicode-info.c:168
 msgid "Separator, Line"
 msgstr "Elválasztó, sor"
 
-#: ../mucharmap/mucharmap-unicode-info.c:155
+#: ../mucharmap/mucharmap-unicode-info.c:169
 msgid "Separator, Paragraph"
 msgstr "Elválasztó, bekezdés"
 
-#: ../mucharmap/mucharmap-unicode-info.c:156
+#: ../mucharmap/mucharmap-unicode-info.c:170
 msgid "Separator, Space"
 msgstr "Elválasztó, szóköz"
 
-#: ../mucharmap/mucharmap-window.c:246
+#: ../mucharmap/mucharmap-window.c:253
 msgid "Searching…"
 msgstr "Keresés…"
 
-#: ../mucharmap/mucharmap-window.c:493
+#: ../mucharmap/mucharmap-window.c:501
 msgid ""
 "Mucharmap is free software; you can redistribute it and/or modify it under "
 "the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 3 of the License, or (at your option) "
 "any later version."
-msgstr ""
-"A Mucharmap szabad szoftver, terjesztheti és/vagy módosíthatja a Free "
-"Software Foundation által kiadott GNU General Public License harmadik (vagy "
-"bármely későbbi) változatában foglaltak alapján"
-
-#: ../mucharmap/mucharmap-window.c:497
-msgid ""
-"Permission is hereby granted, free of charge, to any person obtaining a copy "
-"of the Unicode data files to deal in them without restriction, including "
-"without limitation the rights to use, copy, modify, merge, publish, "
-"distribute, and/or sell copies."
-msgstr ""
-"Ezennel engedélyezzük, hogy bárki ingyenesen beszerezze az Unicode "
-"adatfájlok másolatát, azok korlátozásoktól mentes kezelését, beleértve a "
-"felhasználásra, másolásra, összefésülésre, közzétételre, terjesztésre és/"
-"vagy másolatok eladására vonatkozó jogokat."
-
-#: ../mucharmap/mucharmap-window.c:501
-msgid ""
-"Mucharmap and the Unicode data files are distributed in the hope that they "
-"will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty "
-"of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General "
-"Public License and Unicode Copyright for more details."
-msgstr ""
-"A Mucharmap programot és az Unicode adatfájlokat abban a reményben "
-"terjesztjük, hogy hasznosak lesznek, de nem vállalunk SEMMIFÉLE GARANCIÁT, "
-"még olyan értelemben sem, hogy a program alkalmas-e a KÖZREADÁSRA vagy EGY "
-"BIZONYOS FELADAT ELVÉGZÉSÉRE. További részletekért tanulmányozza a GNU GPL "
-"licencet."
+msgstr "A Mucharmap szabad szoftver, terjesztheti és/vagy módosíthatja a Free Software Foundation által kiadott GNU General Public License harmadik (vagy bármely későbbi) változatában foglaltak alapján"
 
 #: ../mucharmap/mucharmap-window.c:505
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"Mucharmap; if not, write to the Free Software Foundation, Inc., 59 Temple "
-"Place, Suite 330, Boston, MA  02110-1301  USA"
-msgstr ""
-"A Mucharmap programhoz a GNU General Public License egy példánya is jár, ha "
-"nem kapta meg, írjon a Free Software Foundation Inc.-nek. Levélcímük: 59 "
-"Temple Place, Suite 330, Boston, MA 02111-1307, USA."
+"Permission is hereby granted, free of charge, to any person obtaining a copy"
+" of the Unicode data files to deal in them without restriction, including "
+"without limitation the rights to use, copy, modify, merge, publish, "
+"distribute, and/or sell copies."
+msgstr "Ezennel engedélyezzük, hogy bárki ingyenesen beszerezze az Unicode adatfájlok másolatát, azok korlátozásoktól mentes kezelését, beleértve a felhasználásra, másolásra, összefésülésre, közzétételre, terjesztésre és/vagy másolatok eladására vonatkozó jogokat."
 
-#: ../mucharmap/mucharmap-window.c:508
+#: ../mucharmap/mucharmap-window.c:509
+msgid ""
+"Mucharmap and the Unicode data files are distributed in the hope that they "
+"will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty "
+"of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General"
+" Public License and Unicode Copyright for more details."
+msgstr "A Mucharmap programot és az Unicode adatfájlokat abban a reményben terjesztjük, hogy hasznosak lesznek, de nem vállalunk SEMMIFÉLE GARANCIÁT, még olyan értelemben sem, hogy a program alkalmas-e a KÖZREADÁSRA vagy EGY BIZONYOS FELADAT ELVÉGZÉSÉRE. További részletekért tanulmányozza a GNU GPL licencet."
+
+#: ../mucharmap/mucharmap-window.c:513
+msgid ""
+"You should have received a copy of the GNU General Public License along with"
+" Mucharmap; if not, write to the Free Software Foundation, Inc., 51 Franklin"
+" St, Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+
+#: ../mucharmap/mucharmap-window.c:516
 msgid ""
 "Also you should have received a copy of the Unicode Copyright along with "
-"Mucharmap; you can always find it at Unicode's website: http://www.unicode."
-"org/copyright.html"
-msgstr ""
-"Ezen kívül a Mucharmappal együtt kapnia kellett egy példányt az Unicode "
-"Copyright-ból, ezt mindig megtalálhatja az Unicode weboldalán: http://www."
-"unicode.org/copyright.html"
+"Mucharmap; you can always find it at Unicode's website: "
+"http://www.unicode.org/copyright.html"
+msgstr "Ezen kívül a Mucharmappal együtt kapnia kellett egy példányt az Unicode Copyright-ból, ezt mindig megtalálhatja az Unicode weboldalán: http://www.unicode.org/copyright.html"
 
-#: ../mucharmap/mucharmap-window.c:521 ../mucharmap/main.c:37
-msgid "MATE Character Map"
-msgstr "MATE Karaktertábla"
+#: ../mucharmap/mucharmap-window.c:535
+msgid "Based on the Unicode Character Database 6.2"
+msgstr "Az Unicode karakter-adatbázis 6.2-es változata alapján"
 
-#: ../mucharmap/mucharmap-window.c:523
-msgid "Based on the Unicode Character Database 5.2"
-msgstr "Az Unicode karakter-adatbázis 5.2-es változata alapján"
-
-#: ../mucharmap/mucharmap-window.c:532
+#: ../mucharmap/mucharmap-window.c:544
 msgid "translator-credits"
-msgstr ""
-"Dvornik László <dvornikl at mailbox dot hu>\n"
-"Kelemen Gábor <kelemeng at mate dot hu>\n"
-"Tímár András <timar at mate dot hu>\n"
-"Őry Máté <orymate at gmail dot com>"
+msgstr "Dvornik László <dvornikl at mailbox dot hu>\nKelemen Gábor <kelemeng at mate dot hu>\nTímár András <timar at mate dot hu>\nŐry Máté <orymate at gmail dot com>"
 
-#: ../mucharmap/mucharmap-window.c:607 ../mucharmap/mucharmap-window.c:884
+#: ../mucharmap/mucharmap-window.c:619 ../mucharmap/mucharmap-window.c:901
 msgid "Next Script"
 msgstr "Következő írásrendszer"
 
-#: ../mucharmap/mucharmap-window.c:607 ../mucharmap/mucharmap-window.c:886
+#: ../mucharmap/mucharmap-window.c:619 ../mucharmap/mucharmap-window.c:903
 msgid "Previous Script"
 msgstr "Előző írásrendszer"
 
-#: ../mucharmap/mucharmap-window.c:612
+#: ../mucharmap/mucharmap-window.c:624
 msgid "Next Block"
 msgstr "Következő blokk"
 
-#: ../mucharmap/mucharmap-window.c:612
+#: ../mucharmap/mucharmap-window.c:624
 msgid "Previous Block"
 msgstr "Előző blokk"
 
-#: ../mucharmap/mucharmap-window.c:847
+#: ../mucharmap/mucharmap-window.c:864
 msgid "_File"
 msgstr "Fáj_l"
 
-#: ../mucharmap/mucharmap-window.c:848
+#: ../mucharmap/mucharmap-window.c:865
 msgid "_View"
 msgstr "_Nézet"
 
-#: ../mucharmap/mucharmap-window.c:849
+#: ../mucharmap/mucharmap-window.c:866
 msgid "_Search"
 msgstr "_Keresés"
 
-#: ../mucharmap/mucharmap-window.c:850
+#: ../mucharmap/mucharmap-window.c:867
 msgid "_Go"
 msgstr "_Ugrás"
 
-#: ../mucharmap/mucharmap-window.c:851
+#: ../mucharmap/mucharmap-window.c:868
 msgid "_Help"
 msgstr "_Súgó"
 
-#: ../mucharmap/mucharmap-window.c:854
+#: ../mucharmap/mucharmap-window.c:871
 msgid "Page _Setup"
 msgstr "Oldal_beállítás"
 
-#: ../mucharmap/mucharmap-window.c:875
+#: ../mucharmap/mucharmap-window.c:892
 msgid "Find _Next"
 msgstr "Kö_vetkező találat"
 
-#: ../mucharmap/mucharmap-window.c:877
+#: ../mucharmap/mucharmap-window.c:894
 msgid "Find _Previous"
 msgstr "_Előző találat"
 
-#: ../mucharmap/mucharmap-window.c:880
+#: ../mucharmap/mucharmap-window.c:897
 msgid "_Next Character"
 msgstr "_Következő karakter"
 
-#: ../mucharmap/mucharmap-window.c:882
+#: ../mucharmap/mucharmap-window.c:899
 msgid "_Previous Character"
 msgstr "_Előző karakter"
 
-#: ../mucharmap/mucharmap-window.c:889
+#: ../mucharmap/mucharmap-window.c:906
 msgid "_Contents"
 msgstr "_Tartalom"
 
-#: ../mucharmap/mucharmap-window.c:891
+#: ../mucharmap/mucharmap-window.c:908
 msgid "_About"
 msgstr "_Névjegy"
 
-#: ../mucharmap/mucharmap-window.c:901
+#: ../mucharmap/mucharmap-window.c:918
 msgid "By _Script"
 msgstr "Írá_srendszer szerint"
 
-#: ../mucharmap/mucharmap-window.c:903
+#: ../mucharmap/mucharmap-window.c:920
 msgid "By _Unicode Block"
 msgstr "_Unicode-blokk szerint"
 
-#: ../mucharmap/mucharmap-window.c:908
+#: ../mucharmap/mucharmap-window.c:925
 msgid "Snap _Columns to Power of Two"
 msgstr "_Oszlopok összecsukása kettő hatványára"
 
-#: ../mucharmap/mucharmap-window.c:977
+#: ../mucharmap/mucharmap-window.c:993
 msgid "_Text to copy:"
 msgstr "Másolan_dó szöveg:"
 
-#: ../mucharmap/mucharmap-window.c:984
+#: ../mucharmap/mucharmap-window.c:1000
 msgid "Copy to the clipboard."
 msgstr "Másolás a vágólapra."
 
-#: ../mucharmap/main.c:55
+#: ../mucharmap/main.c:48
 msgid "Font to start with; ex: 'Serif 27'"
 msgstr "Kiindulási betűkészlet; például „Serif 27”"
 
-#: ../mucharmap/main.c:55
+#: ../mucharmap/main.c:48
 msgid "FONT"
 msgstr "BETŰKÉSZLET"
 
@@ -522,7 +538,7 @@ msgstr "Összeolvadó diakritikus jelek"
 msgid "Greek and Coptic"
 msgstr "Görög és kopt"
 
-#: ../mucharmap/unicode-blocks.h:22 ../mucharmap/unicode-scripts.h:34
+#: ../mucharmap/unicode-blocks.h:22 ../mucharmap/unicode-scripts.h:37
 msgid "Cyrillic"
 msgstr "Cirill"
 
@@ -534,7 +550,7 @@ msgstr "Cirill kiegészítés"
 msgid "Armenian"
 msgstr "Örmény"
 
-#: ../mucharmap/unicode-blocks.h:25 ../mucharmap/unicode-scripts.h:48
+#: ../mucharmap/unicode-blocks.h:25 ../mucharmap/unicode-scripts.h:51
 msgid "Hebrew"
 msgstr "Héber"
 
@@ -542,7 +558,7 @@ msgstr "Héber"
 msgid "Arabic"
 msgstr "Arab"
 
-#: ../mucharmap/unicode-blocks.h:27 ../mucharmap/unicode-scripts.h:93
+#: ../mucharmap/unicode-blocks.h:27 ../mucharmap/unicode-scripts.h:102
 msgid "Syriac"
 msgstr "Szír"
 
@@ -550,815 +566,866 @@ msgstr "Szír"
 msgid "Arabic Supplement"
 msgstr "Arab kiegészítés"
 
-#: ../mucharmap/unicode-blocks.h:29 ../mucharmap/unicode-scripts.h:101
+#: ../mucharmap/unicode-blocks.h:29 ../mucharmap/unicode-scripts.h:111
 msgid "Thaana"
 msgstr "Thaana"
 
-#: ../mucharmap/unicode-blocks.h:30 ../mucharmap/unicode-scripts.h:73
+#: ../mucharmap/unicode-blocks.h:30 ../mucharmap/unicode-scripts.h:80
 msgid "N'Ko"
 msgstr "N’Ko"
 
-#: ../mucharmap/unicode-blocks.h:31 ../mucharmap/unicode-scripts.h:87
+#: ../mucharmap/unicode-blocks.h:31 ../mucharmap/unicode-scripts.h:94
 msgid "Samaritan"
 msgstr "Szamaritánus"
 
-#: ../mucharmap/unicode-blocks.h:32 ../mucharmap/unicode-scripts.h:36
+#: ../mucharmap/unicode-blocks.h:32 ../mucharmap/unicode-scripts.h:73
+msgid "Mandaic"
+msgstr "Mandeus"
+
+#: ../mucharmap/unicode-blocks.h:33
+msgid "Arabic Extended-A"
+msgstr "Arab bővített – A"
+
+#: ../mucharmap/unicode-blocks.h:34 ../mucharmap/unicode-scripts.h:39
 msgid "Devanagari"
 msgstr "Devanagari"
 
-#: ../mucharmap/unicode-blocks.h:33 ../mucharmap/unicode-scripts.h:21
+#: ../mucharmap/unicode-blocks.h:35 ../mucharmap/unicode-scripts.h:22
 msgid "Bengali"
 msgstr "Bengáli"
 
-#: ../mucharmap/unicode-blocks.h:34 ../mucharmap/unicode-scripts.h:44
+#: ../mucharmap/unicode-blocks.h:36 ../mucharmap/unicode-scripts.h:47
 msgid "Gurmukhi"
 msgstr "Gurmukhi"
 
-#: ../mucharmap/unicode-blocks.h:35 ../mucharmap/unicode-scripts.h:43
+#: ../mucharmap/unicode-blocks.h:37 ../mucharmap/unicode-scripts.h:46
 msgid "Gujarati"
 msgstr "Gudzsarati"
 
-#: ../mucharmap/unicode-blocks.h:36 ../mucharmap/unicode-scripts.h:81
+#: ../mucharmap/unicode-blocks.h:38 ../mucharmap/unicode-scripts.h:88
 msgid "Oriya"
 msgstr "Orija"
 
-#: ../mucharmap/unicode-blocks.h:37 ../mucharmap/unicode-scripts.h:99
+#: ../mucharmap/unicode-blocks.h:39 ../mucharmap/unicode-scripts.h:109
 msgid "Tamil"
 msgstr "Tamil"
 
-#: ../mucharmap/unicode-blocks.h:38 ../mucharmap/unicode-scripts.h:100
+#: ../mucharmap/unicode-blocks.h:40 ../mucharmap/unicode-scripts.h:110
 msgid "Telugu"
 msgstr "Telugu"
 
-#: ../mucharmap/unicode-blocks.h:39 ../mucharmap/unicode-scripts.h:56
+#: ../mucharmap/unicode-blocks.h:41 ../mucharmap/unicode-scripts.h:59
 msgid "Kannada"
 msgstr "Kannada"
 
-#: ../mucharmap/unicode-blocks.h:40 ../mucharmap/unicode-scripts.h:69
+#: ../mucharmap/unicode-blocks.h:42 ../mucharmap/unicode-scripts.h:72
 msgid "Malayalam"
 msgstr "Malayalam"
 
-#: ../mucharmap/unicode-blocks.h:41 ../mucharmap/unicode-scripts.h:90
+#: ../mucharmap/unicode-blocks.h:43 ../mucharmap/unicode-scripts.h:98
 msgid "Sinhala"
 msgstr "Szingaléz"
 
-#: ../mucharmap/unicode-blocks.h:42 ../mucharmap/unicode-scripts.h:102
+#: ../mucharmap/unicode-blocks.h:44 ../mucharmap/unicode-scripts.h:112
 msgid "Thai"
 msgstr "Thai"
 
-#: ../mucharmap/unicode-blocks.h:43 ../mucharmap/unicode-scripts.h:61
+#: ../mucharmap/unicode-blocks.h:45 ../mucharmap/unicode-scripts.h:64
 msgid "Lao"
 msgstr "Lao"
 
-#: ../mucharmap/unicode-blocks.h:44 ../mucharmap/unicode-scripts.h:103
+#: ../mucharmap/unicode-blocks.h:46 ../mucharmap/unicode-scripts.h:113
 msgid "Tibetan"
 msgstr "Tibeti"
 
-#: ../mucharmap/unicode-blocks.h:45 ../mucharmap/unicode-scripts.h:72
+#: ../mucharmap/unicode-blocks.h:47 ../mucharmap/unicode-scripts.h:79
 msgid "Myanmar"
 msgstr "Myanmar"
 
-#: ../mucharmap/unicode-blocks.h:46 ../mucharmap/unicode-scripts.h:39
+#: ../mucharmap/unicode-blocks.h:48 ../mucharmap/unicode-scripts.h:42
 msgid "Georgian"
 msgstr "Grúz"
 
-#: ../mucharmap/unicode-blocks.h:47
+#: ../mucharmap/unicode-blocks.h:49
 msgid "Hangul Jamo"
 msgstr "Hangul Jamo"
 
-#: ../mucharmap/unicode-blocks.h:48 ../mucharmap/unicode-scripts.h:38
+#: ../mucharmap/unicode-blocks.h:50 ../mucharmap/unicode-scripts.h:41
 msgid "Ethiopic"
 msgstr "Etióp"
 
-#: ../mucharmap/unicode-blocks.h:49
+#: ../mucharmap/unicode-blocks.h:51
 msgid "Ethiopic Supplement"
 msgstr "Etióp kiegészítés"
 
-#: ../mucharmap/unicode-blocks.h:50 ../mucharmap/unicode-scripts.h:29
+#: ../mucharmap/unicode-blocks.h:52 ../mucharmap/unicode-scripts.h:32
 msgid "Cherokee"
 msgstr "Cherokee"
 
-#: ../mucharmap/unicode-blocks.h:51
+#: ../mucharmap/unicode-blocks.h:53
 msgid "Unified Canadian Aboriginal Syllabics"
 msgstr "Egységes kanadai bennszülött szótagok"
 
-#: ../mucharmap/unicode-blocks.h:52 ../mucharmap/unicode-scripts.h:75
+#: ../mucharmap/unicode-blocks.h:54 ../mucharmap/unicode-scripts.h:82
 msgid "Ogham"
 msgstr "Ogham"
 
-#: ../mucharmap/unicode-blocks.h:53 ../mucharmap/unicode-scripts.h:86
+#: ../mucharmap/unicode-blocks.h:55 ../mucharmap/unicode-scripts.h:93
 msgid "Runic"
 msgstr "Rúnák"
 
-#: ../mucharmap/unicode-blocks.h:54 ../mucharmap/unicode-scripts.h:94
+#: ../mucharmap/unicode-blocks.h:56 ../mucharmap/unicode-scripts.h:103
 msgid "Tagalog"
 msgstr "Tagalog"
 
-#: ../mucharmap/unicode-blocks.h:55 ../mucharmap/unicode-scripts.h:47
+#: ../mucharmap/unicode-blocks.h:57 ../mucharmap/unicode-scripts.h:50
 msgid "Hanunoo"
 msgstr "Hanunoo"
 
-#: ../mucharmap/unicode-blocks.h:56 ../mucharmap/unicode-scripts.h:25
+#: ../mucharmap/unicode-blocks.h:58 ../mucharmap/unicode-scripts.h:27
 msgid "Buhid"
 msgstr "Buhid"
 
-#: ../mucharmap/unicode-blocks.h:57 ../mucharmap/unicode-scripts.h:95
+#: ../mucharmap/unicode-blocks.h:59 ../mucharmap/unicode-scripts.h:104
 msgid "Tagbanwa"
 msgstr "Tagbanwa"
 
-#: ../mucharmap/unicode-blocks.h:58 ../mucharmap/unicode-scripts.h:60
+#: ../mucharmap/unicode-blocks.h:60 ../mucharmap/unicode-scripts.h:63
 msgid "Khmer"
 msgstr "Khmer"
 
-#: ../mucharmap/unicode-blocks.h:59 ../mucharmap/unicode-scripts.h:71
+#: ../mucharmap/unicode-blocks.h:61 ../mucharmap/unicode-scripts.h:78
 msgid "Mongolian"
 msgstr "Mongol"
 
-#: ../mucharmap/unicode-blocks.h:60
+#: ../mucharmap/unicode-blocks.h:62
 msgid "Unified Canadian Aboriginal Syllabics Extended"
 msgstr "Egységes kanadai bennszülött szótagok kiterjesztve"
 
-#: ../mucharmap/unicode-blocks.h:61 ../mucharmap/unicode-scripts.h:64
+#: ../mucharmap/unicode-blocks.h:63 ../mucharmap/unicode-scripts.h:67
 msgid "Limbu"
 msgstr "Limbu"
 
-#: ../mucharmap/unicode-blocks.h:62 ../mucharmap/unicode-scripts.h:96
+#: ../mucharmap/unicode-blocks.h:64 ../mucharmap/unicode-scripts.h:105
 msgid "Tai Le"
 msgstr "Tai Le"
 
-#: ../mucharmap/unicode-blocks.h:63 ../mucharmap/unicode-scripts.h:74
+#: ../mucharmap/unicode-blocks.h:65 ../mucharmap/unicode-scripts.h:81
 msgid "New Tai Lue"
 msgstr "Új Tai Lue"
 
-#: ../mucharmap/unicode-blocks.h:64
+#: ../mucharmap/unicode-blocks.h:66
 msgid "Khmer Symbols"
 msgstr "Khmer szimbólumok"
 
-#: ../mucharmap/unicode-blocks.h:65 ../mucharmap/unicode-scripts.h:24
+#: ../mucharmap/unicode-blocks.h:67 ../mucharmap/unicode-scripts.h:26
 msgid "Buginese"
 msgstr "Buginese"
 
-#: ../mucharmap/unicode-blocks.h:66 ../mucharmap/unicode-scripts.h:97
+#: ../mucharmap/unicode-blocks.h:68 ../mucharmap/unicode-scripts.h:106
 msgid "Tai Tham"
 msgstr "Tai Tham"
 
-#: ../mucharmap/unicode-blocks.h:67 ../mucharmap/unicode-scripts.h:19
+#: ../mucharmap/unicode-blocks.h:69 ../mucharmap/unicode-scripts.h:19
 msgid "Balinese"
 msgstr "Balinéz"
 
-#: ../mucharmap/unicode-blocks.h:68 ../mucharmap/unicode-scripts.h:91
+#: ../mucharmap/unicode-blocks.h:70 ../mucharmap/unicode-scripts.h:100
 msgid "Sundanese"
 msgstr "Szundai"
 
-#: ../mucharmap/unicode-blocks.h:69 ../mucharmap/unicode-scripts.h:63
+#: ../mucharmap/unicode-blocks.h:71 ../mucharmap/unicode-scripts.h:21
+msgid "Batak"
+msgstr "Batak"
+
+#: ../mucharmap/unicode-blocks.h:72 ../mucharmap/unicode-scripts.h:66
 msgid "Lepcha"
 msgstr "Lepcha"
 
-#: ../mucharmap/unicode-blocks.h:70 ../mucharmap/unicode-scripts.h:76
+#: ../mucharmap/unicode-blocks.h:73 ../mucharmap/unicode-scripts.h:83
 msgid "Ol Chiki"
 msgstr "Ol Chiki"
 
-#: ../mucharmap/unicode-blocks.h:71
+#: ../mucharmap/unicode-blocks.h:74
+msgid "Sundanese Supplement"
+msgstr "Szundanéz kiegészítés"
+
+#: ../mucharmap/unicode-blocks.h:75
 msgid "Vedic Extensions"
 msgstr "Védikus kiterjesztések"
 
-#: ../mucharmap/unicode-blocks.h:72
+#: ../mucharmap/unicode-blocks.h:76
 msgid "Phonetic Extensions"
 msgstr "Fonetikus kiterjesztések"
 
-#: ../mucharmap/unicode-blocks.h:73
+#: ../mucharmap/unicode-blocks.h:77
 msgid "Phonetic Extensions Supplement"
 msgstr "Fonetikus kiterjesztések"
 
-#: ../mucharmap/unicode-blocks.h:74
+#: ../mucharmap/unicode-blocks.h:78
 msgid "Combining Diacritical Marks Supplement"
 msgstr "Összeolvadó diakritikus jelek kiegészítés"
 
-#: ../mucharmap/unicode-blocks.h:75
+#: ../mucharmap/unicode-blocks.h:79
 msgid "Latin Extended Additional"
 msgstr "További latin kiterjesztések"
 
-#: ../mucharmap/unicode-blocks.h:76
+#: ../mucharmap/unicode-blocks.h:80
 msgid "Greek Extended"
 msgstr "Bővített görög"
 
-#: ../mucharmap/unicode-blocks.h:77
+#: ../mucharmap/unicode-blocks.h:81
 msgid "General Punctuation"
 msgstr "Általános központozás"
 
-#: ../mucharmap/unicode-blocks.h:78
+#: ../mucharmap/unicode-blocks.h:82
 msgid "Superscripts and Subscripts"
 msgstr "Alsó és felső index"
 
-#: ../mucharmap/unicode-blocks.h:79
+#: ../mucharmap/unicode-blocks.h:83
 msgid "Currency Symbols"
 msgstr "Pénznemek szimbólumai"
 
-#: ../mucharmap/unicode-blocks.h:80
+#: ../mucharmap/unicode-blocks.h:84
 msgid "Combining Diacritical Marks for Symbols"
 msgstr "Összeolvadó diakritikus jelek szimbólumokhoz"
 
-#: ../mucharmap/unicode-blocks.h:81
+#: ../mucharmap/unicode-blocks.h:85
 msgid "Letterlike Symbols"
 msgstr "Betűszerű szimbólumok"
 
-#: ../mucharmap/unicode-blocks.h:82
+#: ../mucharmap/unicode-blocks.h:86
 msgid "Number Forms"
 msgstr "Számalakok"
 
-#: ../mucharmap/unicode-blocks.h:83
+#: ../mucharmap/unicode-blocks.h:87
 msgid "Arrows"
 msgstr "Nyilak"
 
-#: ../mucharmap/unicode-blocks.h:84
+#: ../mucharmap/unicode-blocks.h:88
 msgid "Mathematical Operators"
 msgstr "Matematikai operátorok"
 
-#: ../mucharmap/unicode-blocks.h:85
+#: ../mucharmap/unicode-blocks.h:89
 msgid "Miscellaneous Technical"
 msgstr "Egyéb műszaki jelek"
 
-#: ../mucharmap/unicode-blocks.h:86
+#: ../mucharmap/unicode-blocks.h:90
 msgid "Control Pictures"
 msgstr "Vezérlőkarakterek jelei"
 
-#: ../mucharmap/unicode-blocks.h:87
+#: ../mucharmap/unicode-blocks.h:91
 msgid "Optical Character Recognition"
 msgstr "Optikai karakterfelismerés"
 
-#: ../mucharmap/unicode-blocks.h:88
+#: ../mucharmap/unicode-blocks.h:92
 msgid "Enclosed Alphanumerics"
 msgstr "Csatolt alfanumerikus karakterek"
 
-#: ../mucharmap/unicode-blocks.h:89
+#: ../mucharmap/unicode-blocks.h:93
 msgid "Box Drawing"
 msgstr "Dobozrajzolás"
 
-#: ../mucharmap/unicode-blocks.h:90
+#: ../mucharmap/unicode-blocks.h:94
 msgid "Block Elements"
 msgstr "Blokkelemek"
 
-#: ../mucharmap/unicode-blocks.h:91
+#: ../mucharmap/unicode-blocks.h:95
 msgid "Geometric Shapes"
 msgstr "Geometriai alakzatok"
 
-#: ../mucharmap/unicode-blocks.h:92
+#: ../mucharmap/unicode-blocks.h:96
 msgid "Miscellaneous Symbols"
 msgstr "Egyéb szimbólumok"
 
-#: ../mucharmap/unicode-blocks.h:93
+#: ../mucharmap/unicode-blocks.h:97
 msgid "Dingbats"
 msgstr "Ábrácskák"
 
-#: ../mucharmap/unicode-blocks.h:94
+#: ../mucharmap/unicode-blocks.h:98
 msgid "Miscellaneous Mathematical Symbols-A"
 msgstr "Egyéb matematikai jelek – A"
 
-#: ../mucharmap/unicode-blocks.h:95
+#: ../mucharmap/unicode-blocks.h:99
 msgid "Supplemental Arrows-A"
 msgstr "Kiegészítő nyilak – A"
 
-#: ../mucharmap/unicode-blocks.h:96
+#: ../mucharmap/unicode-blocks.h:100
 msgid "Braille Patterns"
 msgstr "Braille-jelek"
 
-#: ../mucharmap/unicode-blocks.h:97
+#: ../mucharmap/unicode-blocks.h:101
 msgid "Supplemental Arrows-B"
 msgstr "Kiegészítő nyilak – B"
 
-#: ../mucharmap/unicode-blocks.h:98
+#: ../mucharmap/unicode-blocks.h:102
 msgid "Miscellaneous Mathematical Symbols-B"
 msgstr "Egyéb matematikai jelek – B"
 
-#: ../mucharmap/unicode-blocks.h:99
+#: ../mucharmap/unicode-blocks.h:103
 msgid "Supplemental Mathematical Operators"
 msgstr "Kiegészítő matematikai műveleti jelek"
 
-#: ../mucharmap/unicode-blocks.h:100
+#: ../mucharmap/unicode-blocks.h:104
 msgid "Miscellaneous Symbols and Arrows"
 msgstr "Egyéb szimbólumok és nyilak"
 
-#: ../mucharmap/unicode-blocks.h:101 ../mucharmap/unicode-scripts.h:40
+#: ../mucharmap/unicode-blocks.h:105 ../mucharmap/unicode-scripts.h:43
 msgid "Glagolitic"
 msgstr "Glagolit"
 
-#: ../mucharmap/unicode-blocks.h:102
+#: ../mucharmap/unicode-blocks.h:106
 msgid "Latin Extended-C"
 msgstr "Latin bővített – C"
 
-#: ../mucharmap/unicode-blocks.h:103 ../mucharmap/unicode-scripts.h:31
+#: ../mucharmap/unicode-blocks.h:107 ../mucharmap/unicode-scripts.h:34
 msgid "Coptic"
 msgstr "Kopt"
 
-#: ../mucharmap/unicode-blocks.h:104
+#: ../mucharmap/unicode-blocks.h:108
 msgid "Georgian Supplement"
 msgstr "Grúz kiegészítés"
 
-#: ../mucharmap/unicode-blocks.h:105 ../mucharmap/unicode-scripts.h:104
+#: ../mucharmap/unicode-blocks.h:109 ../mucharmap/unicode-scripts.h:114
 msgid "Tifinagh"
 msgstr "Tifinagh"
 
-#: ../mucharmap/unicode-blocks.h:106
+#: ../mucharmap/unicode-blocks.h:110
 msgid "Ethiopic Extended"
 msgstr "Bővített etióp"
 
-#: ../mucharmap/unicode-blocks.h:107
+#: ../mucharmap/unicode-blocks.h:111
 msgid "Cyrillic Extended-A"
 msgstr "Cirill bővített – A"
 
-#: ../mucharmap/unicode-blocks.h:108
+#: ../mucharmap/unicode-blocks.h:112
 msgid "Supplemental Punctuation"
 msgstr "Kiegészítő írásjelek"
 
-#: ../mucharmap/unicode-blocks.h:109
+#: ../mucharmap/unicode-blocks.h:113
 msgid "CJK Radicals Supplement"
 msgstr "Kiegészítő CJK gyökök"
 
-#: ../mucharmap/unicode-blocks.h:110
+#: ../mucharmap/unicode-blocks.h:114
 msgid "Kangxi Radicals"
 msgstr "Kandzsi gyökök"
 
-#: ../mucharmap/unicode-blocks.h:111
+#: ../mucharmap/unicode-blocks.h:115
 msgid "Ideographic Description Characters"
 msgstr "Ideogrammatikus leíró karakterek"
 
-#: ../mucharmap/unicode-blocks.h:112
+#: ../mucharmap/unicode-blocks.h:116
 msgid "CJK Symbols and Punctuation"
 msgstr "CJK (kínai, japán, koreai) szimbólumok és írásjelek"
 
-#: ../mucharmap/unicode-blocks.h:113 ../mucharmap/unicode-scripts.h:49
+#: ../mucharmap/unicode-blocks.h:117 ../mucharmap/unicode-scripts.h:52
 msgid "Hiragana"
 msgstr "Hiragana"
 
-#: ../mucharmap/unicode-blocks.h:114 ../mucharmap/unicode-scripts.h:57
+#: ../mucharmap/unicode-blocks.h:118 ../mucharmap/unicode-scripts.h:60
 msgid "Katakana"
 msgstr "Katakana"
 
-#: ../mucharmap/unicode-blocks.h:115 ../mucharmap/unicode-scripts.h:22
+#: ../mucharmap/unicode-blocks.h:119 ../mucharmap/unicode-scripts.h:23
 msgid "Bopomofo"
 msgstr "Bopomofo"
 
-#: ../mucharmap/unicode-blocks.h:116
+#: ../mucharmap/unicode-blocks.h:120
 msgid "Hangul Compatibility Jamo"
 msgstr "Hangul-kompatibilis Jamo"
 
-#: ../mucharmap/unicode-blocks.h:117
+#: ../mucharmap/unicode-blocks.h:121
 msgid "Kanbun"
 msgstr "Kanbun"
 
-#: ../mucharmap/unicode-blocks.h:118
+#: ../mucharmap/unicode-blocks.h:122
 msgid "Bopomofo Extended"
 msgstr "Bővített bopofomo"
 
-#: ../mucharmap/unicode-blocks.h:119
+#: ../mucharmap/unicode-blocks.h:123
 msgid "CJK Strokes"
 msgstr "CJK vonások"
 
-#: ../mucharmap/unicode-blocks.h:120
+#: ../mucharmap/unicode-blocks.h:124
 msgid "Katakana Phonetic Extensions"
 msgstr "Katakana fonetikus kiterjesztések"
 
-#: ../mucharmap/unicode-blocks.h:121
+#: ../mucharmap/unicode-blocks.h:125
 msgid "Enclosed CJK Letters and Months"
 msgstr "Csatolt CJK betűk és hónapok"
 
-#: ../mucharmap/unicode-blocks.h:122
+#: ../mucharmap/unicode-blocks.h:126
 msgid "CJK Compatibility"
 msgstr "CJK visszafelé kompatibilitási"
 
-#: ../mucharmap/unicode-blocks.h:123
+#: ../mucharmap/unicode-blocks.h:127
 msgid "CJK Unified Ideographs Extension A"
 msgstr "CJK egyesített ideogramok A kiterjesztés"
 
-#: ../mucharmap/unicode-blocks.h:124
+#: ../mucharmap/unicode-blocks.h:128
 msgid "Yijing Hexagram Symbols"
 msgstr "Yijing Hexagram szimbólumok"
 
-#: ../mucharmap/unicode-blocks.h:125
+#: ../mucharmap/unicode-blocks.h:129
 msgid "CJK Unified Ideographs"
 msgstr "CJK egyesített ideogramok"
 
-#: ../mucharmap/unicode-blocks.h:126
+#: ../mucharmap/unicode-blocks.h:130
 msgid "Yi Syllables"
 msgstr "Yi szótagok"
 
-#: ../mucharmap/unicode-blocks.h:127
+#: ../mucharmap/unicode-blocks.h:131
 msgid "Yi Radicals"
 msgstr "Yi gyökök"
 
-#: ../mucharmap/unicode-blocks.h:128 ../mucharmap/unicode-scripts.h:66
+#: ../mucharmap/unicode-blocks.h:132 ../mucharmap/unicode-scripts.h:69
 msgid "Lisu"
 msgstr "Lisu"
 
-#: ../mucharmap/unicode-blocks.h:129 ../mucharmap/unicode-scripts.h:106
+#: ../mucharmap/unicode-blocks.h:133 ../mucharmap/unicode-scripts.h:116
 msgid "Vai"
 msgstr "Vai"
 
-#: ../mucharmap/unicode-blocks.h:130
+#: ../mucharmap/unicode-blocks.h:134
 msgid "Cyrillic Extended-B"
 msgstr "Cirill bővített – B"
 
-#: ../mucharmap/unicode-blocks.h:131 ../mucharmap/unicode-scripts.h:20
+#: ../mucharmap/unicode-blocks.h:135 ../mucharmap/unicode-scripts.h:20
 msgid "Bamum"
 msgstr "Bamum"
 
-#: ../mucharmap/unicode-blocks.h:132
+#: ../mucharmap/unicode-blocks.h:136
 msgid "Modifier Tone Letters"
 msgstr "Kiejtésmódosító jelek"
 
-#: ../mucharmap/unicode-blocks.h:133
+#: ../mucharmap/unicode-blocks.h:137
 msgid "Latin Extended-D"
 msgstr "Latin bővített – D"
 
-#: ../mucharmap/unicode-blocks.h:134 ../mucharmap/unicode-scripts.h:92
+#: ../mucharmap/unicode-blocks.h:138 ../mucharmap/unicode-scripts.h:101
 msgid "Syloti Nagri"
 msgstr "Syloti Nagri"
 
-#: ../mucharmap/unicode-blocks.h:135
+#: ../mucharmap/unicode-blocks.h:139
 msgid "Common Indic Number Forms"
 msgstr "Általános indiai számalakok"
 
-#: ../mucharmap/unicode-blocks.h:136
+#: ../mucharmap/unicode-blocks.h:140
 msgid "Phags-pa"
 msgstr "Phags-pa"
 
-#: ../mucharmap/unicode-blocks.h:137 ../mucharmap/unicode-scripts.h:88
+#: ../mucharmap/unicode-blocks.h:141 ../mucharmap/unicode-scripts.h:95
 msgid "Saurashtra"
 msgstr "Saurashtra"
 
-#: ../mucharmap/unicode-blocks.h:138
+#: ../mucharmap/unicode-blocks.h:142
 msgid "Devanagari Extended"
 msgstr "Devanagari bővített"
 
-#: ../mucharmap/unicode-blocks.h:139 ../mucharmap/unicode-scripts.h:58
+#: ../mucharmap/unicode-blocks.h:143 ../mucharmap/unicode-scripts.h:61
 msgid "Kayah Li"
 msgstr "Kayah Li"
 
-#: ../mucharmap/unicode-blocks.h:140 ../mucharmap/unicode-scripts.h:85
+#: ../mucharmap/unicode-blocks.h:144 ../mucharmap/unicode-scripts.h:92
 msgid "Rejang"
 msgstr "Rejang"
 
-#: ../mucharmap/unicode-blocks.h:141
+#: ../mucharmap/unicode-blocks.h:145
 msgid "Hangul Jamo Extended-A"
 msgstr "Hangul Jamo bővített – A"
 
-#: ../mucharmap/unicode-blocks.h:142 ../mucharmap/unicode-scripts.h:54
+#: ../mucharmap/unicode-blocks.h:146 ../mucharmap/unicode-scripts.h:57
 msgid "Javanese"
 msgstr "Jávai"
 
-#: ../mucharmap/unicode-blocks.h:143 ../mucharmap/unicode-scripts.h:28
+#: ../mucharmap/unicode-blocks.h:147 ../mucharmap/unicode-scripts.h:31
 msgid "Cham"
 msgstr "Csam"
 
-#: ../mucharmap/unicode-blocks.h:144
+#: ../mucharmap/unicode-blocks.h:148
 msgid "Myanmar Extended-A"
 msgstr "Myanmar bővített – A"
 
-#: ../mucharmap/unicode-blocks.h:145 ../mucharmap/unicode-scripts.h:98
+#: ../mucharmap/unicode-blocks.h:149 ../mucharmap/unicode-scripts.h:107
 msgid "Tai Viet"
 msgstr "Tai Viet"
 
-#: ../mucharmap/unicode-blocks.h:146 ../mucharmap/unicode-scripts.h:70
+#: ../mucharmap/unicode-blocks.h:150
+msgid "Meetei Mayek Extensions"
+msgstr "Meetei Mayek kiterjesztések"
+
+#: ../mucharmap/unicode-blocks.h:151
+msgid "Ethiopic Extended-A"
+msgstr "Bővített etióp – A"
+
+#: ../mucharmap/unicode-blocks.h:152 ../mucharmap/unicode-scripts.h:74
 msgid "Meetei Mayek"
 msgstr "Meetei Mayek"
 
-#: ../mucharmap/unicode-blocks.h:147
+#: ../mucharmap/unicode-blocks.h:153
 msgid "Hangul Syllables"
 msgstr "Hangul szótagok"
 
-#: ../mucharmap/unicode-blocks.h:148
+#: ../mucharmap/unicode-blocks.h:154
 msgid "Hangul Jamo Extended-B"
 msgstr "Hangul Jamo bővített – B"
 
-#: ../mucharmap/unicode-blocks.h:149
+#: ../mucharmap/unicode-blocks.h:155
 msgid "High Surrogates"
 msgstr "Felső pótlások"
 
-#: ../mucharmap/unicode-blocks.h:150
+#: ../mucharmap/unicode-blocks.h:156
 msgid "High Private Use Surrogates"
 msgstr "Felső pótlások személyes felhasználásra"
 
-#: ../mucharmap/unicode-blocks.h:151
+#: ../mucharmap/unicode-blocks.h:157
 msgid "Low Surrogates"
 msgstr "Alsó pótlások"
 
-#: ../mucharmap/unicode-blocks.h:152
+#: ../mucharmap/unicode-blocks.h:158
 msgid "Private Use Area"
 msgstr "Saját használatra kijelölt tartomány"
 
-#: ../mucharmap/unicode-blocks.h:153
+#: ../mucharmap/unicode-blocks.h:159
 msgid "CJK Compatibility Ideographs"
 msgstr "CJK visszafelé kompatibilis ideogramok"
 
-#: ../mucharmap/unicode-blocks.h:154
+#: ../mucharmap/unicode-blocks.h:160
 msgid "Alphabetic Presentation Forms"
 msgstr "Alfabetikus alakok"
 
-#: ../mucharmap/unicode-blocks.h:155
+#: ../mucharmap/unicode-blocks.h:161
 msgid "Arabic Presentation Forms-A"
 msgstr "Arab alakok – A"
 
-#: ../mucharmap/unicode-blocks.h:156
+#: ../mucharmap/unicode-blocks.h:162
 msgid "Variation Selectors"
 msgstr "Variációválasztók"
 
-#: ../mucharmap/unicode-blocks.h:157
+#: ../mucharmap/unicode-blocks.h:163
 msgid "Vertical Forms"
 msgstr "Függőleges alakok"
 
-#: ../mucharmap/unicode-blocks.h:158
+#: ../mucharmap/unicode-blocks.h:164
 msgid "Combining Half Marks"
 msgstr "Összeolvadó fél jelek"
 
-#: ../mucharmap/unicode-blocks.h:159
+#: ../mucharmap/unicode-blocks.h:165
 msgid "CJK Compatibility Forms"
 msgstr "CJK visszafelé kompatibilitási alakok"
 
-#: ../mucharmap/unicode-blocks.h:160
+#: ../mucharmap/unicode-blocks.h:166
 msgid "Small Form Variants"
 msgstr "Kisalakú változatok"
 
-#: ../mucharmap/unicode-blocks.h:161
+#: ../mucharmap/unicode-blocks.h:167
 msgid "Arabic Presentation Forms-B"
 msgstr "Arab alakok – B"
 
-#: ../mucharmap/unicode-blocks.h:162
+#: ../mucharmap/unicode-blocks.h:168
 msgid "Halfwidth and Fullwidth Forms"
 msgstr "Fél- és teljes szélességű alakok"
 
-#: ../mucharmap/unicode-blocks.h:163
+#: ../mucharmap/unicode-blocks.h:169
 msgid "Specials"
 msgstr "Különleges"
 
-#: ../mucharmap/unicode-blocks.h:164
+#: ../mucharmap/unicode-blocks.h:170
 msgid "Linear B Syllabary"
 msgstr "Lineáris B szótagírás"
 
-#: ../mucharmap/unicode-blocks.h:165
+#: ../mucharmap/unicode-blocks.h:171
 msgid "Linear B Ideograms"
 msgstr "Lineáris B ideogrammok"
 
-#: ../mucharmap/unicode-blocks.h:166
+#: ../mucharmap/unicode-blocks.h:172
 msgid "Aegean Numbers"
 msgstr "Égei számok"
 
-#: ../mucharmap/unicode-blocks.h:167
+#: ../mucharmap/unicode-blocks.h:173
 msgid "Ancient Greek Numbers"
 msgstr "Ógörög számok"
 
-#: ../mucharmap/unicode-blocks.h:168
+#: ../mucharmap/unicode-blocks.h:174
 msgid "Ancient Symbols"
 msgstr "Ősi jelek"
 
-#: ../mucharmap/unicode-blocks.h:169
+#: ../mucharmap/unicode-blocks.h:175
 msgid "Phaistos Disc"
 msgstr "Phaisztoszi korong"
 
-#: ../mucharmap/unicode-blocks.h:170 ../mucharmap/unicode-scripts.h:67
+#: ../mucharmap/unicode-blocks.h:176 ../mucharmap/unicode-scripts.h:70
 msgid "Lycian"
 msgstr "Lükiai"
 
-#: ../mucharmap/unicode-blocks.h:171 ../mucharmap/unicode-scripts.h:27
+#: ../mucharmap/unicode-blocks.h:177 ../mucharmap/unicode-scripts.h:29
 msgid "Carian"
 msgstr "Kariai"
 
-#: ../mucharmap/unicode-blocks.h:172 ../mucharmap/unicode-scripts.h:77
+#: ../mucharmap/unicode-blocks.h:178 ../mucharmap/unicode-scripts.h:84
 msgid "Old Italic"
 msgstr "Régi itáliai"
 
-#: ../mucharmap/unicode-blocks.h:173 ../mucharmap/unicode-scripts.h:41
+#: ../mucharmap/unicode-blocks.h:179 ../mucharmap/unicode-scripts.h:44
 msgid "Gothic"
 msgstr "Gót"
 
-#: ../mucharmap/unicode-blocks.h:174 ../mucharmap/unicode-scripts.h:105
+#: ../mucharmap/unicode-blocks.h:180 ../mucharmap/unicode-scripts.h:115
 msgid "Ugaritic"
 msgstr "Ugaritic"
 
-#: ../mucharmap/unicode-blocks.h:175 ../mucharmap/unicode-scripts.h:78
+#: ../mucharmap/unicode-blocks.h:181 ../mucharmap/unicode-scripts.h:85
 msgid "Old Persian"
 msgstr "Óperzsa"
 
-#: ../mucharmap/unicode-blocks.h:176 ../mucharmap/unicode-scripts.h:35
+#: ../mucharmap/unicode-blocks.h:182 ../mucharmap/unicode-scripts.h:38
 msgid "Deseret"
 msgstr "Deseret"
 
-#: ../mucharmap/unicode-blocks.h:177 ../mucharmap/unicode-scripts.h:89
+#: ../mucharmap/unicode-blocks.h:183 ../mucharmap/unicode-scripts.h:97
 msgid "Shavian"
 msgstr "Shavian"
 
-#: ../mucharmap/unicode-blocks.h:178 ../mucharmap/unicode-scripts.h:82
+#: ../mucharmap/unicode-blocks.h:184 ../mucharmap/unicode-scripts.h:89
 msgid "Osmanya"
 msgstr "Osmanya"
 
-#: ../mucharmap/unicode-blocks.h:179
+#: ../mucharmap/unicode-blocks.h:185
 msgid "Cypriot Syllabary"
 msgstr "Ciprióta szótagírás"
 
-#: ../mucharmap/unicode-blocks.h:180 ../mucharmap/unicode-scripts.h:50
+#: ../mucharmap/unicode-blocks.h:186 ../mucharmap/unicode-scripts.h:53
 msgid "Imperial Aramaic"
 msgstr "Birodalmi arámi"
 
-#: ../mucharmap/unicode-blocks.h:181 ../mucharmap/unicode-scripts.h:84
+#: ../mucharmap/unicode-blocks.h:187 ../mucharmap/unicode-scripts.h:91
 msgid "Phoenician"
 msgstr "Föníciai"
 
-#: ../mucharmap/unicode-blocks.h:182 ../mucharmap/unicode-scripts.h:68
+#: ../mucharmap/unicode-blocks.h:188 ../mucharmap/unicode-scripts.h:71
 msgid "Lydian"
 msgstr "Lüd"
 
-#: ../mucharmap/unicode-blocks.h:183 ../mucharmap/unicode-scripts.h:59
+#: ../mucharmap/unicode-blocks.h:189 ../mucharmap/unicode-scripts.h:76
+msgid "Meroitic Hieroglyphs"
+msgstr "Meroita hieroglifák"
+
+#: ../mucharmap/unicode-blocks.h:190 ../mucharmap/unicode-scripts.h:75
+msgid "Meroitic Cursive"
+msgstr "Meroita dőlt"
+
+#: ../mucharmap/unicode-blocks.h:191 ../mucharmap/unicode-scripts.h:62
 msgid "Kharoshthi"
 msgstr "Kharoshthi"
 
-#: ../mucharmap/unicode-blocks.h:184 ../mucharmap/unicode-scripts.h:79
+#: ../mucharmap/unicode-blocks.h:192 ../mucharmap/unicode-scripts.h:86
 msgid "Old South Arabian"
 msgstr "Régi déli arab"
 
-#: ../mucharmap/unicode-blocks.h:185 ../mucharmap/unicode-scripts.h:18
+#: ../mucharmap/unicode-blocks.h:193 ../mucharmap/unicode-scripts.h:18
 msgid "Avestan"
 msgstr "Avesztán"
 
-#: ../mucharmap/unicode-blocks.h:186 ../mucharmap/unicode-scripts.h:53
+#: ../mucharmap/unicode-blocks.h:194 ../mucharmap/unicode-scripts.h:56
 msgid "Inscriptional Parthian"
 msgstr "Feliratos pártus"
 
-#: ../mucharmap/unicode-blocks.h:187 ../mucharmap/unicode-scripts.h:52
+#: ../mucharmap/unicode-blocks.h:195 ../mucharmap/unicode-scripts.h:55
 msgid "Inscriptional Pahlavi"
 msgstr "Feliratos pahlavi"
 
-#: ../mucharmap/unicode-blocks.h:188 ../mucharmap/unicode-scripts.h:80
+#: ../mucharmap/unicode-blocks.h:196 ../mucharmap/unicode-scripts.h:87
 msgid "Old Turkic"
 msgstr "Régi török"
 
-#: ../mucharmap/unicode-blocks.h:189
+#: ../mucharmap/unicode-blocks.h:197
 msgid "Rumi Numeral Symbols"
 msgstr "Rumi számszimbólumok"
 
-#: ../mucharmap/unicode-blocks.h:190 ../mucharmap/unicode-scripts.h:55
+#: ../mucharmap/unicode-blocks.h:198 ../mucharmap/unicode-scripts.h:24
+msgid "Brahmi"
+msgstr "Brahmi"
+
+#: ../mucharmap/unicode-blocks.h:199 ../mucharmap/unicode-scripts.h:58
 msgid "Kaithi"
 msgstr "Kaithi"
 
-#: ../mucharmap/unicode-blocks.h:191 ../mucharmap/unicode-scripts.h:32
+#: ../mucharmap/unicode-blocks.h:200 ../mucharmap/unicode-scripts.h:99
+msgid "Sora Sompeng"
+msgstr "Sora Sompeng"
+
+#: ../mucharmap/unicode-blocks.h:201 ../mucharmap/unicode-scripts.h:30
+msgid "Chakma"
+msgstr "Chakma"
+
+#: ../mucharmap/unicode-blocks.h:202 ../mucharmap/unicode-scripts.h:96
+msgid "Sharada"
+msgstr "Sharada"
+
+#: ../mucharmap/unicode-blocks.h:203 ../mucharmap/unicode-scripts.h:108
+msgid "Takri"
+msgstr "Takri"
+
+#: ../mucharmap/unicode-blocks.h:204 ../mucharmap/unicode-scripts.h:35
 msgid "Cuneiform"
 msgstr "Cuneiform"
 
-#: ../mucharmap/unicode-blocks.h:192
+#: ../mucharmap/unicode-blocks.h:205
 msgid "Cuneiform Numbers and Punctuation"
 msgstr "Cuneiform szimbólumok és írásjelek"
 
-#: ../mucharmap/unicode-blocks.h:193 ../mucharmap/unicode-scripts.h:37
+#: ../mucharmap/unicode-blocks.h:206 ../mucharmap/unicode-scripts.h:40
 msgid "Egyptian Hieroglyphs"
 msgstr "Egyiptomi hieroglifák"
 
-#: ../mucharmap/unicode-blocks.h:194
+#: ../mucharmap/unicode-blocks.h:207
+msgid "Bamum Supplement"
+msgstr "Bamum kiegészítés"
+
+#: ../mucharmap/unicode-blocks.h:208 ../mucharmap/unicode-scripts.h:77
+msgid "Miao"
+msgstr "Miao"
+
+#: ../mucharmap/unicode-blocks.h:209
+msgid "Kana Supplement"
+msgstr "Kana kiegészítés"
+
+#: ../mucharmap/unicode-blocks.h:210
 msgid "Byzantine Musical Symbols"
 msgstr "Bizánci hangjegyek"
 
-#: ../mucharmap/unicode-blocks.h:195
+#: ../mucharmap/unicode-blocks.h:211
 msgid "Musical Symbols"
 msgstr "Hangjegyek"
 
-#: ../mucharmap/unicode-blocks.h:196
+#: ../mucharmap/unicode-blocks.h:212
 msgid "Ancient Greek Musical Notation"
 msgstr "Ógörög zenei jelölés"
 
-#: ../mucharmap/unicode-blocks.h:197
+#: ../mucharmap/unicode-blocks.h:213
 msgid "Tai Xuan Jing Symbols"
 msgstr "Tai Xuan Jing szimbólumok"
 
-#: ../mucharmap/unicode-blocks.h:198
+#: ../mucharmap/unicode-blocks.h:214
 msgid "Counting Rod Numerals"
 msgstr "Számolórúd számjegyek"
 
-#: ../mucharmap/unicode-blocks.h:199
+#: ../mucharmap/unicode-blocks.h:215
 msgid "Mathematical Alphanumeric Symbols"
 msgstr "Matematikai alfanumerikus jelek"
 
-#: ../mucharmap/unicode-blocks.h:200
+#: ../mucharmap/unicode-blocks.h:216
+msgid "Arabic Mathematical Alphabetic Symbols"
+msgstr "Arab matematikai alfabetikus jelek"
+
+#: ../mucharmap/unicode-blocks.h:217
 msgid "Mahjong Tiles"
 msgstr "Mahjongg elemek"
 
-#: ../mucharmap/unicode-blocks.h:201
+#: ../mucharmap/unicode-blocks.h:218
 msgid "Domino Tiles"
 msgstr "Dominók"
 
-#: ../mucharmap/unicode-blocks.h:202
+#: ../mucharmap/unicode-blocks.h:219
+msgid "Playing Cards"
+msgstr "Játékkártyák"
+
+#: ../mucharmap/unicode-blocks.h:220
 msgid "Enclosed Alphanumeric Supplement"
 msgstr "Csatolt alfanumerikus kiegészítés"
 
-#: ../mucharmap/unicode-blocks.h:203
+#: ../mucharmap/unicode-blocks.h:221
 msgid "Enclosed Ideographic Supplement"
 msgstr "Csatolt ideogramok kiegészítése"
 
-#: ../mucharmap/unicode-blocks.h:204
+#: ../mucharmap/unicode-blocks.h:222
+msgid "Miscellaneous Symbols And Pictographs"
+msgstr "Egyéb szimbólumok és piktogramok"
+
+#: ../mucharmap/unicode-blocks.h:223
+msgid "Emoticons"
+msgstr "Hangulatjelek"
+
+#: ../mucharmap/unicode-blocks.h:224
+msgid "Transport And Map Symbols"
+msgstr "Szállítás és térképszimbólumok"
+
+#: ../mucharmap/unicode-blocks.h:225
+msgid "Alchemical Symbols"
+msgstr "Alkimista szimbólumok"
+
+#: ../mucharmap/unicode-blocks.h:226
 msgid "CJK Unified Ideographs Extension B"
 msgstr "CJK egyesített ideogramok B kiterjesztés"
 
-#: ../mucharmap/unicode-blocks.h:205
+#: ../mucharmap/unicode-blocks.h:227
 msgid "CJK Unified Ideographs Extension C"
 msgstr "CJK egyesített ideogramok C kiterjesztés"
 
-#: ../mucharmap/unicode-blocks.h:206
+#: ../mucharmap/unicode-blocks.h:228
+msgid "CJK Unified Ideographs Extension D"
+msgstr "CJK egyesített ideogramok D kiterjesztés"
+
+#: ../mucharmap/unicode-blocks.h:229
 msgid "CJK Compatibility Ideographs Supplement"
 msgstr "CJK egyesített ideogramok kiterjesztés"
 
-#: ../mucharmap/unicode-blocks.h:207
+#: ../mucharmap/unicode-blocks.h:230
 msgid "Tags"
 msgstr "Elemek"
 
-#: ../mucharmap/unicode-blocks.h:208
+#: ../mucharmap/unicode-blocks.h:231
 msgid "Variation Selectors Supplement"
 msgstr "Variációválasztók kiegészítés"
 
-#: ../mucharmap/unicode-blocks.h:209
+#: ../mucharmap/unicode-blocks.h:232
 msgid "Supplementary Private Use Area-A"
 msgstr "Kiegészítés személyes felhasználásra A-terület"
 
-#: ../mucharmap/unicode-blocks.h:210
+#: ../mucharmap/unicode-blocks.h:233
 msgid "Supplementary Private Use Area-B"
 msgstr "Kiegészítés személyes felhasználásra B-terület"
 
-#: ../mucharmap/unicode-scripts.h:23
+#: ../mucharmap/unicode-scripts.h:25
 msgid "Braille"
 msgstr "Braille"
 
-#: ../mucharmap/unicode-scripts.h:26
+#: ../mucharmap/unicode-scripts.h:28
 msgid "Canadian Aboriginal"
 msgstr "Kanadai bennszülött"
 
-#: ../mucharmap/unicode-scripts.h:33
+#: ../mucharmap/unicode-scripts.h:36
 msgid "Cypriot"
 msgstr "Ciprióta"
 
-#: ../mucharmap/unicode-scripts.h:42
+#: ../mucharmap/unicode-scripts.h:45
 msgid "Greek"
 msgstr "Görög"
 
-#: ../mucharmap/unicode-scripts.h:45
+#: ../mucharmap/unicode-scripts.h:48
 msgid "Han"
 msgstr "Han"
 
-#: ../mucharmap/unicode-scripts.h:46
+#: ../mucharmap/unicode-scripts.h:49
 msgid "Hangul"
 msgstr "Hangul"
 
-#: ../mucharmap/unicode-scripts.h:51
+#: ../mucharmap/unicode-scripts.h:54
 msgid "Inherited"
 msgstr "Örökölt"
 
-#: ../mucharmap/unicode-scripts.h:62
+#: ../mucharmap/unicode-scripts.h:65
 msgid "Latin"
 msgstr "Latin"
 
-#: ../mucharmap/unicode-scripts.h:65
+#: ../mucharmap/unicode-scripts.h:68
 msgid "Linear B"
 msgstr "Lineáris B"
 
-#: ../mucharmap/unicode-scripts.h:83
+#: ../mucharmap/unicode-scripts.h:90
 msgid "Phags Pa"
 msgstr "Phags Pa"
 
-#: ../mucharmap/unicode-scripts.h:107
+#: ../mucharmap/unicode-scripts.h:117
 msgid "Yi"
 msgstr "Yi"
-
-#: ../mucharmap/mucharmap-search-dialog.c:569
-msgid "Information"
-msgstr "Információ"
-
-#. follow hig guidelines
-#: ../mucharmap/mucharmap-search-dialog.c:735
-msgid "Find"
-msgstr "Keresés"
-
-#: ../mucharmap/mucharmap-search-dialog.c:753
-msgid "_Previous"
-msgstr "_Előző"
-
-#: ../mucharmap/mucharmap-search-dialog.c:764
-msgid "_Next"
-msgstr "Kö_vetkező"
-
-#: ../mucharmap/mucharmap-search-dialog.c:779
-msgid "_Search:"
-msgstr "_Keresés:"
-
-#: ../mucharmap/mucharmap-search-dialog.c:789
-msgid "Match _whole word"
-msgstr "_Teljes szó"
-
-#: ../mucharmap/mucharmap-search-dialog.c:794
-msgid "Search in character _details"
-msgstr "Keresés a karakter _adatai közt"
-
-#: ../mucharmap/mucharmap-block-chapters-model.c:84
-msgid "All"
-msgstr "Összes"
-
-#: ../mucharmap/mucharmap-block-chapters-model.c:187
-msgid "Unicode Block"
-msgstr "Unicode-blokk"
-
-#: ../mucharmap/mucharmap-script-chapters-model.c:130
-msgid "Script"
-msgstr "Írásrendszer"

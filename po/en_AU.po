@@ -3,71 +3,67 @@
 # This file is distributed under the same license as the PACKAGE package.
 # 
 # Translators:
-# adia <adia@hellug.gr>, 2003
-# adia <adia@hellug.gr>, 2003
-# Efstathios Iosifidis <iosifidis@opensuse.org>, 2013
-# Jennie Petoumenou <epetoumenou@gmail.com>, 2009
-# Kostas Papadimas <pkst@gnome.org>, 2003-2004,2006
+# k3lt01 <keltoiboy@gmail.com>, 2013
 msgid ""
 msgstr ""
 "Project-Id-Version: MATE Desktop Environment\n"
 "Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
 "POT-Creation-Date: 2013-06-12 17:20+0200\n"
-"PO-Revision-Date: 2013-08-06 08:54+0000\n"
-"Last-Translator: Efstathios Iosifidis <iefstathios@gmail.com>\n"
-"Language-Team: Greek (http://www.transifex.com/projects/p/MATE/language/el/)\n"
+"PO-Revision-Date: 2013-06-21 04:25+0000\n"
+"Last-Translator: k3lt01 <keltoiboy@gmail.com>\n"
+"Language-Team: English (Australia) (http://www.transifex.com/projects/p/MATE/language/en_AU/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: el\n"
+"Language: en_AU\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../mucharmap.desktop.in.in.h:1 ../mucharmap/mucharmap-window.c:533
 #: ../mucharmap/main.c:32
 msgid "MATE Character Map"
-msgstr "Πίνακας Χαρακτήρων MATE"
+msgstr "MATE Character Map"
 
 #: ../mucharmap.desktop.in.in.h:2 ../mucharmap/mucharmap-window.c:935
 #: ../mucharmap/main.c:70
 msgid "Character Map"
-msgstr "Πίνακας Χαρακτήρων"
+msgstr "Character Map"
 
 #: ../mucharmap.desktop.in.in.h:3
 msgid "Insert special characters into documents"
-msgstr "Εισαγωγή ειδικών χαρακτήρων σε έγγραφα"
+msgstr "Insert special characters into documents"
 
 #: ../mucharmap/mucharmap-block-chapters-model.c:83
 msgid "All"
-msgstr "Όλα"
+msgstr "All"
 
 #: ../mucharmap/mucharmap-block-chapters-model.c:186
 msgid "Unicode Block"
-msgstr "Μπλοκ Unicode"
+msgstr "Unicode Block"
 
 #: ../mucharmap/mucharmap-charmap.c:575
 msgid "Canonical decomposition:"
-msgstr "Σύνθεση:"
+msgstr "Canonical decomposition:"
 
 #: ../mucharmap/mucharmap-charmap.c:618 ../mucharmap/mucharmap-chartable.c:555
 msgid "[not a printable character]"
-msgstr "[μη εκτυπώσιμος χαρακτήρας]"
+msgstr "[not a printable character]"
 
 #: ../mucharmap/mucharmap-charmap.c:632
 msgid "General Character Properties"
-msgstr "Γενικές Ιδιότητες Χαρακτήρα"
+msgstr "General Character Properties"
 
 #: ../mucharmap/mucharmap-charmap.c:638
 msgid "In Unicode since:"
-msgstr "Στο Unicode από το:"
+msgstr "In Unicode since:"
 
 #. character category
 #: ../mucharmap/mucharmap-charmap.c:642
 msgid "Unicode category:"
-msgstr "Κατηγορία Unicode:"
+msgstr "Unicode category:"
 
 #: ../mucharmap/mucharmap-charmap.c:651
 msgid "Various Useful Representations"
-msgstr "Διάφορες Χρήσιμες Κωδικοποιήσεις"
+msgstr "Various Useful Representations"
 
 #: ../mucharmap/mucharmap-charmap.c:661
 msgid "UTF-8:"
@@ -79,296 +75,296 @@ msgstr "UTF-16:"
 
 #: ../mucharmap/mucharmap-charmap.c:680
 msgid "C octal escaped UTF-8:"
-msgstr "Οκταδική UTF-8 σε C με χαρακτήρες διαφυγής:"
+msgstr "C octal escaped UTF-8:"
 
 #: ../mucharmap/mucharmap-charmap.c:690
 msgid "XML decimal entity:"
-msgstr "Δεκαδική οντότητα XML:"
+msgstr "XML decimal entity:"
 
 #: ../mucharmap/mucharmap-charmap.c:701
 msgid "Annotations and Cross References"
-msgstr "Σχόλια και Παραπομπές"
+msgstr "Annotations and Cross References"
 
 #: ../mucharmap/mucharmap-charmap.c:708
 msgid "Alias names:"
-msgstr "Εναλλακτικές ονομασίες:"
+msgstr "Alias names:"
 
 #: ../mucharmap/mucharmap-charmap.c:717
 msgid "Notes:"
-msgstr "Σημειώσεις:"
+msgstr "Notes:"
 
 #: ../mucharmap/mucharmap-charmap.c:726
 msgid "See also:"
-msgstr "Δείτε επίσης:"
+msgstr "See also:"
 
 #: ../mucharmap/mucharmap-charmap.c:735
 msgid "Approximate equivalents:"
-msgstr "Περίπου ισοδύναμα:"
+msgstr "Approximate equivalents:"
 
 #: ../mucharmap/mucharmap-charmap.c:744
 msgid "Equivalents:"
-msgstr "Ισοδύναμοι χαρακτήρες:"
+msgstr "Equivalents:"
 
 #: ../mucharmap/mucharmap-charmap.c:760
 msgid "CJK Ideograph Information"
-msgstr "Πληροφορίες Ιδεογραμμάτων Κίν-Ιαπ-Κορ"
+msgstr "CJK Ideograph Information"
 
 #: ../mucharmap/mucharmap-charmap.c:765
 msgid "Definition in English:"
-msgstr "Ορισμός στα Αγγλικά:"
+msgstr "Definition in English:"
 
 #: ../mucharmap/mucharmap-charmap.c:770
 msgid "Mandarin Pronunciation:"
-msgstr "Μανδαρινική Προφορά:"
+msgstr "Mandarin Pronunciation:"
 
 #: ../mucharmap/mucharmap-charmap.c:775
 msgid "Cantonese Pronunciation:"
-msgstr "Καντονέζικη προφορά :"
+msgstr "Cantonese Pronunciation:"
 
 #: ../mucharmap/mucharmap-charmap.c:780
 msgid "Japanese On Pronunciation:"
-msgstr "Ιαπωνική Προφορά On:"
+msgstr "Japanese On Pronunciation:"
 
 #: ../mucharmap/mucharmap-charmap.c:785
 msgid "Japanese Kun Pronunciation:"
-msgstr "Ιαπωνική Προφορά Kun:"
+msgstr "Japanese Kun Pronunciation:"
 
 #: ../mucharmap/mucharmap-charmap.c:790
 msgid "Tang Pronunciation:"
-msgstr "Προφορά Tang:"
+msgstr "Tang Pronunciation:"
 
 #: ../mucharmap/mucharmap-charmap.c:795
 msgid "Korean Pronunciation:"
-msgstr "Κορεατική Προφορά:"
+msgstr "Korean Pronunciation:"
 
 #: ../mucharmap/mucharmap-charmap.c:1184
 msgid "Characte_r Table"
-msgstr "_Πίνακας Χαρακτήρων:"
+msgstr "Characte_r Table"
 
 #: ../mucharmap/mucharmap-charmap.c:1230
 msgid "Character _Details"
-msgstr "_Λεπτομέρειες Χαρακτήρα"
+msgstr "Character _Details"
 
 #: ../mucharmap/mucharmap-chartable-accessible.c:831
 msgid "Character Table"
-msgstr "Πίνακας Χαρακτήρων"
+msgstr "Character Table"
 
 #: ../mucharmap/mucharmap-chartable.c:1467
 msgid "Unknown character, unable to identify."
-msgstr "Άγνωστος χαρακτήρας, αδύνατο να αναγνωριστεί."
+msgstr "Unknown character, unable to identify."
 
 #: ../mucharmap/mucharmap-chartable.c:1469
 #: ../mucharmap/mucharmap-search-dialog.c:591
 msgid "Not found."
-msgstr "Δε βρέθηκε."
+msgstr "Not found."
 
 #: ../mucharmap/mucharmap-chartable.c:1472
 msgid "Character found."
-msgstr "Ο χαρακτήρας βρέθηκε."
+msgstr "Character found."
 
 #: ../mucharmap/mucharmap-mini-fontsel.c:284
 msgid "Font"
-msgstr "Γραμματοσειρά"
+msgstr "Font"
 
 #: ../mucharmap/mucharmap-mini-fontsel.c:297
 msgid "Font Family"
-msgstr "Οικογένεια Γραμματοσειράς"
+msgstr "Font Family"
 
 #: ../mucharmap/mucharmap-mini-fontsel.c:315
 msgid "Font Size"
-msgstr "Μέγεθος Γραμματοσειράς"
+msgstr "Font Size"
 
 #: ../mucharmap/mucharmap-script-chapters-model.c:132
 msgid "Script"
-msgstr "Γραφή"
+msgstr "Script"
 
 #. Unicode assigns "Common" as the script name for any character not
 #. * specifically listed in Scripts.txt
 #: ../mucharmap/mucharmap-script-codepoint-list.c:473
 #: ../mucharmap/unicode-scripts.h:33
 msgid "Common"
-msgstr "Κοινά"
+msgstr "Common"
 
 #: ../mucharmap/mucharmap-search-dialog.c:571
 msgid "Information"
-msgstr "Πληροφορίες"
+msgstr "Information"
 
 #. follow hig guidelines
 #: ../mucharmap/mucharmap-search-dialog.c:737
 msgid "Find"
-msgstr "Εύρεση"
+msgstr "Find"
 
 #: ../mucharmap/mucharmap-search-dialog.c:755
 msgid "_Previous"
-msgstr "Προη_γούμενο"
+msgstr "_Previous"
 
 #: ../mucharmap/mucharmap-search-dialog.c:766
 msgid "_Next"
-msgstr "Ε_πόμενο"
+msgstr "_Next"
 
 #: ../mucharmap/mucharmap-search-dialog.c:781
 msgid "_Search:"
-msgstr "_Αναζήτηση:"
+msgstr "_Search:"
 
 #: ../mucharmap/mucharmap-search-dialog.c:791
 msgid "Match _whole word"
-msgstr "Αναζήτηση _ολόκληρων λέξεων"
+msgstr "Match _whole word"
 
 #: ../mucharmap/mucharmap-search-dialog.c:796
 msgid "Search in character _details"
-msgstr "Αναζήτηση στις _λεπτομέρειες χαρακτήρα"
+msgstr "Search in character _details"
 
 #: ../mucharmap/mucharmap-unicode-info.c:98
 msgid "<Non Private Use High Surrogate>"
-msgstr "<Υψηλό υποκατάστατο μη ιδιωτικής χρήσης>"
+msgstr "<Non Private Use High Surrogate>"
 
 #: ../mucharmap/mucharmap-unicode-info.c:102
 msgid "<Private Use High Surrogate>"
-msgstr "<Υψηλό υποκατάστατο ιδιωτικής χρήσης>"
+msgstr "<Private Use High Surrogate>"
 
 #: ../mucharmap/mucharmap-unicode-info.c:106
 msgid "<Low Surrogate>"
-msgstr "<Χαμηλό Υποκατάστατο>"
+msgstr "<Low Surrogate>"
 
 #: ../mucharmap/mucharmap-unicode-info.c:110
 msgid "<Private Use>"
-msgstr "<Ιδιωτικής Χρήσης>"
+msgstr "<Private Use>"
 
 #: ../mucharmap/mucharmap-unicode-info.c:114
 msgid "<Plane 15 Private Use>"
-msgstr "<Ιδιωτικής Χρήσης Επιπέδου 15>"
+msgstr "<Plane 15 Private Use>"
 
 #: ../mucharmap/mucharmap-unicode-info.c:118
 msgid "<Plane 16 Private Use>"
-msgstr "<Ιδιωτικής Χρήσης Επιπέδου 16>"
+msgstr "<Plane 16 Private Use>"
 
 #: ../mucharmap/mucharmap-unicode-info.c:126
 msgid "<not assigned>"
-msgstr "<μη ορισμένο>"
+msgstr "<not assigned>"
 
 #: ../mucharmap/mucharmap-unicode-info.c:141
 msgid "Other, Control"
-msgstr "Άλλο, Ελέγχου"
+msgstr "Other, Control"
 
 #: ../mucharmap/mucharmap-unicode-info.c:142
 msgid "Other, Format"
-msgstr "Άλλο, Μορφοποίησης"
+msgstr "Other, Format"
 
 #: ../mucharmap/mucharmap-unicode-info.c:143
 msgid "Other, Not Assigned"
-msgstr "Άλλο, Μη Ορισμένο"
+msgstr "Other, Not Assigned"
 
 #: ../mucharmap/mucharmap-unicode-info.c:144
 msgid "Other, Private Use"
-msgstr "Άλλο, Ιδιωτικής Χρήσης"
+msgstr "Other, Private Use"
 
 #: ../mucharmap/mucharmap-unicode-info.c:145
 msgid "Other, Surrogate"
-msgstr "Άλλο, Υποκατάστατο"
+msgstr "Other, Surrogate"
 
 #: ../mucharmap/mucharmap-unicode-info.c:146
 msgid "Letter, Lowercase"
-msgstr "Γράμμα, Πεζό"
+msgstr "Letter, Lowercase"
 
 #: ../mucharmap/mucharmap-unicode-info.c:147
 msgid "Letter, Modifier"
-msgstr "Γράμμα, Τροποποιητικό"
+msgstr "Letter, Modifier"
 
 #: ../mucharmap/mucharmap-unicode-info.c:148
 msgid "Letter, Other"
-msgstr "Γράμμα, Άλλο"
+msgstr "Letter, Other"
 
 #: ../mucharmap/mucharmap-unicode-info.c:149
 msgid "Letter, Titlecase"
-msgstr "Γράμμα, Τίτλων"
+msgstr "Letter, Titlecase"
 
 #: ../mucharmap/mucharmap-unicode-info.c:150
 msgid "Letter, Uppercase"
-msgstr "Γράμμα, Κεφαλαίο"
+msgstr "Letter, Uppercase"
 
 #: ../mucharmap/mucharmap-unicode-info.c:151
 msgid "Mark, Spacing Combining"
-msgstr "Σημείο, Συνδυαζόμενο που πιάνει χώρο"
+msgstr "Mark, Spacing Combining"
 
 #: ../mucharmap/mucharmap-unicode-info.c:152
 msgid "Mark, Enclosing"
-msgstr "Σημείο, Παρενθετικό"
+msgstr "Mark, Enclosing"
 
 #: ../mucharmap/mucharmap-unicode-info.c:153
 msgid "Mark, Non-Spacing"
-msgstr "Σημείο, δεν πιάνει χώρο"
+msgstr "Mark, Non-Spacing"
 
 #: ../mucharmap/mucharmap-unicode-info.c:154
 msgid "Number, Decimal Digit"
-msgstr "Αριθμός, Δεκαδικό Ψηφίο"
+msgstr "Number, Decimal Digit"
 
 #: ../mucharmap/mucharmap-unicode-info.c:155
 msgid "Number, Letter"
-msgstr "Αριθμός, Γράμμα"
+msgstr "Number, Letter"
 
 #: ../mucharmap/mucharmap-unicode-info.c:156
 msgid "Number, Other"
-msgstr "Αριθμός, Άλλο"
+msgstr "Number, Other"
 
 #: ../mucharmap/mucharmap-unicode-info.c:157
 msgid "Punctuation, Connector"
-msgstr "Σημείο στίξης, Συνδετικό"
+msgstr "Punctuation, Connector"
 
 #: ../mucharmap/mucharmap-unicode-info.c:158
 msgid "Punctuation, Dash"
-msgstr "Σημείο στίξης, Παύλα"
+msgstr "Punctuation, Dash"
 
 #: ../mucharmap/mucharmap-unicode-info.c:159
 msgid "Punctuation, Close"
-msgstr "Σημείο στίξης, Κλείσιμο"
+msgstr "Punctuation, Close"
 
 #: ../mucharmap/mucharmap-unicode-info.c:160
 msgid "Punctuation, Final Quote"
-msgstr "Σημείο στίξης, Κλείσιμο εισαγωγικών"
+msgstr "Punctuation, Final Quote"
 
 #: ../mucharmap/mucharmap-unicode-info.c:161
 msgid "Punctuation, Initial Quote"
-msgstr "Σημείο στίξης, Άνοιγμα εισαγωγικών"
+msgstr "Punctuation, Initial Quote"
 
 #: ../mucharmap/mucharmap-unicode-info.c:162
 msgid "Punctuation, Other"
-msgstr "Σημείο στίξης, Άλλο"
+msgstr "Punctuation, Other"
 
 #: ../mucharmap/mucharmap-unicode-info.c:163
 msgid "Punctuation, Open"
-msgstr "Σημείο στίξης, Άνοιγμα"
+msgstr "Punctuation, Open"
 
 #: ../mucharmap/mucharmap-unicode-info.c:164
 msgid "Symbol, Currency"
-msgstr "Σύμβολο, Νόμισμα"
+msgstr "Symbol, Currency"
 
 #: ../mucharmap/mucharmap-unicode-info.c:165
 msgid "Symbol, Modifier"
-msgstr "Σύμβολο, Τροποποιητικό"
+msgstr "Symbol, Modifier"
 
 #: ../mucharmap/mucharmap-unicode-info.c:166
 msgid "Symbol, Math"
-msgstr "Σύμβολο, Μαθηματικό"
+msgstr "Symbol, Math"
 
 #: ../mucharmap/mucharmap-unicode-info.c:167
 msgid "Symbol, Other"
-msgstr "Σύμβολο, Άλλο"
+msgstr "Symbol, Other"
 
 #: ../mucharmap/mucharmap-unicode-info.c:168
 msgid "Separator, Line"
-msgstr "Διαχωριστικό, Γραμμή"
+msgstr "Separator, Line"
 
 #: ../mucharmap/mucharmap-unicode-info.c:169
 msgid "Separator, Paragraph"
-msgstr "Διαχωριστικό, Παράγραφος"
+msgstr "Separator, Paragraph"
 
 #: ../mucharmap/mucharmap-unicode-info.c:170
 msgid "Separator, Space"
-msgstr "Διαχωριστικό, Κενό"
+msgstr "Separator, Space"
 
 #: ../mucharmap/mucharmap-window.c:253
 msgid "Searching…"
-msgstr "Αναζήτηση..."
+msgstr "Searching…"
 
 #: ../mucharmap/mucharmap-window.c:501
 msgid ""
@@ -376,7 +372,7 @@ msgid ""
 "the terms of the GNU General Public License as published by the Free "
 "Software Foundation; either version 3 of the License, or (at your option) "
 "any later version."
-msgstr "Το Mucharmap είναι ένα ελεύθερο λογισμικό: μπορείτε να το επαναδιανέμεται και/ή να το τροποποιήσετε σύμφωνα με τους όρους GNU General Public License όπως δημοσιοποιήθηκαν από Ίδρυμα Ελεύθερου Λογισμικού, είτε η έκδοση 3 της άδειας, ή (κατά επιλογή σας) οποιαδήποτε μεταγενέστερη έκδοση."
+msgstr "Mucharmap is free software; you can redistribute it and/or modify it under the terms of the GNU General Public Licence as published by the Free Software Foundation; either version 3 of the Licence, or (at your option) any later version."
 
 #: ../mucharmap/mucharmap-window.c:505
 msgid ""
@@ -384,7 +380,7 @@ msgid ""
 " of the Unicode data files to deal in them without restriction, including "
 "without limitation the rights to use, copy, modify, merge, publish, "
 "distribute, and/or sell copies."
-msgstr "Επιτρέπεται σε οποιοδήποτε πρόσωπο, χωρίς χρέωση, η λήψη των δεδομένων Unicode και η ενασχόληση με αυτά χωρίς κανένα περιορισμό, συμπεριλαμβανομένων των δικαιωμάτων χρήσης, αντιγραφής, τροποποίησης, δημοσίευσης, διανομής και/ή πώλησης αντιγράφων."
+msgstr "Permission is hereby granted, free of charge, to any person obtaining a copy of the Unicode data files to deal in them without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, and/or sell copies."
 
 #: ../mucharmap/mucharmap-window.c:509
 msgid ""
@@ -392,181 +388,181 @@ msgid ""
 "will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty "
 "of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General"
 " Public License and Unicode Copyright for more details."
-msgstr "To ·Mucharmap και τα δεδομένα Unicode διανέμονται·με·την·ελπίδα·ότι·θα·είναι·χρήσιμα αλλά·ΧΩΡΙΣ·ΚΑΜΙΑ·ΑΠΟΛΥΤΩΣ·ΕΓΓΥΗΣΗ· χωρίς ακόμη και σιωπηρή εγγύηση ΕΜΠΟΡΕΥΣΙΜΟΤΗΤΑΣ Η ΚΑΤΑΛΛΗΛΟΤΗΤΑΣ ΓΙΑ ΣΥΓΓΕΚΡΙΜΕΝΟ ΣΚΟΠΟ.Δείτε·για·περισσότερες·λεπτομέρειες·την·GNU·General·Public·License και το Unicode Copyright."
+msgstr "Mucharmap and the Unicode data files are distributed in the hope that they will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public Licence and Unicode Copyright for more details."
 
 #: ../mucharmap/mucharmap-window.c:513
 msgid ""
 "You should have received a copy of the GNU General Public License along with"
 " Mucharmap; if not, write to the Free Software Foundation, Inc., 51 Franklin"
 " St, Fifth Floor, Boston, MA  02110-1301  USA"
-msgstr "Πρέπει να έχετε λάβει αντίγραφο της άδειας GNU General Public License μαζί με το Mucharmap. Αν όχι, γράψτε στο: Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301  USA"
+msgstr "You should have received a copy of the GNU General Public Licence along with Mucharmap; if not, write to the Free Software Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA"
 
 #: ../mucharmap/mucharmap-window.c:516
 msgid ""
 "Also you should have received a copy of the Unicode Copyright along with "
 "Mucharmap; you can always find it at Unicode's website: "
 "http://www.unicode.org/copyright.html"
-msgstr "Επίσης, θα πρέπει να έχετε λάβει ένα αντίγραφο του Unicode Copyright μαζί με το Mucharmap. Αν όχι μπορείτε πάντα να το βρείτε στην ιστοσελίδα του Unicode: http://www.unicode.org/copyright.html"
+msgstr "Also you should have received a copy of the Unicode Copyright along with Mucharmap; you can always find it at Unicode's website: http://www.unicode.org/copyright.html"
 
 #: ../mucharmap/mucharmap-window.c:535
 msgid "Based on the Unicode Character Database 6.2"
-msgstr "Βασισμένο στη βάση δεδομένων χαρακτήρων του Unicode 6.2"
+msgstr "Based on the Unicode Character Database 6.2"
 
 #: ../mucharmap/mucharmap-window.c:544
 msgid "translator-credits"
-msgstr "Αλέξανδρος Διαμαντίδης <adia@hellug.gr> \nΤζένη Πετούμενου <epetoumenou@gmail.com>"
+msgstr "translator-credits"
 
 #: ../mucharmap/mucharmap-window.c:619 ../mucharmap/mucharmap-window.c:901
 msgid "Next Script"
-msgstr "Επόμενη γραφή"
+msgstr "Next Script"
 
 #: ../mucharmap/mucharmap-window.c:619 ../mucharmap/mucharmap-window.c:903
 msgid "Previous Script"
-msgstr "Προηγούμενη γραφή"
+msgstr "Previous Script"
 
 #: ../mucharmap/mucharmap-window.c:624
 msgid "Next Block"
-msgstr "Επόμενο μπλοκ"
+msgstr "Next Block"
 
 #: ../mucharmap/mucharmap-window.c:624
 msgid "Previous Block"
-msgstr "Προηγούμενο μπλοκ"
+msgstr "Previous Block"
 
 #: ../mucharmap/mucharmap-window.c:864
 msgid "_File"
-msgstr "_Αρχείο"
+msgstr "_File"
 
 #: ../mucharmap/mucharmap-window.c:865
 msgid "_View"
-msgstr "_Προβολή"
+msgstr "_View"
 
 #: ../mucharmap/mucharmap-window.c:866
 msgid "_Search"
-msgstr "Ανα_ζήτηση"
+msgstr "_Search"
 
 #: ../mucharmap/mucharmap-window.c:867
 msgid "_Go"
-msgstr "_Μετάβαση"
+msgstr "_Go"
 
 #: ../mucharmap/mucharmap-window.c:868
 msgid "_Help"
-msgstr "_Βοήθεια"
+msgstr "_Help"
 
 #: ../mucharmap/mucharmap-window.c:871
 msgid "Page _Setup"
-msgstr "_Ρύθμιση σελίδας"
+msgstr "Page _Setup"
 
 #: ../mucharmap/mucharmap-window.c:892
 msgid "Find _Next"
-msgstr "Εύρεση Ε_πόμενου"
+msgstr "Find _Next"
 
 #: ../mucharmap/mucharmap-window.c:894
 msgid "Find _Previous"
-msgstr "Εύρεση Προη_γούμενου"
+msgstr "Find _Previous"
 
 #: ../mucharmap/mucharmap-window.c:897
 msgid "_Next Character"
-msgstr "Ε_πόμενος χαρακτήρας"
+msgstr "_Next Character"
 
 #: ../mucharmap/mucharmap-window.c:899
 msgid "_Previous Character"
-msgstr "Προη_γούμενος χαρακτήρας"
+msgstr "_Previous Character"
 
 #: ../mucharmap/mucharmap-window.c:906
 msgid "_Contents"
-msgstr "_Περιεχόμενα"
+msgstr "_Contents"
 
 #: ../mucharmap/mucharmap-window.c:908
 msgid "_About"
-msgstr "Πε_ρί"
+msgstr "_About"
 
 #: ../mucharmap/mucharmap-window.c:918
 msgid "By _Script"
-msgstr "Κατά _γραφή"
+msgstr "By _Script"
 
 #: ../mucharmap/mucharmap-window.c:920
 msgid "By _Unicode Block"
-msgstr "Κατά _μπλοκ Unicode"
+msgstr "By _Unicode Block"
 
 #: ../mucharmap/mucharmap-window.c:925
 msgid "Snap _Columns to Power of Two"
-msgstr "Αριθμός _στηλών αντιστοιχεί σε δύναμη του 2"
+msgstr "Snap _Columns to Power of Two"
 
 #: ../mucharmap/mucharmap-window.c:993
 msgid "_Text to copy:"
-msgstr "_Κείμενο προς αντιγραφή:"
+msgstr "_Text to copy:"
 
 #: ../mucharmap/mucharmap-window.c:1000
 msgid "Copy to the clipboard."
-msgstr "Αντιγραφή στο πρόχειρο."
+msgstr "Copy to the clipboard."
 
 #: ../mucharmap/main.c:48
 msgid "Font to start with; ex: 'Serif 27'"
-msgstr "Αρχική γραμματοσειρά· πχ. 'Serif 27'"
+msgstr "Font to start with; ex: 'Serif 27'"
 
 #: ../mucharmap/main.c:48
 msgid "FONT"
-msgstr "ΓΡΑΜΜΑΤΟΣΕΙΡΑ"
+msgstr "FONT"
 
 #: ../mucharmap/unicode-blocks.h:14
 msgid "Basic Latin"
-msgstr "Βασικά Λατινικά"
+msgstr "Basic Latin"
 
 #: ../mucharmap/unicode-blocks.h:15
 msgid "Latin-1 Supplement"
-msgstr "Συμπλήρωμα Λατινικών 1"
+msgstr "Latin-1 Supplement"
 
 #: ../mucharmap/unicode-blocks.h:16
 msgid "Latin Extended-A"
-msgstr "Επέκταση Α Λατινικών"
+msgstr "Latin Extended-A"
 
 #: ../mucharmap/unicode-blocks.h:17
 msgid "Latin Extended-B"
-msgstr "Επέκταση Β Λατινικών"
+msgstr "Latin Extended-B"
 
 #: ../mucharmap/unicode-blocks.h:18
 msgid "IPA Extensions"
-msgstr "Επεκτάσεις διεθνούς φωνητικού αλφαβήτου (IPA)"
+msgstr "IPA Extensions"
 
 #: ../mucharmap/unicode-blocks.h:19
 msgid "Spacing Modifier Letters"
-msgstr "Τροποποιητικά γράμματα που πιάνουν χώρο"
+msgstr "Spacing Modifier Letters"
 
 #: ../mucharmap/unicode-blocks.h:20
 msgid "Combining Diacritical Marks"
-msgstr "Συνδυαζόμενα Διακριτικά Σημεία"
+msgstr "Combining Diacritical Marks"
 
 #: ../mucharmap/unicode-blocks.h:21
 msgid "Greek and Coptic"
-msgstr "Ελληνικά και Κοπτικά"
+msgstr "Greek and Coptic"
 
 #: ../mucharmap/unicode-blocks.h:22 ../mucharmap/unicode-scripts.h:37
 msgid "Cyrillic"
-msgstr "Κυριλλικά"
+msgstr "Cyrillic"
 
 #: ../mucharmap/unicode-blocks.h:23
 msgid "Cyrillic Supplement"
-msgstr "Συμπλήρωμα Κυριλλικών"
+msgstr "Cyrillic Supplement"
 
 #: ../mucharmap/unicode-blocks.h:24 ../mucharmap/unicode-scripts.h:17
 msgid "Armenian"
-msgstr "Αρμενικά"
+msgstr "Armenian"
 
 #: ../mucharmap/unicode-blocks.h:25 ../mucharmap/unicode-scripts.h:51
 msgid "Hebrew"
-msgstr "Εβραϊκά"
+msgstr "Hebrew"
 
 #: ../mucharmap/unicode-blocks.h:26 ../mucharmap/unicode-scripts.h:16
 msgid "Arabic"
-msgstr "Αραβικά"
+msgstr "Arabic"
 
 #: ../mucharmap/unicode-blocks.h:27 ../mucharmap/unicode-scripts.h:102
 msgid "Syriac"
-msgstr "Συριακά"
+msgstr "Syriac"
 
 #: ../mucharmap/unicode-blocks.h:28
 msgid "Arabic Supplement"
-msgstr "Συμπλήρωμα Αραβικών"
+msgstr "Arabic Supplement"
 
 #: ../mucharmap/unicode-blocks.h:29 ../mucharmap/unicode-scripts.h:111
 msgid "Thaana"
@@ -586,7 +582,7 @@ msgstr "Mandaic"
 
 #: ../mucharmap/unicode-blocks.h:33
 msgid "Arabic Extended-A"
-msgstr "Επέκταση Α Αραβικών"
+msgstr "Arabic Extended-A"
 
 #: ../mucharmap/unicode-blocks.h:34 ../mucharmap/unicode-scripts.h:39
 msgid "Devanagari"
@@ -630,7 +626,7 @@ msgstr "Sinhala"
 
 #: ../mucharmap/unicode-blocks.h:44 ../mucharmap/unicode-scripts.h:112
 msgid "Thai"
-msgstr "Ταϊλανδικά"
+msgstr "Thai"
 
 #: ../mucharmap/unicode-blocks.h:45 ../mucharmap/unicode-scripts.h:64
 msgid "Lao"
@@ -638,15 +634,15 @@ msgstr "Lao"
 
 #: ../mucharmap/unicode-blocks.h:46 ../mucharmap/unicode-scripts.h:113
 msgid "Tibetan"
-msgstr "Θιβετιανά"
+msgstr "Tibetan"
 
 #: ../mucharmap/unicode-blocks.h:47 ../mucharmap/unicode-scripts.h:79
 msgid "Myanmar"
-msgstr "Βιρμανικά"
+msgstr "Myanmar"
 
 #: ../mucharmap/unicode-blocks.h:48 ../mucharmap/unicode-scripts.h:42
 msgid "Georgian"
-msgstr "Γεωργιανά"
+msgstr "Georgian"
 
 #: ../mucharmap/unicode-blocks.h:49
 msgid "Hangul Jamo"
@@ -654,19 +650,19 @@ msgstr "Hangul Jamo"
 
 #: ../mucharmap/unicode-blocks.h:50 ../mucharmap/unicode-scripts.h:41
 msgid "Ethiopic"
-msgstr "Αιθιοπικά"
+msgstr "Ethiopic"
 
 #: ../mucharmap/unicode-blocks.h:51
 msgid "Ethiopic Supplement"
-msgstr "Συμπλήρωμα Αιθιοπικών"
+msgstr "Ethiopic Supplement"
 
 #: ../mucharmap/unicode-blocks.h:52 ../mucharmap/unicode-scripts.h:32
 msgid "Cherokee"
-msgstr "Τσερόκι"
+msgstr "Cherokee"
 
 #: ../mucharmap/unicode-blocks.h:53
 msgid "Unified Canadian Aboriginal Syllabics"
-msgstr "Ενοποιημένη συλλαβική γραφή ιθαγενών Καναδά"
+msgstr "Unified Canadian Aboriginal Syllabics"
 
 #: ../mucharmap/unicode-blocks.h:54 ../mucharmap/unicode-scripts.h:82
 msgid "Ogham"
@@ -674,7 +670,7 @@ msgstr "Ogham"
 
 #: ../mucharmap/unicode-blocks.h:55 ../mucharmap/unicode-scripts.h:93
 msgid "Runic"
-msgstr "Ρουνικά"
+msgstr "Runic"
 
 #: ../mucharmap/unicode-blocks.h:56 ../mucharmap/unicode-scripts.h:103
 msgid "Tagalog"
@@ -694,15 +690,15 @@ msgstr "Tagbanwa"
 
 #: ../mucharmap/unicode-blocks.h:60 ../mucharmap/unicode-scripts.h:63
 msgid "Khmer"
-msgstr "Χμερ"
+msgstr "Khmer"
 
 #: ../mucharmap/unicode-blocks.h:61 ../mucharmap/unicode-scripts.h:78
 msgid "Mongolian"
-msgstr "Μογγολικά"
+msgstr "Mongolian"
 
 #: ../mucharmap/unicode-blocks.h:62
 msgid "Unified Canadian Aboriginal Syllabics Extended"
-msgstr "Ενοποιημένη συλλαβική γραφή ιθαγενών Καναδά"
+msgstr "Unified Canadian Aboriginal Syllabics Extended"
 
 #: ../mucharmap/unicode-blocks.h:63 ../mucharmap/unicode-scripts.h:67
 msgid "Limbu"
@@ -714,11 +710,11 @@ msgstr "Tai Le"
 
 #: ../mucharmap/unicode-blocks.h:65 ../mucharmap/unicode-scripts.h:81
 msgid "New Tai Lue"
-msgstr "Νέα Tai Lue"
+msgstr "New Tai Lue"
 
 #: ../mucharmap/unicode-blocks.h:66
 msgid "Khmer Symbols"
-msgstr "Σύμβολα Χμερ"
+msgstr "Khmer Symbols"
 
 #: ../mucharmap/unicode-blocks.h:67 ../mucharmap/unicode-scripts.h:26
 msgid "Buginese"
@@ -738,7 +734,7 @@ msgstr "Sundanese"
 
 #: ../mucharmap/unicode-blocks.h:71 ../mucharmap/unicode-scripts.h:21
 msgid "Batak"
-msgstr "Batak (Indonesia)"
+msgstr "Batak"
 
 #: ../mucharmap/unicode-blocks.h:72 ../mucharmap/unicode-scripts.h:66
 msgid "Lepcha"
@@ -750,95 +746,95 @@ msgstr "Ol Chiki"
 
 #: ../mucharmap/unicode-blocks.h:74
 msgid "Sundanese Supplement"
-msgstr "Συμπλήρωμα Sundanese"
+msgstr "Sundanese Supplement"
 
 #: ../mucharmap/unicode-blocks.h:75
 msgid "Vedic Extensions"
-msgstr "Επεκτάσεις Vedic"
+msgstr "Vedic Extensions"
 
 #: ../mucharmap/unicode-blocks.h:76
 msgid "Phonetic Extensions"
-msgstr "Φωνητικές επεκτάσεις"
+msgstr "Phonetic Extensions"
 
 #: ../mucharmap/unicode-blocks.h:77
 msgid "Phonetic Extensions Supplement"
-msgstr "Συμπλήρωμα φωνητικών επεκτάσεων"
+msgstr "Phonetic Extensions Supplement"
 
 #: ../mucharmap/unicode-blocks.h:78
 msgid "Combining Diacritical Marks Supplement"
-msgstr "Συνδυαζόμενα διακριτικά σημεία - συμπλήρωμα"
+msgstr "Combining Diacritical Marks Supplement"
 
 #: ../mucharmap/unicode-blocks.h:79
 msgid "Latin Extended Additional"
-msgstr "Πρόσθετες επεκτάσεις Λατινικών"
+msgstr "Latin Extended Additional"
 
 #: ../mucharmap/unicode-blocks.h:80
 msgid "Greek Extended"
-msgstr "Επεκτάσεις Ελληνικών"
+msgstr "Greek Extended"
 
 #: ../mucharmap/unicode-blocks.h:81
 msgid "General Punctuation"
-msgstr "Γενικά σημεία στίξης"
+msgstr "General Punctuation"
 
 #: ../mucharmap/unicode-blocks.h:82
 msgid "Superscripts and Subscripts"
-msgstr "Εκθέτες και δείκτες"
+msgstr "Superscripts and Subscripts"
 
 #: ../mucharmap/unicode-blocks.h:83
 msgid "Currency Symbols"
-msgstr "Σύμβολα νομισμάτων"
+msgstr "Currency Symbols"
 
 #: ../mucharmap/unicode-blocks.h:84
 msgid "Combining Diacritical Marks for Symbols"
-msgstr "Συνδυαζόμενα διακριτικά σημεία για σύμβολα"
+msgstr "Combining Diacritical Marks for Symbols"
 
 #: ../mucharmap/unicode-blocks.h:85
 msgid "Letterlike Symbols"
-msgstr "Σύμβολα βασισμένα σε γράμματα"
+msgstr "Letterlike Symbols"
 
 #: ../mucharmap/unicode-blocks.h:86
 msgid "Number Forms"
-msgstr "Αριθμητικά"
+msgstr "Number Forms"
 
 #: ../mucharmap/unicode-blocks.h:87
 msgid "Arrows"
-msgstr "Βέλη"
+msgstr "Arrows"
 
 #: ../mucharmap/unicode-blocks.h:88
 msgid "Mathematical Operators"
-msgstr "Μαθηματικά σύμβολα"
+msgstr "Mathematical Operators"
 
 #: ../mucharmap/unicode-blocks.h:89
 msgid "Miscellaneous Technical"
-msgstr "Διάφορα τεχνικά"
+msgstr "Miscellaneous Technical"
 
 #: ../mucharmap/unicode-blocks.h:90
 msgid "Control Pictures"
-msgstr "Εικόνες ελέγχου"
+msgstr "Control Pictures"
 
 #: ../mucharmap/unicode-blocks.h:91
 msgid "Optical Character Recognition"
-msgstr "Οπτική Αναγνώριση Χαρακτήρων"
+msgstr "Optical Character Recognition"
 
 #: ../mucharmap/unicode-blocks.h:92
 msgid "Enclosed Alphanumerics"
-msgstr "Αλφαριθμητικά σε παρένθεση"
+msgstr "Enclosed Alphanumerics"
 
 #: ../mucharmap/unicode-blocks.h:93
 msgid "Box Drawing"
-msgstr "Σχεδιασμού πλαισίων"
+msgstr "Box Drawing"
 
 #: ../mucharmap/unicode-blocks.h:94
 msgid "Block Elements"
-msgstr "Σχεδιασμού μπλοκ"
+msgstr "Block Elements"
 
 #: ../mucharmap/unicode-blocks.h:95
 msgid "Geometric Shapes"
-msgstr "Γεωμετρικά σχήματα"
+msgstr "Geometric Shapes"
 
 #: ../mucharmap/unicode-blocks.h:96
 msgid "Miscellaneous Symbols"
-msgstr "Διάφορα σύμβολα"
+msgstr "Miscellaneous Symbols"
 
 #: ../mucharmap/unicode-blocks.h:97
 msgid "Dingbats"
@@ -846,47 +842,47 @@ msgstr "Dingbats"
 
 #: ../mucharmap/unicode-blocks.h:98
 msgid "Miscellaneous Mathematical Symbols-A"
-msgstr "Διάφορα μαθηματικά σύμβολα Α"
+msgstr "Miscellaneous Mathematical Symbols-A"
 
 #: ../mucharmap/unicode-blocks.h:99
 msgid "Supplemental Arrows-A"
-msgstr "Συμπληρωματικά βέλη Α"
+msgstr "Supplemental Arrows-A"
 
 #: ../mucharmap/unicode-blocks.h:100
 msgid "Braille Patterns"
-msgstr "Μπράιγ"
+msgstr "Braille Patterns"
 
 #: ../mucharmap/unicode-blocks.h:101
 msgid "Supplemental Arrows-B"
-msgstr "Συμπληρωματικά βέλη Β"
+msgstr "Supplemental Arrows-B"
 
 #: ../mucharmap/unicode-blocks.h:102
 msgid "Miscellaneous Mathematical Symbols-B"
-msgstr "Διάφορα μαθηματικά σύμβολα Β"
+msgstr "Miscellaneous Mathematical Symbols-B"
 
 #: ../mucharmap/unicode-blocks.h:103
 msgid "Supplemental Mathematical Operators"
-msgstr "Συμπληρωματικά μαθηματικά σύμβολα"
+msgstr "Supplemental Mathematical Operators"
 
 #: ../mucharmap/unicode-blocks.h:104
 msgid "Miscellaneous Symbols and Arrows"
-msgstr "Διάφορα σύμβολα και βέλη"
+msgstr "Miscellaneous Symbols and Arrows"
 
 #: ../mucharmap/unicode-blocks.h:105 ../mucharmap/unicode-scripts.h:43
 msgid "Glagolitic"
-msgstr "Γλαγολιτικά"
+msgstr "Glagolitic"
 
 #: ../mucharmap/unicode-blocks.h:106
 msgid "Latin Extended-C"
-msgstr "Επέκταση Γ Λατινικών"
+msgstr "Latin Extended-C"
 
 #: ../mucharmap/unicode-blocks.h:107 ../mucharmap/unicode-scripts.h:34
 msgid "Coptic"
-msgstr "Κοπτικά"
+msgstr "Coptic"
 
 #: ../mucharmap/unicode-blocks.h:108
 msgid "Georgian Supplement"
-msgstr "Συμπλήρωμα Γεωργιανών"
+msgstr "Georgian Supplement"
 
 #: ../mucharmap/unicode-blocks.h:109 ../mucharmap/unicode-scripts.h:114
 msgid "Tifinagh"
@@ -894,31 +890,31 @@ msgstr "Tifinagh"
 
 #: ../mucharmap/unicode-blocks.h:110
 msgid "Ethiopic Extended"
-msgstr "Επέκταση Αιθιοπικών"
+msgstr "Ethiopic Extended"
 
 #: ../mucharmap/unicode-blocks.h:111
 msgid "Cyrillic Extended-A"
-msgstr "Επέκταση Α Κυριλλικών"
+msgstr "Cyrillic Extended-A"
 
 #: ../mucharmap/unicode-blocks.h:112
 msgid "Supplemental Punctuation"
-msgstr "Συμπληρωματικά σημεία στίξης"
+msgstr "Supplemental Punctuation"
 
 #: ../mucharmap/unicode-blocks.h:113
 msgid "CJK Radicals Supplement"
-msgstr "Συμπληρωματικές Ρίζες Κίν-Ιαπ-Κορ"
+msgstr "CJK Radicals Supplement"
 
 #: ../mucharmap/unicode-blocks.h:114
 msgid "Kangxi Radicals"
-msgstr "Ρίζες Kangxi"
+msgstr "Kangxi Radicals"
 
 #: ../mucharmap/unicode-blocks.h:115
 msgid "Ideographic Description Characters"
-msgstr "Ιδεογραφικοί περιγραφικοί χαρακτήρες"
+msgstr "Ideographic Description Characters"
 
 #: ../mucharmap/unicode-blocks.h:116
 msgid "CJK Symbols and Punctuation"
-msgstr "Σύμβολα και σημεία στίξης Κίν-Ιαπ-Κορ"
+msgstr "CJK Symbols and Punctuation"
 
 #: ../mucharmap/unicode-blocks.h:117 ../mucharmap/unicode-scripts.h:52
 msgid "Hiragana"
@@ -934,7 +930,7 @@ msgstr "Bopomofo"
 
 #: ../mucharmap/unicode-blocks.h:120
 msgid "Hangul Compatibility Jamo"
-msgstr "Hangul συμβατότητα Jamo"
+msgstr "Hangul Compatibility Jamo"
 
 #: ../mucharmap/unicode-blocks.h:121
 msgid "Kanbun"
@@ -942,43 +938,43 @@ msgstr "Kanbun"
 
 #: ../mucharmap/unicode-blocks.h:122
 msgid "Bopomofo Extended"
-msgstr "Επεκτάσεις Bopomofo"
+msgstr "Bopomofo Extended"
 
 #: ../mucharmap/unicode-blocks.h:123
 msgid "CJK Strokes"
-msgstr "Γραμμές Κίν-Ιαπ-Κορ"
+msgstr "CJK Strokes"
 
 #: ../mucharmap/unicode-blocks.h:124
 msgid "Katakana Phonetic Extensions"
-msgstr "Φωνητικές επεκτάσεις Katakana"
+msgstr "Katakana Phonetic Extensions"
 
 #: ../mucharmap/unicode-blocks.h:125
 msgid "Enclosed CJK Letters and Months"
-msgstr "Γράμματα και μήνες Κίν-Ιαπ-Κορ σε παρένθεση"
+msgstr "Enclosed CJK Letters and Months"
 
 #: ../mucharmap/unicode-blocks.h:126
 msgid "CJK Compatibility"
-msgstr "Συμβατότητας Κίν-Ιαπ-Κορ"
+msgstr "CJK Compatibility"
 
 #: ../mucharmap/unicode-blocks.h:127
 msgid "CJK Unified Ideographs Extension A"
-msgstr "Επέκταση Α ενοποιημένων ιδεογραμμάτων Κίν-Ιαπ-Κορ"
+msgstr "CJK Unified Ideographs Extension A"
 
 #: ../mucharmap/unicode-blocks.h:128
 msgid "Yijing Hexagram Symbols"
-msgstr "Σύμβολα εξαγράμμων Ι τσιγκ"
+msgstr "Yijing Hexagram Symbols"
 
 #: ../mucharmap/unicode-blocks.h:129
 msgid "CJK Unified Ideographs"
-msgstr "Ενοποιημένα ιδεογράμματα Κίν-Ιαπ-Κορ"
+msgstr "CJK Unified Ideographs"
 
 #: ../mucharmap/unicode-blocks.h:130
 msgid "Yi Syllables"
-msgstr "Συλλαβές Yi"
+msgstr "Yi Syllables"
 
 #: ../mucharmap/unicode-blocks.h:131
 msgid "Yi Radicals"
-msgstr "Ρίζες Yi"
+msgstr "Yi Radicals"
 
 #: ../mucharmap/unicode-blocks.h:132 ../mucharmap/unicode-scripts.h:69
 msgid "Lisu"
@@ -990,7 +986,7 @@ msgstr "Vai"
 
 #: ../mucharmap/unicode-blocks.h:134
 msgid "Cyrillic Extended-B"
-msgstr "Επέκταση Β Κυριλλικών"
+msgstr "Cyrillic Extended-B"
 
 #: ../mucharmap/unicode-blocks.h:135 ../mucharmap/unicode-scripts.h:20
 msgid "Bamum"
@@ -998,11 +994,11 @@ msgstr "Bamum"
 
 #: ../mucharmap/unicode-blocks.h:136
 msgid "Modifier Tone Letters"
-msgstr "Τροποποιητικά γράμματα επιτονισμού"
+msgstr "Modifier Tone Letters"
 
 #: ../mucharmap/unicode-blocks.h:137
 msgid "Latin Extended-D"
-msgstr "Επέκταση Δ Λατινικών"
+msgstr "Latin Extended-D"
 
 #: ../mucharmap/unicode-blocks.h:138 ../mucharmap/unicode-scripts.h:101
 msgid "Syloti Nagri"
@@ -1010,7 +1006,7 @@ msgstr "Syloti Nagri"
 
 #: ../mucharmap/unicode-blocks.h:139
 msgid "Common Indic Number Forms"
-msgstr "Κοινές αριθμητικές μορφές Indic"
+msgstr "Common Indic Number Forms"
 
 #: ../mucharmap/unicode-blocks.h:140
 msgid "Phags-pa"
@@ -1022,7 +1018,7 @@ msgstr "Saurashtra"
 
 #: ../mucharmap/unicode-blocks.h:142
 msgid "Devanagari Extended"
-msgstr "Devanagari εκτεταμένα"
+msgstr "Devanagari Extended"
 
 #: ../mucharmap/unicode-blocks.h:143 ../mucharmap/unicode-scripts.h:61
 msgid "Kayah Li"
@@ -1034,7 +1030,7 @@ msgstr "Rejang"
 
 #: ../mucharmap/unicode-blocks.h:145
 msgid "Hangul Jamo Extended-A"
-msgstr "Hangul Jamo Εκτεταμένα-A"
+msgstr "Hangul Jamo Extended-A"
 
 #: ../mucharmap/unicode-blocks.h:146 ../mucharmap/unicode-scripts.h:57
 msgid "Javanese"
@@ -1046,7 +1042,7 @@ msgstr "Cham"
 
 #: ../mucharmap/unicode-blocks.h:148
 msgid "Myanmar Extended-A"
-msgstr "Myanmar Εκτεταμένα-A"
+msgstr "Myanmar Extended-A"
 
 #: ../mucharmap/unicode-blocks.h:149 ../mucharmap/unicode-scripts.h:107
 msgid "Tai Viet"
@@ -1054,11 +1050,11 @@ msgstr "Tai Viet"
 
 #: ../mucharmap/unicode-blocks.h:150
 msgid "Meetei Mayek Extensions"
-msgstr "Επεκτάσεις Meetei Mayek"
+msgstr "Meetei Mayek Extensions"
 
 #: ../mucharmap/unicode-blocks.h:151
 msgid "Ethiopic Extended-A"
-msgstr "Επέκταση Α Αιθιοπικών"
+msgstr "Ethiopic Extended-A"
 
 #: ../mucharmap/unicode-blocks.h:152 ../mucharmap/unicode-scripts.h:74
 msgid "Meetei Mayek"
@@ -1066,111 +1062,111 @@ msgstr "Meetei Mayek"
 
 #: ../mucharmap/unicode-blocks.h:153
 msgid "Hangul Syllables"
-msgstr "Συλλαβές Hangul"
+msgstr "Hangul Syllables"
 
 #: ../mucharmap/unicode-blocks.h:154
 msgid "Hangul Jamo Extended-B"
-msgstr "Hangul Jamo Εκτεταμένα-B"
+msgstr "Hangul Jamo Extended-B"
 
 #: ../mucharmap/unicode-blocks.h:155
 msgid "High Surrogates"
-msgstr "Υψηλά υποκατάστατα"
+msgstr "High Surrogates"
 
 #: ../mucharmap/unicode-blocks.h:156
 msgid "High Private Use Surrogates"
-msgstr "Υψηλά υποκατάστατα ιδιωτικής χρήσης"
+msgstr "High Private Use Surrogates"
 
 #: ../mucharmap/unicode-blocks.h:157
 msgid "Low Surrogates"
-msgstr "Χαμηλά υποκατάστατα"
+msgstr "Low Surrogates"
 
 #: ../mucharmap/unicode-blocks.h:158
 msgid "Private Use Area"
-msgstr "Χώρος ιδιωτικής χρήσης"
+msgstr "Private Use Area"
 
 #: ../mucharmap/unicode-blocks.h:159
 msgid "CJK Compatibility Ideographs"
-msgstr "Ιδεογράμματα συμβατότητας Κίν-Ιαπ-Κορ"
+msgstr "CJK Compatibility Ideographs"
 
 #: ../mucharmap/unicode-blocks.h:160
 msgid "Alphabetic Presentation Forms"
-msgstr "Παραλλαγές αλφαβητικών γραμμάτων"
+msgstr "Alphabetic Presentation Forms"
 
 #: ../mucharmap/unicode-blocks.h:161
 msgid "Arabic Presentation Forms-A"
-msgstr "Παραλλαγές αραβικών Α"
+msgstr "Arabic Presentation Forms-A"
 
 #: ../mucharmap/unicode-blocks.h:162
 msgid "Variation Selectors"
-msgstr "Επιλογείς παραλλαγών"
+msgstr "Variation Selectors"
 
 #: ../mucharmap/unicode-blocks.h:163
 msgid "Vertical Forms"
-msgstr "Κάθετες παραλλαγές"
+msgstr "Vertical Forms"
 
 #: ../mucharmap/unicode-blocks.h:164
 msgid "Combining Half Marks"
-msgstr "Συνδυαζόμενα μισά σημεία"
+msgstr "Combining Half Marks"
 
 #: ../mucharmap/unicode-blocks.h:165
 msgid "CJK Compatibility Forms"
-msgstr "Παραλλαγές συμβατότητας Κίν-Ιαπ-Κορ"
+msgstr "CJK Compatibility Forms"
 
 #: ../mucharmap/unicode-blocks.h:166
 msgid "Small Form Variants"
-msgstr "Παραλλαγές μικρού σχήματος"
+msgstr "Small Form Variants"
 
 #: ../mucharmap/unicode-blocks.h:167
 msgid "Arabic Presentation Forms-B"
-msgstr "Αραβικές παραλλαγές Β"
+msgstr "Arabic Presentation Forms-B"
 
 #: ../mucharmap/unicode-blocks.h:168
 msgid "Halfwidth and Fullwidth Forms"
-msgstr "Παραλλαγές διπλού και μισού πλάτους"
+msgstr "Halfwidth and Fullwidth Forms"
 
 #: ../mucharmap/unicode-blocks.h:169
 msgid "Specials"
-msgstr "Ειδικά"
+msgstr "Specials"
 
 #: ../mucharmap/unicode-blocks.h:170
 msgid "Linear B Syllabary"
-msgstr "Συλλαβές Γραμμικής Β"
+msgstr "Linear B Syllabary"
 
 #: ../mucharmap/unicode-blocks.h:171
 msgid "Linear B Ideograms"
-msgstr "Ιδεογράμματα Γραμμικής Β"
+msgstr "Linear B Ideograms"
 
 #: ../mucharmap/unicode-blocks.h:172
 msgid "Aegean Numbers"
-msgstr "Αιγαιακοί αριθμοί"
+msgstr "Aegean Numbers"
 
 #: ../mucharmap/unicode-blocks.h:173
 msgid "Ancient Greek Numbers"
-msgstr "Αρχαίοι Ελληνικοί αριθμοί"
+msgstr "Ancient Greek Numbers"
 
 #: ../mucharmap/unicode-blocks.h:174
 msgid "Ancient Symbols"
-msgstr "Αρχαία σύμβολα"
+msgstr "Ancient Symbols"
 
 #: ../mucharmap/unicode-blocks.h:175
 msgid "Phaistos Disc"
-msgstr "Δίσκου Φαιστού"
+msgstr "Phaistos Disc"
 
 #: ../mucharmap/unicode-blocks.h:176 ../mucharmap/unicode-scripts.h:70
 msgid "Lycian"
-msgstr "Λυκικά"
+msgstr "Lycian"
 
 #: ../mucharmap/unicode-blocks.h:177 ../mucharmap/unicode-scripts.h:29
 msgid "Carian"
-msgstr "Καρικά"
+msgstr "Carian"
 
 #: ../mucharmap/unicode-blocks.h:178 ../mucharmap/unicode-scripts.h:84
 msgid "Old Italic"
-msgstr "Αρχαία Ιταλικά"
+msgstr "Old Italic"
 
 #: ../mucharmap/unicode-blocks.h:179 ../mucharmap/unicode-scripts.h:44
 msgid "Gothic"
-msgstr "Γοτθικά"
+msgstr "Gothic"
 
 #: ../mucharmap/unicode-blocks.h:180 ../mucharmap/unicode-scripts.h:115
 msgid "Ugaritic"
@@ -1178,7 +1174,7 @@ msgstr "Ugaritic"
 
 #: ../mucharmap/unicode-blocks.h:181 ../mucharmap/unicode-scripts.h:85
 msgid "Old Persian"
-msgstr "Παλαιά περσικά"
+msgstr "Old Persian"
 
 #: ../mucharmap/unicode-blocks.h:182 ../mucharmap/unicode-scripts.h:38
 msgid "Deseret"
@@ -1194,7 +1190,7 @@ msgstr "Osmanya"
 
 #: ../mucharmap/unicode-blocks.h:185
 msgid "Cypriot Syllabary"
-msgstr "Κυπριακές συλλαβές"
+msgstr "Cypriot Syllabary"
 
 #: ../mucharmap/unicode-blocks.h:186 ../mucharmap/unicode-scripts.h:53
 msgid "Imperial Aramaic"
@@ -1202,15 +1198,15 @@ msgstr "Imperial Aramaic"
 
 #: ../mucharmap/unicode-blocks.h:187 ../mucharmap/unicode-scripts.h:91
 msgid "Phoenician"
-msgstr "Φοινικικά"
+msgstr "Phoenician"
 
 #: ../mucharmap/unicode-blocks.h:188 ../mucharmap/unicode-scripts.h:71
 msgid "Lydian"
-msgstr "Λυδικά"
+msgstr "Lydian"
 
 #: ../mucharmap/unicode-blocks.h:189 ../mucharmap/unicode-scripts.h:76
 msgid "Meroitic Hieroglyphs"
-msgstr "Αιγυπτιακά ιερογλυφικά"
+msgstr "Meroitic Hieroglyphs"
 
 #: ../mucharmap/unicode-blocks.h:190 ../mucharmap/unicode-scripts.h:75
 msgid "Meroitic Cursive"
@@ -1242,7 +1238,7 @@ msgstr "Old Turkic"
 
 #: ../mucharmap/unicode-blocks.h:197
 msgid "Rumi Numeral Symbols"
-msgstr "Αριθμητικά σύμβολα Rumi"
+msgstr "Rumi Numeral Symbols"
 
 #: ../mucharmap/unicode-blocks.h:198 ../mucharmap/unicode-scripts.h:24
 msgid "Brahmi"
@@ -1270,19 +1266,19 @@ msgstr "Takri"
 
 #: ../mucharmap/unicode-blocks.h:204 ../mucharmap/unicode-scripts.h:35
 msgid "Cuneiform"
-msgstr "Σφηνοειδής γραφή"
+msgstr "Cuneiform"
 
 #: ../mucharmap/unicode-blocks.h:205
 msgid "Cuneiform Numbers and Punctuation"
-msgstr "Σφηνοειδείς αριθμοί και σημεία στίξης "
+msgstr "Cuneiform Numbers and Punctuation"
 
 #: ../mucharmap/unicode-blocks.h:206 ../mucharmap/unicode-scripts.h:40
 msgid "Egyptian Hieroglyphs"
-msgstr "Αγυπτιακά ιερογλυφικά"
+msgstr "Egyptian Hieroglyphs"
 
 #: ../mucharmap/unicode-blocks.h:207
 msgid "Bamum Supplement"
-msgstr "Συμπλήρωμα Bamum"
+msgstr "Bamum Supplement"
 
 #: ../mucharmap/unicode-blocks.h:208 ../mucharmap/unicode-scripts.h:77
 msgid "Miao"
@@ -1290,119 +1286,119 @@ msgstr "Miao"
 
 #: ../mucharmap/unicode-blocks.h:209
 msgid "Kana Supplement"
-msgstr "Συμπλήρωμα Kana"
+msgstr "Kana Supplement"
 
 #: ../mucharmap/unicode-blocks.h:210
 msgid "Byzantine Musical Symbols"
-msgstr "Βυζαντινά μουσικά σύμβολα"
+msgstr "Byzantine Musical Symbols"
 
 #: ../mucharmap/unicode-blocks.h:211
 msgid "Musical Symbols"
-msgstr "Μουσικά σύμβολα"
+msgstr "Musical Symbols"
 
 #: ../mucharmap/unicode-blocks.h:212
 msgid "Ancient Greek Musical Notation"
-msgstr "Αρχαία ελληνικά μουσικά σύμβολα"
+msgstr "Ancient Greek Musical Notation"
 
 #: ../mucharmap/unicode-blocks.h:213
 msgid "Tai Xuan Jing Symbols"
-msgstr "Σύμβολα Tai Xuan Jing"
+msgstr "Tai Xuan Jing Symbols"
 
 #: ../mucharmap/unicode-blocks.h:214
 msgid "Counting Rod Numerals"
-msgstr "Αριθμητικά ράβδων μέτρησης"
+msgstr "Counting Rod Numerals"
 
 #: ../mucharmap/unicode-blocks.h:215
 msgid "Mathematical Alphanumeric Symbols"
-msgstr "Μαθηματικά αλφαριθμητικά σύμβολα"
+msgstr "Mathematical Alphanumeric Symbols"
 
 #: ../mucharmap/unicode-blocks.h:216
 msgid "Arabic Mathematical Alphabetic Symbols"
-msgstr "Μαθηματικά αλφαριθμητικά σύμβολα"
+msgstr "Arabic Mathematical Alphabetic Symbols"
 
 #: ../mucharmap/unicode-blocks.h:217
 msgid "Mahjong Tiles"
-msgstr "Πλακίδια Ματζόγκ"
+msgstr "Mahjong Tiles"
 
 #: ../mucharmap/unicode-blocks.h:218
 msgid "Domino Tiles"
-msgstr "Πλακίδια Ντόμινο"
+msgstr "Domino Tiles"
 
 #: ../mucharmap/unicode-blocks.h:219
 msgid "Playing Cards"
-msgstr "Παιγνιόχαρτα"
+msgstr "Playing Cards"
 
 #: ../mucharmap/unicode-blocks.h:220
 msgid "Enclosed Alphanumeric Supplement"
-msgstr "Αλφαριθμητικά σε παρένθεση συμπληρωματικά"
+msgstr "Enclosed Alphanumeric Supplement"
 
 #: ../mucharmap/unicode-blocks.h:221
 msgid "Enclosed Ideographic Supplement"
-msgstr "Συμπλήρωμα ιδεογραφημάτων"
+msgstr "Enclosed Ideographic Supplement"
 
 #: ../mucharmap/unicode-blocks.h:222
 msgid "Miscellaneous Symbols And Pictographs"
-msgstr "Διάφορα σύμβολα και εικονογραφήματα"
+msgstr "Miscellaneous Symbols And Pictographs"
 
 #: ../mucharmap/unicode-blocks.h:223
 msgid "Emoticons"
-msgstr "Εικονίδια διάθεσης"
+msgstr "Emoticons"
 
 #: ../mucharmap/unicode-blocks.h:224
 msgid "Transport And Map Symbols"
-msgstr ""
+msgstr "Transport And Map Symbols"
 
 #: ../mucharmap/unicode-blocks.h:225
 msgid "Alchemical Symbols"
-msgstr "Αλχημιστικά Σύμβολα"
+msgstr "Alchemical Symbols"
 
 #: ../mucharmap/unicode-blocks.h:226
 msgid "CJK Unified Ideographs Extension B"
-msgstr "Επέκταση Β ενοποιημένων ιδεογραμμάτων Κίν-Ιαπ-Κορ"
+msgstr "CJK Unified Ideographs Extension B"
 
 #: ../mucharmap/unicode-blocks.h:227
 msgid "CJK Unified Ideographs Extension C"
-msgstr "Επέκταση C ενοποιημένων ιδεογραμμάτων Κίν-Ιαπ-Κορ"
+msgstr "CJK Unified Ideographs Extension C"
 
 #: ../mucharmap/unicode-blocks.h:228
 msgid "CJK Unified Ideographs Extension D"
-msgstr "Επέκταση D ενοποιημένων ιδεογραμμάτων Κίν-Ιαπ-Κορ"
+msgstr "CJK Unified Ideographs Extension D"
 
 #: ../mucharmap/unicode-blocks.h:229
 msgid "CJK Compatibility Ideographs Supplement"
-msgstr "Συμπλήρωμα ιδεογραμμάτων συμβατότητας Κίν-Ιαπ-Κορ"
+msgstr "CJK Compatibility Ideographs Supplement"
 
 #: ../mucharmap/unicode-blocks.h:230
 msgid "Tags"
-msgstr "Ετικέτες"
+msgstr "Tags"
 
 #: ../mucharmap/unicode-blocks.h:231
 msgid "Variation Selectors Supplement"
-msgstr "Συμπλήρωμα επιλογέων παραλλαγών"
+msgstr "Variation Selectors Supplement"
 
 #: ../mucharmap/unicode-blocks.h:232
 msgid "Supplementary Private Use Area-A"
-msgstr "Συμπληρωματικά ιδιωτικής χρήσης Α"
+msgstr "Supplementary Private Use Area-A"
 
 #: ../mucharmap/unicode-blocks.h:233
 msgid "Supplementary Private Use Area-B"
-msgstr "Συμπληρωματικά ιδιωτικής χρήσης Β"
+msgstr "Supplementary Private Use Area-B"
 
 #: ../mucharmap/unicode-scripts.h:25
 msgid "Braille"
-msgstr "Μπράιγ"
+msgstr "Braille"
 
 #: ../mucharmap/unicode-scripts.h:28
 msgid "Canadian Aboriginal"
-msgstr "Ιθαγενών Καναδά"
+msgstr "Canadian Aboriginal"
 
 #: ../mucharmap/unicode-scripts.h:36
 msgid "Cypriot"
-msgstr "Κυπριακά"
+msgstr "Cypriot"
 
 #: ../mucharmap/unicode-scripts.h:45
 msgid "Greek"
-msgstr "Ελληνικά"
+msgstr "Greek"
 
 #: ../mucharmap/unicode-scripts.h:48
 msgid "Han"
@@ -1414,15 +1410,15 @@ msgstr "Hangul"
 
 #: ../mucharmap/unicode-scripts.h:54
 msgid "Inherited"
-msgstr "Κληρονομημένα"
+msgstr "Inherited"
 
 #: ../mucharmap/unicode-scripts.h:65
 msgid "Latin"
-msgstr "Λατινικά"
+msgstr "Latin"
 
 #: ../mucharmap/unicode-scripts.h:68
 msgid "Linear B"
-msgstr "Γραμμική Β"
+msgstr "Linear B"
 
 #: ../mucharmap/unicode-scripts.h:90
 msgid "Phags Pa"

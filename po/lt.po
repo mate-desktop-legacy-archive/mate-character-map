@@ -1,492 +1,508 @@
-# translation of mucharmap to Lithuanian
-# Lithuanian translation of mucharmap.
-# Copyright (C) 2003-2007 Free Software Foundation, Inc.
-# Tomas Kuliavas <tokul@users.sourceforge.net>, 2003-2004.
-# Žygimantas Beručka <zygis@gnome.org>, 2004-2006, 2010.
-# Gintautas Miliauskas <gintas@akl.lt>, 2006.
-# Tomas Kuliavas <tokul@users.sourceforge.net>, 2007.
-# $Id:$
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Gintautas Miliauskas <gintas@akl.lt>, 2006
+# Tomas Kuliavas <tokul@users.sourceforge.net>, 2007
+# Žygimantas Beručka <zygis@gnome.org>, 2004-2006, 2010
 msgid ""
 msgstr ""
-"Project-Id-Version: lt\n"
-"Report-Msgid-Bugs-To: "
-"http://bugzilla.mate.org/enter_bug.cgi?product=mucharmap&component=general\n"
-"POT-Creation-Date: 2010-03-27 20:02+0000\n"
-"PO-Revision-Date: 2010-03-28 18:15+0300\n"
-"Last-Translator: Žygimantas Beručka <zygis@gnome.org>\n"
-"Language-Team: Lithuanian <mate-lt@lists.akl.lt>\n"
-"Language: lt\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2013-06-12 17:20+0200\n"
+"PO-Revision-Date: 2013-06-12 15:31+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: Lithuanian (http://www.transifex.com/projects/p/MATE/language/lt/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%"
-"100<10 || n%100>=20) ? 1 : 2);\n"
-"X-Generator: Virtaal 0.5.2\n"
+"Language: lt\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
 
-#: ../mucharmap.desktop.in.in.h:1 ../mucharmap/mucharmap-window.c:905
-#: ../mucharmap/main.c:80
+#: ../mucharmap.desktop.in.in.h:1 ../mucharmap/mucharmap-window.c:533
+#: ../mucharmap/main.c:32
+msgid "MATE Character Map"
+msgstr "MATE simbolių lentelė"
+
+#: ../mucharmap.desktop.in.in.h:2 ../mucharmap/mucharmap-window.c:935
+#: ../mucharmap/main.c:70
 msgid "Character Map"
 msgstr "Simbolių lentelė"
 
-#: ../mucharmap.desktop.in.in.h:2
+#: ../mucharmap.desktop.in.in.h:3
 msgid "Insert special characters into documents"
 msgstr "Įterpti į dokumentus specialius simbolius"
 
-#: ../mucharmap/mucharmap-charmap.c:573
+#: ../mucharmap/mucharmap-block-chapters-model.c:83
+msgid "All"
+msgstr "Visi"
+
+#: ../mucharmap/mucharmap-block-chapters-model.c:186
+msgid "Unicode Block"
+msgstr "Unicode blokas"
+
+#: ../mucharmap/mucharmap-charmap.c:575
 msgid "Canonical decomposition:"
 msgstr "Standartinis išskaidymas:"
 
-#: ../mucharmap/mucharmap-charmap.c:616 ../mucharmap/mucharmap-chartable.c:553
+#: ../mucharmap/mucharmap-charmap.c:618 ../mucharmap/mucharmap-chartable.c:555
 msgid "[not a printable character]"
 msgstr "[nespausdinamas simbolis]"
 
-#: ../mucharmap/mucharmap-charmap.c:630
+#: ../mucharmap/mucharmap-charmap.c:632
 msgid "General Character Properties"
 msgstr "Bendros simbolio savybės"
 
-#: ../mucharmap/mucharmap-charmap.c:636
+#: ../mucharmap/mucharmap-charmap.c:638
 msgid "In Unicode since:"
 msgstr "Unikode nuo:"
 
 #. character category
-#: ../mucharmap/mucharmap-charmap.c:640
+#: ../mucharmap/mucharmap-charmap.c:642
 msgid "Unicode category:"
 msgstr "Unicode kategorija:"
 
-#: ../mucharmap/mucharmap-charmap.c:649
+#: ../mucharmap/mucharmap-charmap.c:651
 msgid "Various Useful Representations"
 msgstr "Įvairios naudingos reikšmės"
 
-#: ../mucharmap/mucharmap-charmap.c:659
+#: ../mucharmap/mucharmap-charmap.c:661
 msgid "UTF-8:"
 msgstr "UTF-8:"
 
-#: ../mucharmap/mucharmap-charmap.c:667
+#: ../mucharmap/mucharmap-charmap.c:669
 msgid "UTF-16:"
 msgstr "UTF-16:"
 
-#: ../mucharmap/mucharmap-charmap.c:678
+#: ../mucharmap/mucharmap-charmap.c:680
 msgid "C octal escaped UTF-8:"
 msgstr "C aštuntainės kaitos UTF-8:"
 
-#: ../mucharmap/mucharmap-charmap.c:688
+#: ../mucharmap/mucharmap-charmap.c:690
 msgid "XML decimal entity:"
 msgstr "XML dešimtainis elementas:"
 
-#: ../mucharmap/mucharmap-charmap.c:699
+#: ../mucharmap/mucharmap-charmap.c:701
 msgid "Annotations and Cross References"
 msgstr "Pastabos ir nuorodos"
 
-#: ../mucharmap/mucharmap-charmap.c:706
+#: ../mucharmap/mucharmap-charmap.c:708
 msgid "Alias names:"
 msgstr "Trumpi vardai:"
 
-#: ../mucharmap/mucharmap-charmap.c:715
+#: ../mucharmap/mucharmap-charmap.c:717
 msgid "Notes:"
 msgstr "Pastabos:"
 
-#: ../mucharmap/mucharmap-charmap.c:724
+#: ../mucharmap/mucharmap-charmap.c:726
 msgid "See also:"
 msgstr "Taip pat žr.:"
 
-#: ../mucharmap/mucharmap-charmap.c:733
+#: ../mucharmap/mucharmap-charmap.c:735
 msgid "Approximate equivalents:"
 msgstr "Apytiksliai analogai:"
 
-#: ../mucharmap/mucharmap-charmap.c:742
+#: ../mucharmap/mucharmap-charmap.c:744
 msgid "Equivalents:"
 msgstr "Analogai:"
 
-#: ../mucharmap/mucharmap-charmap.c:758
+#: ../mucharmap/mucharmap-charmap.c:760
 msgid "CJK Ideograph Information"
 msgstr "CJK ideografinė informacija"
 
-#: ../mucharmap/mucharmap-charmap.c:763
+#: ../mucharmap/mucharmap-charmap.c:765
 msgid "Definition in English:"
 msgstr "Angliškas aprašymas:"
 
-#: ../mucharmap/mucharmap-charmap.c:768
+#: ../mucharmap/mucharmap-charmap.c:770
 msgid "Mandarin Pronunciation:"
 msgstr "Mandarinų tarimas:"
 
-#: ../mucharmap/mucharmap-charmap.c:773
+#: ../mucharmap/mucharmap-charmap.c:775
 msgid "Cantonese Pronunciation:"
 msgstr "Kantonų tarimas:"
 
-#: ../mucharmap/mucharmap-charmap.c:778
+#: ../mucharmap/mucharmap-charmap.c:780
 msgid "Japanese On Pronunciation:"
 msgstr "Japonų On tarimas:"
 
-#: ../mucharmap/mucharmap-charmap.c:783
+#: ../mucharmap/mucharmap-charmap.c:785
 msgid "Japanese Kun Pronunciation:"
 msgstr "Japonų Kun tarimas:"
 
-#: ../mucharmap/mucharmap-charmap.c:788
+#: ../mucharmap/mucharmap-charmap.c:790
 msgid "Tang Pronunciation:"
 msgstr "Tangų tarimas:"
 
-#: ../mucharmap/mucharmap-charmap.c:793
+#: ../mucharmap/mucharmap-charmap.c:795
 msgid "Korean Pronunciation:"
 msgstr "Korėjietiškas tarimas:"
 
-#: ../mucharmap/mucharmap-charmap.c:1178
+#: ../mucharmap/mucharmap-charmap.c:1184
 msgid "Characte_r Table"
 msgstr "Simbolių _lentelė"
 
-#: ../mucharmap/mucharmap-charmap.c:1224
+#: ../mucharmap/mucharmap-charmap.c:1230
 msgid "Character _Details"
 msgstr "Simbolio _detalės"
 
-#: ../mucharmap/mucharmap-chartable.c:1399
-msgid "Unknown character, unable to identify."
-msgstr "Nežinomas simbolis, nepavyko atpažinti."
-
-#: ../mucharmap/mucharmap-chartable.c:1401
-#: ../mucharmap/mucharmap-search-dialog.c:585
-msgid "Not found."
-msgstr "Nerasta."
-
-#: ../mucharmap/mucharmap-chartable.c:1404
-msgid "Character found."
-msgstr "Simbolis surastas."
-
-#: ../mucharmap/mucharmap-chartable-accessible.c:771
+#: ../mucharmap/mucharmap-chartable-accessible.c:831
 msgid "Character Table"
 msgstr "Simbolių lentelė"
 
-#: ../mucharmap/mucharmap-mini-fontsel.c:280
+#: ../mucharmap/mucharmap-chartable.c:1467
+msgid "Unknown character, unable to identify."
+msgstr "Nežinomas simbolis, nepavyko atpažinti."
+
+#: ../mucharmap/mucharmap-chartable.c:1469
+#: ../mucharmap/mucharmap-search-dialog.c:591
+msgid "Not found."
+msgstr "Nerasta."
+
+#: ../mucharmap/mucharmap-chartable.c:1472
+msgid "Character found."
+msgstr "Simbolis surastas."
+
+#: ../mucharmap/mucharmap-mini-fontsel.c:284
 msgid "Font"
 msgstr "Šriftas"
 
-#: ../mucharmap/mucharmap-mini-fontsel.c:293
+#: ../mucharmap/mucharmap-mini-fontsel.c:297
 msgid "Font Family"
 msgstr "Šrifto šeima"
 
-#: ../mucharmap/mucharmap-mini-fontsel.c:311
+#: ../mucharmap/mucharmap-mini-fontsel.c:315
 msgid "Font Size"
 msgstr "Šrifto dydis"
 
-#: ../mucharmap/mucharmap-settings.c:71
-msgid "MateConf could not be initialized."
-msgstr "Nepavyko aktyvuoti MateConf."
+#: ../mucharmap/mucharmap-script-chapters-model.c:132
+msgid "Script"
+msgstr "Raštas"
 
 #. Unicode assigns "Common" as the script name for any character not
 #. * specifically listed in Scripts.txt
-#: ../mucharmap/mucharmap-script-codepoint-list.c:463
-#: ../mucharmap/unicode-scripts.h:30
+#: ../mucharmap/mucharmap-script-codepoint-list.c:473
+#: ../mucharmap/unicode-scripts.h:33
 msgid "Common"
 msgstr "Bendrinis"
 
-#: ../mucharmap/mucharmap-unicode-info.c:99
+#: ../mucharmap/mucharmap-search-dialog.c:571
+msgid "Information"
+msgstr "Informacija"
+
+#. follow hig guidelines
+#: ../mucharmap/mucharmap-search-dialog.c:737
+msgid "Find"
+msgstr "Rasti"
+
+#: ../mucharmap/mucharmap-search-dialog.c:755
+msgid "_Previous"
+msgstr "_Ankstesnis"
+
+#: ../mucharmap/mucharmap-search-dialog.c:766
+msgid "_Next"
+msgstr "_Kitas"
+
+#: ../mucharmap/mucharmap-search-dialog.c:781
+msgid "_Search:"
+msgstr "_Ieškoti:"
+
+#: ../mucharmap/mucharmap-search-dialog.c:791
+msgid "Match _whole word"
+msgstr "Atitikti _visą žodį"
+
+#: ../mucharmap/mucharmap-search-dialog.c:796
+msgid "Search in character _details"
+msgstr "Ieškoti simbolio _informacijoje"
+
+#: ../mucharmap/mucharmap-unicode-info.c:98
 msgid "<Non Private Use High Surrogate>"
 msgstr "<Neasmenio naudojimo aukštieji pakaitalai>"
 
-#: ../mucharmap/mucharmap-unicode-info.c:101
+#: ../mucharmap/mucharmap-unicode-info.c:102
 msgid "<Private Use High Surrogate>"
 msgstr "<Asmeninio naudojimo aukštieji pakaitalai>"
 
-#: ../mucharmap/mucharmap-unicode-info.c:103
+#: ../mucharmap/mucharmap-unicode-info.c:106
 msgid "<Low Surrogate>"
 msgstr "<Žemieji pakaitalai>"
 
-#: ../mucharmap/mucharmap-unicode-info.c:105
+#: ../mucharmap/mucharmap-unicode-info.c:110
 msgid "<Private Use>"
 msgstr "<Asmeninio naudojimo>"
 
-#: ../mucharmap/mucharmap-unicode-info.c:107
+#: ../mucharmap/mucharmap-unicode-info.c:114
 msgid "<Plane 15 Private Use>"
 msgstr "<Plane 15 asmeninio naudojimo>"
 
-#: ../mucharmap/mucharmap-unicode-info.c:109
+#: ../mucharmap/mucharmap-unicode-info.c:118
 msgid "<Plane 16 Private Use>"
 msgstr "<Plane 16 asmeninio naudojimo>"
 
-#: ../mucharmap/mucharmap-unicode-info.c:114
+#: ../mucharmap/mucharmap-unicode-info.c:126
 msgid "<not assigned>"
 msgstr "<nepriskirtas>"
 
-#: ../mucharmap/mucharmap-unicode-info.c:127
+#: ../mucharmap/mucharmap-unicode-info.c:141
 msgid "Other, Control"
 msgstr "Kita, kontrolė"
 
-#: ../mucharmap/mucharmap-unicode-info.c:128
+#: ../mucharmap/mucharmap-unicode-info.c:142
 msgid "Other, Format"
 msgstr "Kita, formatas"
 
-#: ../mucharmap/mucharmap-unicode-info.c:129
+#: ../mucharmap/mucharmap-unicode-info.c:143
 msgid "Other, Not Assigned"
 msgstr "Kita, nepriskirtas"
 
-#: ../mucharmap/mucharmap-unicode-info.c:130
+#: ../mucharmap/mucharmap-unicode-info.c:144
 msgid "Other, Private Use"
 msgstr "Kita, asmeninio naudojimo"
 
-#: ../mucharmap/mucharmap-unicode-info.c:131
+#: ../mucharmap/mucharmap-unicode-info.c:145
 msgid "Other, Surrogate"
 msgstr "Kita, pakaitalas"
 
-#: ../mucharmap/mucharmap-unicode-info.c:132
+#: ../mucharmap/mucharmap-unicode-info.c:146
 msgid "Letter, Lowercase"
 msgstr "Raidės, mažosios"
 
-#: ../mucharmap/mucharmap-unicode-info.c:133
+#: ../mucharmap/mucharmap-unicode-info.c:147
 msgid "Letter, Modifier"
 msgstr "Raidės, keitikliai"
 
-#: ../mucharmap/mucharmap-unicode-info.c:134
+#: ../mucharmap/mucharmap-unicode-info.c:148
 msgid "Letter, Other"
 msgstr "Raidės, kitos"
 
-#: ../mucharmap/mucharmap-unicode-info.c:135
+#: ../mucharmap/mucharmap-unicode-info.c:149
 msgid "Letter, Titlecase"
 msgstr "Raidės, antraštinės"
 
-#: ../mucharmap/mucharmap-unicode-info.c:136
+#: ../mucharmap/mucharmap-unicode-info.c:150
 msgid "Letter, Uppercase"
 msgstr "Raidės, didžiosios"
 
-#: ../mucharmap/mucharmap-unicode-info.c:137
+#: ../mucharmap/mucharmap-unicode-info.c:151
 msgid "Mark, Spacing Combining"
 msgstr "Žymės, tarpų sujungimas"
 
-#: ../mucharmap/mucharmap-unicode-info.c:138
+#: ../mucharmap/mucharmap-unicode-info.c:152
 msgid "Mark, Enclosing"
 msgstr "Žymės, apribojimo"
 
-#: ../mucharmap/mucharmap-unicode-info.c:139
+#: ../mucharmap/mucharmap-unicode-info.c:153
 msgid "Mark, Non-Spacing"
 msgstr "Žymės, nepašalinami tarpai"
 
-#: ../mucharmap/mucharmap-unicode-info.c:140
+#: ../mucharmap/mucharmap-unicode-info.c:154
 msgid "Number, Decimal Digit"
 msgstr "Skaičiai, dešimtainiai"
 
-#: ../mucharmap/mucharmap-unicode-info.c:141
+#: ../mucharmap/mucharmap-unicode-info.c:155
 msgid "Number, Letter"
 msgstr "Skaičiai, raidiniai"
 
-#: ../mucharmap/mucharmap-unicode-info.c:142
+#: ../mucharmap/mucharmap-unicode-info.c:156
 msgid "Number, Other"
 msgstr "Skaičiai, kiti"
 
-#: ../mucharmap/mucharmap-unicode-info.c:143
+#: ../mucharmap/mucharmap-unicode-info.c:157
 msgid "Punctuation, Connector"
 msgstr "Skyryba, jungtukas"
 
-#: ../mucharmap/mucharmap-unicode-info.c:144
+#: ../mucharmap/mucharmap-unicode-info.c:158
 msgid "Punctuation, Dash"
 msgstr "Skyryba, brūkšnys"
 
-#: ../mucharmap/mucharmap-unicode-info.c:145
+#: ../mucharmap/mucharmap-unicode-info.c:159
 msgid "Punctuation, Close"
 msgstr "Skyryba, uždarymas"
 
-#: ../mucharmap/mucharmap-unicode-info.c:146
+#: ../mucharmap/mucharmap-unicode-info.c:160
 msgid "Punctuation, Final Quote"
 msgstr "Skyryba, uždarančios kabutės"
 
-#: ../mucharmap/mucharmap-unicode-info.c:147
+#: ../mucharmap/mucharmap-unicode-info.c:161
 msgid "Punctuation, Initial Quote"
 msgstr "Skyryba, atidarančios kabutės"
 
-#: ../mucharmap/mucharmap-unicode-info.c:148
+#: ../mucharmap/mucharmap-unicode-info.c:162
 msgid "Punctuation, Other"
 msgstr "Skyryba, kita"
 
-#: ../mucharmap/mucharmap-unicode-info.c:149
+#: ../mucharmap/mucharmap-unicode-info.c:163
 msgid "Punctuation, Open"
 msgstr "Skyryba, atidarymas"
 
-#: ../mucharmap/mucharmap-unicode-info.c:150
+#: ../mucharmap/mucharmap-unicode-info.c:164
 msgid "Symbol, Currency"
 msgstr "Simboliai, valiuta"
 
-#: ../mucharmap/mucharmap-unicode-info.c:151
+#: ../mucharmap/mucharmap-unicode-info.c:165
 msgid "Symbol, Modifier"
 msgstr "Simboliai, keitiklis"
 
-#: ../mucharmap/mucharmap-unicode-info.c:152
+#: ../mucharmap/mucharmap-unicode-info.c:166
 msgid "Symbol, Math"
 msgstr "Simboliai, matematika"
 
-#: ../mucharmap/mucharmap-unicode-info.c:153
+#: ../mucharmap/mucharmap-unicode-info.c:167
 msgid "Symbol, Other"
 msgstr "Simboliai, kita"
 
-#: ../mucharmap/mucharmap-unicode-info.c:154
+#: ../mucharmap/mucharmap-unicode-info.c:168
 msgid "Separator, Line"
 msgstr "Skirtukai, linija"
 
-#: ../mucharmap/mucharmap-unicode-info.c:155
+#: ../mucharmap/mucharmap-unicode-info.c:169
 msgid "Separator, Paragraph"
 msgstr "Skirtukai, pastraipa"
 
-#: ../mucharmap/mucharmap-unicode-info.c:156
+#: ../mucharmap/mucharmap-unicode-info.c:170
 msgid "Separator, Space"
 msgstr "Skirtukai, tarpas"
 
-#: ../mucharmap/mucharmap-window.c:246
+#: ../mucharmap/mucharmap-window.c:253
 msgid "Searching…"
 msgstr "Ieškoma…"
 
-#: ../mucharmap/mucharmap-window.c:493
+#: ../mucharmap/mucharmap-window.c:501
 msgid ""
 "Mucharmap is free software; you can redistribute it and/or modify it under "
 "the terms of the GNU General Public License as published by the Free "
-"Software Foundation; either version 2 of the License, or (at your option) "
+"Software Foundation; either version 3 of the License, or (at your option) "
 "any later version."
 msgstr ""
-"Mucharmap yra laisva programinė įranga; galite ją platinti ir/ar modifikuoti "
-"GNU bendrosios viešosios licencijos sąlygomis, kurios paskelbtos Laisvosios "
-"programinės įrangos fondo; 2-osios arba (Jūsų pasirinkimu) bet kurios "
-"vėlesnės licencijos versijos sąlygomis."
-
-#: ../mucharmap/mucharmap-window.c:497
-msgid ""
-"Permission is hereby granted, free of charge, to any person obtaining a copy "
-"of the Unicode data files to deal in them without restriction, including "
-"without limitation the rights to use, copy, modify, merge, publish, "
-"distribute, and/or sell copies."
-msgstr ""
-"Bet kokiam žmogui, gavusiam Unikodo duomenų failų kopijas, užtikrinama "
-"teisė, nemokamai ir neribotai jomis naudotis, tame tarpe, teisė naudotis, "
-"kopijuoti, modifikuoti, sujungti, paskelbti, platinti ir/ar parduoti kopijas."
-
-#: ../mucharmap/mucharmap-window.c:501
-msgid ""
-"Mucharmap and the Unicode data files are distributed in the hope that they "
-"will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty "
-"of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General "
-"Public License and Unicode Copyright for more details."
-msgstr ""
-"Mucharmap ir Unikodo duomenų failo yra platinamos tikintis, kad jos bus "
-"naudingos, bet BE JOKIŲ GARANTIJŲ; netgi be numanomų PARDAVIMO arba "
-"TINKAMUMO TAM TIKRAM TIKSLUI garantijų. Dėl išsamesnės informacijos "
-"žiūrėkite GNU bendrąją viešąją licenciją."
 
 #: ../mucharmap/mucharmap-window.c:505
 msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"Mucharmap; if not, write to the Free Software Foundation, Inc., 59 Temple "
-"Place, Suite 330, Boston, MA  02110-1301  USA"
-msgstr ""
-"Jūs turėjote gauti GNU bendrosios viešosios licencijos kopiją kartu su "
-"Mucharmap; jeigu negavote, rašykite Laisvosios programinės įrangos fondui, "
-"59 Temple Place, Suite 330, Boston, MA  02111-1307  USA"
+"Permission is hereby granted, free of charge, to any person obtaining a copy"
+" of the Unicode data files to deal in them without restriction, including "
+"without limitation the rights to use, copy, modify, merge, publish, "
+"distribute, and/or sell copies."
+msgstr "Bet kokiam žmogui, gavusiam Unikodo duomenų failų kopijas, užtikrinama teisė, nemokamai ir neribotai jomis naudotis, tame tarpe, teisė naudotis, kopijuoti, modifikuoti, sujungti, paskelbti, platinti ir/ar parduoti kopijas."
 
-#: ../mucharmap/mucharmap-window.c:508
+#: ../mucharmap/mucharmap-window.c:509
+msgid ""
+"Mucharmap and the Unicode data files are distributed in the hope that they "
+"will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty "
+"of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General"
+" Public License and Unicode Copyright for more details."
+msgstr "Mucharmap ir Unikodo duomenų failo yra platinamos tikintis, kad jos bus naudingos, bet BE JOKIŲ GARANTIJŲ; netgi be numanomų PARDAVIMO arba TINKAMUMO TAM TIKRAM TIKSLUI garantijų. Dėl išsamesnės informacijos žiūrėkite GNU bendrąją viešąją licenciją."
+
+#: ../mucharmap/mucharmap-window.c:513
+msgid ""
+"You should have received a copy of the GNU General Public License along with"
+" Mucharmap; if not, write to the Free Software Foundation, Inc., 51 Franklin"
+" St, Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
+
+#: ../mucharmap/mucharmap-window.c:516
 msgid ""
 "Also you should have received a copy of the Unicode Copyright along with "
-"Mucharmap; you can always find it at Unicode's website: http://www.unicode."
-"org/copyright.html"
+"Mucharmap; you can always find it at Unicode's website: "
+"http://www.unicode.org/copyright.html"
+msgstr "Jūs kartu su Mucharmap taip pat turėjote gauti Unikodo licencijos kopiją; ją visada galite rasti Unikodo svetainėje: http://www.unicode.org/copyright.html"
+
+#: ../mucharmap/mucharmap-window.c:535
+msgid "Based on the Unicode Character Database 6.2"
 msgstr ""
-"Jūs kartu su Mucharmap taip pat turėjote gauti Unikodo licencijos kopiją; ją "
-"visada galite rasti Unikodo svetainėje: http://www.unicode.org/copyright.html"
 
-#: ../mucharmap/mucharmap-window.c:521 ../mucharmap/main.c:37
-msgid "MATE Character Map"
-msgstr "MATE simbolių lentelė"
-
-#: ../mucharmap/mucharmap-window.c:523
-#| msgid "Based on the Unicode Character Database 5.1"
-msgid "Based on the Unicode Character Database 5.2"
-msgstr "Paremta Unikodo simbolių duomenų baze 5.2"
-
-#: ../mucharmap/mucharmap-window.c:532
+#: ../mucharmap/mucharmap-window.c:544
 msgid "translator-credits"
-msgstr ""
-"Žygimantas Beručka <zygis@gnome.org>,\n"
-"Tomas Kuliavas <tokul@users.sourceforge.net>"
+msgstr "Žygimantas Beručka <zygis@gnome.org>,\nTomas Kuliavas <tokul@users.sourceforge.net>"
 
-#: ../mucharmap/mucharmap-window.c:607 ../mucharmap/mucharmap-window.c:874
+#: ../mucharmap/mucharmap-window.c:619 ../mucharmap/mucharmap-window.c:901
 msgid "Next Script"
 msgstr "Kitas raštas"
 
-#: ../mucharmap/mucharmap-window.c:607 ../mucharmap/mucharmap-window.c:876
+#: ../mucharmap/mucharmap-window.c:619 ../mucharmap/mucharmap-window.c:903
 msgid "Previous Script"
 msgstr "Ankstesnis raštas"
 
-#: ../mucharmap/mucharmap-window.c:612
+#: ../mucharmap/mucharmap-window.c:624
 msgid "Next Block"
 msgstr "Kitas blokas"
 
-#: ../mucharmap/mucharmap-window.c:612
+#: ../mucharmap/mucharmap-window.c:624
 msgid "Previous Block"
 msgstr "Ankstesnis blokas"
 
-#: ../mucharmap/mucharmap-window.c:837
+#: ../mucharmap/mucharmap-window.c:864
 msgid "_File"
 msgstr "_Failas"
 
-#: ../mucharmap/mucharmap-window.c:838
+#: ../mucharmap/mucharmap-window.c:865
 msgid "_View"
 msgstr "R_odymas"
 
-#: ../mucharmap/mucharmap-window.c:839
+#: ../mucharmap/mucharmap-window.c:866
 msgid "_Search"
 msgstr "Pa_ieška"
 
-#: ../mucharmap/mucharmap-window.c:840
+#: ../mucharmap/mucharmap-window.c:867
 msgid "_Go"
 msgstr "_Eiti"
 
-#: ../mucharmap/mucharmap-window.c:841
+#: ../mucharmap/mucharmap-window.c:868
 msgid "_Help"
 msgstr "_Žinynas"
 
-#: ../mucharmap/mucharmap-window.c:844
+#: ../mucharmap/mucharmap-window.c:871
 msgid "Page _Setup"
 msgstr "Puslapio _nustatymai"
 
-#: ../mucharmap/mucharmap-window.c:865
+#: ../mucharmap/mucharmap-window.c:892
 msgid "Find _Next"
 msgstr "Ieškoti _kito"
 
-#: ../mucharmap/mucharmap-window.c:867
+#: ../mucharmap/mucharmap-window.c:894
 msgid "Find _Previous"
 msgstr "Ieškoti _ankstesnio"
 
-#: ../mucharmap/mucharmap-window.c:870
+#: ../mucharmap/mucharmap-window.c:897
 msgid "_Next Character"
 msgstr "_Kitas simbolis"
 
-#: ../mucharmap/mucharmap-window.c:872
+#: ../mucharmap/mucharmap-window.c:899
 msgid "_Previous Character"
 msgstr "_Ankstesnis simbolis"
 
-#: ../mucharmap/mucharmap-window.c:879
+#: ../mucharmap/mucharmap-window.c:906
 msgid "_Contents"
 msgstr "_Turinys"
 
-#: ../mucharmap/mucharmap-window.c:881
+#: ../mucharmap/mucharmap-window.c:908
 msgid "_About"
 msgstr "_Apie"
 
-#: ../mucharmap/mucharmap-window.c:891
+#: ../mucharmap/mucharmap-window.c:918
 msgid "By _Script"
 msgstr "Pagal _raštą"
 
-#: ../mucharmap/mucharmap-window.c:893
+#: ../mucharmap/mucharmap-window.c:920
 msgid "By _Unicode Block"
 msgstr "Pagal _Unicode bloką"
 
-#: ../mucharmap/mucharmap-window.c:898
+#: ../mucharmap/mucharmap-window.c:925
 msgid "Snap _Columns to Power of Two"
 msgstr "_Stulpelių plotis dalinasi iš dviejų"
 
-#: ../mucharmap/mucharmap-window.c:967
+#: ../mucharmap/mucharmap-window.c:993
 msgid "_Text to copy:"
 msgstr "Kopijuotinas _tekstas:"
 
-#: ../mucharmap/mucharmap-window.c:974
+#: ../mucharmap/mucharmap-window.c:1000
 msgid "Copy to the clipboard."
 msgstr "Kopijuoti į atmintinę."
 
-#: ../mucharmap/main.c:55
+#: ../mucharmap/main.c:48
 msgid "Font to start with; ex: 'Serif 27'"
 msgstr "Pradinis šriftas, pvz.: „Serif 27“"
 
-#: ../mucharmap/main.c:55
+#: ../mucharmap/main.c:48
 msgid "FONT"
 msgstr "ŠRIFTAS"
 
@@ -522,7 +538,7 @@ msgstr "Jungiamieji diakritiniai ženklai"
 msgid "Greek and Coptic"
 msgstr "Graikų ir koptų"
 
-#: ../mucharmap/unicode-blocks.h:22 ../mucharmap/unicode-scripts.h:34
+#: ../mucharmap/unicode-blocks.h:22 ../mucharmap/unicode-scripts.h:37
 msgid "Cyrillic"
 msgstr "Kirilica"
 
@@ -534,7 +550,7 @@ msgstr "Kirilicos papildymas"
 msgid "Armenian"
 msgstr "Armėnų"
 
-#: ../mucharmap/unicode-blocks.h:25 ../mucharmap/unicode-scripts.h:48
+#: ../mucharmap/unicode-blocks.h:25 ../mucharmap/unicode-scripts.h:51
 msgid "Hebrew"
 msgstr "Hebrajų"
 
@@ -542,7 +558,7 @@ msgstr "Hebrajų"
 msgid "Arabic"
 msgstr "Arabų"
 
-#: ../mucharmap/unicode-blocks.h:27 ../mucharmap/unicode-scripts.h:93
+#: ../mucharmap/unicode-blocks.h:27 ../mucharmap/unicode-scripts.h:102
 msgid "Syriac"
 msgstr "Siriečių"
 
@@ -550,853 +566,866 @@ msgstr "Siriečių"
 msgid "Arabic Supplement"
 msgstr "Arabiškas papildymas"
 
-#: ../mucharmap/unicode-blocks.h:29 ../mucharmap/unicode-scripts.h:101
+#: ../mucharmap/unicode-blocks.h:29 ../mucharmap/unicode-scripts.h:111
 msgid "Thaana"
 msgstr "Thaana"
 
-#: ../mucharmap/unicode-blocks.h:30 ../mucharmap/unicode-scripts.h:73
+#: ../mucharmap/unicode-blocks.h:30 ../mucharmap/unicode-scripts.h:80
 msgid "N'Ko"
 msgstr "NKo"
 
-#: ../mucharmap/unicode-blocks.h:31 ../mucharmap/unicode-scripts.h:87
-#| msgid "Carian"
+#: ../mucharmap/unicode-blocks.h:31 ../mucharmap/unicode-scripts.h:94
 msgid "Samaritan"
 msgstr "Samariečių"
 
-#: ../mucharmap/unicode-blocks.h:32 ../mucharmap/unicode-scripts.h:36
+#: ../mucharmap/unicode-blocks.h:32 ../mucharmap/unicode-scripts.h:73
+msgid "Mandaic"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:33
+msgid "Arabic Extended-A"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:34 ../mucharmap/unicode-scripts.h:39
 msgid "Devanagari"
 msgstr "Devanagari"
 
-#: ../mucharmap/unicode-blocks.h:33 ../mucharmap/unicode-scripts.h:21
+#: ../mucharmap/unicode-blocks.h:35 ../mucharmap/unicode-scripts.h:22
 msgid "Bengali"
 msgstr "Bengalų"
 
-#: ../mucharmap/unicode-blocks.h:34 ../mucharmap/unicode-scripts.h:44
+#: ../mucharmap/unicode-blocks.h:36 ../mucharmap/unicode-scripts.h:47
 msgid "Gurmukhi"
 msgstr "Gurmukhi"
 
-#: ../mucharmap/unicode-blocks.h:35 ../mucharmap/unicode-scripts.h:43
+#: ../mucharmap/unicode-blocks.h:37 ../mucharmap/unicode-scripts.h:46
 msgid "Gujarati"
 msgstr "Gudžaratų"
 
-#: ../mucharmap/unicode-blocks.h:36 ../mucharmap/unicode-scripts.h:81
+#: ../mucharmap/unicode-blocks.h:38 ../mucharmap/unicode-scripts.h:88
 msgid "Oriya"
 msgstr "Oriya"
 
-#: ../mucharmap/unicode-blocks.h:37 ../mucharmap/unicode-scripts.h:99
+#: ../mucharmap/unicode-blocks.h:39 ../mucharmap/unicode-scripts.h:109
 msgid "Tamil"
 msgstr "Tamilų"
 
-#: ../mucharmap/unicode-blocks.h:38 ../mucharmap/unicode-scripts.h:100
+#: ../mucharmap/unicode-blocks.h:40 ../mucharmap/unicode-scripts.h:110
 msgid "Telugu"
 msgstr "Telugu"
 
-#: ../mucharmap/unicode-blocks.h:39 ../mucharmap/unicode-scripts.h:56
+#: ../mucharmap/unicode-blocks.h:41 ../mucharmap/unicode-scripts.h:59
 msgid "Kannada"
 msgstr "Kannada"
 
-#: ../mucharmap/unicode-blocks.h:40 ../mucharmap/unicode-scripts.h:69
+#: ../mucharmap/unicode-blocks.h:42 ../mucharmap/unicode-scripts.h:72
 msgid "Malayalam"
 msgstr "Malayalam"
 
-#: ../mucharmap/unicode-blocks.h:41 ../mucharmap/unicode-scripts.h:90
+#: ../mucharmap/unicode-blocks.h:43 ../mucharmap/unicode-scripts.h:98
 msgid "Sinhala"
 msgstr "Singhų"
 
-#: ../mucharmap/unicode-blocks.h:42 ../mucharmap/unicode-scripts.h:102
+#: ../mucharmap/unicode-blocks.h:44 ../mucharmap/unicode-scripts.h:112
 msgid "Thai"
 msgstr "Tajų"
 
-#: ../mucharmap/unicode-blocks.h:43 ../mucharmap/unicode-scripts.h:61
+#: ../mucharmap/unicode-blocks.h:45 ../mucharmap/unicode-scripts.h:64
 msgid "Lao"
 msgstr "Lao"
 
-#: ../mucharmap/unicode-blocks.h:44 ../mucharmap/unicode-scripts.h:103
+#: ../mucharmap/unicode-blocks.h:46 ../mucharmap/unicode-scripts.h:113
 msgid "Tibetan"
 msgstr "Tibetiečių"
 
-#: ../mucharmap/unicode-blocks.h:45 ../mucharmap/unicode-scripts.h:72
+#: ../mucharmap/unicode-blocks.h:47 ../mucharmap/unicode-scripts.h:79
 msgid "Myanmar"
 msgstr "Mianmaro"
 
-#: ../mucharmap/unicode-blocks.h:46 ../mucharmap/unicode-scripts.h:39
+#: ../mucharmap/unicode-blocks.h:48 ../mucharmap/unicode-scripts.h:42
 msgid "Georgian"
 msgstr "Gruzinų"
 
-#: ../mucharmap/unicode-blocks.h:47
+#: ../mucharmap/unicode-blocks.h:49
 msgid "Hangul Jamo"
 msgstr "Hangulų Jamo"
 
-#: ../mucharmap/unicode-blocks.h:48 ../mucharmap/unicode-scripts.h:38
+#: ../mucharmap/unicode-blocks.h:50 ../mucharmap/unicode-scripts.h:41
 msgid "Ethiopic"
 msgstr "Etiopijos"
 
-#: ../mucharmap/unicode-blocks.h:49
+#: ../mucharmap/unicode-blocks.h:51
 msgid "Ethiopic Supplement"
 msgstr "Etiopijos papildymas"
 
-#: ../mucharmap/unicode-blocks.h:50 ../mucharmap/unicode-scripts.h:29
+#: ../mucharmap/unicode-blocks.h:52 ../mucharmap/unicode-scripts.h:32
 msgid "Cherokee"
 msgstr "Čerokių"
 
-#: ../mucharmap/unicode-blocks.h:51
+#: ../mucharmap/unicode-blocks.h:53
 msgid "Unified Canadian Aboriginal Syllabics"
 msgstr "Unifikuoti kanados aborigenų skiemenys"
 
-#: ../mucharmap/unicode-blocks.h:52 ../mucharmap/unicode-scripts.h:75
+#: ../mucharmap/unicode-blocks.h:54 ../mucharmap/unicode-scripts.h:82
 msgid "Ogham"
 msgstr "Ogham"
 
-#: ../mucharmap/unicode-blocks.h:53 ../mucharmap/unicode-scripts.h:86
+#: ../mucharmap/unicode-blocks.h:55 ../mucharmap/unicode-scripts.h:93
 msgid "Runic"
 msgstr "Runos"
 
-#: ../mucharmap/unicode-blocks.h:54 ../mucharmap/unicode-scripts.h:94
+#: ../mucharmap/unicode-blocks.h:56 ../mucharmap/unicode-scripts.h:103
 msgid "Tagalog"
 msgstr "Tagalogas"
 
-#: ../mucharmap/unicode-blocks.h:55 ../mucharmap/unicode-scripts.h:47
+#: ../mucharmap/unicode-blocks.h:57 ../mucharmap/unicode-scripts.h:50
 msgid "Hanunoo"
 msgstr "Hanunoo"
 
-#: ../mucharmap/unicode-blocks.h:56 ../mucharmap/unicode-scripts.h:25
+#: ../mucharmap/unicode-blocks.h:58 ../mucharmap/unicode-scripts.h:27
 msgid "Buhid"
 msgstr "Buhid"
 
-#: ../mucharmap/unicode-blocks.h:57 ../mucharmap/unicode-scripts.h:95
+#: ../mucharmap/unicode-blocks.h:59 ../mucharmap/unicode-scripts.h:104
 msgid "Tagbanwa"
 msgstr "Tagbanwa"
 
-#: ../mucharmap/unicode-blocks.h:58 ../mucharmap/unicode-scripts.h:60
+#: ../mucharmap/unicode-blocks.h:60 ../mucharmap/unicode-scripts.h:63
 msgid "Khmer"
 msgstr "Khmerų"
 
-#: ../mucharmap/unicode-blocks.h:59 ../mucharmap/unicode-scripts.h:71
+#: ../mucharmap/unicode-blocks.h:61 ../mucharmap/unicode-scripts.h:78
 msgid "Mongolian"
 msgstr "Mongolų"
 
-#: ../mucharmap/unicode-blocks.h:60
-#| msgid "Unified Canadian Aboriginal Syllabics"
+#: ../mucharmap/unicode-blocks.h:62
 msgid "Unified Canadian Aboriginal Syllabics Extended"
 msgstr "Suvienodinti išplėstiniai Kanados aborigenų skiemenys"
 
-#: ../mucharmap/unicode-blocks.h:61 ../mucharmap/unicode-scripts.h:64
+#: ../mucharmap/unicode-blocks.h:63 ../mucharmap/unicode-scripts.h:67
 msgid "Limbu"
 msgstr "Limbu"
 
-#: ../mucharmap/unicode-blocks.h:62 ../mucharmap/unicode-scripts.h:96
+#: ../mucharmap/unicode-blocks.h:64 ../mucharmap/unicode-scripts.h:105
 msgid "Tai Le"
 msgstr "Tai Le"
 
-#: ../mucharmap/unicode-blocks.h:63 ../mucharmap/unicode-scripts.h:74
+#: ../mucharmap/unicode-blocks.h:65 ../mucharmap/unicode-scripts.h:81
 msgid "New Tai Lue"
 msgstr "Naujas Tai Lue"
 
-#: ../mucharmap/unicode-blocks.h:64
+#: ../mucharmap/unicode-blocks.h:66
 msgid "Khmer Symbols"
 msgstr "Khmerų simboliai"
 
-#: ../mucharmap/unicode-blocks.h:65 ../mucharmap/unicode-scripts.h:24
+#: ../mucharmap/unicode-blocks.h:67 ../mucharmap/unicode-scripts.h:26
 msgid "Buginese"
 msgstr "Buginų"
 
-#: ../mucharmap/unicode-blocks.h:66 ../mucharmap/unicode-scripts.h:97
+#: ../mucharmap/unicode-blocks.h:68 ../mucharmap/unicode-scripts.h:106
 msgid "Tai Tham"
 msgstr "Tai Tham"
 
-#: ../mucharmap/unicode-blocks.h:67 ../mucharmap/unicode-scripts.h:19
+#: ../mucharmap/unicode-blocks.h:69 ../mucharmap/unicode-scripts.h:19
 msgid "Balinese"
 msgstr "Baliečių"
 
-#: ../mucharmap/unicode-blocks.h:68 ../mucharmap/unicode-scripts.h:91
+#: ../mucharmap/unicode-blocks.h:70 ../mucharmap/unicode-scripts.h:100
 msgid "Sundanese"
 msgstr "Sundaniečių"
 
-#: ../mucharmap/unicode-blocks.h:69 ../mucharmap/unicode-scripts.h:63
+#: ../mucharmap/unicode-blocks.h:71 ../mucharmap/unicode-scripts.h:21
+msgid "Batak"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:72 ../mucharmap/unicode-scripts.h:66
 msgid "Lepcha"
 msgstr "Lepcha"
 
-#: ../mucharmap/unicode-blocks.h:70 ../mucharmap/unicode-scripts.h:76
+#: ../mucharmap/unicode-blocks.h:73 ../mucharmap/unicode-scripts.h:83
 msgid "Ol Chiki"
 msgstr "Ol Chiki"
 
-#: ../mucharmap/unicode-blocks.h:71
-#| msgid "Phonetic Extensions"
+#: ../mucharmap/unicode-blocks.h:74
+msgid "Sundanese Supplement"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:75
 msgid "Vedic Extensions"
 msgstr "Vedų išplėtimai"
 
-#: ../mucharmap/unicode-blocks.h:72
+#: ../mucharmap/unicode-blocks.h:76
 msgid "Phonetic Extensions"
 msgstr "Fonetiniai išplėtimai"
 
-#: ../mucharmap/unicode-blocks.h:73
+#: ../mucharmap/unicode-blocks.h:77
 msgid "Phonetic Extensions Supplement"
 msgstr "Fonetinių išplėtimų papildymas"
 
-#: ../mucharmap/unicode-blocks.h:74
+#: ../mucharmap/unicode-blocks.h:78
 msgid "Combining Diacritical Marks Supplement"
 msgstr "Sujungiančių skyrybų žymių papildymas"
 
-#: ../mucharmap/unicode-blocks.h:75
+#: ../mucharmap/unicode-blocks.h:79
 msgid "Latin Extended Additional"
 msgstr "Lotynų išplėstas papildomas"
 
-#: ../mucharmap/unicode-blocks.h:76
+#: ../mucharmap/unicode-blocks.h:80
 msgid "Greek Extended"
 msgstr "Graikų išplėstas"
 
-#: ../mucharmap/unicode-blocks.h:77
+#: ../mucharmap/unicode-blocks.h:81
 msgid "General Punctuation"
 msgstr "Bendroji skyryba"
 
-#: ../mucharmap/unicode-blocks.h:78
+#: ../mucharmap/unicode-blocks.h:82
 msgid "Superscripts and Subscripts"
 msgstr "Indeksai ir rodyklės"
 
-#: ../mucharmap/unicode-blocks.h:79
+#: ../mucharmap/unicode-blocks.h:83
 msgid "Currency Symbols"
 msgstr "Valiutų simboliai"
 
-#: ../mucharmap/unicode-blocks.h:80
+#: ../mucharmap/unicode-blocks.h:84
 msgid "Combining Diacritical Marks for Symbols"
 msgstr "Sujungiamieji simbolių diakritiniai ženklai"
 
-#: ../mucharmap/unicode-blocks.h:81
+#: ../mucharmap/unicode-blocks.h:85
 msgid "Letterlike Symbols"
 msgstr "Raidiniai simboliai"
 
-#: ../mucharmap/unicode-blocks.h:82
+#: ../mucharmap/unicode-blocks.h:86
 msgid "Number Forms"
 msgstr "Skaičių formos"
 
-#: ../mucharmap/unicode-blocks.h:83
+#: ../mucharmap/unicode-blocks.h:87
 msgid "Arrows"
 msgstr "Rodyklės"
 
-#: ../mucharmap/unicode-blocks.h:84
+#: ../mucharmap/unicode-blocks.h:88
 msgid "Mathematical Operators"
 msgstr "Matematiniai operatoriai"
 
-#: ../mucharmap/unicode-blocks.h:85
+#: ../mucharmap/unicode-blocks.h:89
 msgid "Miscellaneous Technical"
 msgstr "Įvairūs techniniai"
 
-#: ../mucharmap/unicode-blocks.h:86
+#: ../mucharmap/unicode-blocks.h:90
 msgid "Control Pictures"
 msgstr "Valdymo paveikslėliai"
 
-#: ../mucharmap/unicode-blocks.h:87
+#: ../mucharmap/unicode-blocks.h:91
 msgid "Optical Character Recognition"
 msgstr "Optinis simbolių atpažinimas"
 
-#: ../mucharmap/unicode-blocks.h:88
+#: ../mucharmap/unicode-blocks.h:92
 msgid "Enclosed Alphanumerics"
 msgstr "Apriboti alfaskaitmeniniai simboliai"
 
-#: ../mucharmap/unicode-blocks.h:89
+#: ../mucharmap/unicode-blocks.h:93
 msgid "Box Drawing"
 msgstr "Linijinis braižymas"
 
-#: ../mucharmap/unicode-blocks.h:90
+#: ../mucharmap/unicode-blocks.h:94
 msgid "Block Elements"
 msgstr "Blokų elementai"
 
-#: ../mucharmap/unicode-blocks.h:91
+#: ../mucharmap/unicode-blocks.h:95
 msgid "Geometric Shapes"
 msgstr "Geometrinės figūros"
 
-#: ../mucharmap/unicode-blocks.h:92
+#: ../mucharmap/unicode-blocks.h:96
 msgid "Miscellaneous Symbols"
 msgstr "Įvairūs simboliai"
 
-#: ../mucharmap/unicode-blocks.h:93
+#: ../mucharmap/unicode-blocks.h:97
 msgid "Dingbats"
 msgstr "Dingbats"
 
-#: ../mucharmap/unicode-blocks.h:94
+#: ../mucharmap/unicode-blocks.h:98
 msgid "Miscellaneous Mathematical Symbols-A"
 msgstr "Įvairūs matematiniai simboliai A"
 
-#: ../mucharmap/unicode-blocks.h:95
+#: ../mucharmap/unicode-blocks.h:99
 msgid "Supplemental Arrows-A"
 msgstr "Papildomos rodyklės A"
 
-#: ../mucharmap/unicode-blocks.h:96
+#: ../mucharmap/unicode-blocks.h:100
 msgid "Braille Patterns"
 msgstr "Brailio raštas"
 
-#: ../mucharmap/unicode-blocks.h:97
+#: ../mucharmap/unicode-blocks.h:101
 msgid "Supplemental Arrows-B"
 msgstr "Papildomos rodyklės B"
 
-#: ../mucharmap/unicode-blocks.h:98
+#: ../mucharmap/unicode-blocks.h:102
 msgid "Miscellaneous Mathematical Symbols-B"
 msgstr "Papildomi matematiniai simboliai B"
 
-#: ../mucharmap/unicode-blocks.h:99
+#: ../mucharmap/unicode-blocks.h:103
 msgid "Supplemental Mathematical Operators"
 msgstr "Papildomi matematiniai operatoriai"
 
-#: ../mucharmap/unicode-blocks.h:100
+#: ../mucharmap/unicode-blocks.h:104
 msgid "Miscellaneous Symbols and Arrows"
 msgstr "Papildomi simboliai ir rodyklės"
 
-#: ../mucharmap/unicode-blocks.h:101 ../mucharmap/unicode-scripts.h:40
+#: ../mucharmap/unicode-blocks.h:105 ../mucharmap/unicode-scripts.h:43
 msgid "Glagolitic"
 msgstr "Glagolitiškas"
 
-#: ../mucharmap/unicode-blocks.h:102
+#: ../mucharmap/unicode-blocks.h:106
 msgid "Latin Extended-C"
 msgstr "Lotynų išplėstas C"
 
-#: ../mucharmap/unicode-blocks.h:103 ../mucharmap/unicode-scripts.h:31
+#: ../mucharmap/unicode-blocks.h:107 ../mucharmap/unicode-scripts.h:34
 msgid "Coptic"
 msgstr "Koptų"
 
-#: ../mucharmap/unicode-blocks.h:104
+#: ../mucharmap/unicode-blocks.h:108
 msgid "Georgian Supplement"
 msgstr "Gruzinų papildymas"
 
-#: ../mucharmap/unicode-blocks.h:105 ../mucharmap/unicode-scripts.h:104
+#: ../mucharmap/unicode-blocks.h:109 ../mucharmap/unicode-scripts.h:114
 msgid "Tifinagh"
 msgstr "Tifinagh"
 
-#: ../mucharmap/unicode-blocks.h:106
+#: ../mucharmap/unicode-blocks.h:110
 msgid "Ethiopic Extended"
 msgstr "Etiopų išplėstas"
 
-#: ../mucharmap/unicode-blocks.h:107
+#: ../mucharmap/unicode-blocks.h:111
 msgid "Cyrillic Extended-A"
 msgstr "Kirilica išplėsta A"
 
-#: ../mucharmap/unicode-blocks.h:108
+#: ../mucharmap/unicode-blocks.h:112
 msgid "Supplemental Punctuation"
 msgstr "Papildoma skyryba"
 
-#: ../mucharmap/unicode-blocks.h:109
+#: ../mucharmap/unicode-blocks.h:113
 msgid "CJK Radicals Supplement"
 msgstr "CJK rapildomi radikalai"
 
-#: ../mucharmap/unicode-blocks.h:110
+#: ../mucharmap/unicode-blocks.h:114
 msgid "Kangxi Radicals"
 msgstr "Kandži radikalai"
 
-#: ../mucharmap/unicode-blocks.h:111
+#: ../mucharmap/unicode-blocks.h:115
 msgid "Ideographic Description Characters"
 msgstr "Ideografiniai aprašymų simboliai"
 
-#: ../mucharmap/unicode-blocks.h:112
+#: ../mucharmap/unicode-blocks.h:116
 msgid "CJK Symbols and Punctuation"
 msgstr "CJK simboliai ir skyryba"
 
-#: ../mucharmap/unicode-blocks.h:113 ../mucharmap/unicode-scripts.h:49
+#: ../mucharmap/unicode-blocks.h:117 ../mucharmap/unicode-scripts.h:52
 msgid "Hiragana"
 msgstr "Hiragana"
 
-#: ../mucharmap/unicode-blocks.h:114 ../mucharmap/unicode-scripts.h:57
+#: ../mucharmap/unicode-blocks.h:118 ../mucharmap/unicode-scripts.h:60
 msgid "Katakana"
 msgstr "Katakana"
 
-#: ../mucharmap/unicode-blocks.h:115 ../mucharmap/unicode-scripts.h:22
+#: ../mucharmap/unicode-blocks.h:119 ../mucharmap/unicode-scripts.h:23
 msgid "Bopomofo"
 msgstr "Bopomofo"
 
-#: ../mucharmap/unicode-blocks.h:116
+#: ../mucharmap/unicode-blocks.h:120
 msgid "Hangul Compatibility Jamo"
 msgstr "Hangulų suderimamumas su Jamo"
 
-#: ../mucharmap/unicode-blocks.h:117
+#: ../mucharmap/unicode-blocks.h:121
 msgid "Kanbun"
 msgstr "Kanbun"
 
-#: ../mucharmap/unicode-blocks.h:118
+#: ../mucharmap/unicode-blocks.h:122
 msgid "Bopomofo Extended"
 msgstr "Bopomofo išsplėstas"
 
-#: ../mucharmap/unicode-blocks.h:119
+#: ../mucharmap/unicode-blocks.h:123
 msgid "CJK Strokes"
 msgstr "CJK brūkšniai"
 
-#: ../mucharmap/unicode-blocks.h:120
+#: ../mucharmap/unicode-blocks.h:124
 msgid "Katakana Phonetic Extensions"
 msgstr "Katakana fonetiniai išplėtimai"
 
-#: ../mucharmap/unicode-blocks.h:121
+#: ../mucharmap/unicode-blocks.h:125
 msgid "Enclosed CJK Letters and Months"
 msgstr "Apribotos CJK raidės ir mėnesiai"
 
-#: ../mucharmap/unicode-blocks.h:122
+#: ../mucharmap/unicode-blocks.h:126
 msgid "CJK Compatibility"
 msgstr "CJK suderinamumas"
 
-#: ../mucharmap/unicode-blocks.h:123
+#: ../mucharmap/unicode-blocks.h:127
 msgid "CJK Unified Ideographs Extension A"
 msgstr "CJK unifikuotų ideogramų išplėtimas A"
 
-#: ../mucharmap/unicode-blocks.h:124
+#: ../mucharmap/unicode-blocks.h:128
 msgid "Yijing Hexagram Symbols"
 msgstr "Yijing heksagramų simboliai"
 
-#: ../mucharmap/unicode-blocks.h:125
+#: ../mucharmap/unicode-blocks.h:129
 msgid "CJK Unified Ideographs"
 msgstr "CJK unifikuotos ideogramos"
 
-#: ../mucharmap/unicode-blocks.h:126
+#: ../mucharmap/unicode-blocks.h:130
 msgid "Yi Syllables"
 msgstr "Dži skiemenys"
 
-#: ../mucharmap/unicode-blocks.h:127
+#: ../mucharmap/unicode-blocks.h:131
 msgid "Yi Radicals"
 msgstr "Dži radikalai"
 
-#: ../mucharmap/unicode-blocks.h:128 ../mucharmap/unicode-scripts.h:66
-#| msgid "Limbu"
+#: ../mucharmap/unicode-blocks.h:132 ../mucharmap/unicode-scripts.h:69
 msgid "Lisu"
 msgstr "﻿Lisu"
 
-#: ../mucharmap/unicode-blocks.h:129 ../mucharmap/unicode-scripts.h:106
+#: ../mucharmap/unicode-blocks.h:133 ../mucharmap/unicode-scripts.h:116
 msgid "Vai"
 msgstr "Vai"
 
-#: ../mucharmap/unicode-blocks.h:130
+#: ../mucharmap/unicode-blocks.h:134
 msgid "Cyrillic Extended-B"
 msgstr "Kirilica išplėsta B"
 
-#: ../mucharmap/unicode-blocks.h:131 ../mucharmap/unicode-scripts.h:20
+#: ../mucharmap/unicode-blocks.h:135 ../mucharmap/unicode-scripts.h:20
 msgid "Bamum"
 msgstr "﻿Bamum"
 
-#: ../mucharmap/unicode-blocks.h:132
+#: ../mucharmap/unicode-blocks.h:136
 msgid "Modifier Tone Letters"
 msgstr "Tonų keitimo raidės"
 
-#: ../mucharmap/unicode-blocks.h:133
+#: ../mucharmap/unicode-blocks.h:137
 msgid "Latin Extended-D"
 msgstr "Lotynų išplėsta D"
 
-#: ../mucharmap/unicode-blocks.h:134 ../mucharmap/unicode-scripts.h:92
+#: ../mucharmap/unicode-blocks.h:138 ../mucharmap/unicode-scripts.h:101
 msgid "Syloti Nagri"
 msgstr "Syloti Nagri"
 
-#: ../mucharmap/unicode-blocks.h:135
-#| msgid "Number Forms"
+#: ../mucharmap/unicode-blocks.h:139
 msgid "Common Indic Number Forms"
 msgstr "Bendrosios indiškos skaičių formos"
 
-#: ../mucharmap/unicode-blocks.h:136
+#: ../mucharmap/unicode-blocks.h:140
 msgid "Phags-pa"
 msgstr "Fags-pa"
 
-#: ../mucharmap/unicode-blocks.h:137 ../mucharmap/unicode-scripts.h:88
+#: ../mucharmap/unicode-blocks.h:141 ../mucharmap/unicode-scripts.h:95
 msgid "Saurashtra"
 msgstr "Saurashtra"
 
-#: ../mucharmap/unicode-blocks.h:138
-#| msgid "Devanagari"
+#: ../mucharmap/unicode-blocks.h:142
 msgid "Devanagari Extended"
 msgstr "Devanagari išplėstinė"
 
-#: ../mucharmap/unicode-blocks.h:139 ../mucharmap/unicode-scripts.h:58
+#: ../mucharmap/unicode-blocks.h:143 ../mucharmap/unicode-scripts.h:61
 msgid "Kayah Li"
 msgstr "Kayah Li"
 
-#: ../mucharmap/unicode-blocks.h:140 ../mucharmap/unicode-scripts.h:85
+#: ../mucharmap/unicode-blocks.h:144 ../mucharmap/unicode-scripts.h:92
 msgid "Rejang"
 msgstr "Rejang"
 
-#: ../mucharmap/unicode-blocks.h:141
-#| msgid "Latin Extended-A"
+#: ../mucharmap/unicode-blocks.h:145
 msgid "Hangul Jamo Extended-A"
 msgstr "Hangul Jamo išplėstinis A"
 
-#: ../mucharmap/unicode-blocks.h:142 ../mucharmap/unicode-scripts.h:54
-#| msgid "Balinese"
+#: ../mucharmap/unicode-blocks.h:146 ../mucharmap/unicode-scripts.h:57
 msgid "Javanese"
 msgstr "Javiečių"
 
-#: ../mucharmap/unicode-blocks.h:143 ../mucharmap/unicode-scripts.h:28
+#: ../mucharmap/unicode-blocks.h:147 ../mucharmap/unicode-scripts.h:31
 msgid "Cham"
 msgstr "Cham"
 
-#: ../mucharmap/unicode-blocks.h:144
-#| msgid "Latin Extended-A"
+#: ../mucharmap/unicode-blocks.h:148
 msgid "Myanmar Extended-A"
 msgstr "﻿Mianmaro išplėstinis A"
 
-#: ../mucharmap/unicode-blocks.h:145 ../mucharmap/unicode-scripts.h:98
-#| msgid "Tai Le"
+#: ../mucharmap/unicode-blocks.h:149 ../mucharmap/unicode-scripts.h:107
 msgid "Tai Viet"
 msgstr "Tajų Vietnamo"
 
-#: ../mucharmap/unicode-blocks.h:146 ../mucharmap/unicode-scripts.h:70
+#: ../mucharmap/unicode-blocks.h:150
+msgid "Meetei Mayek Extensions"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:151
+msgid "Ethiopic Extended-A"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:152 ../mucharmap/unicode-scripts.h:74
 msgid "Meetei Mayek"
 msgstr "Meetei Mayek"
 
-#: ../mucharmap/unicode-blocks.h:147
+#: ../mucharmap/unicode-blocks.h:153
 msgid "Hangul Syllables"
 msgstr "Hangulų skiemenys"
 
-#: ../mucharmap/unicode-blocks.h:148
-#| msgid "Latin Extended-B"
+#: ../mucharmap/unicode-blocks.h:154
 msgid "Hangul Jamo Extended-B"
 msgstr "Hangul Jamo išplėstinis B"
 
-#: ../mucharmap/unicode-blocks.h:149
+#: ../mucharmap/unicode-blocks.h:155
 msgid "High Surrogates"
 msgstr "Aukštieji pakaitalai"
 
-#: ../mucharmap/unicode-blocks.h:150
+#: ../mucharmap/unicode-blocks.h:156
 msgid "High Private Use Surrogates"
 msgstr "Aukštieji asmeninio naudojimo pakaitalai"
 
-#: ../mucharmap/unicode-blocks.h:151
+#: ../mucharmap/unicode-blocks.h:157
 msgid "Low Surrogates"
 msgstr "Žemieji pakaitalai"
 
-#: ../mucharmap/unicode-blocks.h:152
+#: ../mucharmap/unicode-blocks.h:158
 msgid "Private Use Area"
 msgstr "Asmeninio naudojimo sritis"
 
-#: ../mucharmap/unicode-blocks.h:153
+#: ../mucharmap/unicode-blocks.h:159
 msgid "CJK Compatibility Ideographs"
 msgstr "CJK suderinamumo ideogramos"
 
-#: ../mucharmap/unicode-blocks.h:154
+#: ../mucharmap/unicode-blocks.h:160
 msgid "Alphabetic Presentation Forms"
 msgstr "Alfabetininės atvaizdavimo formos"
 
-#: ../mucharmap/unicode-blocks.h:155
+#: ../mucharmap/unicode-blocks.h:161
 msgid "Arabic Presentation Forms-A"
 msgstr "Arabų atvaizdavimo formos-A"
 
-#: ../mucharmap/unicode-blocks.h:156
+#: ../mucharmap/unicode-blocks.h:162
 msgid "Variation Selectors"
 msgstr "Variacijų pasirinkimas"
 
-#: ../mucharmap/unicode-blocks.h:157
+#: ../mucharmap/unicode-blocks.h:163
 msgid "Vertical Forms"
 msgstr "Vertikalios formos"
 
-#: ../mucharmap/unicode-blocks.h:158
+#: ../mucharmap/unicode-blocks.h:164
 msgid "Combining Half Marks"
 msgstr "Sujungiančios pusinės žymės"
 
-#: ../mucharmap/unicode-blocks.h:159
+#: ../mucharmap/unicode-blocks.h:165
 msgid "CJK Compatibility Forms"
 msgstr "CJK suderinamumo formos"
 
-#: ../mucharmap/unicode-blocks.h:160
+#: ../mucharmap/unicode-blocks.h:166
 msgid "Small Form Variants"
 msgstr "Mažos formos variantai"
 
-#: ../mucharmap/unicode-blocks.h:161
+#: ../mucharmap/unicode-blocks.h:167
 msgid "Arabic Presentation Forms-B"
 msgstr "Arabų atvaizdavimo formos-B"
 
-#: ../mucharmap/unicode-blocks.h:162
+#: ../mucharmap/unicode-blocks.h:168
 msgid "Halfwidth and Fullwidth Forms"
 msgstr "Pusės ir pilno pločio formos"
 
-#: ../mucharmap/unicode-blocks.h:163
+#: ../mucharmap/unicode-blocks.h:169
 msgid "Specials"
 msgstr "Specialūs simboliai"
 
-#: ../mucharmap/unicode-blocks.h:164
+#: ../mucharmap/unicode-blocks.h:170
 msgid "Linear B Syllabary"
 msgstr "Linijiniai B skiemenys"
 
-#: ../mucharmap/unicode-blocks.h:165
+#: ../mucharmap/unicode-blocks.h:171
 msgid "Linear B Ideograms"
 msgstr "Linijinės B ideogramos"
 
-#: ../mucharmap/unicode-blocks.h:166
+#: ../mucharmap/unicode-blocks.h:172
 msgid "Aegean Numbers"
 msgstr "Ėgėjo skaičiai"
 
-#: ../mucharmap/unicode-blocks.h:167
+#: ../mucharmap/unicode-blocks.h:173
 msgid "Ancient Greek Numbers"
 msgstr "Senovės graikų skaičiai"
 
-#: ../mucharmap/unicode-blocks.h:168
+#: ../mucharmap/unicode-blocks.h:174
 msgid "Ancient Symbols"
 msgstr "Senoviniai simboliai"
 
-#: ../mucharmap/unicode-blocks.h:169
+#: ../mucharmap/unicode-blocks.h:175
 msgid "Phaistos Disc"
 msgstr "Phaistos Disc"
 
-#: ../mucharmap/unicode-blocks.h:170 ../mucharmap/unicode-scripts.h:67
+#: ../mucharmap/unicode-blocks.h:176 ../mucharmap/unicode-scripts.h:70
 msgid "Lycian"
 msgstr "Likų"
 
-#: ../mucharmap/unicode-blocks.h:171 ../mucharmap/unicode-scripts.h:27
+#: ../mucharmap/unicode-blocks.h:177 ../mucharmap/unicode-scripts.h:29
 msgid "Carian"
 msgstr "Karų"
 
-#: ../mucharmap/unicode-blocks.h:172 ../mucharmap/unicode-scripts.h:77
+#: ../mucharmap/unicode-blocks.h:178 ../mucharmap/unicode-scripts.h:84
 msgid "Old Italic"
 msgstr "Etruskų"
 
-#: ../mucharmap/unicode-blocks.h:173 ../mucharmap/unicode-scripts.h:41
+#: ../mucharmap/unicode-blocks.h:179 ../mucharmap/unicode-scripts.h:44
 msgid "Gothic"
 msgstr "Gotika"
 
-#: ../mucharmap/unicode-blocks.h:174 ../mucharmap/unicode-scripts.h:105
+#: ../mucharmap/unicode-blocks.h:180 ../mucharmap/unicode-scripts.h:115
 msgid "Ugaritic"
 msgstr "Ugaritic"
 
-#: ../mucharmap/unicode-blocks.h:175 ../mucharmap/unicode-scripts.h:78
+#: ../mucharmap/unicode-blocks.h:181 ../mucharmap/unicode-scripts.h:85
 msgid "Old Persian"
 msgstr "Senoji persų"
 
-#: ../mucharmap/unicode-blocks.h:176 ../mucharmap/unicode-scripts.h:35
+#: ../mucharmap/unicode-blocks.h:182 ../mucharmap/unicode-scripts.h:38
 msgid "Deseret"
 msgstr "Deseret"
 
-#: ../mucharmap/unicode-blocks.h:177 ../mucharmap/unicode-scripts.h:89
+#: ../mucharmap/unicode-blocks.h:183 ../mucharmap/unicode-scripts.h:97
 msgid "Shavian"
 msgstr "Shavian"
 
-#: ../mucharmap/unicode-blocks.h:178 ../mucharmap/unicode-scripts.h:82
+#: ../mucharmap/unicode-blocks.h:184 ../mucharmap/unicode-scripts.h:89
 msgid "Osmanya"
 msgstr "Osmanų"
 
-#: ../mucharmap/unicode-blocks.h:179
+#: ../mucharmap/unicode-blocks.h:185
 msgid "Cypriot Syllabary"
 msgstr "Kipro skiemenys"
 
-#: ../mucharmap/unicode-blocks.h:180 ../mucharmap/unicode-scripts.h:50
+#: ../mucharmap/unicode-blocks.h:186 ../mucharmap/unicode-scripts.h:53
 msgid "Imperial Aramaic"
 msgstr "Imperiniai aramėjų"
 
-#: ../mucharmap/unicode-blocks.h:181 ../mucharmap/unicode-scripts.h:84
+#: ../mucharmap/unicode-blocks.h:187 ../mucharmap/unicode-scripts.h:91
 msgid "Phoenician"
 msgstr "Finikiečių"
 
-#: ../mucharmap/unicode-blocks.h:182 ../mucharmap/unicode-scripts.h:68
+#: ../mucharmap/unicode-blocks.h:188 ../mucharmap/unicode-scripts.h:71
 msgid "Lydian"
 msgstr "Lidų"
 
-#: ../mucharmap/unicode-blocks.h:183 ../mucharmap/unicode-scripts.h:59
+#: ../mucharmap/unicode-blocks.h:189 ../mucharmap/unicode-scripts.h:76
+msgid "Meroitic Hieroglyphs"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:190 ../mucharmap/unicode-scripts.h:75
+msgid "Meroitic Cursive"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:191 ../mucharmap/unicode-scripts.h:62
 msgid "Kharoshthi"
 msgstr "Kharoshthi"
 
-#: ../mucharmap/unicode-blocks.h:184 ../mucharmap/unicode-scripts.h:79
+#: ../mucharmap/unicode-blocks.h:192 ../mucharmap/unicode-scripts.h:86
 msgid "Old South Arabian"
 msgstr "Senasis Pietų Arabijos"
 
-#: ../mucharmap/unicode-blocks.h:185 ../mucharmap/unicode-scripts.h:18
+#: ../mucharmap/unicode-blocks.h:193 ../mucharmap/unicode-scripts.h:18
 msgid "Avestan"
 msgstr "Avestų"
 
-#: ../mucharmap/unicode-blocks.h:186 ../mucharmap/unicode-scripts.h:53
+#: ../mucharmap/unicode-blocks.h:194 ../mucharmap/unicode-scripts.h:56
 msgid "Inscriptional Parthian"
 msgstr "Įrėžiamas partų"
 
-#: ../mucharmap/unicode-blocks.h:187 ../mucharmap/unicode-scripts.h:52
+#: ../mucharmap/unicode-blocks.h:195 ../mucharmap/unicode-scripts.h:55
 msgid "Inscriptional Pahlavi"
 msgstr "Įrėžiamas pahlavų"
 
-#: ../mucharmap/unicode-blocks.h:188 ../mucharmap/unicode-scripts.h:80
-#| msgid "Old Italic"
+#: ../mucharmap/unicode-blocks.h:196 ../mucharmap/unicode-scripts.h:87
 msgid "Old Turkic"
 msgstr "Senasis tiurkų"
 
-#: ../mucharmap/unicode-blocks.h:189
-#| msgid "Musical Symbols"
+#: ../mucharmap/unicode-blocks.h:197
 msgid "Rumi Numeral Symbols"
 msgstr "Rumi skaitiniai simboliai"
 
-#: ../mucharmap/unicode-blocks.h:190 ../mucharmap/unicode-scripts.h:55
-#| msgid "Kharoshthi"
+#: ../mucharmap/unicode-blocks.h:198 ../mucharmap/unicode-scripts.h:24
+msgid "Brahmi"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:199 ../mucharmap/unicode-scripts.h:58
 msgid "Kaithi"
 msgstr "Kaithi"
 
-#: ../mucharmap/unicode-blocks.h:191 ../mucharmap/unicode-scripts.h:32
+#: ../mucharmap/unicode-blocks.h:200 ../mucharmap/unicode-scripts.h:99
+msgid "Sora Sompeng"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:201 ../mucharmap/unicode-scripts.h:30
+msgid "Chakma"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:202 ../mucharmap/unicode-scripts.h:96
+msgid "Sharada"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:203 ../mucharmap/unicode-scripts.h:108
+msgid "Takri"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:204 ../mucharmap/unicode-scripts.h:35
 msgid "Cuneiform"
 msgstr "Dantiraštis"
 
-#: ../mucharmap/unicode-blocks.h:192
+#: ../mucharmap/unicode-blocks.h:205
 msgid "Cuneiform Numbers and Punctuation"
 msgstr "Dantiraščio skaičiai ir skyryba"
 
-#: ../mucharmap/unicode-blocks.h:193 ../mucharmap/unicode-scripts.h:37
+#: ../mucharmap/unicode-blocks.h:206 ../mucharmap/unicode-scripts.h:40
 msgid "Egyptian Hieroglyphs"
 msgstr "Egiptietiški hieroglifai"
 
-#: ../mucharmap/unicode-blocks.h:194
+#: ../mucharmap/unicode-blocks.h:207
+msgid "Bamum Supplement"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:208 ../mucharmap/unicode-scripts.h:77
+msgid "Miao"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:209
+msgid "Kana Supplement"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:210
 msgid "Byzantine Musical Symbols"
 msgstr "Bizantijos muzikiniai simboliai"
 
-#: ../mucharmap/unicode-blocks.h:195
+#: ../mucharmap/unicode-blocks.h:211
 msgid "Musical Symbols"
 msgstr "Muzikiniai simboliai"
 
-#: ../mucharmap/unicode-blocks.h:196
+#: ../mucharmap/unicode-blocks.h:212
 msgid "Ancient Greek Musical Notation"
 msgstr "Senovės graikų muzikinė notacija"
 
-#: ../mucharmap/unicode-blocks.h:197
+#: ../mucharmap/unicode-blocks.h:213
 msgid "Tai Xuan Jing Symbols"
 msgstr "Tai Xuan Jing simboliai"
 
-#: ../mucharmap/unicode-blocks.h:198
+#: ../mucharmap/unicode-blocks.h:214
 msgid "Counting Rod Numerals"
 msgstr "Skaičiuojamų lazdelių skaitmenys"
 
-#: ../mucharmap/unicode-blocks.h:199
+#: ../mucharmap/unicode-blocks.h:215
 msgid "Mathematical Alphanumeric Symbols"
 msgstr "Matematiniai alfaskaitmeniniai simboliai"
 
-#: ../mucharmap/unicode-blocks.h:200
+#: ../mucharmap/unicode-blocks.h:216
+msgid "Arabic Mathematical Alphabetic Symbols"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:217
 msgid "Mahjong Tiles"
 msgstr "Mahjong kaladėlės"
 
-#: ../mucharmap/unicode-blocks.h:201
+#: ../mucharmap/unicode-blocks.h:218
 msgid "Domino Tiles"
 msgstr "Domino kaladėlės"
 
-#: ../mucharmap/unicode-blocks.h:202
-#| msgid "Enclosed Alphanumerics"
+#: ../mucharmap/unicode-blocks.h:219
+msgid "Playing Cards"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:220
 msgid "Enclosed Alphanumeric Supplement"
 msgstr "Apribotas alfaskaitinis papildymas"
 
-#: ../mucharmap/unicode-blocks.h:203
-#| msgid "Ethiopic Supplement"
+#: ../mucharmap/unicode-blocks.h:221
 msgid "Enclosed Ideographic Supplement"
 msgstr "Apribotas ideografinis papildymas"
 
-#: ../mucharmap/unicode-blocks.h:204
+#: ../mucharmap/unicode-blocks.h:222
+msgid "Miscellaneous Symbols And Pictographs"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:223
+msgid "Emoticons"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:224
+msgid "Transport And Map Symbols"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:225
+msgid "Alchemical Symbols"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:226
 msgid "CJK Unified Ideographs Extension B"
 msgstr "CJK unifikuotas ideografų išplėtimas B"
 
-#: ../mucharmap/unicode-blocks.h:205
-#| msgid "CJK Unified Ideographs Extension A"
+#: ../mucharmap/unicode-blocks.h:227
 msgid "CJK Unified Ideographs Extension C"
 msgstr "CJK unifikuotų ideografų išplėtimas C"
 
-#: ../mucharmap/unicode-blocks.h:206
+#: ../mucharmap/unicode-blocks.h:228
+msgid "CJK Unified Ideographs Extension D"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:229
 msgid "CJK Compatibility Ideographs Supplement"
 msgstr "CJK suderinamumo ideografinis papildymas"
 
-#: ../mucharmap/unicode-blocks.h:207
+#: ../mucharmap/unicode-blocks.h:230
 msgid "Tags"
 msgstr "Žymės"
 
-#: ../mucharmap/unicode-blocks.h:208
+#: ../mucharmap/unicode-blocks.h:231
 msgid "Variation Selectors Supplement"
 msgstr "Papildomas variacijų pasirinkimas"
 
-#: ../mucharmap/unicode-blocks.h:209
+#: ../mucharmap/unicode-blocks.h:232
 msgid "Supplementary Private Use Area-A"
 msgstr "Papildoma asmeninio naudojimo sritis-A"
 
-#: ../mucharmap/unicode-blocks.h:210
+#: ../mucharmap/unicode-blocks.h:233
 msgid "Supplementary Private Use Area-B"
 msgstr "Papildoma asmeninio naudojimo sritis-B"
 
-#: ../mucharmap/unicode-scripts.h:23
+#: ../mucharmap/unicode-scripts.h:25
 msgid "Braille"
 msgstr "Brailis"
 
-#: ../mucharmap/unicode-scripts.h:26
+#: ../mucharmap/unicode-scripts.h:28
 msgid "Canadian Aboriginal"
 msgstr "Kanados aborigenų"
 
-#: ../mucharmap/unicode-scripts.h:33
+#: ../mucharmap/unicode-scripts.h:36
 msgid "Cypriot"
 msgstr "Kipro"
 
-#: ../mucharmap/unicode-scripts.h:42
+#: ../mucharmap/unicode-scripts.h:45
 msgid "Greek"
 msgstr "Graikų"
 
-#: ../mucharmap/unicode-scripts.h:45
+#: ../mucharmap/unicode-scripts.h:48
 msgid "Han"
 msgstr "Han"
 
-#: ../mucharmap/unicode-scripts.h:46
+#: ../mucharmap/unicode-scripts.h:49
 msgid "Hangul"
 msgstr "Hangulas"
 
-#: ../mucharmap/unicode-scripts.h:51
+#: ../mucharmap/unicode-scripts.h:54
 msgid "Inherited"
 msgstr "Paveldėtas"
 
-#: ../mucharmap/unicode-scripts.h:62
+#: ../mucharmap/unicode-scripts.h:65
 msgid "Latin"
 msgstr "Lotynų"
 
-#: ../mucharmap/unicode-scripts.h:65
+#: ../mucharmap/unicode-scripts.h:68
 msgid "Linear B"
 msgstr "Linijinis B"
 
-#: ../mucharmap/unicode-scripts.h:83
+#: ../mucharmap/unicode-scripts.h:90
 msgid "Phags Pa"
 msgstr "Fags Pa"
 
-#: ../mucharmap/unicode-scripts.h:107
+#: ../mucharmap/unicode-scripts.h:117
 msgid "Yi"
 msgstr "Dži"
-
-#: ../mucharmap/mucharmap-search-dialog.c:565
-msgid "Information"
-msgstr "Informacija"
-
-#. follow hig guidelines
-#: ../mucharmap/mucharmap-search-dialog.c:729
-msgid "Find"
-msgstr "Rasti"
-
-#: ../mucharmap/mucharmap-search-dialog.c:743
-msgid "_Previous"
-msgstr "_Ankstesnis"
-
-#: ../mucharmap/mucharmap-search-dialog.c:750
-msgid "_Next"
-msgstr "_Kitas"
-
-#: ../mucharmap/mucharmap-search-dialog.c:765
-msgid "_Search:"
-msgstr "_Ieškoti:"
-
-#: ../mucharmap/mucharmap-search-dialog.c:775
-msgid "Match _whole word"
-msgstr "Atitikti _visą žodį"
-
-#: ../mucharmap/mucharmap-search-dialog.c:780
-msgid "Search in character _details"
-msgstr "Ieškoti simbolio _informacijoje"
-
-#: ../mucharmap/mucharmap-block-chapters-model.c:84
-msgid "All"
-msgstr "Visi"
-
-#: ../mucharmap/mucharmap-block-chapters-model.c:190
-msgid "Unicode Block"
-msgstr "Unicode blokas"
-
-#: ../mucharmap/mucharmap-script-chapters-model.c:134
-msgid "Script"
-msgstr "Raštas"
-
-#~ msgid "Mucharmap"
-#~ msgstr "Mucharmap"
-
-#~ msgid "_Quit"
-#~ msgstr "Iš_eiti"
-
-#~ msgid "Zoom _In"
-#~ msgstr "_Padidinti"
-
-#~ msgid "Zoom _Out"
-#~ msgstr "_Sumažinti"
-
-#~ msgid "_Normal Size"
-#~ msgstr "_Normalus dydis"
-
-#~ msgid "_Find..."
-#~ msgstr "_Ieškoti..."
-
-#~ msgid "Nko"
-#~ msgstr "Nko"

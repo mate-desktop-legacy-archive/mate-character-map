@@ -1,486 +1,506 @@
-# Afrikaans translation of mucharmap.
-# Copyright (C) 2008
-# This file is distributed under the same license as the mucharmap package.
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
 # F Wolff <friedel@translate.org.za>, 2008
 msgid ""
 msgstr ""
-"Project-Id-Version: mucharmap HEAD\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-22 23:20+0200\n"
-"PO-Revision-Date: 2008-09-22 22:23+0200\n"
-"Last-Translator: F Wolff <friedel@translate.org.za>\n"
-"Language-Team: translate-discuss-af@lists.sourceforge.net\n"
+"Project-Id-Version: MATE Desktop Environment\n"
+"Report-Msgid-Bugs-To: https://github.com/mate-desktop/\n"
+"POT-Creation-Date: 2013-06-12 17:20+0200\n"
+"PO-Revision-Date: 2013-06-12 15:29+0000\n"
+"Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>\n"
+"Language-Team: Afrikaans (http://www.transifex.com/projects/p/MATE/language/af/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: af\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: VirTaal 0.1\n"
 
-#: ../mucharmap.desktop.in.in.h:1 ../mucharmap/mucharmap-window.c:890
-#: ../mucharmap/main.c:61
+#: ../mucharmap.desktop.in.in.h:1 ../mucharmap/mucharmap-window.c:533
+#: ../mucharmap/main.c:32
+msgid "MATE Character Map"
+msgstr ""
+
+#: ../mucharmap.desktop.in.in.h:2 ../mucharmap/mucharmap-window.c:935
+#: ../mucharmap/main.c:70
 msgid "Character Map"
 msgstr "Karakterkaart"
 
-#: ../mucharmap.desktop.in.in.h:2
+#: ../mucharmap.desktop.in.in.h:3
 msgid "Insert special characters into documents"
 msgstr "Voeg spesiale karakters in dokumente in"
 
-#: ../mucharmap/mucharmap-charmap.c:553
+#: ../mucharmap/mucharmap-block-chapters-model.c:83
+msgid "All"
+msgstr "Almal"
+
+#: ../mucharmap/mucharmap-block-chapters-model.c:186
+msgid "Unicode Block"
+msgstr "Unicode-blok"
+
+#: ../mucharmap/mucharmap-charmap.c:575
 msgid "Canonical decomposition:"
 msgstr "Kanonieke dekomposisie:"
 
-#: ../mucharmap/mucharmap-charmap.c:596 ../mucharmap/mucharmap-chartable.c:568
+#: ../mucharmap/mucharmap-charmap.c:618 ../mucharmap/mucharmap-chartable.c:555
 msgid "[not a printable character]"
 msgstr "[nie 'n drukbare karakter nie]"
 
-#: ../mucharmap/mucharmap-charmap.c:610
+#: ../mucharmap/mucharmap-charmap.c:632
 msgid "General Character Properties"
 msgstr "Algemene karaktereienskappe"
 
-#: ../mucharmap/mucharmap-charmap.c:616
+#: ../mucharmap/mucharmap-charmap.c:638
 msgid "In Unicode since:"
 msgstr "In Unicode sedert:"
 
 #. character category
-#: ../mucharmap/mucharmap-charmap.c:620
+#: ../mucharmap/mucharmap-charmap.c:642
 msgid "Unicode category:"
 msgstr "Unicode-kategorie:"
 
-#: ../mucharmap/mucharmap-charmap.c:629
+#: ../mucharmap/mucharmap-charmap.c:651
 msgid "Various Useful Representations"
 msgstr "Verskeie nuttige voorstellings"
 
-#: ../mucharmap/mucharmap-charmap.c:639
+#: ../mucharmap/mucharmap-charmap.c:661
 msgid "UTF-8:"
 msgstr "UTF-8:"
 
-#: ../mucharmap/mucharmap-charmap.c:647
+#: ../mucharmap/mucharmap-charmap.c:669
 msgid "UTF-16:"
 msgstr "UTF-16:"
 
-#: ../mucharmap/mucharmap-charmap.c:658
+#: ../mucharmap/mucharmap-charmap.c:680
 msgid "C octal escaped UTF-8:"
 msgstr ""
 
-#: ../mucharmap/mucharmap-charmap.c:668
+#: ../mucharmap/mucharmap-charmap.c:690
 msgid "XML decimal entity:"
 msgstr "XML- desimale entiteit:"
 
-#: ../mucharmap/mucharmap-charmap.c:679
+#: ../mucharmap/mucharmap-charmap.c:701
 msgid "Annotations and Cross References"
 msgstr "Opmerkings en kruisverwysings"
 
-#: ../mucharmap/mucharmap-charmap.c:686
+#: ../mucharmap/mucharmap-charmap.c:708
 msgid "Alias names:"
 msgstr "Aliasname:"
 
-#: ../mucharmap/mucharmap-charmap.c:695
+#: ../mucharmap/mucharmap-charmap.c:717
 msgid "Notes:"
 msgstr "Notas:"
 
-#: ../mucharmap/mucharmap-charmap.c:704
+#: ../mucharmap/mucharmap-charmap.c:726
 msgid "See also:"
 msgstr "Sien ook:"
 
-#: ../mucharmap/mucharmap-charmap.c:713
+#: ../mucharmap/mucharmap-charmap.c:735
 msgid "Approximate equivalents:"
 msgstr "Ongeveer ekwivalent:"
 
-#: ../mucharmap/mucharmap-charmap.c:722
+#: ../mucharmap/mucharmap-charmap.c:744
 msgid "Equivalents:"
 msgstr "Ekwivalent:"
 
-#: ../mucharmap/mucharmap-charmap.c:738
+#: ../mucharmap/mucharmap-charmap.c:760
 msgid "CJK Ideograph Information"
 msgstr "CJK-idiogram-inligting"
 
-#: ../mucharmap/mucharmap-charmap.c:743
+#: ../mucharmap/mucharmap-charmap.c:765
 msgid "Definition in English:"
 msgstr "Definisie in Engels:"
 
-#: ../mucharmap/mucharmap-charmap.c:748
+#: ../mucharmap/mucharmap-charmap.c:770
 msgid "Mandarin Pronunciation:"
 msgstr "Mandarynse uitspraak:"
 
-#: ../mucharmap/mucharmap-charmap.c:753
+#: ../mucharmap/mucharmap-charmap.c:775
 msgid "Cantonese Pronunciation:"
 msgstr "Kantonese uitspraak:"
 
-#: ../mucharmap/mucharmap-charmap.c:758
+#: ../mucharmap/mucharmap-charmap.c:780
 msgid "Japanese On Pronunciation:"
 msgstr "Japannese \"On\"-uitspraak:"
 
-#: ../mucharmap/mucharmap-charmap.c:763
+#: ../mucharmap/mucharmap-charmap.c:785
 msgid "Japanese Kun Pronunciation:"
 msgstr "Japannese \"Kun\"-uitspraak:Japanese"
 
-#: ../mucharmap/mucharmap-charmap.c:768
+#: ../mucharmap/mucharmap-charmap.c:790
 msgid "Tang Pronunciation:"
 msgstr "\"Tang\"-uitspraak"
 
-#: ../mucharmap/mucharmap-charmap.c:773
+#: ../mucharmap/mucharmap-charmap.c:795
 msgid "Korean Pronunciation:"
 msgstr "Koreaanse uitspraak:"
 
-#: ../mucharmap/mucharmap-charmap.c:1158
+#: ../mucharmap/mucharmap-charmap.c:1184
 msgid "Characte_r Table"
 msgstr "Ka_raktertabel"
 
-#: ../mucharmap/mucharmap-charmap.c:1204
+#: ../mucharmap/mucharmap-charmap.c:1230
 msgid "Character _Details"
 msgstr "Karakter_detail"
 
-#: ../mucharmap/mucharmap-chartable.c:1371
-msgid "Unknown character, unable to identify."
-msgstr "Onbekende karakter; kan dit nie identifiseer nie."
-
-#: ../mucharmap/mucharmap-chartable.c:1373
-#: ../mucharmap/mucharmap-search-dialog.c:585
-msgid "Not found."
-msgstr "Nie gevind nie."
-
-#: ../mucharmap/mucharmap-chartable.c:1376
-msgid "Character found."
-msgstr "Karakter gevind."
-
-#: ../mucharmap/mucharmap-chartable-accessible.c:771
+#: ../mucharmap/mucharmap-chartable-accessible.c:831
 msgid "Character Table"
 msgstr "Karaktertabel"
 
-#: ../mucharmap/mucharmap-mini-fontsel.c:280
+#: ../mucharmap/mucharmap-chartable.c:1467
+msgid "Unknown character, unable to identify."
+msgstr "Onbekende karakter; kan dit nie identifiseer nie."
+
+#: ../mucharmap/mucharmap-chartable.c:1469
+#: ../mucharmap/mucharmap-search-dialog.c:591
+msgid "Not found."
+msgstr "Nie gevind nie."
+
+#: ../mucharmap/mucharmap-chartable.c:1472
+msgid "Character found."
+msgstr "Karakter gevind."
+
+#: ../mucharmap/mucharmap-mini-fontsel.c:284
 msgid "Font"
 msgstr "Font"
 
-#: ../mucharmap/mucharmap-mini-fontsel.c:293
-#, fuzzy
+#: ../mucharmap/mucharmap-mini-fontsel.c:297
 msgid "Font Family"
-msgstr "Lettertipe-familie"
+msgstr ""
 
-#: ../mucharmap/mucharmap-mini-fontsel.c:311
+#: ../mucharmap/mucharmap-mini-fontsel.c:315
 msgid "Font Size"
 msgstr "Skrifgrootte"
 
-#: ../mucharmap/mucharmap-settings.c:71
-msgid "MateConf could not be initialized."
-msgstr "MateConf kon nie geïnisialiseer word nie."
+#: ../mucharmap/mucharmap-script-chapters-model.c:132
+msgid "Script"
+msgstr "Skrif"
 
 #. Unicode assigns "Common" as the script name for any character not
 #. * specifically listed in Scripts.txt
-#: ../mucharmap/mucharmap-script-codepoint-list.c:463
-#: ../mucharmap/unicode-scripts.h:28
+#: ../mucharmap/mucharmap-script-codepoint-list.c:473
+#: ../mucharmap/unicode-scripts.h:33
 msgid "Common"
 msgstr "Algemeen"
 
-#: ../mucharmap/mucharmap-unicode-info.c:94
+#: ../mucharmap/mucharmap-search-dialog.c:571
+msgid "Information"
+msgstr "Inligting"
+
+#. follow hig guidelines
+#: ../mucharmap/mucharmap-search-dialog.c:737
+msgid "Find"
+msgstr "Vind"
+
+#: ../mucharmap/mucharmap-search-dialog.c:755
+msgid "_Previous"
+msgstr "Vo_rige"
+
+#: ../mucharmap/mucharmap-search-dialog.c:766
+msgid "_Next"
+msgstr "Vo_lgende"
+
+#: ../mucharmap/mucharmap-search-dialog.c:781
+msgid "_Search:"
+msgstr "_Soek:"
+
+#: ../mucharmap/mucharmap-search-dialog.c:791
+msgid "Match _whole word"
+msgstr "Pas hele _woord"
+
+#: ../mucharmap/mucharmap-search-dialog.c:796
+msgid "Search in character _details"
+msgstr "Soek in karakter_detail"
+
+#: ../mucharmap/mucharmap-unicode-info.c:98
 msgid "<Non Private Use High Surrogate>"
 msgstr ""
 
-#: ../mucharmap/mucharmap-unicode-info.c:96
+#: ../mucharmap/mucharmap-unicode-info.c:102
 msgid "<Private Use High Surrogate>"
 msgstr ""
 
-#: ../mucharmap/mucharmap-unicode-info.c:98
+#: ../mucharmap/mucharmap-unicode-info.c:106
 msgid "<Low Surrogate>"
 msgstr ""
 
-#: ../mucharmap/mucharmap-unicode-info.c:100
+#: ../mucharmap/mucharmap-unicode-info.c:110
 msgid "<Private Use>"
 msgstr "<Privaat gebruik>"
 
-#: ../mucharmap/mucharmap-unicode-info.c:102
+#: ../mucharmap/mucharmap-unicode-info.c:114
 msgid "<Plane 15 Private Use>"
 msgstr ""
 
-#: ../mucharmap/mucharmap-unicode-info.c:104
+#: ../mucharmap/mucharmap-unicode-info.c:118
 msgid "<Plane 16 Private Use>"
 msgstr ""
 
-#: ../mucharmap/mucharmap-unicode-info.c:109
+#: ../mucharmap/mucharmap-unicode-info.c:126
 msgid "<not assigned>"
 msgstr "<nie toegeken nie>"
 
-#: ../mucharmap/mucharmap-unicode-info.c:122
+#: ../mucharmap/mucharmap-unicode-info.c:141
 msgid "Other, Control"
 msgstr "Ander, beheer"
 
-#: ../mucharmap/mucharmap-unicode-info.c:123
+#: ../mucharmap/mucharmap-unicode-info.c:142
 msgid "Other, Format"
 msgstr "Ander, formatering"
 
-#: ../mucharmap/mucharmap-unicode-info.c:124
+#: ../mucharmap/mucharmap-unicode-info.c:143
 msgid "Other, Not Assigned"
 msgstr "Ander, nie toegeken nie"
 
-#: ../mucharmap/mucharmap-unicode-info.c:125
+#: ../mucharmap/mucharmap-unicode-info.c:144
 msgid "Other, Private Use"
 msgstr "Ander, privaat gebruik"
 
-#: ../mucharmap/mucharmap-unicode-info.c:126
+#: ../mucharmap/mucharmap-unicode-info.c:145
 msgid "Other, Surrogate"
 msgstr ""
 
-#: ../mucharmap/mucharmap-unicode-info.c:127
+#: ../mucharmap/mucharmap-unicode-info.c:146
 msgid "Letter, Lowercase"
 msgstr "Letter, onderkas"
 
-#: ../mucharmap/mucharmap-unicode-info.c:128
-#, fuzzy
+#: ../mucharmap/mucharmap-unicode-info.c:147
 msgid "Letter, Modifier"
-msgstr "Letter, wysigend"
+msgstr ""
 
-#: ../mucharmap/mucharmap-unicode-info.c:129
+#: ../mucharmap/mucharmap-unicode-info.c:148
 msgid "Letter, Other"
 msgstr "Letter, ander"
 
-#: ../mucharmap/mucharmap-unicode-info.c:130
+#: ../mucharmap/mucharmap-unicode-info.c:149
 msgid "Letter, Titlecase"
 msgstr "Letter, titelkas"
 
-#: ../mucharmap/mucharmap-unicode-info.c:131
+#: ../mucharmap/mucharmap-unicode-info.c:150
 msgid "Letter, Uppercase"
 msgstr "Letter, bokas"
 
-#: ../mucharmap/mucharmap-unicode-info.c:132
+#: ../mucharmap/mucharmap-unicode-info.c:151
 msgid "Mark, Spacing Combining"
 msgstr "Merk, spasiërend kombinerend"
 
-#: ../mucharmap/mucharmap-unicode-info.c:133
+#: ../mucharmap/mucharmap-unicode-info.c:152
 msgid "Mark, Enclosing"
 msgstr "Merk, omhulsel"
 
-#: ../mucharmap/mucharmap-unicode-info.c:134
+#: ../mucharmap/mucharmap-unicode-info.c:153
 msgid "Mark, Non-Spacing"
 msgstr "Merk, niespasiërend"
 
-#: ../mucharmap/mucharmap-unicode-info.c:135
+#: ../mucharmap/mucharmap-unicode-info.c:154
 msgid "Number, Decimal Digit"
 msgstr "Getal, desimale syfer"
 
-#: ../mucharmap/mucharmap-unicode-info.c:136
+#: ../mucharmap/mucharmap-unicode-info.c:155
 msgid "Number, Letter"
 msgstr "Getal, letter"
 
-#: ../mucharmap/mucharmap-unicode-info.c:137
+#: ../mucharmap/mucharmap-unicode-info.c:156
 msgid "Number, Other"
 msgstr "Getal, ander"
 
-#: ../mucharmap/mucharmap-unicode-info.c:138
+#: ../mucharmap/mucharmap-unicode-info.c:157
 msgid "Punctuation, Connector"
 msgstr "Leesteken, verbindend"
 
-#: ../mucharmap/mucharmap-unicode-info.c:139
+#: ../mucharmap/mucharmap-unicode-info.c:158
 msgid "Punctuation, Dash"
 msgstr "Leesteken, streep"
 
-#: ../mucharmap/mucharmap-unicode-info.c:140
+#: ../mucharmap/mucharmap-unicode-info.c:159
 msgid "Punctuation, Close"
 msgstr "Leesteken, sluit hakkie"
 
-#: ../mucharmap/mucharmap-unicode-info.c:141
+#: ../mucharmap/mucharmap-unicode-info.c:160
 msgid "Punctuation, Final Quote"
 msgstr "Leesteken, sluit aanhaling"
 
-#: ../mucharmap/mucharmap-unicode-info.c:142
+#: ../mucharmap/mucharmap-unicode-info.c:161
 msgid "Punctuation, Initial Quote"
 msgstr "Leesteken, open aanhaling"
 
-#: ../mucharmap/mucharmap-unicode-info.c:143
+#: ../mucharmap/mucharmap-unicode-info.c:162
 msgid "Punctuation, Other"
 msgstr "Leesteken, ander"
 
-#: ../mucharmap/mucharmap-unicode-info.c:144
+#: ../mucharmap/mucharmap-unicode-info.c:163
 msgid "Punctuation, Open"
 msgstr "Leesteken, open hakkie"
 
-#: ../mucharmap/mucharmap-unicode-info.c:145
+#: ../mucharmap/mucharmap-unicode-info.c:164
 msgid "Symbol, Currency"
 msgstr "Simbool, geldeenheid"
 
-#: ../mucharmap/mucharmap-unicode-info.c:146
+#: ../mucharmap/mucharmap-unicode-info.c:165
 msgid "Symbol, Modifier"
 msgstr "Simbool, wysigend"
 
-#: ../mucharmap/mucharmap-unicode-info.c:147
+#: ../mucharmap/mucharmap-unicode-info.c:166
 msgid "Symbol, Math"
 msgstr "Simbool, wiskunde"
 
-#: ../mucharmap/mucharmap-unicode-info.c:148
+#: ../mucharmap/mucharmap-unicode-info.c:167
 msgid "Symbol, Other"
 msgstr "Simbool, ander"
 
-#: ../mucharmap/mucharmap-unicode-info.c:149
+#: ../mucharmap/mucharmap-unicode-info.c:168
 msgid "Separator, Line"
 msgstr "Skeier, lyn"
 
-#: ../mucharmap/mucharmap-unicode-info.c:150
+#: ../mucharmap/mucharmap-unicode-info.c:169
 msgid "Separator, Paragraph"
 msgstr "Skeier, paragraaf"
 
-#: ../mucharmap/mucharmap-unicode-info.c:151
+#: ../mucharmap/mucharmap-unicode-info.c:170
 msgid "Separator, Space"
 msgstr "Skeier, spasie"
 
-#: ../mucharmap/mucharmap-window.c:246
+#: ../mucharmap/mucharmap-window.c:253
 msgid "Searching…"
 msgstr "Soek tans…"
 
-#: ../mucharmap/mucharmap-window.c:478
+#: ../mucharmap/mucharmap-window.c:501
 msgid ""
 "Mucharmap is free software; you can redistribute it and/or modify it under "
 "the terms of the GNU General Public License as published by the Free "
-"Software Foundation; either version 2 of the License, or (at your option) "
+"Software Foundation; either version 3 of the License, or (at your option) "
 "any later version."
 msgstr ""
-"Mucharmap is Vry Sagteware; u kan dit herversprei en/of wysig onderhewig aan "
-"die voorwaardes van die GNU Algemene Publieke Lisensie soos gepubliseer deur "
-"die Stigting vir Vry Sagteware; óf weergawe 2 van die Lisensie, óf (indien u "
-"verkies) enige latere weergawe."
 
-#: ../mucharmap/mucharmap-window.c:482
+#: ../mucharmap/mucharmap-window.c:505
 msgid ""
-"Permission is hereby granted, free of charge, to any person obtaining a copy "
-"of the Unicode data files to deal in them without restriction, including "
+"Permission is hereby granted, free of charge, to any person obtaining a copy"
+" of the Unicode data files to deal in them without restriction, including "
 "without limitation the rights to use, copy, modify, merge, publish, "
 "distribute, and/or sell copies."
-msgstr ""
-"Toestemming word hiermee gratis verleen aan enige persoon wat 'n kopie van "
-"die Unicode-datalêers bekom om daarmee om te gaan sonder beperking, "
-"insluitend, sonder voorbehoud, die regte om te gebruik, te kopieer, te "
-"wysig, saam te voeg, te publiseer, te versprei, en/of kopieë te verkoop."
+msgstr "Toestemming word hiermee gratis verleen aan enige persoon wat 'n kopie van die Unicode-datalêers bekom om daarmee om te gaan sonder beperking, insluitend, sonder voorbehoud, die regte om te gebruik, te kopieer, te wysig, saam te voeg, te publiseer, te versprei, en/of kopieë te verkoop."
 
-#: ../mucharmap/mucharmap-window.c:486
+#: ../mucharmap/mucharmap-window.c:509
 msgid ""
 "Mucharmap and the Unicode data files are distributed in the hope that they "
 "will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty "
-"of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General "
-"Public License and Unicode Copyright for more details."
-msgstr ""
-"Mucharmap en die Unicode-datalêers word versprei met die hoop dat dit nuttig "
-"sal wees, maar SONDER ENIGE WAARBORG; sonder selfs die geïmpliseerde "
-"waarborg van VERHANDELBAARHEID of GESKIKTHEID VIR 'N SPESIFIEKE DOEL.  Sien "
-"die GNU Algemene Publieke Lisensie vir meer besonderhede."
-
-#: ../mucharmap/mucharmap-window.c:490
-msgid ""
-"You should have received a copy of the GNU General Public License along with "
-"Mucharmap; if not, write to the Free Software Foundation, Inc., 59 Temple "
-"Place, Suite 330, Boston, MA  02110-1301  USA"
-msgstr ""
-"U moes 'n kopie van die GNU Algemene Publieke Lisensie ontvang het saam met "
-"Mucharmap; indien nie, skryf aan Free Software Foundation, Inc., 59 Temple "
-"Place, Suite 330, Boston, MA  02110-1301  USA"
-
-#: ../mucharmap/mucharmap-window.c:493
-msgid ""
-"Also you should have received a copy of the Unicode Copyright along with "
-"Mucharmap; you can always find it at Unicode's website: http://www.unicode."
-"org/copyright.html"
-msgstr ""
-"U moes ook 'n kopie van die Unicode-kopiereg saam met Mucharmap ontvang het; "
-"dit is altyd beskikbaar by Unicode se webwerf: http://www.unicode.org/"
-"copyright.html"
-
-#: ../mucharmap/mucharmap-window.c:506
-msgid "MATE Character Map based on the Unicode Character Database"
-msgstr "MATE se karakterkaart gebaseer op die Unicode-karakterdatabasis"
+"of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General"
+" Public License and Unicode Copyright for more details."
+msgstr "Mucharmap en die Unicode-datalêers word versprei met die hoop dat dit nuttig sal wees, maar SONDER ENIGE WAARBORG; sonder selfs die geïmpliseerde waarborg van VERHANDELBAARHEID of GESKIKTHEID VIR 'N SPESIFIEKE DOEL.  Sien die GNU Algemene Publieke Lisensie vir meer besonderhede."
 
 #: ../mucharmap/mucharmap-window.c:513
-msgid "Mucharmap"
-msgstr "Mucharmap"
+msgid ""
+"You should have received a copy of the GNU General Public License along with"
+" Mucharmap; if not, write to the Free Software Foundation, Inc., 51 Franklin"
+" St, Fifth Floor, Boston, MA  02110-1301  USA"
+msgstr ""
 
-#: ../mucharmap/mucharmap-window.c:515
+#: ../mucharmap/mucharmap-window.c:516
+msgid ""
+"Also you should have received a copy of the Unicode Copyright along with "
+"Mucharmap; you can always find it at Unicode's website: "
+"http://www.unicode.org/copyright.html"
+msgstr "U moes ook 'n kopie van die Unicode-kopiereg saam met Mucharmap ontvang het; dit is altyd beskikbaar by Unicode se webwerf: http://www.unicode.org/copyright.html"
+
+#: ../mucharmap/mucharmap-window.c:535
+msgid "Based on the Unicode Character Database 6.2"
+msgstr ""
+
+#: ../mucharmap/mucharmap-window.c:544
 msgid "translator-credits"
 msgstr "Friedel Wolff"
 
-#: ../mucharmap/mucharmap-window.c:592 ../mucharmap/mucharmap-window.c:859
+#: ../mucharmap/mucharmap-window.c:619 ../mucharmap/mucharmap-window.c:901
 msgid "Next Script"
 msgstr "Volgende skrifblok"
 
-#: ../mucharmap/mucharmap-window.c:592 ../mucharmap/mucharmap-window.c:861
+#: ../mucharmap/mucharmap-window.c:619 ../mucharmap/mucharmap-window.c:903
 msgid "Previous Script"
 msgstr "Vorige skrifblok"
 
-#: ../mucharmap/mucharmap-window.c:597
+#: ../mucharmap/mucharmap-window.c:624
 msgid "Next Block"
 msgstr "Volgende blok"
 
-#: ../mucharmap/mucharmap-window.c:597
+#: ../mucharmap/mucharmap-window.c:624
 msgid "Previous Block"
 msgstr "Vorige blok"
 
-#: ../mucharmap/mucharmap-window.c:822
+#: ../mucharmap/mucharmap-window.c:864
 msgid "_File"
 msgstr "_Lêer"
 
-#: ../mucharmap/mucharmap-window.c:823
+#: ../mucharmap/mucharmap-window.c:865
 msgid "_View"
 msgstr "_Bekyk"
 
-#: ../mucharmap/mucharmap-window.c:824
+#: ../mucharmap/mucharmap-window.c:866
 msgid "_Search"
 msgstr "_Soek"
 
-#: ../mucharmap/mucharmap-window.c:825
+#: ../mucharmap/mucharmap-window.c:867
 msgid "_Go"
 msgstr "_Gaan"
 
-#: ../mucharmap/mucharmap-window.c:826
+#: ../mucharmap/mucharmap-window.c:868
 msgid "_Help"
 msgstr "_Hulp"
 
-#: ../mucharmap/mucharmap-window.c:829
+#: ../mucharmap/mucharmap-window.c:871
 msgid "Page _Setup"
 msgstr "Bladsy_opstelling"
 
-#: ../mucharmap/mucharmap-window.c:850
+#: ../mucharmap/mucharmap-window.c:892
 msgid "Find _Next"
 msgstr "Soek vo_lgende"
 
-#: ../mucharmap/mucharmap-window.c:852
+#: ../mucharmap/mucharmap-window.c:894
 msgid "Find _Previous"
 msgstr "Soek vo_rige"
 
-#: ../mucharmap/mucharmap-window.c:855
+#: ../mucharmap/mucharmap-window.c:897
 msgid "_Next Character"
 msgstr "Vo_lgende karakter"
 
-#: ../mucharmap/mucharmap-window.c:857
+#: ../mucharmap/mucharmap-window.c:899
 msgid "_Previous Character"
 msgstr "Vo_rige karakter"
 
-#: ../mucharmap/mucharmap-window.c:864
+#: ../mucharmap/mucharmap-window.c:906
 msgid "_Contents"
 msgstr "_Inhoud"
 
-#: ../mucharmap/mucharmap-window.c:866
+#: ../mucharmap/mucharmap-window.c:908
 msgid "_About"
 msgstr "_Aangaande"
 
-#: ../mucharmap/mucharmap-window.c:876
+#: ../mucharmap/mucharmap-window.c:918
 msgid "By _Script"
 msgstr "Volgens _skrifblok"
 
-#: ../mucharmap/mucharmap-window.c:878
+#: ../mucharmap/mucharmap-window.c:920
 msgid "By _Unicode Block"
 msgstr "Volgens _Unicode-blok"
 
-#: ../mucharmap/mucharmap-window.c:883
+#: ../mucharmap/mucharmap-window.c:925
 msgid "Snap _Columns to Power of Two"
 msgstr "Forseer aantal _kolomme na 'n mag van twee"
 
-#: ../mucharmap/mucharmap-window.c:952
+#: ../mucharmap/mucharmap-window.c:993
 msgid "_Text to copy:"
 msgstr "_Teks om te kopieer:"
 
-#: ../mucharmap/mucharmap-window.c:959
+#: ../mucharmap/mucharmap-window.c:1000
 msgid "Copy to the clipboard."
 msgstr "Kopieer na die knipbord."
 
-#: ../mucharmap/main.c:43
+#: ../mucharmap/main.c:48
 msgid "Font to start with; ex: 'Serif 27'"
 msgstr ""
 
-#: ../mucharmap/main.c:43
+#: ../mucharmap/main.c:48
 msgid "FONT"
 msgstr ""
 
@@ -505,9 +525,8 @@ msgid "IPA Extensions"
 msgstr "IPA-uitbreidings"
 
 #: ../mucharmap/unicode-blocks.h:19
-#, fuzzy
 msgid "Spacing Modifier Letters"
-msgstr "Spasiërende wysigingsletters"
+msgstr ""
 
 #: ../mucharmap/unicode-blocks.h:20
 msgid "Combining Diacritical Marks"
@@ -517,20 +536,19 @@ msgstr "Kombinerende diakritiese tekens"
 msgid "Greek and Coptic"
 msgstr "Grieks en Kopties"
 
-#: ../mucharmap/unicode-blocks.h:22 ../mucharmap/unicode-scripts.h:32
+#: ../mucharmap/unicode-blocks.h:22 ../mucharmap/unicode-scripts.h:37
 msgid "Cyrillic"
 msgstr "Cyrillies"
 
 #: ../mucharmap/unicode-blocks.h:23
-#, fuzzy
 msgid "Cyrillic Supplement"
-msgstr "Cyrillies-bylaag"
+msgstr ""
 
 #: ../mucharmap/unicode-blocks.h:24 ../mucharmap/unicode-scripts.h:17
 msgid "Armenian"
 msgstr "Armeens"
 
-#: ../mucharmap/unicode-blocks.h:25 ../mucharmap/unicode-scripts.h:45
+#: ../mucharmap/unicode-blocks.h:25 ../mucharmap/unicode-scripts.h:51
 msgid "Hebrew"
 msgstr "Hebreeus"
 
@@ -538,7 +556,7 @@ msgstr "Hebreeus"
 msgid "Arabic"
 msgstr "Arabies"
 
-#: ../mucharmap/unicode-blocks.h:27 ../mucharmap/unicode-scripts.h:80
+#: ../mucharmap/unicode-blocks.h:27 ../mucharmap/unicode-scripts.h:102
 msgid "Syriac"
 msgstr "Siries"
 
@@ -546,717 +564,866 @@ msgstr "Siries"
 msgid "Arabic Supplement"
 msgstr "Arabies-bylaag"
 
-#: ../mucharmap/unicode-blocks.h:29 ../mucharmap/unicode-scripts.h:86
+#: ../mucharmap/unicode-blocks.h:29 ../mucharmap/unicode-scripts.h:111
 msgid "Thaana"
 msgstr "Thaana"
 
-#: ../mucharmap/unicode-blocks.h:30 ../mucharmap/unicode-scripts.h:63
+#: ../mucharmap/unicode-blocks.h:30 ../mucharmap/unicode-scripts.h:80
 msgid "N'Ko"
 msgstr "N'ko"
 
-#: ../mucharmap/unicode-blocks.h:31 ../mucharmap/unicode-scripts.h:34
+#: ../mucharmap/unicode-blocks.h:31 ../mucharmap/unicode-scripts.h:94
+msgid "Samaritan"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:32 ../mucharmap/unicode-scripts.h:73
+msgid "Mandaic"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:33
+msgid "Arabic Extended-A"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:34 ../mucharmap/unicode-scripts.h:39
 msgid "Devanagari"
 msgstr "Devanagari"
 
-#: ../mucharmap/unicode-blocks.h:32 ../mucharmap/unicode-scripts.h:19
+#: ../mucharmap/unicode-blocks.h:35 ../mucharmap/unicode-scripts.h:22
 msgid "Bengali"
 msgstr "Bengaals"
 
-#: ../mucharmap/unicode-blocks.h:33 ../mucharmap/unicode-scripts.h:41
+#: ../mucharmap/unicode-blocks.h:36 ../mucharmap/unicode-scripts.h:47
 msgid "Gurmukhi"
 msgstr "Gurmukhi"
 
-#: ../mucharmap/unicode-blocks.h:34 ../mucharmap/unicode-scripts.h:40
+#: ../mucharmap/unicode-blocks.h:37 ../mucharmap/unicode-scripts.h:46
 msgid "Gujarati"
 msgstr "Goedjarati"
 
-#: ../mucharmap/unicode-blocks.h:35 ../mucharmap/unicode-scripts.h:69
+#: ../mucharmap/unicode-blocks.h:38 ../mucharmap/unicode-scripts.h:88
 msgid "Oriya"
 msgstr "Orija"
 
-#: ../mucharmap/unicode-blocks.h:36 ../mucharmap/unicode-scripts.h:84
+#: ../mucharmap/unicode-blocks.h:39 ../mucharmap/unicode-scripts.h:109
 msgid "Tamil"
 msgstr "Tamil"
 
-#: ../mucharmap/unicode-blocks.h:37 ../mucharmap/unicode-scripts.h:85
+#: ../mucharmap/unicode-blocks.h:40 ../mucharmap/unicode-scripts.h:110
 msgid "Telugu"
 msgstr "Teloegoe"
 
-#: ../mucharmap/unicode-blocks.h:38 ../mucharmap/unicode-scripts.h:48
+#: ../mucharmap/unicode-blocks.h:41 ../mucharmap/unicode-scripts.h:59
 msgid "Kannada"
 msgstr "Kannada"
 
-#: ../mucharmap/unicode-blocks.h:39 ../mucharmap/unicode-scripts.h:60
+#: ../mucharmap/unicode-blocks.h:42 ../mucharmap/unicode-scripts.h:72
 msgid "Malayalam"
 msgstr "Malajalam"
 
-#: ../mucharmap/unicode-blocks.h:40 ../mucharmap/unicode-scripts.h:77
+#: ../mucharmap/unicode-blocks.h:43 ../mucharmap/unicode-scripts.h:98
 msgid "Sinhala"
 msgstr "Sinhalees"
 
-#: ../mucharmap/unicode-blocks.h:41 ../mucharmap/unicode-scripts.h:87
+#: ../mucharmap/unicode-blocks.h:44 ../mucharmap/unicode-scripts.h:112
 msgid "Thai"
 msgstr "Thai"
 
-#: ../mucharmap/unicode-blocks.h:42 ../mucharmap/unicode-scripts.h:53
+#: ../mucharmap/unicode-blocks.h:45 ../mucharmap/unicode-scripts.h:64
 msgid "Lao"
 msgstr "Lao"
 
-#: ../mucharmap/unicode-blocks.h:43 ../mucharmap/unicode-scripts.h:88
+#: ../mucharmap/unicode-blocks.h:46 ../mucharmap/unicode-scripts.h:113
 msgid "Tibetan"
 msgstr "Tibetaans"
 
-#: ../mucharmap/unicode-blocks.h:44 ../mucharmap/unicode-scripts.h:62
+#: ../mucharmap/unicode-blocks.h:47 ../mucharmap/unicode-scripts.h:79
 msgid "Myanmar"
 msgstr "Burmees"
 
-#: ../mucharmap/unicode-blocks.h:45 ../mucharmap/unicode-scripts.h:36
+#: ../mucharmap/unicode-blocks.h:48 ../mucharmap/unicode-scripts.h:42
 msgid "Georgian"
 msgstr "Georgies"
 
-#: ../mucharmap/unicode-blocks.h:46
+#: ../mucharmap/unicode-blocks.h:49
 msgid "Hangul Jamo"
 msgstr "Hangoel Jamo"
 
-#: ../mucharmap/unicode-blocks.h:47 ../mucharmap/unicode-scripts.h:35
+#: ../mucharmap/unicode-blocks.h:50 ../mucharmap/unicode-scripts.h:41
 msgid "Ethiopic"
 msgstr "Etiopies"
 
-#: ../mucharmap/unicode-blocks.h:48
+#: ../mucharmap/unicode-blocks.h:51
 msgid "Ethiopic Supplement"
 msgstr "Etiopies-bylaag"
 
-#: ../mucharmap/unicode-blocks.h:49 ../mucharmap/unicode-scripts.h:27
+#: ../mucharmap/unicode-blocks.h:52 ../mucharmap/unicode-scripts.h:32
 msgid "Cherokee"
 msgstr "Cherokee"
 
-#: ../mucharmap/unicode-blocks.h:50
+#: ../mucharmap/unicode-blocks.h:53
 msgid "Unified Canadian Aboriginal Syllabics"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:51 ../mucharmap/unicode-scripts.h:65
+#: ../mucharmap/unicode-blocks.h:54 ../mucharmap/unicode-scripts.h:82
 msgid "Ogham"
 msgstr "Ogham"
 
-#: ../mucharmap/unicode-blocks.h:52 ../mucharmap/unicode-scripts.h:74
+#: ../mucharmap/unicode-blocks.h:55 ../mucharmap/unicode-scripts.h:93
 msgid "Runic"
 msgstr "Runies"
 
-#: ../mucharmap/unicode-blocks.h:53 ../mucharmap/unicode-scripts.h:81
+#: ../mucharmap/unicode-blocks.h:56 ../mucharmap/unicode-scripts.h:103
 msgid "Tagalog"
 msgstr "Tagalog"
 
-#: ../mucharmap/unicode-blocks.h:54 ../mucharmap/unicode-scripts.h:44
+#: ../mucharmap/unicode-blocks.h:57 ../mucharmap/unicode-scripts.h:50
 msgid "Hanunoo"
 msgstr "Hanunoo"
 
-#: ../mucharmap/unicode-blocks.h:55 ../mucharmap/unicode-scripts.h:23
+#: ../mucharmap/unicode-blocks.h:58 ../mucharmap/unicode-scripts.h:27
 msgid "Buhid"
 msgstr "Buhid"
 
-#: ../mucharmap/unicode-blocks.h:56 ../mucharmap/unicode-scripts.h:82
+#: ../mucharmap/unicode-blocks.h:59 ../mucharmap/unicode-scripts.h:104
 msgid "Tagbanwa"
 msgstr "Tagbanwa"
 
-#: ../mucharmap/unicode-blocks.h:57 ../mucharmap/unicode-scripts.h:52
+#: ../mucharmap/unicode-blocks.h:60 ../mucharmap/unicode-scripts.h:63
 msgid "Khmer"
 msgstr "Khmer"
 
-#: ../mucharmap/unicode-blocks.h:58 ../mucharmap/unicode-scripts.h:61
+#: ../mucharmap/unicode-blocks.h:61 ../mucharmap/unicode-scripts.h:78
 msgid "Mongolian"
 msgstr "Mongools"
 
-#: ../mucharmap/unicode-blocks.h:59 ../mucharmap/unicode-scripts.h:56
+#: ../mucharmap/unicode-blocks.h:62
+msgid "Unified Canadian Aboriginal Syllabics Extended"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:63 ../mucharmap/unicode-scripts.h:67
 msgid "Limbu"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:60 ../mucharmap/unicode-scripts.h:83
+#: ../mucharmap/unicode-blocks.h:64 ../mucharmap/unicode-scripts.h:105
 msgid "Tai Le"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:61 ../mucharmap/unicode-scripts.h:64
+#: ../mucharmap/unicode-blocks.h:65 ../mucharmap/unicode-scripts.h:81
 msgid "New Tai Lue"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:62
+#: ../mucharmap/unicode-blocks.h:66
 msgid "Khmer Symbols"
 msgstr "Khmer simbole"
 
-#: ../mucharmap/unicode-blocks.h:63 ../mucharmap/unicode-scripts.h:22
+#: ../mucharmap/unicode-blocks.h:67 ../mucharmap/unicode-scripts.h:26
 msgid "Buginese"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:64 ../mucharmap/unicode-scripts.h:18
+#: ../mucharmap/unicode-blocks.h:68 ../mucharmap/unicode-scripts.h:106
+msgid "Tai Tham"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:69 ../mucharmap/unicode-scripts.h:19
 msgid "Balinese"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:65 ../mucharmap/unicode-scripts.h:78
+#: ../mucharmap/unicode-blocks.h:70 ../mucharmap/unicode-scripts.h:100
 msgid "Sundanese"
 msgstr "Soendannees"
 
-#: ../mucharmap/unicode-blocks.h:66 ../mucharmap/unicode-scripts.h:55
+#: ../mucharmap/unicode-blocks.h:71 ../mucharmap/unicode-scripts.h:21
+msgid "Batak"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:72 ../mucharmap/unicode-scripts.h:66
 msgid "Lepcha"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:67 ../mucharmap/unicode-scripts.h:66
+#: ../mucharmap/unicode-blocks.h:73 ../mucharmap/unicode-scripts.h:83
 msgid "Ol Chiki"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:68
+#: ../mucharmap/unicode-blocks.h:74
+msgid "Sundanese Supplement"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:75
+msgid "Vedic Extensions"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:76
 msgid "Phonetic Extensions"
 msgstr "Fonetiese uitbreidings"
 
-#: ../mucharmap/unicode-blocks.h:69
+#: ../mucharmap/unicode-blocks.h:77
 msgid "Phonetic Extensions Supplement"
 msgstr "Fonetiese uitbreidingsbylaag"
 
-#: ../mucharmap/unicode-blocks.h:70
+#: ../mucharmap/unicode-blocks.h:78
 msgid "Combining Diacritical Marks Supplement"
 msgstr "Kombinerende diakritiese merke bylaag"
 
-#: ../mucharmap/unicode-blocks.h:71
+#: ../mucharmap/unicode-blocks.h:79
 msgid "Latin Extended Additional"
 msgstr "Latyns uitgebrei bykomend"
 
-#: ../mucharmap/unicode-blocks.h:72
+#: ../mucharmap/unicode-blocks.h:80
 msgid "Greek Extended"
 msgstr "Grieks uitgebrei"
 
-#: ../mucharmap/unicode-blocks.h:73
+#: ../mucharmap/unicode-blocks.h:81
 msgid "General Punctuation"
 msgstr "Algemene leestekens"
 
-#: ../mucharmap/unicode-blocks.h:74
+#: ../mucharmap/unicode-blocks.h:82
 msgid "Superscripts and Subscripts"
 msgstr "Boskrifte en voetskrifte"
 
-#: ../mucharmap/unicode-blocks.h:75
+#: ../mucharmap/unicode-blocks.h:83
 msgid "Currency Symbols"
 msgstr "Geldeenheidsimbole"
 
-#: ../mucharmap/unicode-blocks.h:76
+#: ../mucharmap/unicode-blocks.h:84
 msgid "Combining Diacritical Marks for Symbols"
 msgstr "Kombinerende diakritiese merke vir simbole"
 
-#: ../mucharmap/unicode-blocks.h:77
+#: ../mucharmap/unicode-blocks.h:85
 msgid "Letterlike Symbols"
 msgstr "Letteragtige simbole"
 
-#: ../mucharmap/unicode-blocks.h:78
+#: ../mucharmap/unicode-blocks.h:86
 msgid "Number Forms"
 msgstr "Getalvorms"
 
-#: ../mucharmap/unicode-blocks.h:79
+#: ../mucharmap/unicode-blocks.h:87
 msgid "Arrows"
 msgstr "Pyltjies"
 
-#: ../mucharmap/unicode-blocks.h:80
+#: ../mucharmap/unicode-blocks.h:88
 msgid "Mathematical Operators"
 msgstr "Wiskundige operators"
 
-#: ../mucharmap/unicode-blocks.h:81
+#: ../mucharmap/unicode-blocks.h:89
 msgid "Miscellaneous Technical"
 msgstr "Diverse tegniese"
 
-#: ../mucharmap/unicode-blocks.h:82
+#: ../mucharmap/unicode-blocks.h:90
 msgid "Control Pictures"
 msgstr "Beheerprentjies"
 
-#: ../mucharmap/unicode-blocks.h:83
+#: ../mucharmap/unicode-blocks.h:91
 msgid "Optical Character Recognition"
 msgstr "Optiese karakterherkenning"
 
-#: ../mucharmap/unicode-blocks.h:84
+#: ../mucharmap/unicode-blocks.h:92
 msgid "Enclosed Alphanumerics"
 msgstr "Omhulde alfanumeriese karakters"
 
-#: ../mucharmap/unicode-blocks.h:85
+#: ../mucharmap/unicode-blocks.h:93
 msgid "Box Drawing"
 msgstr "Kassietekening"
 
-#: ../mucharmap/unicode-blocks.h:86
+#: ../mucharmap/unicode-blocks.h:94
 msgid "Block Elements"
 msgstr "Blokelemente"
 
-#: ../mucharmap/unicode-blocks.h:87
+#: ../mucharmap/unicode-blocks.h:95
 msgid "Geometric Shapes"
 msgstr "Meetkundige vorms"
 
-#: ../mucharmap/unicode-blocks.h:88
+#: ../mucharmap/unicode-blocks.h:96
 msgid "Miscellaneous Symbols"
 msgstr "Diverse simbole"
 
-#: ../mucharmap/unicode-blocks.h:89
+#: ../mucharmap/unicode-blocks.h:97
 msgid "Dingbats"
 msgstr "Dingbats"
 
-#: ../mucharmap/unicode-blocks.h:90
+#: ../mucharmap/unicode-blocks.h:98
 msgid "Miscellaneous Mathematical Symbols-A"
 msgstr "Diverse wiskundige simbole-A"
 
-#: ../mucharmap/unicode-blocks.h:91
+#: ../mucharmap/unicode-blocks.h:99
 msgid "Supplemental Arrows-A"
 msgstr "Aanvullende pyltjies-A"
 
-#: ../mucharmap/unicode-blocks.h:92
+#: ../mucharmap/unicode-blocks.h:100
 msgid "Braille Patterns"
 msgstr "Braille-patrone"
 
-#: ../mucharmap/unicode-blocks.h:93
+#: ../mucharmap/unicode-blocks.h:101
 msgid "Supplemental Arrows-B"
 msgstr "Aanvullende pyltjies-B"
 
-#: ../mucharmap/unicode-blocks.h:94
+#: ../mucharmap/unicode-blocks.h:102
 msgid "Miscellaneous Mathematical Symbols-B"
 msgstr "Diverse wiskundige simbole-B"
 
-#: ../mucharmap/unicode-blocks.h:95
+#: ../mucharmap/unicode-blocks.h:103
 msgid "Supplemental Mathematical Operators"
 msgstr "Aanvullende wiskundige operators"
 
-#: ../mucharmap/unicode-blocks.h:96
+#: ../mucharmap/unicode-blocks.h:104
 msgid "Miscellaneous Symbols and Arrows"
 msgstr "Diverse simbole en pyltjies"
 
-#: ../mucharmap/unicode-blocks.h:97 ../mucharmap/unicode-scripts.h:37
+#: ../mucharmap/unicode-blocks.h:105 ../mucharmap/unicode-scripts.h:43
 msgid "Glagolitic"
 msgstr "Glagolities"
 
-#: ../mucharmap/unicode-blocks.h:98
+#: ../mucharmap/unicode-blocks.h:106
 msgid "Latin Extended-C"
 msgstr "Latyns uitgebrei-C"
 
-#: ../mucharmap/unicode-blocks.h:99 ../mucharmap/unicode-scripts.h:29
+#: ../mucharmap/unicode-blocks.h:107 ../mucharmap/unicode-scripts.h:34
 msgid "Coptic"
 msgstr "Kopties"
 
-#: ../mucharmap/unicode-blocks.h:100
+#: ../mucharmap/unicode-blocks.h:108
 msgid "Georgian Supplement"
 msgstr "Georgies-bylaag"
 
-#: ../mucharmap/unicode-blocks.h:101 ../mucharmap/unicode-scripts.h:89
-#, fuzzy
+#: ../mucharmap/unicode-blocks.h:109 ../mucharmap/unicode-scripts.h:114
 msgid "Tifinagh"
-msgstr "Tifinaag"
+msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:102
+#: ../mucharmap/unicode-blocks.h:110
 msgid "Ethiopic Extended"
 msgstr "Etiopies uitgebrei"
 
-#: ../mucharmap/unicode-blocks.h:103
+#: ../mucharmap/unicode-blocks.h:111
 msgid "Cyrillic Extended-A"
 msgstr "Cyrillies uitgebrei-A"
 
-#: ../mucharmap/unicode-blocks.h:104
+#: ../mucharmap/unicode-blocks.h:112
 msgid "Supplemental Punctuation"
 msgstr "Aanvullende leestekens"
 
-#: ../mucharmap/unicode-blocks.h:105
+#: ../mucharmap/unicode-blocks.h:113
 msgid "CJK Radicals Supplement"
 msgstr "CJK-radikale-bylaag"
 
-#: ../mucharmap/unicode-blocks.h:106
+#: ../mucharmap/unicode-blocks.h:114
 msgid "Kangxi Radicals"
 msgstr "Kangxi-radikale"
 
-#: ../mucharmap/unicode-blocks.h:107
+#: ../mucharmap/unicode-blocks.h:115
 msgid "Ideographic Description Characters"
 msgstr "Ideografiese beskrywende karakters"
 
-#: ../mucharmap/unicode-blocks.h:108
+#: ../mucharmap/unicode-blocks.h:116
 msgid "CJK Symbols and Punctuation"
 msgstr "CJK-simbole en leestekens"
 
-#: ../mucharmap/unicode-blocks.h:109 ../mucharmap/unicode-scripts.h:46
+#: ../mucharmap/unicode-blocks.h:117 ../mucharmap/unicode-scripts.h:52
 msgid "Hiragana"
 msgstr "Hiragana"
 
-#: ../mucharmap/unicode-blocks.h:110 ../mucharmap/unicode-scripts.h:49
+#: ../mucharmap/unicode-blocks.h:118 ../mucharmap/unicode-scripts.h:60
 msgid "Katakana"
 msgstr "Katakana"
 
-#: ../mucharmap/unicode-blocks.h:111 ../mucharmap/unicode-scripts.h:20
+#: ../mucharmap/unicode-blocks.h:119 ../mucharmap/unicode-scripts.h:23
 msgid "Bopomofo"
 msgstr "Bopomofo"
 
-#: ../mucharmap/unicode-blocks.h:112
+#: ../mucharmap/unicode-blocks.h:120
 msgid "Hangul Compatibility Jamo"
 msgstr "Hangoel-versoenbaarheid Jamo"
 
-#: ../mucharmap/unicode-blocks.h:113
+#: ../mucharmap/unicode-blocks.h:121
 msgid "Kanbun"
 msgstr "Kanbun"
 
-#: ../mucharmap/unicode-blocks.h:114
+#: ../mucharmap/unicode-blocks.h:122
 msgid "Bopomofo Extended"
 msgstr "Bopomofo uitgebrei"
 
-#: ../mucharmap/unicode-blocks.h:115
+#: ../mucharmap/unicode-blocks.h:123
 msgid "CJK Strokes"
 msgstr "CJK-hale"
 
-#: ../mucharmap/unicode-blocks.h:116
+#: ../mucharmap/unicode-blocks.h:124
 msgid "Katakana Phonetic Extensions"
 msgstr "Katakana fonetiese uitbreidings"
 
-#: ../mucharmap/unicode-blocks.h:117
+#: ../mucharmap/unicode-blocks.h:125
 msgid "Enclosed CJK Letters and Months"
 msgstr "Omhulde CJK-letters en -maande"
 
-#: ../mucharmap/unicode-blocks.h:118
+#: ../mucharmap/unicode-blocks.h:126
 msgid "CJK Compatibility"
 msgstr "CJK-versoenbaarheid"
 
-#: ../mucharmap/unicode-blocks.h:119
-#, fuzzy
+#: ../mucharmap/unicode-blocks.h:127
 msgid "CJK Unified Ideographs Extension A"
-msgstr "CJK Unified-ideogramme uitbreiding-A"
+msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:120
+#: ../mucharmap/unicode-blocks.h:128
 msgid "Yijing Hexagram Symbols"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:121
-#, fuzzy
+#: ../mucharmap/unicode-blocks.h:129
 msgid "CJK Unified Ideographs"
-msgstr "CJK Unified-ideogramme"
+msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:122
+#: ../mucharmap/unicode-blocks.h:130
 msgid "Yi Syllables"
 msgstr "Yi-sillabes"
 
-#: ../mucharmap/unicode-blocks.h:123
+#: ../mucharmap/unicode-blocks.h:131
 msgid "Yi Radicals"
 msgstr "Yi-radikale"
 
-#: ../mucharmap/unicode-blocks.h:124 ../mucharmap/unicode-scripts.h:91
+#: ../mucharmap/unicode-blocks.h:132 ../mucharmap/unicode-scripts.h:69
+msgid "Lisu"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:133 ../mucharmap/unicode-scripts.h:116
 msgid "Vai"
 msgstr "Vai"
 
-#: ../mucharmap/unicode-blocks.h:125
+#: ../mucharmap/unicode-blocks.h:134
 msgid "Cyrillic Extended-B"
 msgstr "Cyrillies uitgebrei-B"
 
-#: ../mucharmap/unicode-blocks.h:126
-#, fuzzy
-msgid "Modifier Tone Letters"
-msgstr "Wysigingstoonletters"
-
-#: ../mucharmap/unicode-blocks.h:127
-msgid "Latin Extended-D"
-msgstr "Latyns uitgebrei-D"
-
-#: ../mucharmap/unicode-blocks.h:128 ../mucharmap/unicode-scripts.h:79
-msgid "Syloti Nagri"
-msgstr ""
-
-#: ../mucharmap/unicode-blocks.h:129
-msgid "Phags-pa"
-msgstr ""
-
-#: ../mucharmap/unicode-blocks.h:130 ../mucharmap/unicode-scripts.h:75
-msgid "Saurashtra"
-msgstr ""
-
-#: ../mucharmap/unicode-blocks.h:131 ../mucharmap/unicode-scripts.h:50
-msgid "Kayah Li"
-msgstr ""
-
-#: ../mucharmap/unicode-blocks.h:132 ../mucharmap/unicode-scripts.h:73
-msgid "Rejang"
-msgstr ""
-
-#: ../mucharmap/unicode-blocks.h:133 ../mucharmap/unicode-scripts.h:26
-msgid "Cham"
-msgstr ""
-
-#: ../mucharmap/unicode-blocks.h:134
-msgid "Hangul Syllables"
-msgstr "Hangul-sillabes"
-
-#: ../mucharmap/unicode-blocks.h:135
-msgid "High Surrogates"
+#: ../mucharmap/unicode-blocks.h:135 ../mucharmap/unicode-scripts.h:20
+msgid "Bamum"
 msgstr ""
 
 #: ../mucharmap/unicode-blocks.h:136
-msgid "High Private Use Surrogates"
+msgid "Modifier Tone Letters"
 msgstr ""
 
 #: ../mucharmap/unicode-blocks.h:137
-msgid "Low Surrogates"
-msgstr ""
+msgid "Latin Extended-D"
+msgstr "Latyns uitgebrei-D"
 
-#: ../mucharmap/unicode-blocks.h:138
-msgid "Private Use Area"
-msgstr "Area vir private gebruik"
+#: ../mucharmap/unicode-blocks.h:138 ../mucharmap/unicode-scripts.h:101
+msgid "Syloti Nagri"
+msgstr ""
 
 #: ../mucharmap/unicode-blocks.h:139
-msgid "CJK Compatibility Ideographs"
-msgstr "CJK-versoenbare ideogramme"
-
-#: ../mucharmap/unicode-blocks.h:140
-msgid "Alphabetic Presentation Forms"
-msgstr "Alfabetiese aanbiedingsvorms"
-
-#: ../mucharmap/unicode-blocks.h:141
-msgid "Arabic Presentation Forms-A"
-msgstr "Arabiese aanbiedingsvorms-A"
-
-#: ../mucharmap/unicode-blocks.h:142
-msgid "Variation Selectors"
+msgid "Common Indic Number Forms"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:143
-msgid "Vertical Forms"
-msgstr "Vertikale vorms"
+#: ../mucharmap/unicode-blocks.h:140
+msgid "Phags-pa"
+msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:144
-msgid "Combining Half Marks"
-msgstr "Kombinerende halftekens"
+#: ../mucharmap/unicode-blocks.h:141 ../mucharmap/unicode-scripts.h:95
+msgid "Saurashtra"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:142
+msgid "Devanagari Extended"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:143 ../mucharmap/unicode-scripts.h:61
+msgid "Kayah Li"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:144 ../mucharmap/unicode-scripts.h:92
+msgid "Rejang"
+msgstr ""
 
 #: ../mucharmap/unicode-blocks.h:145
-msgid "CJK Compatibility Forms"
-msgstr "CJK-versoenbaarheidsvorms"
+msgid "Hangul Jamo Extended-A"
+msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:146
-msgid "Small Form Variants"
-msgstr "Klein vormvariante"
+#: ../mucharmap/unicode-blocks.h:146 ../mucharmap/unicode-scripts.h:57
+msgid "Javanese"
+msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:147
-msgid "Arabic Presentation Forms-B"
-msgstr "Arabiese aanbiedingsvorms-B"
+#: ../mucharmap/unicode-blocks.h:147 ../mucharmap/unicode-scripts.h:31
+msgid "Cham"
+msgstr ""
 
 #: ../mucharmap/unicode-blocks.h:148
-msgid "Halfwidth and Fullwidth Forms"
-msgstr "Halfbreedte- en volbreedtevorms"
+msgid "Myanmar Extended-A"
+msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:149
-msgid "Specials"
-msgstr "Spesiales"
+#: ../mucharmap/unicode-blocks.h:149 ../mucharmap/unicode-scripts.h:107
+msgid "Tai Viet"
+msgstr ""
 
 #: ../mucharmap/unicode-blocks.h:150
-msgid "Linear B Syllabary"
-msgstr "Lineêr B-sillabes"
+msgid "Meetei Mayek Extensions"
+msgstr ""
 
 #: ../mucharmap/unicode-blocks.h:151
-msgid "Linear B Ideograms"
-msgstr "Lineêr B-idiogramme"
+msgid "Ethiopic Extended-A"
+msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:152
-msgid "Aegean Numbers"
+#: ../mucharmap/unicode-blocks.h:152 ../mucharmap/unicode-scripts.h:74
+msgid "Meetei Mayek"
 msgstr ""
 
 #: ../mucharmap/unicode-blocks.h:153
+msgid "Hangul Syllables"
+msgstr "Hangul-sillabes"
+
+#: ../mucharmap/unicode-blocks.h:154
+msgid "Hangul Jamo Extended-B"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:155
+msgid "High Surrogates"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:156
+msgid "High Private Use Surrogates"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:157
+msgid "Low Surrogates"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:158
+msgid "Private Use Area"
+msgstr "Area vir private gebruik"
+
+#: ../mucharmap/unicode-blocks.h:159
+msgid "CJK Compatibility Ideographs"
+msgstr "CJK-versoenbare ideogramme"
+
+#: ../mucharmap/unicode-blocks.h:160
+msgid "Alphabetic Presentation Forms"
+msgstr "Alfabetiese aanbiedingsvorms"
+
+#: ../mucharmap/unicode-blocks.h:161
+msgid "Arabic Presentation Forms-A"
+msgstr "Arabiese aanbiedingsvorms-A"
+
+#: ../mucharmap/unicode-blocks.h:162
+msgid "Variation Selectors"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:163
+msgid "Vertical Forms"
+msgstr "Vertikale vorms"
+
+#: ../mucharmap/unicode-blocks.h:164
+msgid "Combining Half Marks"
+msgstr "Kombinerende halftekens"
+
+#: ../mucharmap/unicode-blocks.h:165
+msgid "CJK Compatibility Forms"
+msgstr "CJK-versoenbaarheidsvorms"
+
+#: ../mucharmap/unicode-blocks.h:166
+msgid "Small Form Variants"
+msgstr "Klein vormvariante"
+
+#: ../mucharmap/unicode-blocks.h:167
+msgid "Arabic Presentation Forms-B"
+msgstr "Arabiese aanbiedingsvorms-B"
+
+#: ../mucharmap/unicode-blocks.h:168
+msgid "Halfwidth and Fullwidth Forms"
+msgstr "Halfbreedte- en volbreedtevorms"
+
+#: ../mucharmap/unicode-blocks.h:169
+msgid "Specials"
+msgstr "Spesiales"
+
+#: ../mucharmap/unicode-blocks.h:170
+msgid "Linear B Syllabary"
+msgstr "Lineêr B-sillabes"
+
+#: ../mucharmap/unicode-blocks.h:171
+msgid "Linear B Ideograms"
+msgstr "Lineêr B-idiogramme"
+
+#: ../mucharmap/unicode-blocks.h:172
+msgid "Aegean Numbers"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:173
 msgid "Ancient Greek Numbers"
 msgstr "Antieke Griekse getalle"
 
-#: ../mucharmap/unicode-blocks.h:154
+#: ../mucharmap/unicode-blocks.h:174
 msgid "Ancient Symbols"
 msgstr "Antieke simbole"
 
-#: ../mucharmap/unicode-blocks.h:155
+#: ../mucharmap/unicode-blocks.h:175
 msgid "Phaistos Disc"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:156 ../mucharmap/unicode-scripts.h:58
+#: ../mucharmap/unicode-blocks.h:176 ../mucharmap/unicode-scripts.h:70
 msgid "Lycian"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:157 ../mucharmap/unicode-scripts.h:25
+#: ../mucharmap/unicode-blocks.h:177 ../mucharmap/unicode-scripts.h:29
 msgid "Carian"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:158 ../mucharmap/unicode-scripts.h:67
+#: ../mucharmap/unicode-blocks.h:178 ../mucharmap/unicode-scripts.h:84
 msgid "Old Italic"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:159 ../mucharmap/unicode-scripts.h:38
+#: ../mucharmap/unicode-blocks.h:179 ../mucharmap/unicode-scripts.h:44
 msgid "Gothic"
 msgstr "Goties"
 
-#: ../mucharmap/unicode-blocks.h:160 ../mucharmap/unicode-scripts.h:90
+#: ../mucharmap/unicode-blocks.h:180 ../mucharmap/unicode-scripts.h:115
 msgid "Ugaritic"
 msgstr "Oegarities"
 
-#: ../mucharmap/unicode-blocks.h:161 ../mucharmap/unicode-scripts.h:68
+#: ../mucharmap/unicode-blocks.h:181 ../mucharmap/unicode-scripts.h:85
 msgid "Old Persian"
 msgstr "Oud-Persies"
 
-#: ../mucharmap/unicode-blocks.h:162 ../mucharmap/unicode-scripts.h:33
+#: ../mucharmap/unicode-blocks.h:182 ../mucharmap/unicode-scripts.h:38
 msgid "Deseret"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:163 ../mucharmap/unicode-scripts.h:76
+#: ../mucharmap/unicode-blocks.h:183 ../mucharmap/unicode-scripts.h:97
 msgid "Shavian"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:164 ../mucharmap/unicode-scripts.h:70
+#: ../mucharmap/unicode-blocks.h:184 ../mucharmap/unicode-scripts.h:89
 msgid "Osmanya"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:165
+#: ../mucharmap/unicode-blocks.h:185
 msgid "Cypriot Syllabary"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:166 ../mucharmap/unicode-scripts.h:72
+#: ../mucharmap/unicode-blocks.h:186 ../mucharmap/unicode-scripts.h:53
+msgid "Imperial Aramaic"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:187 ../mucharmap/unicode-scripts.h:91
 msgid "Phoenician"
 msgstr "Fenicies"
 
-#: ../mucharmap/unicode-blocks.h:167 ../mucharmap/unicode-scripts.h:59
+#: ../mucharmap/unicode-blocks.h:188 ../mucharmap/unicode-scripts.h:71
 msgid "Lydian"
 msgstr "Lidies"
 
-#: ../mucharmap/unicode-blocks.h:168 ../mucharmap/unicode-scripts.h:51
+#: ../mucharmap/unicode-blocks.h:189 ../mucharmap/unicode-scripts.h:76
+msgid "Meroitic Hieroglyphs"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:190 ../mucharmap/unicode-scripts.h:75
+msgid "Meroitic Cursive"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:191 ../mucharmap/unicode-scripts.h:62
 msgid "Kharoshthi"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:169 ../mucharmap/unicode-scripts.h:30
+#: ../mucharmap/unicode-blocks.h:192 ../mucharmap/unicode-scripts.h:86
+msgid "Old South Arabian"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:193 ../mucharmap/unicode-scripts.h:18
+msgid "Avestan"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:194 ../mucharmap/unicode-scripts.h:56
+msgid "Inscriptional Parthian"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:195 ../mucharmap/unicode-scripts.h:55
+msgid "Inscriptional Pahlavi"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:196 ../mucharmap/unicode-scripts.h:87
+msgid "Old Turkic"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:197
+msgid "Rumi Numeral Symbols"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:198 ../mucharmap/unicode-scripts.h:24
+msgid "Brahmi"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:199 ../mucharmap/unicode-scripts.h:58
+msgid "Kaithi"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:200 ../mucharmap/unicode-scripts.h:99
+msgid "Sora Sompeng"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:201 ../mucharmap/unicode-scripts.h:30
+msgid "Chakma"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:202 ../mucharmap/unicode-scripts.h:96
+msgid "Sharada"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:203 ../mucharmap/unicode-scripts.h:108
+msgid "Takri"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:204 ../mucharmap/unicode-scripts.h:35
 msgid "Cuneiform"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:170
+#: ../mucharmap/unicode-blocks.h:205
 msgid "Cuneiform Numbers and Punctuation"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:171
+#: ../mucharmap/unicode-blocks.h:206 ../mucharmap/unicode-scripts.h:40
+msgid "Egyptian Hieroglyphs"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:207
+msgid "Bamum Supplement"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:208 ../mucharmap/unicode-scripts.h:77
+msgid "Miao"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:209
+msgid "Kana Supplement"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:210
 msgid "Byzantine Musical Symbols"
 msgstr "Bisantynse musieksimbole"
 
-#: ../mucharmap/unicode-blocks.h:172
+#: ../mucharmap/unicode-blocks.h:211
 msgid "Musical Symbols"
 msgstr "Musieksimbole"
 
-#: ../mucharmap/unicode-blocks.h:173
+#: ../mucharmap/unicode-blocks.h:212
 msgid "Ancient Greek Musical Notation"
 msgstr "Antieke Griekse musieknotasie"
 
-#: ../mucharmap/unicode-blocks.h:174
+#: ../mucharmap/unicode-blocks.h:213
 msgid "Tai Xuan Jing Symbols"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:175
+#: ../mucharmap/unicode-blocks.h:214
 msgid "Counting Rod Numerals"
 msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:176
+#: ../mucharmap/unicode-blocks.h:215
 msgid "Mathematical Alphanumeric Symbols"
 msgstr "Wiskundige alfanumeriese simbole"
 
-#: ../mucharmap/unicode-blocks.h:177
+#: ../mucharmap/unicode-blocks.h:216
+msgid "Arabic Mathematical Alphabetic Symbols"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:217
 msgid "Mahjong Tiles"
 msgstr "Mahjong-teëltjies"
 
-#: ../mucharmap/unicode-blocks.h:178
+#: ../mucharmap/unicode-blocks.h:218
 msgid "Domino Tiles"
 msgstr "Domino-teëltjies"
 
-#: ../mucharmap/unicode-blocks.h:179
-#, fuzzy
-msgid "CJK Unified Ideographs Extension B"
-msgstr "CJK Unified-ideogramme uitbreiding-A"
+#: ../mucharmap/unicode-blocks.h:219
+msgid "Playing Cards"
+msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:180
+#: ../mucharmap/unicode-blocks.h:220
+msgid "Enclosed Alphanumeric Supplement"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:221
+msgid "Enclosed Ideographic Supplement"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:222
+msgid "Miscellaneous Symbols And Pictographs"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:223
+msgid "Emoticons"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:224
+msgid "Transport And Map Symbols"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:225
+msgid "Alchemical Symbols"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:226
+msgid "CJK Unified Ideographs Extension B"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:227
+msgid "CJK Unified Ideographs Extension C"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:228
+msgid "CJK Unified Ideographs Extension D"
+msgstr ""
+
+#: ../mucharmap/unicode-blocks.h:229
 msgid "CJK Compatibility Ideographs Supplement"
 msgstr "CJK-versoeningsidiogramme-bylaag"
 
-#: ../mucharmap/unicode-blocks.h:181
+#: ../mucharmap/unicode-blocks.h:230
 msgid "Tags"
 msgstr "Etikette"
 
-#: ../mucharmap/unicode-blocks.h:182
-#, fuzzy
+#: ../mucharmap/unicode-blocks.h:231
 msgid "Variation Selectors Supplement"
-msgstr "Variasieselekteerders-bylaag"
+msgstr ""
 
-#: ../mucharmap/unicode-blocks.h:183
+#: ../mucharmap/unicode-blocks.h:232
 msgid "Supplementary Private Use Area-A"
 msgstr "Aanvullende privaat gebruiksarea-A"
 
-#: ../mucharmap/unicode-blocks.h:184
+#: ../mucharmap/unicode-blocks.h:233
 msgid "Supplementary Private Use Area-B"
 msgstr "Aanvullende privaat gebruiksarea-B"
 
-#: ../mucharmap/unicode-scripts.h:21
+#: ../mucharmap/unicode-scripts.h:25
 msgid "Braille"
 msgstr "Braille"
 
-#: ../mucharmap/unicode-scripts.h:24
+#: ../mucharmap/unicode-scripts.h:28
 msgid "Canadian Aboriginal"
 msgstr ""
 
-#: ../mucharmap/unicode-scripts.h:31
+#: ../mucharmap/unicode-scripts.h:36
 msgid "Cypriot"
 msgstr "Cipries"
 
-#: ../mucharmap/unicode-scripts.h:39
+#: ../mucharmap/unicode-scripts.h:45
 msgid "Greek"
 msgstr "Grieks"
 
-#: ../mucharmap/unicode-scripts.h:42
+#: ../mucharmap/unicode-scripts.h:48
 msgid "Han"
 msgstr "Han"
 
-#: ../mucharmap/unicode-scripts.h:43
+#: ../mucharmap/unicode-scripts.h:49
 msgid "Hangul"
 msgstr "Hangoel"
 
-#: ../mucharmap/unicode-scripts.h:47
+#: ../mucharmap/unicode-scripts.h:54
 msgid "Inherited"
 msgstr "Oorgeërf"
 
-#: ../mucharmap/unicode-scripts.h:54
+#: ../mucharmap/unicode-scripts.h:65
 msgid "Latin"
 msgstr "Latyns"
 
-#: ../mucharmap/unicode-scripts.h:57
+#: ../mucharmap/unicode-scripts.h:68
 msgid "Linear B"
 msgstr "Lineêr-B"
 
-#: ../mucharmap/unicode-scripts.h:71
+#: ../mucharmap/unicode-scripts.h:90
 msgid "Phags Pa"
 msgstr ""
 
-#: ../mucharmap/unicode-scripts.h:92
+#: ../mucharmap/unicode-scripts.h:117
 msgid "Yi"
 msgstr "Yi"
-
-#: ../mucharmap/mucharmap-search-dialog.c:565
-msgid "Information"
-msgstr "Inligting"
-
-#. follow hig guidelines
-#: ../mucharmap/mucharmap-search-dialog.c:739
-msgid "Find"
-msgstr "Vind"
-
-#: ../mucharmap/mucharmap-search-dialog.c:753
-msgid "_Previous"
-msgstr "Vo_rige"
-
-#: ../mucharmap/mucharmap-search-dialog.c:760
-msgid "_Next"
-msgstr "Vo_lgende"
-
-#: ../mucharmap/mucharmap-search-dialog.c:770
-msgid "_Search:"
-msgstr "_Soek:"
-
-#: ../mucharmap/mucharmap-search-dialog.c:780
-msgid "Match _whole word"
-msgstr "Pas hele _woord"
-
-#: ../mucharmap/mucharmap-search-dialog.c:785
-msgid "Search in character _details"
-msgstr "Soek in karakter_detail"
-
-#: ../mucharmap/mucharmap-block-chapters-model.c:53
-msgid "All"
-msgstr "Almal"
-
-#: ../mucharmap/mucharmap-block-chapters-model.c:138
-msgid "Unicode Block"
-msgstr "Unicode-blok"
-
-#: ../mucharmap/mucharmap-script-chapters-model.c:134
-msgid "Script"
-msgstr "Skrif"
