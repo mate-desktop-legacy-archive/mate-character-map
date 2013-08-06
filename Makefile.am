@@ -3,16 +3,10 @@ NULL =
 ACLOCAL_AMFLAGS = -I m4
 GITIGNOREFILES = m4
 
-SUBDIRS = po pixmaps mucharmap docs
+SUBDIRS = po pixmaps mucharmap docs help
 
 if HAVE_GTK_2
 SUBDIRS += bindings
-endif
-
-if ENABLE_CHARMAP
-if HAVE_MATE_DOC_UTILS
-SUBDIRS += help
-endif
 endif
 
 distuninstallcheck_listfiles = find . -type -f -print | grep -v scrollkeeper
@@ -31,7 +25,6 @@ EXTRA_DIST = \
 	ChangeLog.README \
 	autogen.sh \
 	gtkrc.win32 \
-	mate-doc-utils.make \
 	org.mate.mucharmap.schema.xml.in \
 	COPYING.UNICODE \
 	$(NULL)
@@ -65,7 +58,6 @@ MAINTAINERCLEANFILES = \
 	$(srcdir)/omf.make \
 	$(srcdir)/xmldocs.make \
 	$(srcdir)/gtk-doc.make \
-	$(srcdir)/mate-doc-utils.make \
 	`find "$(srcdir)" -type f -name Makefile.in -print`
 
 ChangeLog:

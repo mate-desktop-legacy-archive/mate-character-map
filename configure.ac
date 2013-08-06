@@ -292,10 +292,7 @@ AM_CONDITIONAL([ENABLE_INTROSPECTION],[test "$enable_introspection" = "yes"])
 # API & User Docs
 # ***************
 
-MATE_DOC_INIT([0.9.0],[have_gdu=yes],[have_gdu=no])
-if test "$have_gdu" = "no"; then
-	AC_MSG_WARN([MATE doc utils not found; disabling user manual])
-fi
+YELP_HELP_INIT
 
 GTK_DOC_CHECK([1.0])
 

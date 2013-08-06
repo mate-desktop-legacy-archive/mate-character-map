@@ -1,14 +1,12 @@
-include $(top_srcdir)/mate-doc-utils.make
-dist-hook: doc-dist-hook
+@YELP_HELP_RULES@
 
-DOC_MODULE = mucharmap
-DOC_ENTITIES = legal.xml
-DOC_INCLUDES = 
+HELP_ID = mucharmap
+HELP_FILES = index.docbook legal.xml
 
-DOC_LINGUAS = bg ca cs de el en_GB es fi fr ko oc pt_BR ru sv vi zh_CN
+HELP_LINGUAS = bg ca cs de el en_GB es fi fr ko oc pt_BR ru sv vi zh_CN
 
 # These should be converted to use mate-doc-utils
-# http://live.mate.org/MateDocUtilsTranslationMigration
+# http://live.gnome.org/GnomeDocUtilsTranslationMigration
 # Please remember also to remove help/langcode/Makefile from toplevel
 # configure.ac's AC_CONFIG_FILES, and remove your directory from
 # the SUBDIRS below.

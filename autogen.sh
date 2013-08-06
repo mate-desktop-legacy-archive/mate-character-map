@@ -13,13 +13,17 @@ PKG_NAME="mucharmap"
 }
 
 which mate-autogen || {
-    echo "You need to install mate-common from MATE git and make"
+    echo "You need to install mate-common and make"
     echo "sure the mate-autogen.sh script is in your \$PATH."
+    exit 1
+}
+
+which yelp-build || {
+    echo "You need to install yelp-tools" 
     exit 1
 }
 
 REQUIRED_INTLTOOL_VERSION=0.40.4
 REQUIRED_AUTOMAKE_VERSION=1.9
-REQUIRED_MATE_DOC_UTILS_VERSION=0.9.0
 
 . mate-autogen
