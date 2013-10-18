@@ -32,7 +32,6 @@ EXTRA_DIST = \
 	autogen.sh \
 	gtkrc.win32 \
 	mate-doc-utils.make \
-	org.mate.mucharmap.schema.xml.in \
 	COPYING.UNICODE \
 	$(NULL)
 
