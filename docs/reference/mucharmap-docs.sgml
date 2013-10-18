@@ -22,6 +22,5 @@
     <xi:include href="xml/mucharmap-chapters-view.xml"/>
     <xi:include href="xml/mucharmap-charmap.xml"/>
     <xi:include href="xml/mucharmap-unicode-info.xml"/>
-    <xi:include href="xml/mucharmap.xml"/>
   </chapter>
 </book>
