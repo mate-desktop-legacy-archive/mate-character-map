@@ -25,7 +25,6 @@ EXTRA_DIST = \
 	ChangeLog.README \
 	autogen.sh \
 	gtkrc.win32 \
-	org.mate.mucharmap.schema.xml.in \
 	COPYING.UNICODE \
 	$(NULL)
 
