@@ -36,13 +36,13 @@ m4_define([mucharmap_lt_current_minus_age],[m4_eval(mucharmap_lt_current - mucha
 
 AC_PREREQ([2.56])
 
-AC_INIT([MATE Character Map],[mucharmap_version],[http://bugzilla.mate.org/enter_bug.cgi?product=mucharmap],[mucharmap])
+AC_INIT([MATE Character Map],[mucharmap_version],[https://github.com/mate-desktop/mate-character-map/issues/],[mucharmap])
 
 AC_CONFIG_MACRO_DIR([m4])
 AC_CONFIG_SRCDIR([mucharmap/mucharmap.h.in])
 AC_CONFIG_HEADERS([config.h])
 
-AM_INIT_AUTOMAKE([1.9 foreign dist-bzip2 no-dist-gzip])
+AM_INIT_AUTOMAKE([1.9 foreign dist-xz no-dist-gzip])
 
 m4_ifdef([AM_SILENT_RULES],[AM_SILENT_RULES([yes])])
 
