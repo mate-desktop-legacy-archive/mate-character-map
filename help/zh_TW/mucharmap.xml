@@ -64,7 +64,7 @@
 
     <revhistory>
       <revision><revnumber>統一碼字元對映手冊 V&manrevision;</revnumber> <date>&date;</date> <revdescription> 
-          <para role="author">Sun MATE 文件小組</para>
+          <para role="author">Sun GNOME 文件小組</para>
           <para role="publisher">MATE 文件專案</para>
         </revdescription>
       </revision>
