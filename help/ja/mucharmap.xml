@@ -93,7 +93,7 @@
 	<revnumber>Unicode Character Map のマニュアル V&manrevision;</revnumber> 
 	<date>&date;</date> 
 	<revdescription> 
-          <para role="author">Sun MATE ドキュメンテーションチーム</para>
+          <para role="author">Sun GNOME ドキュメンテーションチーム</para>
           <para role="publisher">MATE ドキュメンテーションプロジェクト</para>
         </revdescription>
       </revision>
