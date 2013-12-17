@@ -322,10 +322,6 @@ docs/reference/Makefile
 mucharmap/Makefile
 mucharmap/mucharmap.h
 help/Makefile
-help/it/Makefile
-help/ja/Makefile
-help/zh_HK/Makefile
-help/zh_TW/Makefile
 pixmaps/Makefile
 po/Makefile.in
 ])
