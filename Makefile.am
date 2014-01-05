@@ -1,6 +1,6 @@
 NULL =
 
-ACLOCAL_AMFLAGS = -I m4
+ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAG}
 GITIGNOREFILES = m4
 
 SUBDIRS = po pixmaps mucharmap docs help
