@@ -37,7 +37,7 @@
 	  NUM_SIGNALS
 	};
 
-	static guint mucharmap_search_dialog_signals[NUM_SIGNALS];
+	static guint mucharmap_search_dialog_signals[NUM_SIGNALS] = { 0 };
 
 	enum
 	{
