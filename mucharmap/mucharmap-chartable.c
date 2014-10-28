@@ -63,7 +63,7 @@
 	static void mucharmap_chartable_class_init (MucharmapChartableClass *klass);
 	static void mucharmap_chartable_finalize   (GObject *object);
 
-	static guint signals[NUM_SIGNALS];
+	static guint signals[NUM_SIGNALS] = { 0 };
 
 	#define DEFAULT_FONT_SIZE (20.0 * (double) PANGO_SCALE)
 
