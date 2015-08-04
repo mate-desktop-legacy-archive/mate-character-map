@@ -45,7 +45,8 @@ typedef enum {
 	MUCHARMAP_UNICODE_VERSION_6_2,
 	MUCHARMAP_UNICODE_VERSION_6_3,
 	MUCHARMAP_UNICODE_VERSION_7_0,
-	MUCHARMAP_UNICODE_VERSION_LATEST = MUCHARMAP_UNICODE_VERSION_7_0 /* private, will move forward with each revision */
+	MUCHARMAP_UNICODE_VERSION_8_0,
+	MUCHARMAP_UNICODE_VERSION_LATEST = MUCHARMAP_UNICODE_VERSION_8_0 /* private, will move forward with each revision */
 } MucharmapUnicodeVersion;
 
 /* return values are read-only */
