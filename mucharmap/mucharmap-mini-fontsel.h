@@ -43,7 +43,7 @@ struct _MucharmapMiniFontSelection
   GtkWidget            *bold;   /* toggle button*/
   GtkWidget            *italic; /* toggle button*/
 
-  GtkObject            *size_adj;
+  GtkAdjustment        *size_adj;
   GtkWidget            *size;   /* spin button */
 
   PangoFontDescription *font_desc;

@@ -695,8 +695,8 @@ search_find_response (GtkDialog *dialog,
 }
 
 static void
-entry_changed (GtkObject             *object,
-	           MucharmapSearchDialog *search_dialog)
+entry_changed (GObject               *object,
+               MucharmapSearchDialog *search_dialog)
 {
   MucharmapSearchDialogPrivate *priv = MUCHARMAP_SEARCH_DIALOG_GET_PRIVATE (search_dialog);
   gboolean is_empty;

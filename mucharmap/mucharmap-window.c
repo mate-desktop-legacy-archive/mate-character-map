@@ -527,7 +527,7 @@ next_or_prev_character (GtkAction       *action,
 	gtk_binding_set_activate (gtk_binding_set_by_class (klass),
 	                          keyval,
 	                          0,
-	                          GTK_OBJECT (chartable));
+	                          G_OBJECT (chartable));
 }
 
 static void
