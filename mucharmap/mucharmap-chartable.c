@@ -1439,25 +1439,46 @@ mucharmap_chartable_drag_data_received (GtkWidget *widget,
   /* no need to chain up */
 }
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+static gboolean
+mucharmap_chartable_draw (GtkWidget *widget,
+                          cairo_t *cr)
+#else
 static gboolean
 mucharmap_chartable_expose_event (GtkWidget *widget,
-	                              GdkEventExpose *event)
+                                  GdkEventExpose *event)
+#endif
 {
   MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
   MucharmapChartablePrivate *priv = chartable->priv;
   GtkStyle *style;
-  cairo_t *cr;
   int row, col;
+#if GTK_CHECK_VERSION (3, 0, 0)
+  cairo_rectangle_int_t clip_rect;
+  cairo_region_t *region;
+#else
+  GdkRegion *region = event->region;
+  cairo_t *cr;
+#endif
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
   /* Don't draw anything if we haven't set a codepoint list yet */
   if (event->window != gtk_widget_get_window (widget))
 	return FALSE;
+#endif
 
 #if GTK_CHECK_VERSION (3, 0, 0)
-  if (cairo_region_is_empty (event->region))
+  if (!gdk_cairo_get_clip_rectangle (cr, &clip_rect))
 	return FALSE;
+
+  region = cairo_region_create_rectangle (&clip_rect);
+
+  if (cairo_region_is_empty (region)) {
+    cairo_region_destroy (region);
+    return FALSE;
+  }
 #else
-  if (gdk_region_empty (event->region))
+  if (gdk_region_empty (region))
 	return FALSE;
 #endif
 
@@ -1476,13 +1497,15 @@ mucharmap_chartable_expose_event (GtkWidget *widget,
   }
 #endif
 
+#if !GTK_CHECK_VERSION (3, 0, 0)
   cr = gdk_cairo_create (event->window);
-  gdk_cairo_region (cr, event->region);
+  gdk_cairo_region (cr, region);
   cairo_clip (cr);
+#endif
 
   style = gtk_widget_get_style (widget);
   gdk_cairo_set_source_color (cr, &style->bg[GTK_STATE_NORMAL]);
-  gdk_cairo_region (cr, event->region);
+  gdk_cairo_region (cr, region);
   cairo_fill (cr);
 
   if (priv->codepoint_list == NULL)
@@ -1506,10 +1529,10 @@ mucharmap_chartable_expose_event (GtkWidget *widget,
           rect.height = _mucharmap_chartable_row_height (chartable, row);
 
 #if GTK_CHECK_VERSION (3, 0, 0)
-          if (cairo_region_contains_rectangle (event->region, &rect) == CAIRO_REGION_OVERLAP_OUT)
+          if (cairo_region_contains_rectangle (region, &rect) == CAIRO_REGION_OVERLAP_OUT)
             continue;
 #else
-          if (gdk_region_rect_in (event->region, &rect) == GDK_OVERLAP_RECTANGLE_OUT)
+          if (gdk_region_rect_in (region, &rect) == GDK_OVERLAP_RECTANGLE_OUT)
             continue;
 #endif
 
@@ -1522,7 +1545,11 @@ mucharmap_chartable_expose_event (GtkWidget *widget,
 
 expose_done:
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+  cairo_region_destroy (region);
+#else
   cairo_destroy (cr);
+#endif
 
   /* no need to chain up */
   return FALSE;
@@ -2167,7 +2194,11 @@ mucharmap_chartable_class_init (MucharmapChartableClass *klass)
   widget_class->drag_data_received = mucharmap_chartable_drag_data_received;
   widget_class->button_press_event = mucharmap_chartable_button_press;
   widget_class->button_release_event = mucharmap_chartable_button_release;
+#if GTK_CHECK_VERSION (3, 0, 0)
+  widget_class->draw = mucharmap_chartable_draw;
+#else
   widget_class->expose_event = mucharmap_chartable_expose_event;
+#endif
   widget_class->focus_in_event = mucharmap_chartable_focus_in_event;
   widget_class->focus_out_event = mucharmap_chartable_focus_out_event;
   widget_class->key_press_event = mucharmap_chartable_key_press_event;
