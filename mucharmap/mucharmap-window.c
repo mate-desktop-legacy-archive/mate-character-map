@@ -770,14 +770,10 @@
 		            MucharmapWindow *guw)
 	{
 	  GtkAllocation *allocation;
-	#if GTK_CHECK_VERSION (2, 18, 0)
 	  GtkAllocation widget_allocation;
 
 	  gtk_widget_get_allocation (guw->status, &widget_allocation);
 	  allocation = &widget_allocation;
-	#else
-	  allocation = &guw->status->allocation;
-	#endif
 
 	  /* FIXMEchpe ewww... */
 	  /* increase the height a bit so it doesn't resize itself */
@@ -1124,11 +1120,7 @@
 
 		g_return_if_fail(MUCHARMAP_IS_WINDOW(guw));
 
-		#if GTK_CHECK_VERSION (2,20,0)
 			g_assert(!gtk_widget_get_realized(GTK_WIDGET(guw)));
-		#else
-			g_assert(!GTK_WIDGET_REALIZED(guw));
-		#endif
 
 		if (!font)
 			return;

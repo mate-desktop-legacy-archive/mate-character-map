@@ -107,11 +107,7 @@
 	  GPtrArray *cells;
 	  guint n_cells, n;
 
-	#if GTK_CHECK_VERSION (2, 21, 0)
 	  widget = gtk_accessible_get_widget (GTK_ACCESSIBLE (obj));
-	#else
-	  widget = GTK_ACCESSIBLE (obj)->widget;
-	#endif
 	  if (widget == NULL)
 		/* State is defunct */
 		return NULL;
@@ -165,11 +161,7 @@
 	  AtkObject *child;
 	  gint index;
 
-	#if GTK_CHECK_VERSION (2, 21, 0)
 	  widget = gtk_accessible_get_widget (GTK_ACCESSIBLE (table));
-	#else
-	  widget = GTK_ACCESSIBLE (table)->widget;
-	#endif
 	  if (widget == NULL)
 		/* State is defunct */
 		return NULL;
@@ -196,11 +188,7 @@
 	  gint x_pos, y_pos;
 	  gint row, col;
 
-	#if GTK_CHECK_VERSION (2, 21, 0)
 	  widget = gtk_accessible_get_widget (GTK_ACCESSIBLE (component));
-	#else
-	  widget = GTK_ACCESSIBLE (component)->widget;
-	#endif
 	  if (widget == NULL)
 		/* State is defunct */
 		return NULL;
@@ -258,11 +246,7 @@
 	  GtkWidget *widget;
 
 	  state_set = ATK_OBJECT_CLASS (mucharmap_chartable_accessible_parent_class)->ref_state_set (obj);
-	#if GTK_CHECK_VERSION (2, 21, 0)
 	  widget = gtk_accessible_get_widget (GTK_ACCESSIBLE (obj));
-	#else
-	  widget = GTK_ACCESSIBLE (obj)->widget;
-	#endif
 
 	  if (widget != NULL)
 		atk_state_set_add_state (state_set, ATK_STATE_MANAGES_DESCENDANTS);
@@ -277,11 +261,7 @@
 	{
 	  GtkWidget *widget;
 
-	#if GTK_CHECK_VERSION (2, 21, 0)
 	  widget = gtk_accessible_get_widget (GTK_ACCESSIBLE (obj));
-	#else
-	  widget = GTK_ACCESSIBLE (obj)->widget;
-	#endif
 	  if (widget == NULL)
 		/* State is defunct */
 		return 0;
@@ -335,11 +315,7 @@
 	  GPtrArray *cells;
 	  guint n_cells, n;
 
-	#if GTK_CHECK_VERSION (2, 21, 0)
 	  widget = gtk_accessible_get_widget (GTK_ACCESSIBLE (obj));
-	#else
-	  widget = GTK_ACCESSIBLE (obj)->widget;
-	#endif
 	  if (!widget)
 		/* Widget is being deleted */
 		return;
@@ -524,15 +500,9 @@
 	static void
 	mucharmap_chartable_accessible_connect_widget_destroyed (GtkAccessible *accessible)
 	{
-	#if GTK_CHECK_VERSION (2, 21, 0)
 	  if (gtk_accessible_get_widget (accessible))
 		{
 		  g_signal_connect_after (gtk_accessible_get_widget (accessible),
-	#else
-	  if (accessible->widget)
-		{
-		  g_signal_connect_after (accessible->widget,
-	#endif
 		                          "destroy",
 		                          G_CALLBACK (mucharmap_chartable_accessible_destroyed),
 		                          accessible);
@@ -569,11 +539,7 @@
 	  MucharmapChartable *chartable;
 	  MucharmapChartablePrivate *chartable_priv;
 
-	#if GTK_CHECK_VERSION (2, 21, 0)
 	  widget = gtk_accessible_get_widget (GTK_ACCESSIBLE (table));
-	#else
-	  widget = GTK_ACCESSIBLE (table)->widget;
-	#endif
 	  if (widget == NULL)
 		/* State is defunct */
 		return 0;
@@ -592,11 +558,7 @@
 	{
 	  GtkWidget *widget;
 
-	#if GTK_CHECK_VERSION (2, 21, 0)
 	  widget = gtk_accessible_get_widget (GTK_ACCESSIBLE (table));
-	#else
-	  widget = GTK_ACCESSIBLE (table)->widget;
-	#endif
 	  if (widget == NULL)
 		/* State is defunct */
 		return 0;
@@ -613,11 +575,7 @@
 	  MucharmapChartablePrivate *chartable_priv;
 	  gint n_rows;
 
-	#if GTK_CHECK_VERSION (2, 21, 0)
 	  widget = gtk_accessible_get_widget (GTK_ACCESSIBLE (table));
-	#else
-	  widget = GTK_ACCESSIBLE (table)->widget;
-	#endif
 	  if (widget == NULL)
 		/* State is defunct */
 		return 0;
@@ -638,11 +596,7 @@
 	{
 	  GtkWidget *widget;
 
-	#if GTK_CHECK_VERSION (2, 21, 0)
 	  widget = gtk_accessible_get_widget (GTK_ACCESSIBLE (table));
-	#else
-	  widget = GTK_ACCESSIBLE (table)->widget;
-	#endif
 	  if (widget == NULL)
 		/* State is defunct */
 		return 0;
@@ -660,11 +614,7 @@
 	  MucharmapChartable *chartable;
 	  MucharmapChartablePrivate *chartable_priv;
 
-	#if GTK_CHECK_VERSION (2, 21, 0)
 	  widget = gtk_accessible_get_widget (GTK_ACCESSIBLE (table));
-	#else
-	  widget = GTK_ACCESSIBLE (table)->widget;
-	#endif
 	  if (widget == NULL)
 		/* State is defunct */
 		return -1;
@@ -684,11 +634,7 @@
 	  MucharmapChartable *chartable;
 	  MucharmapChartablePrivate *chartable_priv;
 
-	#if GTK_CHECK_VERSION (2, 21, 0)
 	  widget = gtk_accessible_get_widget (GTK_ACCESSIBLE (table));
-	#else
-	  widget = GTK_ACCESSIBLE (table)->widget;
-	#endif
 	  if (widget == NULL)
 		/* State is defunct */
 		return -1;
@@ -708,11 +654,7 @@
 	  MucharmapChartable *chartable;
 	  MucharmapChartablePrivate *chartable_priv;
 
-	#if GTK_CHECK_VERSION (2, 21, 0)
 	  widget = gtk_accessible_get_widget (GTK_ACCESSIBLE (table));
-	#else
-	  widget = GTK_ACCESSIBLE (table)->widget;
-	#endif
 	  if (widget == NULL)
 		/* State is defunct */
 		return -1;

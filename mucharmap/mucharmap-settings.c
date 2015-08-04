@@ -126,11 +126,7 @@ mucharmap_settings_add_window(GtkWindow* window)
 
 	g_return_if_fail(GTK_IS_WINDOW(window));
 
-	#if GTK_CHECK_VERSION (2,20,0)
 		g_return_if_fail(!gtk_widget_get_realized(GTK_WIDGET(window)));
-	#else
-		g_return_if_fail(!GTK_WIDGET_REALIZED(window));
-	#endif
 
 	state = g_slice_new0(WindowState);
 	state->settings = g_settings_new ("org.mate.mucharmap.WindowState");

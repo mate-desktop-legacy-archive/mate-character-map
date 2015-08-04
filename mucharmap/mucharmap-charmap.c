@@ -33,10 +33,6 @@
 //class MucharmapCharmap extends GtkPaned
 //{
 	struct _MucharmapCharmapPrivate {
-	#if !GTK_CHECK_VERSION (2, 15, 0)
-	  GtkOrientation orientation;
-	  GtkWidgetClass *paned_class;
-	#endif
 
 	  GtkWidget *notebook;
 	  MucharmapChaptersView *chapters_view;
@@ -65,9 +61,6 @@
 
 	enum {
 	  PROP_0,
-	#if !GTK_CHECK_VERSION (2, 15, 0)
-	  PROP_ORIENTATION,
-	#endif
 	  PROP_CHAPTERS_MODEL,
 	  PROP_ACTIVE_CHAPTER,
 	  PROP_ACTIVE_CHARACTER,
@@ -96,10 +89,6 @@
 	  if (priv->font_desc)
 		pango_font_description_free (priv->font_desc);
 
-	#if !GTK_CHECK_VERSION (2, 15, 0)
-	  g_type_class_unref (priv->paned_class);
-	#endif
-
 	  G_OBJECT_CLASS (mucharmap_charmap_parent_class)->finalize (object);
 	}
 
@@ -113,11 +102,6 @@
 	  MucharmapCharmapPrivate *priv = charmap->priv;
 
 	  switch (prop_id) {
-	#if !GTK_CHECK_VERSION (2, 15, 0)
-		case PROP_ORIENTATION:
-		  g_value_set_enum (value, mucharmap_charmap_get_orientation (charmap));
-		  break;
-	#endif
 		case PROP_CHAPTERS_MODEL:
 		  g_value_set_object (value, mucharmap_charmap_get_chapters_model (charmap));
 		  break;
@@ -155,11 +139,6 @@
 	  MucharmapCharmapPrivate *priv = charmap->priv;
 
 	  switch (prop_id) {
-	#if !GTK_CHECK_VERSION (2, 15, 0)
-		case PROP_ORIENTATION:
-		  mucharmap_charmap_set_orientation (charmap, g_value_get_enum (value));
-		  break;
-	#endif
 		case PROP_CHAPTERS_MODEL:
 		  mucharmap_charmap_set_chapters_model (charmap, g_value_get_object (value));
 		  break;
@@ -186,48 +165,16 @@
 	  }
 	}
 
-	#if !GTK_CHECK_VERSION (2, 15, 0)
-
-	static void
-	mucharmap_charmap_size_request (GtkWidget *widget,
-		                            GtkRequisition *requisition)
-	{
-	  MucharmapCharmap *charmap = MUCHARMAP_CHARMAP (widget);
-	  MucharmapCharmapPrivate *priv = charmap->priv;
-
-	  priv->paned_class->size_request (widget, requisition);
-	}
-
-	static void
-	mucharmap_charmap_size_allocate (GtkWidget *widget,
-		                             GtkAllocation  *allocation)
-	{
-	  MucharmapCharmap *charmap = MUCHARMAP_CHARMAP (widget);
-	  MucharmapCharmapPrivate *priv = charmap->priv;
-
-	  priv->paned_class->size_allocate (widget, allocation);
-	}
-
-	#endif /* GTK < 2.15.0 */
-
 	static void
 	mucharmap_charmap_class_init (MucharmapCharmapClass *klass)
 	{
 	  GObjectClass *object_class = G_OBJECT_CLASS (klass);
-	#if !GTK_CHECK_VERSION (2, 15, 0)
-	  GtkWidgetClass *widget_class = GTK_WIDGET_CLASS (klass);
-	#endif
 
 	  _mucharmap_intl_ensure_initialized ();
 
 	  object_class->get_property = mucharmap_charmap_get_property;
 	  object_class->set_property = mucharmap_charmap_set_property;
 	  object_class->finalize = mucharmap_charmap_finalize;
-
-	#if !GTK_CHECK_VERSION (2, 15, 0)
-	  widget_class->size_request = mucharmap_charmap_size_request;
-	  widget_class->size_allocate = mucharmap_charmap_size_allocate;
-	#endif
 
 	  mucharmap_charmap_signals[STATUS_MESSAGE] =
 		  g_signal_new (I_("status-message"), mucharmap_charmap_get_type (),
@@ -242,20 +189,6 @@
 		                G_STRUCT_OFFSET (MucharmapCharmapClass, link_clicked),
 		                NULL, NULL, _mucharmap_marshal_VOID__UINT_UINT, G_TYPE_NONE,
 		                2, G_TYPE_UINT, G_TYPE_UINT);
-
-	#if !GTK_CHECK_VERSION (2, 15, 0)
-	  g_object_class_install_property
-		(object_class,
-		 PROP_ORIENTATION,
-		 g_param_spec_enum ("orientation", NULL, NULL,
-		                    GTK_TYPE_ORIENTATION,
-		                    GTK_ORIENTATION_HORIZONTAL,
-		                    G_PARAM_READWRITE |
-		                    G_PARAM_CONSTRUCT |
-		                    G_PARAM_STATIC_NAME |
-		                    G_PARAM_STATIC_NICK |
-		                    G_PARAM_STATIC_BLURB));
-	#endif
 
 	  g_object_class_install_property
 		(object_class,
@@ -1075,11 +1008,7 @@
 
 	static void
 	notebook_switch_page (GtkNotebook *notebook,
-	#if GTK_CHECK_VERSION (2, 90, 6)
 		                  GtkWidget *page,
-	#else
-		                  gpointer page /* useless */,
-	#endif
 		                  guint page_num,
 		                  MucharmapCharmap *charmap)
 	{
@@ -1261,37 +1190,7 @@
 	mucharmap_charmap_set_orientation (MucharmapCharmap *charmap,
 		                               GtkOrientation orientation)
 	{
-	#if GTK_CHECK_VERSION (2, 15, 0)
 	  gtk_orientable_set_orientation (GTK_ORIENTABLE (charmap), orientation);
-	#else
-	  MucharmapCharmapPrivate *priv;
-	  GtkPaned *paned = GTK_PANED (charmap);
-
-	  g_return_if_fail (MUCHARMAP_IS_CHARMAP (charmap));
-	  priv = charmap->priv;
-
-	  priv->orientation = orientation;
-
-	  if (priv->paned_class)
-		g_type_class_unref (priv->paned_class);
-
-	  switch (orientation) {
-		case GTK_ORIENTATION_HORIZONTAL:
-		  priv->paned_class = g_type_class_ref (GTK_TYPE_HPANED);
-
-		  paned->cursor_type = GDK_SB_H_DOUBLE_ARROW;
-		  paned->orientation = GTK_ORIENTATION_VERTICAL;
-		  break;
-		case GTK_ORIENTATION_VERTICAL:
-		  priv->paned_class = g_type_class_ref (GTK_TYPE_VPANED);
-
-		  paned->cursor_type = GDK_SB_V_DOUBLE_ARROW;
-		  paned->orientation = GTK_ORIENTATION_HORIZONTAL;
-		  break;
-	  }
-
-	  g_object_notify (G_OBJECT (charmap), "orientation");
-	#endif
 	}
 
 	/**
@@ -1305,11 +1204,7 @@
 	{
 	  g_return_val_if_fail (MUCHARMAP_IS_CHARMAP (charmap), GTK_ORIENTATION_HORIZONTAL);
 
-	#if GTK_CHECK_VERSION (2, 15, 0)
 	  return gtk_orientable_get_orientation (GTK_ORIENTABLE (charmap));
-	#else
-	  return charmap->priv->orientation;
-	#endif
 	}
 
 	#endif /* !MUCHARMAP_DISABLE_DEPRECATED_SOURCE */
@@ -1488,11 +1383,7 @@
 	{
 	  MucharmapCharmapPrivate *priv = charmap->priv;
 
-	#if GTK_CHECK_VERSION (2,18,0)
 	  return gtk_widget_get_visible (GTK_WIDGET (priv->chapters_view));
-	#else
-	  return GTK_WIDGET_VISIBLE (priv->chapters_view);
-	#endif
 	}
 
 	void
@@ -1521,11 +1412,7 @@
 	  if (!page_widget)
 		return FALSE;
 
-	#if GTK_CHECK_VERSION (2,18,0)
 	  return gtk_widget_get_visible (page_widget);
-	#else
-	  return GTK_WIDGET_VISIBLE (page_widget);
-	#endif
 	}
 
 	void

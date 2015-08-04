@@ -619,12 +619,8 @@
 	  if (!pixmap)
 		return;
 
-		#if GTK_CHECK_VERSION(3, 0, 0)
-			width = gdk_window_get_width(pixmap);
-			height = gdk_window_get_height(pixmap);
-		#else
-			gdk_drawable_get_size(GDK_DRAWABLE(pixmap), &width, &height);
-		#endif
+	  width = gdk_window_get_width(pixmap);
+	  height = gdk_window_get_height(pixmap);
 
 	  get_appropriate_upper_left_xy (chartable, width, height,
 		                             x_root, y_root, &x, &y);
@@ -649,13 +645,8 @@
 
 	  rect.x = rect.y = 0;
 
-		#if GTK_CHECK_VERSION(3, 0, 0)
-			rect.width = gdk_window_get_width(GDK_WINDOW(pixmap));
-			rect.height = gdk_window_get_height(GDK_WINDOW(pixmap));
-		#else
-			gdk_drawable_get_size(GDK_DRAWABLE(pixmap), &rect.width, &rect.height);
-		#endif
-
+	  rect.width = gdk_window_get_width(GDK_WINDOW(pixmap));
+	  rect.height = gdk_window_get_height(GDK_WINDOW(pixmap));
 
 	  position_rectangle_on_screen (GTK_WIDGET (chartable),
 		                            &rect,
@@ -851,14 +842,10 @@
 	  GtkAllocation *allocation;
 	  GtkStyle *style;
 	  gint x, y, col, row;
-	#if GTK_CHECK_VERSION (2, 18, 0)
 	  GtkAllocation widget_allocation;
 
 	  gtk_widget_get_allocation (widget, &widget_allocation);
 	  allocation = &widget_allocation;
-	#else
-	  allocation = &widget->allocation;
-	#endif
 
 	  /* dark_gc[GTK_STATE_NORMAL] seems to be what is used to draw the borders
 	   * around widgets, so we use it for the lines */
@@ -956,11 +943,7 @@
 
 	  style = gtk_widget_get_style (widget);
 
-	#if GTK_CHECK_VERSION (2, 18, 0)
 	  if (gtk_widget_has_focus (widget) && (gint)cell == priv->active_cell)
-	#else
-	  if (GTK_WIDGET_HAS_FOCUS (widget) && (gint)cell == priv->active_cell)
-	#endif
 		gc = style->text_gc[GTK_STATE_SELECTED];
 	  else if ((gint)cell == priv->active_cell)
 		gc = style->text_gc[GTK_STATE_ACTIVE];
@@ -1004,11 +987,7 @@
 
 	  style = gtk_widget_get_style (widget);
 
-	#if GTK_CHECK_VERSION (2, 18, 0)
 	  if (gtk_widget_has_focus (widget) && (gint)cell == priv->active_cell)
-	#else
-	  if (GTK_WIDGET_HAS_FOCUS (widget) && (gint)cell == priv->active_cell)
-	#endif
 		untinted = style->base[GTK_STATE_SELECTED];
 	  else if ((gint)cell == priv->active_cell)
 		untinted = style->base[GTK_STATE_ACTIVE];
@@ -1077,22 +1056,14 @@
 	  GtkWidget *widget = GTK_WIDGET (chartable);
 	  gint row, col;
 	  GtkAllocation *allocation;
-	#if GTK_CHECK_VERSION (2, 18, 0)
 	  GtkAllocation widget_allocation;
 
 	  gtk_widget_get_allocation (widget, &widget_allocation);
 	  allocation = &widget_allocation;
-	#else
-	  allocation = &widget->allocation;
-	#endif
 
 	  /* drawing area may not be exposed yet when restoring last char setting
 	   */
-	#if GTK_CHECK_VERSION (2, 20, 0)
 	  if (!gtk_widget_get_realized (GTK_WIDGET (chartable)))
-	#else
-	  if (!GTK_WIDGET_REALIZED (chartable))
-	#endif
 		return;
 
 	  if (priv->pixmap == NULL)
@@ -1121,14 +1092,10 @@
 	  gint from_row, to_row;
 	  GtkStyle *style;
 	  GtkAllocation *allocation;
-	#if GTK_CHECK_VERSION (2, 18, 0)
 	  GtkAllocation widget_allocation;
 
 	  gtk_widget_get_allocation (widget, &widget_allocation);
 	  allocation = &widget_allocation;
-	#else
-	  allocation = &widget->allocation;
-	#endif
 
 	  style = gtk_widget_get_style (widget);
 
@@ -1705,18 +1672,12 @@
 	  int new_first_cell;
 	  int bare_minimal_column_width, bare_minimal_row_height;
 	  int font_size_px;
-	#if GTK_CHECK_VERSION (2, 18, 0)
 	  GtkAllocation widget_allocation;
-	#endif
 
 	  GTK_WIDGET_CLASS (mucharmap_chartable_parent_class)->size_allocate (widget, allocation);
 
-	#if GTK_CHECK_VERSION (2, 18, 0)
 	  gtk_widget_get_allocation (widget, &widget_allocation);
 	  allocation = &widget_allocation;
-	#else
-	  allocation = &widget->allocation;
-	#endif
 
 	  old_rows = priv->rows;
 	  old_cols = priv->cols;
@@ -2082,11 +2043,7 @@
 	  GtkClipboard *clipboard;
 	  gpointer *data;
 
-	#if GTK_CHECK_VERSION (2, 20, 0)
 	  if (!gtk_widget_get_realized (GTK_WIDGET (chartable)))
-	#else
-	  if (!GTK_WIDGET_REALIZED (chartable))
-	#endif
 		return;
 
 	  data = g_slice_new (gpointer);
@@ -2135,11 +2092,7 @@
 	  gtk_drag_dest_add_text_targets (widget);
 
 	  /* this is required to get key_press events */
-	#if GTK_CHECK_VERSION (2, 18, 0)
 	  gtk_widget_set_can_focus (widget, TRUE);
-	#else
-	  GTK_WIDGET_SET_FLAGS (widget, GTK_CAN_FOCUS);
-	#endif
 
 	  mucharmap_chartable_set_codepoint_list (chartable, NULL);
 
