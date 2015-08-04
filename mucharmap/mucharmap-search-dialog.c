@@ -747,7 +747,7 @@ mucharmap_search_dialog_init (MucharmapSearchDialog *search_dialog)
   gtk_widget_show (priv->prev_button);
 
   priv->next_button = gtk_button_new ();
-  gtk_widget_set_can_default (priv->prev_button, TRUE);
+  gtk_widget_set_can_default (priv->next_button, TRUE);
   gtk_widget_show (priv->next_button);
   set_button_stock_image_and_label (GTK_BUTTON (priv->next_button), GTK_STOCK_GO_FORWARD, _("_Next"));
   gtk_dialog_add_action_widget (GTK_DIALOG (search_dialog), priv->next_button, MUCHARMAP_RESPONSE_NEXT);
