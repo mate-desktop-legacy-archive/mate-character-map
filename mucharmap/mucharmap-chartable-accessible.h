@@ -27,22 +27,19 @@
 
 G_BEGIN_DECLS
 
-//class MucharmapChartableAccessible
-//{
-	#define MUCHARMAP_TYPE_CHARTABLE_ACCESSIBLE             (mucharmap_chartable_accessible_get_type ())
-	#define MUCHARMAP_CHARTABLE_ACCESSIBLE(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_CHARTABLE_ACCESSIBLE, MucharmapChartableAccessible))
-	#define MUCHARMAP_CHARTABLE_ACCESSIBLE_CLASS(k) (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_CHARTABLE_ACCESSIBLE, MucharmapChartableAccessibleClass))
-	#define MUCHARMAP_IS_CHARTABLE_ACCESSIBLE(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_CHARTABLE_ACCESSIBLE))
-	#define MUCHARMAP_IS_CHARTABLE_ACCESSIBLE_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_CHARTABLE_ACCESSIBLE))
-	#define MUCHARMAP_CHARTABLE_ACCESSIBLE_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_CHARTABLE_ACCESSIBLE, MucharmapChartableAccessibleClass))
+#define MUCHARMAP_TYPE_CHARTABLE_ACCESSIBLE             (mucharmap_chartable_accessible_get_type ())
+#define MUCHARMAP_CHARTABLE_ACCESSIBLE(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_CHARTABLE_ACCESSIBLE, MucharmapChartableAccessible))
+#define MUCHARMAP_CHARTABLE_ACCESSIBLE_CLASS(k) (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_CHARTABLE_ACCESSIBLE, MucharmapChartableAccessibleClass))
+#define MUCHARMAP_IS_CHARTABLE_ACCESSIBLE(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_CHARTABLE_ACCESSIBLE))
+#define MUCHARMAP_IS_CHARTABLE_ACCESSIBLE_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_CHARTABLE_ACCESSIBLE))
+#define MUCHARMAP_CHARTABLE_ACCESSIBLE_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_CHARTABLE_ACCESSIBLE, MucharmapChartableAccessibleClass))
 
-	typedef struct _MucharmapChartableAccessible      MucharmapChartableAccessible;
-	typedef struct _MucharmapChartableAccessibleClass MucharmapChartableAccessibleClass;
+typedef struct _MucharmapChartableAccessible      MucharmapChartableAccessible;
+typedef struct _MucharmapChartableAccessibleClass MucharmapChartableAccessibleClass;
 
-	GType mucharmap_chartable_accessible_get_type (void);
+GType mucharmap_chartable_accessible_get_type (void);
 
-	AtkObject *mucharmap_chartable_accessible_new (MucharmapChartable *chartable);
-//}
+AtkObject *mucharmap_chartable_accessible_new (MucharmapChartable *chartable);
 
 G_END_DECLS
 

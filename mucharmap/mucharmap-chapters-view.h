@@ -31,49 +31,49 @@
 
 G_BEGIN_DECLS
 
-	#define MUCHARMAP_TYPE_CHAPTERS_VIEW             (mucharmap_chapters_view_get_type ())
-	#define MUCHARMAP_CHAPTERS_VIEW(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_CHAPTERS_VIEW, MucharmapChaptersView))
-	#define MUCHARMAP_CHAPTERS_VIEW_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_CHAPTERS_VIEW, MucharmapChaptersViewClass))
-	#define MUCHARMAP_IS_CHAPTERS_VIEW(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_CHAPTERS_VIEW))
-	#define MUCHARMAP_IS_CHAPTERS_VIEW_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_CHAPTERS_VIEW))
-	#define MUCHARMAP_CHAPTERS_VIEW_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_CHAPTERS_VIEW, MucharmapChaptersViewClass))
+#define MUCHARMAP_TYPE_CHAPTERS_VIEW             (mucharmap_chapters_view_get_type ())
+#define MUCHARMAP_CHAPTERS_VIEW(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_CHAPTERS_VIEW, MucharmapChaptersView))
+#define MUCHARMAP_CHAPTERS_VIEW_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_CHAPTERS_VIEW, MucharmapChaptersViewClass))
+#define MUCHARMAP_IS_CHAPTERS_VIEW(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_CHAPTERS_VIEW))
+#define MUCHARMAP_IS_CHAPTERS_VIEW_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_CHAPTERS_VIEW))
+#define MUCHARMAP_CHAPTERS_VIEW_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_CHAPTERS_VIEW, MucharmapChaptersViewClass))
 
-	typedef struct _MucharmapChaptersView         MucharmapChaptersView;
-	typedef struct _MucharmapChaptersViewPrivate  MucharmapChaptersViewPrivate;
-	typedef struct _MucharmapChaptersViewClass    MucharmapChaptersViewClass;
+typedef struct _MucharmapChaptersView         MucharmapChaptersView;
+typedef struct _MucharmapChaptersViewPrivate  MucharmapChaptersViewPrivate;
+typedef struct _MucharmapChaptersViewClass    MucharmapChaptersViewClass;
 
-	struct _MucharmapChaptersView
-	{
-	  GtkTreeView parent_instance;
+struct _MucharmapChaptersView
+{
+  GtkTreeView parent_instance;
 
-	  /*< private >*/
-	  MucharmapChaptersViewPrivate *priv;
-	};
+  /*< private >*/
+  MucharmapChaptersViewPrivate *priv;
+};
 
-	struct _MucharmapChaptersViewClass
-	{
-	  GtkTreeViewClass parent_class;
-	};
+struct _MucharmapChaptersViewClass
+{
+  GtkTreeViewClass parent_class;
+};
 
-	GType       mucharmap_chapters_view_get_type (void);
+GType       mucharmap_chapters_view_get_type (void);
 
-	GtkWidget * mucharmap_chapters_view_new      (void);
+GtkWidget * mucharmap_chapters_view_new      (void);
 
-	void                    mucharmap_chapters_view_set_model (MucharmapChaptersView *view,
-		                                                       MucharmapChaptersModel *model);
-	MucharmapChaptersModel *mucharmap_chapters_view_get_model (MucharmapChaptersView *view);
+void                    mucharmap_chapters_view_set_model (MucharmapChaptersView *view,
+	                                                       MucharmapChaptersModel *model);
+MucharmapChaptersModel *mucharmap_chapters_view_get_model (MucharmapChaptersView *view);
 
-	gboolean           mucharmap_chapters_view_select_character (MucharmapChaptersView *view,
-		                                                         gunichar           wc);
-	MucharmapCodepointList * mucharmap_chapters_view_get_codepoint_list      (MucharmapChaptersView *view);
-	MucharmapCodepointList * mucharmap_chapters_view_get_book_codepoint_list (MucharmapChaptersView *view);
+gboolean           mucharmap_chapters_view_select_character (MucharmapChaptersView *view,
+	                                                         gunichar           wc);
+MucharmapCodepointList * mucharmap_chapters_view_get_codepoint_list      (MucharmapChaptersView *view);
+MucharmapCodepointList * mucharmap_chapters_view_get_book_codepoint_list (MucharmapChaptersView *view);
 
-	void               mucharmap_chapters_view_next         (MucharmapChaptersView *view);
-	void               mucharmap_chapters_view_previous     (MucharmapChaptersView *view);
+void               mucharmap_chapters_view_next         (MucharmapChaptersView *view);
+void               mucharmap_chapters_view_previous     (MucharmapChaptersView *view);
 
-	gchar *            mucharmap_chapters_view_get_selected  (MucharmapChaptersView *view);
-	gboolean           mucharmap_chapters_view_set_selected  (MucharmapChaptersView *view,
-		                                                      const gchar       *name);
+gchar *            mucharmap_chapters_view_get_selected  (MucharmapChaptersView *view);
+gboolean           mucharmap_chapters_view_set_selected  (MucharmapChaptersView *view,
+	                                                      const gchar       *name);
 G_END_DECLS
 
 #endif /* #ifndef MUCHARMAP_CHAPTERS_VIEW_H */

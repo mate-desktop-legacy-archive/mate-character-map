@@ -26,56 +26,56 @@
 
 G_BEGIN_DECLS
 
-	#define MUCHARMAP_TYPE_WINDOW             (mucharmap_window_get_type ())
-	#define MUCHARMAP_WINDOW(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_WINDOW, MucharmapWindow))
-	#define MUCHARMAP_WINDOW_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_WINDOW, MucharmapWindowClass))
-	#define MUCHARMAP_IS_WINDOW(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_WINDOW))
-	#define MUCHARMAP_IS_WINDOW_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_WINDOW))
-	#define MUCHARMAP_WINDOW_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_WINDOW, MucharmapWindowClass))
+#define MUCHARMAP_TYPE_WINDOW             (mucharmap_window_get_type ())
+#define MUCHARMAP_WINDOW(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_WINDOW, MucharmapWindow))
+#define MUCHARMAP_WINDOW_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_WINDOW, MucharmapWindowClass))
+#define MUCHARMAP_IS_WINDOW(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_WINDOW))
+#define MUCHARMAP_IS_WINDOW_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_WINDOW))
+#define MUCHARMAP_WINDOW_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_WINDOW, MucharmapWindowClass))
 
-	typedef struct _MucharmapWindow MucharmapWindow;
-	typedef struct _MucharmapWindowClass MucharmapWindowClass;
+typedef struct _MucharmapWindow MucharmapWindow;
+typedef struct _MucharmapWindowClass MucharmapWindowClass;
 
-	struct _MucharmapWindow {
-		GtkWindow parent;
+struct _MucharmapWindow {
+	GtkWindow parent;
 
-		GSettings *settings;
-		MucharmapCharmap *charmap;
-		GtkWidget* status;
+	GSettings *settings;
+	MucharmapCharmap *charmap;
+	GtkWidget* status;
 
-		GtkWidget* fontsel;
-		GtkWidget* text_to_copy_entry;
+	GtkWidget* fontsel;
+	GtkWidget* text_to_copy_entry;
 
-		GtkUIManager* uimanager;
+	GtkUIManager* uimanager;
 
-		GtkActionGroup* action_group;
+	GtkActionGroup* action_group;
 
-		GtkWidget* search_dialog; /* takes care of all aspects of searching */
+	GtkWidget* search_dialog; /* takes care of all aspects of searching */
 
-		GtkWidget* progress;
+	GtkWidget* progress;
 
-		guint save_last_char_idle_id;
+	guint save_last_char_idle_id;
 
-		GtkPageSetup* page_setup;
-		GtkPrintSettings* print_settings;
+	GtkPageSetup* page_setup;
+	GtkPrintSettings* print_settings;
 
-		guint in_notification : 1;
-	};
+	guint in_notification : 1;
+};
 
-	struct _MucharmapWindowClass {
-		GtkWindowClass parent_class;
-	};
+struct _MucharmapWindowClass {
+	GtkWindowClass parent_class;
+};
 
-	#define MUCHARMAP_ICON_NAME "accessories-character-map"
+#define MUCHARMAP_ICON_NAME "accessories-character-map"
 
-	GType       mucharmap_window_get_type  (void);
+GType       mucharmap_window_get_type  (void);
 
-	GtkWidget*  mucharmap_window_new       (void);
+GtkWidget*  mucharmap_window_new       (void);
 
-	void        mucharmap_window_set_font  (MucharmapWindow* guw,
-		                                    const char*      font);
+void        mucharmap_window_set_font  (MucharmapWindow* guw,
+	                                    const char*      font);
 
-	GdkCursor* _mucharmap_window_progress_cursor (void);
+GdkCursor* _mucharmap_window_progress_cursor (void);
 
 G_END_DECLS
 

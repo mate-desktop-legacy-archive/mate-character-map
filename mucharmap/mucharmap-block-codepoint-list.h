@@ -29,35 +29,32 @@
 
 G_BEGIN_DECLS
 
-//class MucharmapBlockCodepointList extends MucharmapCodepointList
-//{
-	#define MUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST             (mucharmap_block_codepoint_list_get_type ())
-	#define MUCHARMAP_BLOCK_CODEPOINT_LIST(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST, MucharmapBlockCodepointList))
-	#define MUCHARMAP_BLOCK_CODEPOINT_LIST_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST, MucharmapBlockCodepointListClass))
-	#define MUCHARMAP_IS_BLOCK_CODEPOINT_LIST(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST))
-	#define MUCHARMAP_IS_BLOCK_CODEPOINT_LIST_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST))
-	#define MUCHARMAP_BLOCK_CODEPOINT_LIST_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST, MucharmapBlockCodepointListClass))
+#define MUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST             (mucharmap_block_codepoint_list_get_type ())
+#define MUCHARMAP_BLOCK_CODEPOINT_LIST(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST, MucharmapBlockCodepointList))
+#define MUCHARMAP_BLOCK_CODEPOINT_LIST_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST, MucharmapBlockCodepointListClass))
+#define MUCHARMAP_IS_BLOCK_CODEPOINT_LIST(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST))
+#define MUCHARMAP_IS_BLOCK_CODEPOINT_LIST_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST))
+#define MUCHARMAP_BLOCK_CODEPOINT_LIST_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_BLOCK_CODEPOINT_LIST, MucharmapBlockCodepointListClass))
 
-	typedef struct _MucharmapBlockCodepointList         MucharmapBlockCodepointList;
-	typedef struct _MucharmapBlockCodepointListPrivate  MucharmapBlockCodepointListPrivate;
-	typedef struct _MucharmapBlockCodepointListClass    MucharmapBlockCodepointListClass;
+typedef struct _MucharmapBlockCodepointList         MucharmapBlockCodepointList;
+typedef struct _MucharmapBlockCodepointListPrivate  MucharmapBlockCodepointListPrivate;
+typedef struct _MucharmapBlockCodepointListClass    MucharmapBlockCodepointListClass;
 
-	struct _MucharmapBlockCodepointList {
-		MucharmapCodepointList parent_instance;
+struct _MucharmapBlockCodepointList {
+	MucharmapCodepointList parent_instance;
 
-		/*< private >*/
-		MucharmapBlockCodepointListPrivate* priv;
-	};
+	/*< private >*/
+	MucharmapBlockCodepointListPrivate* priv;
+};
 
-	struct _MucharmapBlockCodepointListClass {
-		MucharmapCodepointListClass parent_class;
-	};
+struct _MucharmapBlockCodepointListClass {
+	MucharmapCodepointListClass parent_class;
+};
 
-	GType                    mucharmap_block_codepoint_list_get_type (void);
+GType                    mucharmap_block_codepoint_list_get_type (void);
 
-	MucharmapCodepointList*  mucharmap_block_codepoint_list_new      (gunichar start,
-		                                                              gunichar end);
-//}
+MucharmapCodepointList*  mucharmap_block_codepoint_list_new      (gunichar start,
+	                                                              gunichar end);
 G_END_DECLS
 
 #endif /* #ifndef MUCHARMAP_BLOCK_CODEPOINT_LIST_H */

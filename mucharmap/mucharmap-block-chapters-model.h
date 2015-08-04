@@ -30,33 +30,30 @@
 
 G_BEGIN_DECLS
 
-//class MucharmapBlockChaptersModel extends MucharmapChaptersModel
-//{
-	#define MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL             (mucharmap_block_chapters_model_get_type ())
-	#define MUCHARMAP_BLOCK_CHAPTERS_MODEL(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL, MucharmapBlockChaptersModel))
-	#define MUCHARMAP_BLOCK_CHAPTERS_MODEL_CLASS(k) (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL, MucharmapBlockChaptersModelClass))
-	#define MUCHARMAP_IS_BLOCK_CHAPTERS_MODEL(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL))
-	#define MUCHARMAP_IS_BLOCK_CHAPTERS_MODEL_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL))
-	#define MUCHARMAP_BLOCK_CHAPTERS_MODEL_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL, MucharmapBlockChaptersModelClass))
+#define MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL             (mucharmap_block_chapters_model_get_type ())
+#define MUCHARMAP_BLOCK_CHAPTERS_MODEL(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL, MucharmapBlockChaptersModel))
+#define MUCHARMAP_BLOCK_CHAPTERS_MODEL_CLASS(k) (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL, MucharmapBlockChaptersModelClass))
+#define MUCHARMAP_IS_BLOCK_CHAPTERS_MODEL(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL))
+#define MUCHARMAP_IS_BLOCK_CHAPTERS_MODEL_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL))
+#define MUCHARMAP_BLOCK_CHAPTERS_MODEL_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_BLOCK_CHAPTERS_MODEL, MucharmapBlockChaptersModelClass))
 
-	typedef struct _MucharmapBlockChaptersModel MucharmapBlockChaptersModel;
-	typedef struct _MucharmapBlockChaptersModelPrivate MucharmapBlockChaptersModelPrivate;
-	typedef struct _MucharmapBlockChaptersModelClass MucharmapBlockChaptersModelClass;
+typedef struct _MucharmapBlockChaptersModel MucharmapBlockChaptersModel;
+typedef struct _MucharmapBlockChaptersModelPrivate MucharmapBlockChaptersModelPrivate;
+typedef struct _MucharmapBlockChaptersModelClass MucharmapBlockChaptersModelClass;
 
-	struct _MucharmapBlockChaptersModel {
-		MucharmapChaptersModel parent;
+struct _MucharmapBlockChaptersModel {
+	MucharmapChaptersModel parent;
 
-		/*< private >*/
-		MucharmapBlockChaptersModelPrivate* priv;
-	};
+	/*< private >*/
+	MucharmapBlockChaptersModelPrivate* priv;
+};
 
-	struct _MucharmapBlockChaptersModelClass {
-		MucharmapChaptersModelClass parent_class;
-	};
+struct _MucharmapBlockChaptersModelClass {
+	MucharmapChaptersModelClass parent_class;
+};
 
-	GType                   mucharmap_block_chapters_model_get_type (void);
-	MucharmapChaptersModel* mucharmap_block_chapters_model_new      (void);
-//}
+GType                   mucharmap_block_chapters_model_get_type (void);
+MucharmapChaptersModel* mucharmap_block_chapters_model_new      (void);
 
 G_END_DECLS
 

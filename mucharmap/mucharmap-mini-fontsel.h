@@ -24,55 +24,52 @@
 
 G_BEGIN_DECLS
 
-//class MucharmapMiniFontSelection
-//{
-	#define MUCHARMAP_TYPE_MINI_FONT_SELECTION             (mucharmap_mini_font_selection_get_type ())
-	#define MUCHARMAP_MINI_FONT_SELECTION(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_MINI_FONT_SELECTION, MucharmapMiniFontSelection))
-	#define MUCHARMAP_MINI_FONT_SELECTION_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_MINI_FONT_SELECTION, MucharmapMiniFontSelectionClass))
-	#define MUCHARMAP_IS_MINI_FONT_SELECTION(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_MINI_FONT_SELECTION))
-	#define MUCHARMAP_IS_MINI_FONT_SELECTION_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_MINI_FONT_SELECTION))
-	#define MUCHARMAP_MINI_FONT_SELECTION_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_MINI_FONT_SELECTION, MucharmapMiniFontSelectionClass))
+#define MUCHARMAP_TYPE_MINI_FONT_SELECTION             (mucharmap_mini_font_selection_get_type ())
+#define MUCHARMAP_MINI_FONT_SELECTION(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_MINI_FONT_SELECTION, MucharmapMiniFontSelection))
+#define MUCHARMAP_MINI_FONT_SELECTION_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_MINI_FONT_SELECTION, MucharmapMiniFontSelectionClass))
+#define MUCHARMAP_IS_MINI_FONT_SELECTION(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_MINI_FONT_SELECTION))
+#define MUCHARMAP_IS_MINI_FONT_SELECTION_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_MINI_FONT_SELECTION))
+#define MUCHARMAP_MINI_FONT_SELECTION_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_MINI_FONT_SELECTION, MucharmapMiniFontSelectionClass))
 
-	typedef struct _MucharmapMiniFontSelection MucharmapMiniFontSelection;
-	typedef struct _MucharmapMiniFontSelectionClass MucharmapMiniFontSelectionClass;
+typedef struct _MucharmapMiniFontSelection MucharmapMiniFontSelection;
+typedef struct _MucharmapMiniFontSelectionClass MucharmapMiniFontSelectionClass;
 
-	struct _MucharmapMiniFontSelection
-	{
-	  GtkHBox parent;
+struct _MucharmapMiniFontSelection
+{
+  GtkHBox parent;
 
-	  GtkListStore         *family_store;
-	  GtkWidget            *family; /* combo box */
-	  GtkWidget            *bold;   /* toggle button*/
-	  GtkWidget            *italic; /* toggle button*/
+  GtkListStore         *family_store;
+  GtkWidget            *family; /* combo box */
+  GtkWidget            *bold;   /* toggle button*/
+  GtkWidget            *italic; /* toggle button*/
 
-	  GtkObject            *size_adj; 
-	  GtkWidget            *size;   /* spin button */
-	  
-	  PangoFontDescription *font_desc;
+  GtkObject            *size_adj;
+  GtkWidget            *size;   /* spin button */
 
-	  gint                  default_size;
-	};
+  PangoFontDescription *font_desc;
 
-	struct _MucharmapMiniFontSelectionClass
-	{
-	  GtkHBoxClass parent_class;
-	};
+  gint                  default_size;
+};
+
+struct _MucharmapMiniFontSelectionClass
+{
+  GtkHBoxClass parent_class;
+};
 
 
-	GType                  mucharmap_mini_font_selection_get_type         (void);
+GType                  mucharmap_mini_font_selection_get_type         (void);
 
-	GtkWidget *            mucharmap_mini_font_selection_new              (void);
+GtkWidget *            mucharmap_mini_font_selection_new              (void);
 
-	void                   mucharmap_mini_font_selection_set_font_desc    (MucharmapMiniFontSelection *fontsel,
-		                                                                   PangoFontDescription       *font_desc);
+void                   mucharmap_mini_font_selection_set_font_desc    (MucharmapMiniFontSelection *fontsel,
+	                                                                   PangoFontDescription       *font_desc);
 
-	PangoFontDescription * mucharmap_mini_font_selection_get_font_desc    (MucharmapMiniFontSelection *fontsel);
+PangoFontDescription * mucharmap_mini_font_selection_get_font_desc    (MucharmapMiniFontSelection *fontsel);
 
-	void                   mucharmap_mini_font_selection_change_font_size (MucharmapMiniFontSelection *fontsel,
-		                                                                   float factor);
+void                   mucharmap_mini_font_selection_change_font_size (MucharmapMiniFontSelection *fontsel,
+	                                                                   float factor);
 
-	void                   mucharmap_mini_font_selection_reset_font_size  (MucharmapMiniFontSelection *fontsel);
-//}
+void                   mucharmap_mini_font_selection_reset_font_size  (MucharmapMiniFontSelection *fontsel);
 G_END_DECLS
 
 #endif /* #ifndef MUCHARMAP_MINI_FONTSEL_H */

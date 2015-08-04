@@ -25,37 +25,34 @@
 
 G_BEGIN_DECLS
 
-//class MucharmapPrintOperation
-//{
-	#define MUCHARMAP_TYPE_PRINT_OPERATION          (mucharmap_print_operation_get_type ())
-	#define MUCHARMAP_PRINT_OPERATION(o)            (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_PRINT_OPERATION, MucharmapPrintOperation))
-	#define MUCHARMAP_PRINT_OPERATION_CLASS(k)      (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_PRINT_OPERATION, MucharmapPrintOperationClass))
-	#define MUCHARMAP_IS_PRINT_OPERATION(o)         (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_PRINT_OPERATION))
-	#define MUCHARMAP_IS_PRINT_OPERATION_CLASS(k)   (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_PRINT_OPERATION))
-	#define MUCHARMAP_PRINT_OPERATION_GET_CLASS(o)  (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_PRINT_OPERATION, MucharmapPrintOperationClass))
+#define MUCHARMAP_TYPE_PRINT_OPERATION          (mucharmap_print_operation_get_type ())
+#define MUCHARMAP_PRINT_OPERATION(o)            (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_PRINT_OPERATION, MucharmapPrintOperation))
+#define MUCHARMAP_PRINT_OPERATION_CLASS(k)      (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_PRINT_OPERATION, MucharmapPrintOperationClass))
+#define MUCHARMAP_IS_PRINT_OPERATION(o)         (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_PRINT_OPERATION))
+#define MUCHARMAP_IS_PRINT_OPERATION_CLASS(k)   (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_PRINT_OPERATION))
+#define MUCHARMAP_PRINT_OPERATION_GET_CLASS(o)  (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_PRINT_OPERATION, MucharmapPrintOperationClass))
 
-	typedef struct _MucharmapPrintOperation         MucharmapPrintOperation;
-	typedef struct _MucharmapPrintOperationClass    MucharmapPrintOperationClass;
-	typedef struct _MucharmapPrintOperationPrivate  MucharmapPrintOperationPrivate;
+typedef struct _MucharmapPrintOperation         MucharmapPrintOperation;
+typedef struct _MucharmapPrintOperationClass    MucharmapPrintOperationClass;
+typedef struct _MucharmapPrintOperationPrivate  MucharmapPrintOperationPrivate;
 
-	struct _MucharmapPrintOperation
-	{
-	  GtkPrintOperation parent_instance;
+struct _MucharmapPrintOperation
+{
+  GtkPrintOperation parent_instance;
 
-	  /*< private >*/
-	  MucharmapPrintOperationPrivate *priv;
-	};
+  /*< private >*/
+  MucharmapPrintOperationPrivate *priv;
+};
 
-	struct _MucharmapPrintOperationClass
-	{
-	  GtkPrintOperationClass parent_class;
-	};
+struct _MucharmapPrintOperationClass
+{
+  GtkPrintOperationClass parent_class;
+};
 
-	GType               mucharmap_print_operation_get_type (void);
+GType               mucharmap_print_operation_get_type (void);
 
-	GtkPrintOperation * mucharmap_print_operation_new      (MucharmapCodepointList *codepoint_list,
-		                                                    PangoFontDescription *font_desc);
-//}
+GtkPrintOperation * mucharmap_print_operation_new      (MucharmapCodepointList *codepoint_list,
+	                                                    PangoFontDescription *font_desc);
 
 G_END_DECLS
 

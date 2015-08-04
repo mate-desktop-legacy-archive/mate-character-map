@@ -22,362 +22,359 @@
 
 #include "mucharmap-print-operation.h"
 
-//class MucharmapPrintOperation
-//{
-	#define MUCHARMAP_PRINT_OPERATION_GET_PRIVATE(print_operation)(G_TYPE_INSTANCE_GET_PRIVATE ((print_operation), MUCHARMAP_TYPE_PRINT_OPERATION, MucharmapPrintOperationPrivate))
+#define MUCHARMAP_PRINT_OPERATION_GET_PRIVATE(print_operation)(G_TYPE_INSTANCE_GET_PRIVATE ((print_operation), MUCHARMAP_TYPE_PRINT_OPERATION, MucharmapPrintOperationPrivate))
 
-	#define GRID_LINE_WIDTH (0.25)
+#define GRID_LINE_WIDTH (0.25)
 
-	struct _MucharmapPrintOperationPrivate
-	{
-	  MucharmapCodepointList *codepoint_list;
-	  PangoFontDescription *font_desc;
-	  PangoLayout *character_layout;
-	  PangoLayout *info_text_layout;
-	  int last_codepoint_index;
-	  int n_columns;
-	  int n_rows;
-	  double width;
-	  double height;
-	  double character_width;
-	  double character_height;
-	  double info_text_width;
-	  double info_text_height;
-	  double info_text_gap;
-	  double cell_width;
-	  double cell_height;
-	  double cell_margin_left;
-	  double cell_margin_right;
-	  double cell_margin_top;
-	  double cell_margin_bottom;
-	};
+struct _MucharmapPrintOperationPrivate
+{
+  MucharmapCodepointList *codepoint_list;
+  PangoFontDescription *font_desc;
+  PangoLayout *character_layout;
+  PangoLayout *info_text_layout;
+  int last_codepoint_index;
+  int n_columns;
+  int n_rows;
+  double width;
+  double height;
+  double character_width;
+  double character_height;
+  double info_text_width;
+  double info_text_height;
+  double info_text_gap;
+  double cell_width;
+  double cell_height;
+  double cell_margin_left;
+  double cell_margin_right;
+  double cell_margin_top;
+  double cell_margin_bottom;
+};
 
-	enum
-	{
-	  PROP_0,
-	  PROP_CODEPOINT_LIST,
-	  PROP_FONT_DESC
-	};
+enum
+{
+  PROP_0,
+  PROP_CODEPOINT_LIST,
+  PROP_FONT_DESC
+};
 
-	G_DEFINE_TYPE (MucharmapPrintOperation, mucharmap_print_operation, GTK_TYPE_PRINT_OPERATION)
+G_DEFINE_TYPE (MucharmapPrintOperation, mucharmap_print_operation, GTK_TYPE_PRINT_OPERATION)
 
-	/* helper functions */
+/* helper functions */
 
-	static void
-	draw_character_cell (MucharmapPrintOperation *print_operation,
-		                 cairo_t *cr,
-		                 int row,
-		                 int col,
-		                 int character_index)
-	{
-	  MucharmapPrintOperationPrivate *priv = print_operation->priv;
-	  gunichar wc;
-	  char utf8[7];
-	  int len;
-	  double x, y;
-	  PangoRectangle ink_rect;
+static void
+draw_character_cell (MucharmapPrintOperation *print_operation,
+	                 cairo_t *cr,
+	                 int row,
+	                 int col,
+	                 int character_index)
+{
+  MucharmapPrintOperationPrivate *priv = print_operation->priv;
+  gunichar wc;
+  char utf8[7];
+  int len;
+  double x, y;
+  PangoRectangle ink_rect;
 
-	  wc = mucharmap_codepoint_list_get_char (priv->codepoint_list, character_index);
-	  if (!mucharmap_unichar_validate (wc))
-		return; /* FIXME print info nevertheless */
+  wc = mucharmap_codepoint_list_get_char (priv->codepoint_list, character_index);
+  if (!mucharmap_unichar_validate (wc))
+	return; /* FIXME print info nevertheless */
 
-	  len = g_unichar_to_utf8 (wc, utf8);
-	  pango_layout_set_text (priv->character_layout, utf8, len);
+  len = g_unichar_to_utf8 (wc, utf8);
+  pango_layout_set_text (priv->character_layout, utf8, len);
 
-	  pango_layout_get_extents (priv->character_layout, &ink_rect, NULL);
+  pango_layout_get_extents (priv->character_layout, &ink_rect, NULL);
 
-	  /* FIXME: RTL? */
-	  x = col * priv->cell_width + priv->cell_margin_left;
-	  y = row * priv->cell_height + priv->cell_margin_top;
+  /* FIXME: RTL? */
+  x = col * priv->cell_width + priv->cell_margin_left;
+  y = row * priv->cell_height + priv->cell_margin_top;
 
-	  cairo_move_to (cr, x, y);
-	  pango_cairo_show_layout (cr, priv->character_layout);
+  cairo_move_to (cr, x, y);
+  pango_cairo_show_layout (cr, priv->character_layout);
 
-	  cairo_set_line_width (cr, GRID_LINE_WIDTH);
-	  cairo_rectangle (cr,
-		               col * priv->cell_width,
-		               row * priv->cell_height,
-		               priv->cell_width,
-		               priv->cell_height);
-	  cairo_stroke (cr);
+  cairo_set_line_width (cr, GRID_LINE_WIDTH);
+  cairo_rectangle (cr,
+	               col * priv->cell_width,
+	               row * priv->cell_height,
+	               priv->cell_width,
+	               priv->cell_height);
+  cairo_stroke (cr);
+}
+
+static void
+draw_cell_grid (MucharmapPrintOperation *print_operation,
+	            cairo_t *cr,
+	            int last_row,
+	            int last_col)
+{
+#if 0
+  MucharmapPrintOperationPrivate *priv = print_operation->priv;
+  int row, col;
+  double x, y;
+
+  cairo_set_line_width (cr, GRID_LINE_WIDTH);
+
+  x = y = 0;
+  for (row = 0; row <= priv->n_rows; ++row) {
+	cairo_move_to (cr, x, y);
+	cairo_line_to (cr, priv->width, y);
+
+	y += priv->cell_height;
+  }
+
+  x = y = 0;
+  for (col = 0; col <= priv->n_columns; ++col) {
+	cairo_move_to (cr, x, y);
+	cairo_line_to (cr, x, priv->height);
+
+	x += priv->cell_width;
+  }
+
+  cairo_stroke (cr);
+#endif
+}
+
+/* GtkPrintOperation class implementation */
+
+/* Before first draw_page */
+static void
+mucharmap_print_operation_begin_print (GtkPrintOperation *operation,
+	                                   GtkPrintContext   *context)
+{
+  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (operation);
+  MucharmapPrintOperationPrivate *priv = print_operation->priv;
+  PangoFontDescription *info_font_desc;
+  double width, height;
+  int page_size, pages;
+
+  priv->last_codepoint_index = mucharmap_codepoint_list_get_last_index (priv->codepoint_list);
+  g_print ("last_codepoint_index %d\n", priv->last_codepoint_index);
+  if (priv->last_codepoint_index < 0) {
+	/* Nothing to print */
+	gtk_print_operation_cancel (operation);
+	return;
+  }
+
+  gtk_print_operation_set_unit (operation, GTK_UNIT_POINTS);
+
+  width = priv->width = gtk_print_context_get_width (context);
+  height = priv->height = gtk_print_context_get_height (context);
+
+#define N_COLS 8
+#define MARGIN 5 /* pt */
+
+  priv->n_columns = N_COLS;
+
+  priv->cell_width = width / N_COLS;
+  priv->cell_height = priv->cell_width;
+
+  priv->info_text_width = 0;
+  priv->info_text_height = 0;
+  priv->info_text_gap = 0;
+
+  priv->cell_margin_left = priv->cell_margin_right = priv->cell_margin_top = priv->cell_margin_bottom = MARGIN;
+  //XXX  calculate cell_width/height
+
+  priv->character_width = priv->cell_width -
+	                      priv->cell_margin_left -
+	                      priv->cell_margin_right;
+  priv->character_height = priv->cell_height -
+	                       priv->cell_margin_top -
+	                       priv->cell_margin_bottom -
+	                       priv->info_text_gap -
+	                       priv->info_text_height;
+
+  priv->n_rows = height / priv->cell_height;
+  page_size = priv->n_rows * priv->n_columns;
+  pages = (priv->last_codepoint_index + page_size) / page_size;
+
+  gtk_print_operation_set_n_pages (operation, pages);
+
+  g_print ("cols: %d rows: %d pages: %d\n", priv->n_columns, priv->n_rows, pages);
+
+  priv->character_layout = gtk_print_context_create_pango_layout (context);
+  pango_layout_set_font_description (priv->character_layout, priv->font_desc);
+  pango_layout_set_width (priv->character_layout, priv->character_width);
+//   pango_layout_set_height (priv->character_layout, priv->character_height);
+
+  priv->info_text_layout = gtk_print_context_create_pango_layout (context);
+
+  info_font_desc = pango_font_description_from_string ("Sans 8");
+  pango_layout_set_font_description (priv->info_text_layout, info_font_desc);
+  pango_font_description_free (info_font_desc);
+
+  pango_layout_set_width (priv->info_text_layout, priv->cell_width);
+}
+
+static void
+mucharmap_print_operation_draw_page (GtkPrintOperation *operation,
+	                                 GtkPrintContext   *context,
+	                                 int                page_nr)
+{
+  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (operation);
+  MucharmapPrintOperationPrivate *priv = print_operation->priv;
+  cairo_t *cr;
+  int row, col, page_size;
+  int i, start_index, last_index;
+
+  page_size = priv->n_rows * priv->n_columns;
+  start_index = page_nr * page_size;
+  last_index = start_index + page_size - 1;
+  last_index = MIN (last_index, priv->last_codepoint_index);
+  /* g_assert (i <= priv->last_codepoint_index); */
+
+  cr = gtk_print_context_get_cairo_context (context);
+
+  cairo_set_source_rgb (cr, 0, 0, 0);
+
+  col = row = 0;
+  for (i = start_index; i <= last_index; ++i) {
+	draw_character_cell (print_operation, cr, row, col, i);
+
+	if (++col == priv->n_columns) {
+	  ++row;
+	  col = 0;
 	}
+  }
 
-	static void
-	draw_cell_grid (MucharmapPrintOperation *print_operation,
-		            cairo_t *cr,
-		            int last_row,
-		            int last_col)
-	{
-	#if 0
-	  MucharmapPrintOperationPrivate *priv = print_operation->priv;
-	  int row, col;
-	  double x, y;
+  draw_cell_grid (print_operation, cr, row, col);
+}
 
-	  cairo_set_line_width (cr, GRID_LINE_WIDTH);
+/* After last draw_page */
+static void
+mucharmap_print_operation_end_print (GtkPrintOperation *operation,
+	                                 GtkPrintContext   *context)
+{
+  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (operation);
+  MucharmapPrintOperationPrivate *priv = print_operation->priv;
 
-	  x = y = 0;
-	  for (row = 0; row <= priv->n_rows; ++row) {
-		cairo_move_to (cr, x, y);
-		cairo_line_to (cr, priv->width, y);
+  g_object_unref (priv->character_layout);
+  priv->character_layout = NULL;
 
-		y += priv->cell_height;
-	  }
+  g_object_unref (priv->info_text_layout);
+  priv->info_text_layout = NULL;
+}
 
-	  x = y = 0;
-	  for (col = 0; col <= priv->n_columns; ++col) {
-		cairo_move_to (cr, x, y);
-		cairo_line_to (cr, x, priv->height);
+static GtkWidget *
+mucharmap_print_operation_create_custom_widget (GtkPrintOperation *operation)
+{
+/*  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (operation);
+  MucharmapPrintOperationPrivate *priv = print_operation->priv;*/
+  return GTK_PRINT_OPERATION_CLASS (mucharmap_print_operation_parent_class)->create_custom_widget (operation);
+}
 
-		x += priv->cell_width;
-	  }
+static void
+mucharmap_print_operation_custom_widget_apply (GtkPrintOperation *operation,
+	                                           GtkWidget *widget)
+{
+/*  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (operation);
+  MucharmapPrintOperationPrivate *priv = print_operation->priv;*/
+}
 
-	  cairo_stroke (cr);
-	#endif
-	}
+/* GObject class implementation */
 
-	/* GtkPrintOperation class implementation */
+static void
+mucharmap_print_operation_init (MucharmapPrintOperation *print_operation)
+{
+  MucharmapPrintOperationPrivate *priv;
 
-	/* Before first draw_page */
-	static void
-	mucharmap_print_operation_begin_print (GtkPrintOperation *operation,
-		                                   GtkPrintContext   *context)
-	{
-	  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (operation);
-	  MucharmapPrintOperationPrivate *priv = print_operation->priv;
-	  PangoFontDescription *info_font_desc;
-	  double width, height;
-	  int page_size, pages;
+  priv = print_operation->priv = MUCHARMAP_PRINT_OPERATION_GET_PRIVATE (print_operation);
+}
 
-	  priv->last_codepoint_index = mucharmap_codepoint_list_get_last_index (priv->codepoint_list);
-	  g_print ("last_codepoint_index %d\n", priv->last_codepoint_index);
-	  if (priv->last_codepoint_index < 0) {
-		/* Nothing to print */
-		gtk_print_operation_cancel (operation);
-		return;
-	  }
+static GObject *
+mucharmap_print_operation_constructor (GType type,
+	                                   guint n_construct_properties,
+	                                   GObjectConstructParam *construct_params)
+{
+  GObject *object;
+  MucharmapPrintOperation *print_operation;
+  MucharmapPrintOperationPrivate *priv;
 
-	  gtk_print_operation_set_unit (operation, GTK_UNIT_POINTS);
-	  
-	  width = priv->width = gtk_print_context_get_width (context);
-	  height = priv->height = gtk_print_context_get_height (context);
+  object = G_OBJECT_CLASS (mucharmap_print_operation_parent_class)->constructor
+	         (type, n_construct_properties, construct_params);
 
-	#define N_COLS 8
-	#define MARGIN 5 /* pt */
+  print_operation = MUCHARMAP_PRINT_OPERATION (object);
+  priv = print_operation->priv;
 
-	  priv->n_columns = N_COLS;
+  g_assert (priv->codepoint_list != NULL);
+  g_assert (priv->font_desc != NULL);
 
-	  priv->cell_width = width / N_COLS;
-	  priv->cell_height = priv->cell_width;
+  return object;
+}
 
-	  priv->info_text_width = 0;
-	  priv->info_text_height = 0;
-	  priv->info_text_gap = 0;
+static void
+mucharmap_print_operation_finalize (GObject *object)
+{
+//   MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (object);
+//   MucharmapPrintOperationPrivate *priv = print_operation->priv;
 
-	  priv->cell_margin_left = priv->cell_margin_right = priv->cell_margin_top = priv->cell_margin_bottom = MARGIN;
-	  //XXX  calculate cell_width/height
+  G_OBJECT_CLASS (mucharmap_print_operation_parent_class)->finalize (object);
+}
 
-	  priv->character_width = priv->cell_width -
-		                      priv->cell_margin_left -
-		                      priv->cell_margin_right;
-	  priv->character_height = priv->cell_height -
-		                       priv->cell_margin_top -
-		                       priv->cell_margin_bottom -
-		                       priv->info_text_gap -
-		                       priv->info_text_height;
+static void
+mucharmap_print_operation_set_property (GObject *object,
+			   guint prop_id,
+			   const GValue *value,
+			   GParamSpec *pspec)
+{
+  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (object);
+  MucharmapPrintOperationPrivate *priv = print_operation->priv;
 
-	  priv->n_rows = height / priv->cell_height;
-	  page_size = priv->n_rows * priv->n_columns;
-	  pages = (priv->last_codepoint_index + page_size) / page_size;
+  switch (prop_id) {
+	case PROP_CODEPOINT_LIST:
+	  priv->codepoint_list = g_value_dup_object (value);
+	  break;
+	case PROP_FONT_DESC:
+	  priv->font_desc = g_value_dup_boxed (value);
+	  break;
+	default:
+	  G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
+	  break;
+  }
+}
 
-	  gtk_print_operation_set_n_pages (operation, pages);
+static void
+mucharmap_print_operation_class_init (MucharmapPrintOperationClass *klass)
+{
+  GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
+  GtkPrintOperationClass *print_op_class = GTK_PRINT_OPERATION_CLASS (klass);
 
-	  g_print ("cols: %d rows: %d pages: %d\n", priv->n_columns, priv->n_rows, pages);
-	  
-	  priv->character_layout = gtk_print_context_create_pango_layout (context);
-	  pango_layout_set_font_description (priv->character_layout, priv->font_desc);
-	  pango_layout_set_width (priv->character_layout, priv->character_width);
-	//   pango_layout_set_height (priv->character_layout, priv->character_height);
+  gobject_class->constructor = mucharmap_print_operation_constructor;
+  gobject_class->finalize = mucharmap_print_operation_finalize;
+  gobject_class->set_property = mucharmap_print_operation_set_property;
 
-	  priv->info_text_layout = gtk_print_context_create_pango_layout (context);
+  print_op_class->begin_print = mucharmap_print_operation_begin_print;
+  print_op_class->draw_page = mucharmap_print_operation_draw_page;
+  print_op_class->end_print = mucharmap_print_operation_end_print;
+  print_op_class->create_custom_widget = mucharmap_print_operation_create_custom_widget;
+  print_op_class->custom_widget_apply = mucharmap_print_operation_custom_widget_apply;
 
-	  info_font_desc = pango_font_description_from_string ("Sans 8");
-	  pango_layout_set_font_description (priv->info_text_layout, info_font_desc);
-	  pango_font_description_free (info_font_desc);
+  g_object_class_install_property
+	(gobject_class,
+	 PROP_CODEPOINT_LIST,
+	 g_param_spec_object ("codepoint-list", NULL, NULL,
+	                      MUCHARMAP_TYPE_CODEPOINT_LIST,
+	                      G_PARAM_WRITABLE | G_PARAM_STATIC_NAME | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB |
+	                      G_PARAM_CONSTRUCT_ONLY));
 
-	  pango_layout_set_width (priv->info_text_layout, priv->cell_width);
-	}
+  g_object_class_install_property
+	(gobject_class,
+	 PROP_FONT_DESC,
+	 g_param_spec_boxed ("font-desc", NULL, NULL,
+	                     PANGO_TYPE_FONT_DESCRIPTION,
+	                     G_PARAM_WRITABLE | G_PARAM_STATIC_NAME | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB |
+	                     G_PARAM_CONSTRUCT_ONLY));
 
-	static void
-	mucharmap_print_operation_draw_page (GtkPrintOperation *operation,
-		                                 GtkPrintContext   *context,
-		                                 int                page_nr)
-	{
-	  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (operation);
-	  MucharmapPrintOperationPrivate *priv = print_operation->priv;
-	  cairo_t *cr;
-	  int row, col, page_size;
-	  int i, start_index, last_index;
+  g_type_class_add_private (gobject_class, sizeof (MucharmapPrintOperationPrivate));
+}
 
-	  page_size = priv->n_rows * priv->n_columns;
-	  start_index = page_nr * page_size;
-	  last_index = start_index + page_size - 1;
-	  last_index = MIN (last_index, priv->last_codepoint_index);
-	  /* g_assert (i <= priv->last_codepoint_index); */
+/* public API */
 
-	  cr = gtk_print_context_get_cairo_context (context);
-
-	  cairo_set_source_rgb (cr, 0, 0, 0);
-
-	  col = row = 0;
-	  for (i = start_index; i <= last_index; ++i) {
-		draw_character_cell (print_operation, cr, row, col, i);
-
-		if (++col == priv->n_columns) {
-		  ++row;
-		  col = 0;
-		}
-	  }
-
-	  draw_cell_grid (print_operation, cr, row, col);
-	}
-	  
-	/* After last draw_page */
-	static void
-	mucharmap_print_operation_end_print (GtkPrintOperation *operation,
-		                                 GtkPrintContext   *context)
-	{
-	  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (operation);
-	  MucharmapPrintOperationPrivate *priv = print_operation->priv;
-
-	  g_object_unref (priv->character_layout);
-	  priv->character_layout = NULL;
-
-	  g_object_unref (priv->info_text_layout);
-	  priv->info_text_layout = NULL;
-	}
-	  
-	static GtkWidget *
-	mucharmap_print_operation_create_custom_widget (GtkPrintOperation *operation)
-	{
-	/*  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (operation);
-	  MucharmapPrintOperationPrivate *priv = print_operation->priv;*/
-	  return GTK_PRINT_OPERATION_CLASS (mucharmap_print_operation_parent_class)->create_custom_widget (operation);
-	}
-
-	static void
-	mucharmap_print_operation_custom_widget_apply (GtkPrintOperation *operation,
-		                                           GtkWidget *widget)
-	{
-	/*  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (operation);
-	  MucharmapPrintOperationPrivate *priv = print_operation->priv;*/
-	}
-
-	/* GObject class implementation */
-
-	static void
-	mucharmap_print_operation_init (MucharmapPrintOperation *print_operation)
-	{
-	  MucharmapPrintOperationPrivate *priv;
-
-	  priv = print_operation->priv = MUCHARMAP_PRINT_OPERATION_GET_PRIVATE (print_operation);
-	}
-
-	static GObject *
-	mucharmap_print_operation_constructor (GType type,
-		                                   guint n_construct_properties,
-		                                   GObjectConstructParam *construct_params)
-	{
-	  GObject *object;
-	  MucharmapPrintOperation *print_operation;
-	  MucharmapPrintOperationPrivate *priv;
-
-	  object = G_OBJECT_CLASS (mucharmap_print_operation_parent_class)->constructor
-		         (type, n_construct_properties, construct_params);
-
-	  print_operation = MUCHARMAP_PRINT_OPERATION (object);
-	  priv = print_operation->priv;
-
-	  g_assert (priv->codepoint_list != NULL);
-	  g_assert (priv->font_desc != NULL);
-
-	  return object;
-	}
-
-	static void
-	mucharmap_print_operation_finalize (GObject *object)
-	{
-	//   MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (object);
-	//   MucharmapPrintOperationPrivate *priv = print_operation->priv;
-
-	  G_OBJECT_CLASS (mucharmap_print_operation_parent_class)->finalize (object);
-	}
-
-	static void
-	mucharmap_print_operation_set_property (GObject *object,
-				   guint prop_id,
-				   const GValue *value,
-				   GParamSpec *pspec)
-	{
-	  MucharmapPrintOperation *print_operation = MUCHARMAP_PRINT_OPERATION (object);
-	  MucharmapPrintOperationPrivate *priv = print_operation->priv;
-
-	  switch (prop_id) {
-		case PROP_CODEPOINT_LIST:
-		  priv->codepoint_list = g_value_dup_object (value);
-		  break;
-		case PROP_FONT_DESC:
-		  priv->font_desc = g_value_dup_boxed (value);
-		  break;
-		default:
-		  G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
-		  break;
-	  }
-	}
-
-	static void
-	mucharmap_print_operation_class_init (MucharmapPrintOperationClass *klass)
-	{
-	  GObjectClass *gobject_class = G_OBJECT_CLASS (klass);
-	  GtkPrintOperationClass *print_op_class = GTK_PRINT_OPERATION_CLASS (klass);
-
-	  gobject_class->constructor = mucharmap_print_operation_constructor;
-	  gobject_class->finalize = mucharmap_print_operation_finalize;
-	  gobject_class->set_property = mucharmap_print_operation_set_property;
-
-	  print_op_class->begin_print = mucharmap_print_operation_begin_print;
-	  print_op_class->draw_page = mucharmap_print_operation_draw_page;
-	  print_op_class->end_print = mucharmap_print_operation_end_print;
-	  print_op_class->create_custom_widget = mucharmap_print_operation_create_custom_widget;
-	  print_op_class->custom_widget_apply = mucharmap_print_operation_custom_widget_apply;
-
-	  g_object_class_install_property
-		(gobject_class,
-		 PROP_CODEPOINT_LIST,
-		 g_param_spec_object ("codepoint-list", NULL, NULL,
-		                      MUCHARMAP_TYPE_CODEPOINT_LIST,
-		                      G_PARAM_WRITABLE | G_PARAM_STATIC_NAME | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB |
-		                      G_PARAM_CONSTRUCT_ONLY));
-
-	  g_object_class_install_property
-		(gobject_class,
-		 PROP_FONT_DESC,
-		 g_param_spec_boxed ("font-desc", NULL, NULL,
-		                     PANGO_TYPE_FONT_DESCRIPTION,
-		                     G_PARAM_WRITABLE | G_PARAM_STATIC_NAME | G_PARAM_STATIC_NICK | G_PARAM_STATIC_BLURB |
-		                     G_PARAM_CONSTRUCT_ONLY));
-
-	  g_type_class_add_private (gobject_class, sizeof (MucharmapPrintOperationPrivate));
-	}
-
-	/* public API */
-
-	GtkPrintOperation *
-	mucharmap_print_operation_new (MucharmapCodepointList *codepoint_list,
-		                           PangoFontDescription *font_desc)
-	{
-	  return g_object_new (MUCHARMAP_TYPE_PRINT_OPERATION,
-		                   "codepoint-list", codepoint_list,
-		                   "font-desc", font_desc,
-		                   NULL);
-	}
-//}
+GtkPrintOperation *
+mucharmap_print_operation_new (MucharmapCodepointList *codepoint_list,
+	                           PangoFontDescription *font_desc)
+{
+  return g_object_new (MUCHARMAP_TYPE_PRINT_OPERATION,
+	                   "codepoint-list", codepoint_list,
+	                   "font-desc", font_desc,
+	                   NULL);
+}

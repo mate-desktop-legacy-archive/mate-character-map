@@ -30,63 +30,60 @@
 
 G_BEGIN_DECLS
 
-//class MucharmapChartable extends GtkDrawingArea
-//{
-	#define MUCHARMAP_TYPE_CHARTABLE             (mucharmap_chartable_get_type ())
-	#define MUCHARMAP_CHARTABLE(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_CHARTABLE, MucharmapChartable))
-	#define MUCHARMAP_CHARTABLE_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_CHARTABLE, MucharmapChartableClass))
-	#define MUCHARMAP_IS_CHARTABLE(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_CHARTABLE))
-	#define MUCHARMAP_IS_CHARTABLE_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_CHARTABLE))
-	#define MUCHARMAP_CHARTABLE_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_CHARTABLE, MucharmapChartableClass))
+#define MUCHARMAP_TYPE_CHARTABLE             (mucharmap_chartable_get_type ())
+#define MUCHARMAP_CHARTABLE(o)               (G_TYPE_CHECK_INSTANCE_CAST ((o), MUCHARMAP_TYPE_CHARTABLE, MucharmapChartable))
+#define MUCHARMAP_CHARTABLE_CLASS(k)         (G_TYPE_CHECK_CLASS_CAST((k), MUCHARMAP_TYPE_CHARTABLE, MucharmapChartableClass))
+#define MUCHARMAP_IS_CHARTABLE(o)            (G_TYPE_CHECK_INSTANCE_TYPE ((o), MUCHARMAP_TYPE_CHARTABLE))
+#define MUCHARMAP_IS_CHARTABLE_CLASS(k)      (G_TYPE_CHECK_CLASS_TYPE ((k), MUCHARMAP_TYPE_CHARTABLE))
+#define MUCHARMAP_CHARTABLE_GET_CLASS(o)     (G_TYPE_INSTANCE_GET_CLASS ((o), MUCHARMAP_TYPE_CHARTABLE, MucharmapChartableClass))
 
-	typedef struct _MucharmapChartable        MucharmapChartable;
-	typedef struct _MucharmapChartablePrivate MucharmapChartablePrivate;
-	typedef struct _MucharmapChartableClass   MucharmapChartableClass;
+typedef struct _MucharmapChartable        MucharmapChartable;
+typedef struct _MucharmapChartablePrivate MucharmapChartablePrivate;
+typedef struct _MucharmapChartableClass   MucharmapChartableClass;
 
-	struct _MucharmapChartable
-	{
-	  GtkDrawingArea parent_instance;
+struct _MucharmapChartable
+{
+  GtkDrawingArea parent_instance;
 
-	  /*< private >*/
-	  MucharmapChartablePrivate *priv;
-	};
+  /*< private >*/
+  MucharmapChartablePrivate *priv;
+};
 
-	struct _MucharmapChartableClass
-	{
-	  GtkDrawingAreaClass parent_class;
+struct _MucharmapChartableClass
+{
+  GtkDrawingAreaClass parent_class;
 
-	  void    (* set_scroll_adjustments) (MucharmapChartable *chartable,
-		                                  GtkAdjustment      *hadjustment,
-		                                  GtkAdjustment      *vadjustment);
-	  gboolean (* move_cursor)           (MucharmapChartable *chartable,
-		                                  GtkMovementStep     step,
-		                                  gint                count);
-	  void (* activate) (MucharmapChartable *chartable);
-	  void (* copy_clipboard) (MucharmapChartable *chartable);
-	  void (* paste_clipboard) (MucharmapChartable *chartable);
+  void    (* set_scroll_adjustments) (MucharmapChartable *chartable,
+	                                  GtkAdjustment      *hadjustment,
+	                                  GtkAdjustment      *vadjustment);
+  gboolean (* move_cursor)           (MucharmapChartable *chartable,
+	                                  GtkMovementStep     step,
+	                                  gint                count);
+  void (* activate) (MucharmapChartable *chartable);
+  void (* copy_clipboard) (MucharmapChartable *chartable);
+  void (* paste_clipboard) (MucharmapChartable *chartable);
 
-	  void (* set_active_char) (MucharmapChartable *chartable, guint ch);
-	  void (* status_message) (MucharmapChartable *chartable, const gchar *message);
-	};
+  void (* set_active_char) (MucharmapChartable *chartable, guint ch);
+  void (* status_message) (MucharmapChartable *chartable, const gchar *message);
+};
 
-	GType mucharmap_chartable_get_type (void);
-	GtkWidget * mucharmap_chartable_new (void);
-	void mucharmap_chartable_set_font_desc (MucharmapChartable *chartable,
-		                                    PangoFontDescription *font_desc);
-	PangoFontDescription * mucharmap_chartable_get_font_desc (MucharmapChartable *chartable);
-	gunichar mucharmap_chartable_get_active_character (MucharmapChartable *chartable);
-	void mucharmap_chartable_set_active_character (MucharmapChartable *chartable, 
-		                                           gunichar uc);
-	void mucharmap_chartable_set_zoom_enabled (MucharmapChartable *chartable,
-		                                       gboolean enabled);
-	gboolean mucharmap_chartable_get_zoom_enabled (MucharmapChartable *chartable);
-	void mucharmap_chartable_set_snap_pow2 (MucharmapChartable *chartable,
-		                                    gboolean snap);
-	gboolean mucharmap_chartable_get_snap_pow2 (MucharmapChartable *chartable);
-	void mucharmap_chartable_set_codepoint_list (MucharmapChartable         *chartable,
-		                                         MucharmapCodepointList *list);
-	MucharmapCodepointList * mucharmap_chartable_get_codepoint_list (MucharmapChartable *chartable);
-//}
+GType mucharmap_chartable_get_type (void);
+GtkWidget * mucharmap_chartable_new (void);
+void mucharmap_chartable_set_font_desc (MucharmapChartable *chartable,
+	                                    PangoFontDescription *font_desc);
+PangoFontDescription * mucharmap_chartable_get_font_desc (MucharmapChartable *chartable);
+gunichar mucharmap_chartable_get_active_character (MucharmapChartable *chartable);
+void mucharmap_chartable_set_active_character (MucharmapChartable *chartable,
+	                                           gunichar uc);
+void mucharmap_chartable_set_zoom_enabled (MucharmapChartable *chartable,
+	                                       gboolean enabled);
+gboolean mucharmap_chartable_get_zoom_enabled (MucharmapChartable *chartable);
+void mucharmap_chartable_set_snap_pow2 (MucharmapChartable *chartable,
+	                                    gboolean snap);
+gboolean mucharmap_chartable_get_snap_pow2 (MucharmapChartable *chartable);
+void mucharmap_chartable_set_codepoint_list (MucharmapChartable         *chartable,
+	                                         MucharmapCodepointList *list);
+MucharmapCodepointList * mucharmap_chartable_get_codepoint_list (MucharmapChartable *chartable);
 
 G_END_DECLS
 
