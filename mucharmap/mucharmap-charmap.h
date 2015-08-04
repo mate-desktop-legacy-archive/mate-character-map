@@ -90,6 +90,10 @@ void                     mucharmap_charmap_set_font_desc      (MucharmapCharmap 
 
 PangoFontDescription *   mucharmap_charmap_get_font_desc      (MucharmapCharmap  *charmap);
 
+void                     mucharmap_charmap_set_font_fallback  (MucharmapCharmap *charmap,
+                                                               gboolean enable_font_fallback);
+gboolean                 mucharmap_charmap_get_font_fallback  (MucharmapCharmap *charmap);
+
 MucharmapChaptersView *  mucharmap_charmap_get_chapters_view  (MucharmapCharmap       *charmap);
 
 void                     mucharmap_charmap_set_chapters_model (MucharmapCharmap       *charmap,

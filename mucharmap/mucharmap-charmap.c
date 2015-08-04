@@ -65,7 +65,8 @@ enum {
   PROP_ACTIVE_CODEPOINT_LIST,
   PROP_ACTIVE_PAGE,
   PROP_SNAP_POW2,
-  PROP_FONT_DESC
+  PROP_FONT_DESC,
+  PROP_FONT_FALLBACK
 };
 
 static guint mucharmap_charmap_signals[NUM_SIGNALS];
@@ -118,6 +119,9 @@ mucharmap_charmap_get_property (GObject *object,
 	case PROP_FONT_DESC:
 	  g_value_set_boxed (value, mucharmap_charmap_get_font_desc (charmap));
 	  break;
+	case PROP_FONT_FALLBACK:
+	  g_value_set_boolean (value, mucharmap_charmap_get_font_fallback (charmap));
+	  break;
 	case PROP_SNAP_POW2:
 	  g_value_set_boolean (value, mucharmap_charmap_get_snap_pow2 (charmap));
 	  break;
@@ -152,6 +156,9 @@ mucharmap_charmap_set_property (GObject *object,
 	  break;
 	case PROP_FONT_DESC:
 	  mucharmap_charmap_set_font_desc (charmap, g_value_get_boxed (value));
+	  break;
+	case PROP_FONT_FALLBACK:
+	  mucharmap_charmap_set_font_fallback (charmap, g_value_get_boolean (value));
 	  break;
 	case PROP_SNAP_POW2:
 	  mucharmap_charmap_set_snap_pow2 (charmap, g_value_get_boolean (value));
@@ -252,6 +259,19 @@ mucharmap_charmap_class_init (MucharmapCharmapClass *klass)
 	                     G_PARAM_STATIC_NAME |
 	                     G_PARAM_STATIC_NICK |
 	                     G_PARAM_STATIC_BLURB));
+
+  /**
+   * MucharmapCharmap:font-fallback:
+   *
+   * Whether font fallback is enabled.
+   *
+   */
+  g_object_class_install_property
+    (object_class,
+     PROP_FONT_FALLBACK,
+     g_param_spec_boolean ("font-fallback", NULL, NULL,
+                           TRUE,
+                           G_PARAM_READWRITE | G_PARAM_STATIC_STRINGS));
 
   g_object_class_install_property
 	(object_class,
@@ -1246,6 +1266,39 @@ mucharmap_charmap_get_font_desc (MucharmapCharmap *charmap)
   g_return_val_if_fail (MUCHARMAP_IS_CHARMAP (charmap), NULL);
 
   return charmap->priv->font_desc;
+}
+
+/**
+ * mucharmap_charmap_set_font_fallback:
+ * @charmap: a #GucharmapCharmap
+ * @enable_font_fallback: whether to enable font fallback
+ *
+ */
+void
+mucharmap_charmap_set_font_fallback (MucharmapCharmap *charmap,
+                                     gboolean enable_font_fallback)
+{
+  g_return_if_fail (MUCHARMAP_IS_CHARMAP (charmap));
+
+  mucharmap_chartable_set_font_fallback (charmap->priv->chartable,
+                                         enable_font_fallback);
+
+  g_object_notify (G_OBJECT (charmap), "font-fallback");
+}
+
+/**
+ * mucharmap_charmap_get_font_fallback:
+ * @charmap: a #MucharmapCharmap
+ *
+ * Returns: whether font fallback is enabled
+ *
+ */
+gboolean
+mucharmap_charmap_get_font_fallback (MucharmapCharmap *charmap)
+{
+  g_return_val_if_fail (MUCHARMAP_IS_CHARMAP (charmap), FALSE);
+
+  return mucharmap_chartable_get_font_fallback (charmap->priv->chartable);
 }
 
 void

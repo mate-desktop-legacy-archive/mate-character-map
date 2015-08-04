@@ -72,6 +72,9 @@ GtkWidget * mucharmap_chartable_new (void);
 void mucharmap_chartable_set_font_desc (MucharmapChartable *chartable,
 	                                    PangoFontDescription *font_desc);
 PangoFontDescription * mucharmap_chartable_get_font_desc (MucharmapChartable *chartable);
+void mucharmap_chartable_set_font_fallback (MucharmapChartable *chartable,
+                                            gboolean enable_font_fallback);
+gboolean mucharmap_chartable_get_font_fallback (MucharmapChartable *chartable);
 gunichar mucharmap_chartable_get_active_character (MucharmapChartable *chartable);
 void mucharmap_chartable_set_active_character (MucharmapChartable *chartable,
 	                                           gunichar uc);
