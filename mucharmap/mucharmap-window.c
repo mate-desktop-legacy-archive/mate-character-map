@@ -507,11 +507,11 @@
 
 		if (strcmp (name, "NextCharacter") == 0)
 		{
-			keyval = GDK_Right;
+			keyval = GDK_KEY_Right;
 		}
 		else if (strcmp (name, "PreviousCharacter") == 0)
 		{
-			keyval = GDK_Left;
+			keyval = GDK_KEY_Left;
 		}
 
 		chartable = mucharmap_charmap_get_chartable (guw->charmap);

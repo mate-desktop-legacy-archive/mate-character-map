@@ -1352,7 +1352,7 @@
 
 	  switch (event->keyval)
 		{
-		  case GDK_Shift_L: case GDK_Shift_R:
+		  case GDK_KEY_Shift_L: case GDK_KEY_Shift_R:
 		    mucharmap_chartable_show_zoom (chartable);
 		    break;
 
@@ -1375,10 +1375,10 @@
 		  /* XXX: If the group(shift_toggle) Xkb option is set, then releasing
 		   * the shift key gives either ISO_Next_Group or ISO_Prev_Group. Is
 		   * there a better way to handle this case? */
-		  case GDK_Shift_L:
-		  case GDK_Shift_R:
-		  case GDK_ISO_Next_Group:
-		  case GDK_ISO_Prev_Group:
+		  case GDK_KEY_Shift_L:
+		  case GDK_KEY_Shift_R:
+		  case GDK_KEY_ISO_Next_Group:
+		  case GDK_KEY_ISO_Prev_Group:
 		    mucharmap_chartable_hide_zoom (chartable);
 		    break;
 		}
@@ -2106,97 +2106,97 @@
 	  binding_set = gtk_binding_set_by_class (klass);
 
 	  /* Cursor movement */
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_Up, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_Up, 0,
 		                                    GTK_MOVEMENT_DISPLAY_LINES, -1);
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_KP_Up, 0,
-		                                    GTK_MOVEMENT_DISPLAY_LINES, -1);
-
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_Down, 0,
-		                                    GTK_MOVEMENT_DISPLAY_LINES, 1);
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_KP_Down, 0,
-		                                    GTK_MOVEMENT_DISPLAY_LINES, 1);
-
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_p, GDK_CONTROL_MASK,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_KP_Up, 0,
 		                                    GTK_MOVEMENT_DISPLAY_LINES, -1);
 
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_n, GDK_CONTROL_MASK,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_Down, 0,
+		                                    GTK_MOVEMENT_DISPLAY_LINES, 1);
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_KP_Down, 0,
 		                                    GTK_MOVEMENT_DISPLAY_LINES, 1);
 
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_Home, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_p, GDK_CONTROL_MASK,
+		                                    GTK_MOVEMENT_DISPLAY_LINES, -1);
+
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_n, GDK_CONTROL_MASK,
+		                                    GTK_MOVEMENT_DISPLAY_LINES, 1);
+
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_Home, 0,
 		                                    GTK_MOVEMENT_BUFFER_ENDS, -1);
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_KP_Home, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_KP_Home, 0,
 		                                    GTK_MOVEMENT_BUFFER_ENDS, -1);
 
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_End, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_End, 0,
 		                                    GTK_MOVEMENT_BUFFER_ENDS, 1);
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_KP_End, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_KP_End, 0,
 		                                    GTK_MOVEMENT_BUFFER_ENDS, 1);
 
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_Page_Up, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_Page_Up, 0,
 		                                    GTK_MOVEMENT_PAGES, -1);
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_KP_Page_Up, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_KP_Page_Up, 0,
 		                                    GTK_MOVEMENT_PAGES, -1);
 
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_Page_Down, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_Page_Down, 0,
 		                                    GTK_MOVEMENT_PAGES, 1);
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_KP_Page_Down, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_KP_Page_Down, 0,
 		                                    GTK_MOVEMENT_PAGES, 1);
 
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_Left, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_Left, 0,
 		                                    GTK_MOVEMENT_VISUAL_POSITIONS, -1);
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_KP_Left, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_KP_Left, 0,
 		                                    GTK_MOVEMENT_VISUAL_POSITIONS, -1);
 
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_Right, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_Right, 0,
 		                                    GTK_MOVEMENT_VISUAL_POSITIONS, 1);
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_KP_Right, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_KP_Right, 0,
 		                                    GTK_MOVEMENT_VISUAL_POSITIONS, 1);
 
 	  /* Activate */
-	  gtk_binding_entry_add_signal (binding_set, GDK_Return, 0,
+	  gtk_binding_entry_add_signal (binding_set, GDK_KEY_Return, 0,
 		                            "activate", 0);
-	  gtk_binding_entry_add_signal (binding_set, GDK_ISO_Enter, 0,
+	  gtk_binding_entry_add_signal (binding_set, GDK_KEY_ISO_Enter, 0,
 		                            "activate", 0);
-	  gtk_binding_entry_add_signal (binding_set, GDK_KP_Enter, 0,
+	  gtk_binding_entry_add_signal (binding_set, GDK_KEY_KP_Enter, 0,
 		                            "activate", 0);
-	  gtk_binding_entry_add_signal (binding_set, GDK_space, 0,
+	  gtk_binding_entry_add_signal (binding_set, GDK_KEY_space, 0,
 		                            "activate", 0);
 
 	  /* Clipboard actions */
-	  gtk_binding_entry_add_signal (binding_set, GDK_c, GDK_CONTROL_MASK,
+	  gtk_binding_entry_add_signal (binding_set, GDK_KEY_c, GDK_CONTROL_MASK,
 		                            "copy-clipboard", 0);
-	  gtk_binding_entry_add_signal (binding_set, GDK_Insert, GDK_CONTROL_MASK,
+	  gtk_binding_entry_add_signal (binding_set, GDK_KEY_Insert, GDK_CONTROL_MASK,
 		                            "copy-clipboard", 0);
-	  gtk_binding_entry_add_signal (binding_set, GDK_v, GDK_CONTROL_MASK,
+	  gtk_binding_entry_add_signal (binding_set, GDK_KEY_v, GDK_CONTROL_MASK,
 		                            "paste-clipboard", 0);
-	  gtk_binding_entry_add_signal (binding_set, GDK_Insert, GDK_SHIFT_MASK,
+	  gtk_binding_entry_add_signal (binding_set, GDK_KEY_Insert, GDK_SHIFT_MASK,
 		                            "paste-clipboard", 0);
 
 	#if 0
 	  /* VI keybindings */
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_k, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_k, 0,
 		                                    GTK_MOVEMENT_DISPLAY_LINES, -1);
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_K, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_K, 0,
 		                                    GTK_MOVEMENT_DISPLAY_LINES, -1);
 
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_j, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_j, 0,
 		                                    GTK_MOVEMENT_DISPLAY_LINES, 1);
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_J, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_J, 0,
 		                                    GTK_MOVEMENT_DISPLAY_LINES, 1);
 
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_b, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_b, 0,
 		                                    GTK_MOVEMENT_PAGES, -1);
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_B, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_B, 0,
 		                                    GTK_MOVEMENT_PAGES, -1);
 
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_h, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_h, 0,
 		                                    GTK_MOVEMENT_VISUAL_POSITIONS, -1);
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_H, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_H, 0,
 		                                    GTK_MOVEMENT_VISUAL_POSITIONS, -1);
 
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_l, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_l, 0,
 		                                    GTK_MOVEMENT_VISUAL_POSITIONS, 1);
-	  mucharmap_chartable_add_move_binding (binding_set, GDK_L, 0,
+	  mucharmap_chartable_add_move_binding (binding_set, GDK_KEY_L, 0,
 		                                    GTK_MOVEMENT_VISUAL_POSITIONS, 1);
 	#endif
 	}
