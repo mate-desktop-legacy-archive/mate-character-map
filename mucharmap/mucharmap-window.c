@@ -775,6 +775,21 @@ charmap_sync_active_character (GtkWidget *widget,
   guw->save_last_char_idle_id = g_idle_add ((GSourceFunc) save_last_char_idle_cb, guw);
 }
 
+static gboolean
+string_to_unichar_mapping (GVariant *value,
+                           gpointer *result,
+                           gpointer  user_data)
+{
+  const gchar *str;
+
+  str = g_variant_get_string (value, NULL);
+  if (g_utf8_strlen (str, -1) != 1)
+    return FALSE;
+
+  *result = GINT_TO_POINTER (g_utf8_get_char (str));
+  return TRUE;
+}
+
 static void
 mucharmap_window_init (MucharmapWindow *guw)
 {
@@ -852,7 +867,7 @@ mucharmap_window_init (MucharmapWindow *guw)
   };
   GtkWidget *menubar;
   GtkAction *action;
-  gchar *active;
+  gunichar active;
   gchar *font;
 
   guw->settings = g_settings_new ("org.mate.mucharmap");
@@ -1001,9 +1016,8 @@ mucharmap_window_init (MucharmapWindow *guw)
   mucharmap_window_set_chapters_model (guw, g_settings_get_enum (guw->settings, "group-by"));
 
   /* active character */
-  active = g_settings_get_string (guw->settings, "last-char");
-  mucharmap_charmap_set_active_character (guw->charmap, g_utf8_get_char (active));
-  g_free (active);
+  active = (gsize) g_settings_get_mapped (guw->settings, "last-char", string_to_unichar_mapping, NULL);
+  mucharmap_charmap_set_active_character (guw->charmap, active);
 
   /* window geometry */
   mucharmap_settings_add_window (GTK_WINDOW (guw));
