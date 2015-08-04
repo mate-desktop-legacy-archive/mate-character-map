@@ -62,6 +62,8 @@
 
 	static void mucharmap_chartable_class_init (MucharmapChartableClass *klass);
 	static void mucharmap_chartable_finalize   (GObject *object);
+	static void mucharmap_chartable_set_active_cell (MucharmapChartable *chartable,
+                                                         int cell);
 
 	static guint signals[NUM_SIGNALS] = { 0 };
 
@@ -421,39 +423,6 @@
 	  return y;
 	}
 
-	static void
-	set_top_row (MucharmapChartable *chartable,
-		         gint            row)
-	{
-	  MucharmapChartablePrivate *priv = chartable->priv;
-	  gint r, c;
-
-	  g_return_if_fail (row >= 0 && row <= priv->last_cell / priv->cols);
-
-	  priv->old_page_first_cell = priv->page_first_cell;
-	  priv->old_active_cell = priv->active_cell;
-
-	  priv->page_first_cell = row * priv->cols;
-
-	  /* character is still on the visible page */
-	  if (priv->active_cell - priv->page_first_cell >= 0
-		  && priv->active_cell - priv->page_first_cell < priv->page_size)
-		return;
-
-	  c = priv->old_active_cell % priv->cols;
-
-	  if (priv->page_first_cell < priv->old_page_first_cell)
-		r = priv->rows - 1;
-	  else
-		r = 0;
-
-	  priv->active_cell = priv->page_first_cell + r * priv->cols + c;
-	  if (priv->active_cell > priv->last_cell)
-		priv->active_cell = priv->last_cell;
-
-	  g_object_notify (G_OBJECT (chartable), "active-character");
-	}
-
 	/* returns the font family of the last glyph item in the first line of the
 	 * layout; should be freed by caller */
 	static gchar *
@@ -541,6 +510,7 @@
 	  GtkStyle *style;
 	  GdkPixmap *pixmap;
 	  char *family;
+	  cairo_t *cr;
 
 	  /* Apply the scaling.  Unfortunately not all fonts seem to be scalable.
 	   * We could fall back to GdkPixbuf scaling, but that looks butt ugly :-/
@@ -573,33 +543,46 @@
 	  pixmap = gdk_pixmap_new (gtk_widget_get_window (widget),
 		                       pixmap_width, pixmap_height, -1);
 
-	  gdk_draw_rectangle (pixmap, style->base_gc[GTK_STATE_NORMAL],
-		                  TRUE, 0, 0, pixmap_width, pixmap_height);
+	  cr = gdk_cairo_create (pixmap);
 
-	  /* Draw a rectangular border, taking char_rect offsets into account. */
-	  gdk_draw_rectangle (pixmap, style->fg_gc[GTK_STATE_INSENSITIVE],
-		                  FALSE, 1, 1, pixmap_width - 3, pixmap_height - 3);
+	  gdk_cairo_set_source_color (cr, &style->base[GTK_STATE_NORMAL]);
+	  cairo_rectangle (cr, 0, 0, pixmap_width, pixmap_height);
+	  cairo_fill (cr);
+
+	  gdk_cairo_set_source_color (cr, &style->fg[GTK_STATE_INSENSITIVE]);
+	  cairo_set_line_width (cr, 1);
+	  cairo_set_line_cap (cr, CAIRO_LINE_CAP_SQUARE);
+	  cairo_rectangle (cr, 1.5, 1.5, pixmap_width - 3, pixmap_height - 3);
+	  cairo_stroke (cr);
 
 	  /* Now draw the glyph.  The coordinates are adapted
-	   * in order to compensate negative char_rect offsets. */
-	  gdk_draw_layout (pixmap, style->text_gc[GTK_STATE_NORMAL],
-		               -char_rect.x + PADDING, -char_rect.y + PADDING,
-		               pango_layout);
+	   * in order to compensate negative char_rect offsets.
+	   */
+	  gdk_cairo_set_source_color (cr, &style->text[GTK_STATE_NORMAL]);
+	  cairo_move_to (cr, -char_rect.x + PADDING, -char_rect.y + PADDING);
+	  pango_cairo_show_layout (cr, pango_layout);
 	  g_object_unref (pango_layout);
 
 	  if (draw_font_family)
 		{
-		  gdk_draw_line (pixmap, style->dark_gc[GTK_STATE_NORMAL],
-		                 6 + 1, char_rect.height + 2 * PADDING,
-		                 pixmap_width - 3 - 6, char_rect.height + 2 * PADDING);
-		  gdk_draw_layout (pixmap, style->text_gc[GTK_STATE_NORMAL],
-		                   PADDING, pixmap_height - PADDING - family_rect.height,
-		                   pango_layout2);
+		  cairo_set_line_width (cr, 1);
+		  cairo_set_line_cap (cr, CAIRO_LINE_CAP_SQUARE);
+		  gdk_cairo_set_source_color (cr, &style->dark[GTK_STATE_NORMAL]);
+		  cairo_move_to (cr, 6 + 1 + .5, char_rect.height + 2 * PADDING + .5);
+		  cairo_line_to (cr, pixmap_width - 3 - 6 - .5, char_rect.height + 2 * PADDING + .5);
+		  cairo_stroke (cr);
+
+		  gdk_cairo_set_source_color (cr, &style->text[GTK_STATE_NORMAL]);
+		  cairo_move_to (cr, PADDING, pixmap_height - PADDING - family_rect.height);
+		  /* FIXME: clip here? */
+		  pango_cairo_show_layout (cr, pango_layout2);
 
 		  g_object_unref (pango_layout2);
 		}
 
 	  g_free (family);
+
+	  cairo_destroy (cr);
 
 	  return pixmap;
 	}
@@ -690,6 +673,9 @@
 	  double scale;
 	  int font_size_px, screen_height;
 
+	  if (priv->zoom_window == NULL)
+	    return;
+
 	  font_size_px = get_font_size_px (chartable);
 	  screen_height = gdk_screen_get_height (gtk_widget_get_screen (widget));
 
@@ -770,129 +756,6 @@
 	  g_object_notify (G_OBJECT (chartable), "zoom-showing");
 	}
 
-	static void
-	mucharmap_chartable_set_active_cell (MucharmapChartable *chartable,
-		                                 guint cell)
-	{
-	  MucharmapChartablePrivate *priv = chartable->priv;
-	  int _cell = (int) cell;
-
-	  priv->old_active_cell = priv->active_cell;
-	  priv->old_page_first_cell = priv->page_first_cell;
-
-	  priv->active_cell = _cell;
-
-	  /* update page, if necessary */
-	  if (_cell < priv->page_first_cell ||
-		  _cell - priv->page_first_cell >= priv->page_size)
-		{
-		  /* move the page_first_cell as far as active_cell has moved */
-		  int offset = priv->active_cell - priv->old_active_cell;
-
-		  if (priv->old_page_first_cell + offset < 0)
-		    priv->page_first_cell = 0;
-		  else if (priv->old_page_first_cell +
-		           offset >
-		           priv->last_cell -
-		           (priv->last_cell % priv->cols) -
-		           priv->cols * (priv->rows - 1))
-		    priv->page_first_cell = priv->last_cell -
-		                                 (priv->last_cell % priv->cols) -
-		                                 priv->cols * (priv->rows - 1);
-		  else
-		    priv->page_first_cell = priv->old_page_first_cell + offset;
-
-		  /* FIXMEchpe: this should be fixed in the conditions above, but just do it for now: */
-		  if (priv->page_first_cell < 0)
-		    priv->page_first_cell = 0;
-
-		  /* round down so that it's a multiple of priv->cols */
-		  priv->page_first_cell -= (priv->page_first_cell % priv->cols);
-
-		  /* go back up if we should have rounded up */
-		  if (priv->active_cell - priv->page_first_cell >= priv->page_size)
-		    priv->page_first_cell += priv->cols;
-		}
-
-	  g_object_notify (G_OBJECT (chartable), "active-character");
-
-	  /* FIXMEchpe: update the scroll adjustment! */
-	}
-
-	static void
-	set_active_char (MucharmapChartable *chartable,
-		             gunichar        wc)
-	{
-	  MucharmapChartablePrivate *priv = chartable->priv;
-
-	  guint cell = mucharmap_codepoint_list_get_index (priv->codepoint_list, wc);
-	  if (cell == -1) {
-		gtk_widget_error_bell (GTK_WIDGET (chartable));
-		return;
-	  }
-
-	  mucharmap_chartable_set_active_cell (chartable, cell);
-	}
-
-	static void
-	draw_borders (MucharmapChartable *chartable)
-	{
-	  MucharmapChartablePrivate *priv = chartable->priv;
-	  GtkWidget *widget = GTK_WIDGET (chartable);
-	  GtkAllocation *allocation;
-	  GtkStyle *style;
-	  gint x, y, col, row;
-	  GtkAllocation widget_allocation;
-
-	  gtk_widget_get_allocation (widget, &widget_allocation);
-	  allocation = &widget_allocation;
-
-	  /* dark_gc[GTK_STATE_NORMAL] seems to be what is used to draw the borders
-	   * around widgets, so we use it for the lines */
-
-	  style = gtk_widget_get_style (widget);
-
-	  /* vertical lines */
-	  gdk_draw_line (priv->pixmap,
-		             style->dark_gc[GTK_STATE_NORMAL],
-		             0, 0, 0, allocation->height - 1);
-	  for (col = 0, x = 0;  col < priv->cols;  col++)
-		{
-		  x += _mucharmap_chartable_column_width (chartable, col);
-		  gdk_draw_line (priv->pixmap,
-		                 style->dark_gc[GTK_STATE_NORMAL],
-		                 x, 0, x, allocation->height - 1);
-		}
-
-	  /* horizontal lines */
-	  gdk_draw_line (priv->pixmap,
-		             style->dark_gc[GTK_STATE_NORMAL],
-		             0, 0, allocation->width - 1, 0);
-	  for (row = 0, y = 0;  row < priv->rows;  row++)
-		{
-		  y += _mucharmap_chartable_row_height (chartable, row);
-		  gdk_draw_line (priv->pixmap,
-		                 style->dark_gc[GTK_STATE_NORMAL],
-		                 0, y, allocation->width - 1, y);
-		}
-	}
-
-	static void
-	set_scrollbar_adjustment (MucharmapChartable *chartable)
-	{
-	  MucharmapChartablePrivate *priv = chartable->priv;
-
-	  /* block our "value_changed" handler */
-	  g_signal_handler_block (G_OBJECT (priv->vadjustment),
-		                      priv->vadjustment_changed_handler_id);
-
-	  gtk_adjustment_set_value (priv->vadjustment, 1.0 * priv->page_first_cell / priv->cols);
-
-	  g_signal_handler_unblock (G_OBJECT (priv->vadjustment),
-		                        priv->vadjustment_changed_handler_id);
-	}
-
-	/* for mouse clicks */
 	static gunichar
 	get_cell_at_xy (MucharmapChartable *chartable,
 		            gint            x,
@@ -920,6 +783,7 @@
 
 	static void
 	draw_character (MucharmapChartable *chartable,
+			cairo_t            *cr,
 		            gint            row,
 		            gint            col)
 	{
@@ -930,8 +794,8 @@
 	  gint square_width, square_height;
 	  gunichar wc;
 	  guint cell;
-	  GdkGC *gc;
 	  GtkStyle *style;
+	  GdkColor *color;
 	  gchar buf[10];
 	  gint n;
 
@@ -943,12 +807,16 @@
 
 	  style = gtk_widget_get_style (widget);
 
+	  cairo_save (cr);
+
 	  if (gtk_widget_has_focus (widget) && (gint)cell == priv->active_cell)
-		gc = style->text_gc[GTK_STATE_SELECTED];
+		color = &style->text[GTK_STATE_SELECTED];
 	  else if ((gint)cell == priv->active_cell)
-		gc = style->text_gc[GTK_STATE_ACTIVE];
+		color = &style->text[GTK_STATE_ACTIVE];
 	  else
-		gc = style->text_gc[GTK_STATE_NORMAL];
+		color = &style->text[GTK_STATE_NORMAL];
+
+	  gdk_cairo_set_source_color (cr, color);
 
 	  square_width = _mucharmap_chartable_column_width (chartable, col) - 1;
 	  square_height = _mucharmap_chartable_row_height (chartable, row) - 1;
@@ -962,55 +830,18 @@
 	  padding_x = (square_width - char_width) - (square_width - char_width)/2;
 	  padding_y = (square_height - char_height) - (square_height - char_height)/2;
 
-	  gdk_draw_layout (priv->pixmap, gc,
-		               _mucharmap_chartable_x_offset (chartable, col) + padding_x,
-		               _mucharmap_chartable_y_offset (chartable, row) + padding_y,
-		               priv->pango_layout);
-	}
+	  cairo_rectangle (cr,
+			   _mucharmap_chartable_x_offset (chartable, col) + 1,
+			   _mucharmap_chartable_y_offset (chartable, row) + 1,
+			   _mucharmap_chartable_column_width (chartable, col) - 2,
+			   _mucharmap_chartable_row_height (chartable, row) - 2);
+	  cairo_clip (cr);
+	  cairo_move_to (cr,
+			 _mucharmap_chartable_x_offset (chartable, col) + padding_x,
+			 _mucharmap_chartable_y_offset (chartable, row) + padding_y);
+	  pango_cairo_show_layout (cr, priv->pango_layout);
 
-	static void
-	draw_square_bg (MucharmapChartable *chartable, gint row, gint col)
-	{
-	  MucharmapChartablePrivate *priv = chartable->priv;
-	  GtkWidget *widget = GTK_WIDGET (chartable);
-	  gint square_width, square_height;
-	  GdkGC *gc;
-	  GdkColor untinted;
-	  GtkStyle *style;
-	  guint cell;
-	  gunichar wc;
-
-	  cell = get_cell_at_rowcol (chartable, row, col);
-	  wc = mucharmap_codepoint_list_get_char (priv->codepoint_list, cell);
-
-	  gc = gdk_gc_new (GDK_DRAWABLE (gtk_widget_get_window (widget)));
-
-	  style = gtk_widget_get_style (widget);
-
-	  if (gtk_widget_has_focus (widget) && (gint)cell == priv->active_cell)
-		untinted = style->base[GTK_STATE_SELECTED];
-	  else if ((gint)cell == priv->active_cell)
-		untinted = style->base[GTK_STATE_ACTIVE];
-	  else if ((gint)cell > priv->last_cell)
-		untinted = style->dark[GTK_STATE_NORMAL];
-	  else if (! mucharmap_unichar_validate (wc))
-		untinted = style->fg[GTK_STATE_INSENSITIVE];
-	  else if (! mucharmap_unichar_isdefined (wc))
-		untinted = style->bg[GTK_STATE_INSENSITIVE];
-	  else
-		untinted = style->base[GTK_STATE_NORMAL];
-
-	  gdk_gc_set_rgb_fg_color (gc, &untinted);
-
-	  square_width = _mucharmap_chartable_column_width (chartable, col) - 1;
-	  square_height = _mucharmap_chartable_row_height (chartable, row) - 1;
-
-	  gdk_draw_rectangle (priv->pixmap, gc, TRUE,
-		                  _mucharmap_chartable_x_offset (chartable, col),
-				  _mucharmap_chartable_y_offset (chartable, row),
-		                  square_width, square_height);
-
-	  g_object_unref (gc);
+	  cairo_restore (cr);
 	}
 
 	static void
@@ -1026,15 +857,8 @@
 	}
 
 	static void
-	draw_square (MucharmapChartable *chartable, gint row, gint col)
-	{
-	  draw_square_bg (chartable, row, col);
-	  draw_character (chartable, row, col);
-	}
-
-	static void
-	draw_and_expose_cell (MucharmapChartable *chartable,
-		                  guint cell)
+	expose_cell (MucharmapChartable *chartable,
+		     guint cell)
 	{
 	  MucharmapChartablePrivate *priv = chartable->priv;
 
@@ -1042,222 +866,128 @@
 	  gint col = _mucharmap_chartable_cell_column (chartable, cell);
 
 	  if (row >= 0 && row < priv->rows && col >= 0 && col < priv->cols)
-		{
-		  draw_square (chartable, row, col);
-		  expose_square (chartable, row, col);
-		}
-	}
-
-	/* draws the backing store pixmap */
-	static void
-	draw_chartable_from_scratch (MucharmapChartable *chartable)
-	{
-	  MucharmapChartablePrivate *priv = chartable->priv;
-	  GtkWidget *widget = GTK_WIDGET (chartable);
-	  gint row, col;
-	  GtkAllocation *allocation;
-	  GtkAllocation widget_allocation;
-
-	  gtk_widget_get_allocation (widget, &widget_allocation);
-	  allocation = &widget_allocation;
-
-	  /* drawing area may not be exposed yet when restoring last char setting
-	   */
-	  if (!gtk_widget_get_realized (GTK_WIDGET (chartable)))
-		return;
-
-	  if (priv->pixmap == NULL)
-		priv->pixmap = gdk_pixmap_new (
-			gtk_widget_get_window (widget),
-			allocation->width,
-			allocation->height, -1);
-
-	  draw_borders (chartable);
-
-	  /* draw the characters */
-	  for (row = 0;  row < priv->rows;  row++)
-		for (col = 0;  col < priv->cols;  col++)
-		  {
-		    draw_square_bg (chartable, row, col);
-		    draw_character (chartable, row, col);
-		  }
+	    expose_square (chartable, row, col);
 	}
 
 	static void
-	copy_rows (MucharmapChartable *chartable, gint row_offset)
+	draw_square_bg (MucharmapChartable *chartable,
+			cairo_t *cr,
+			gint row,
+			gint col)
 	{
 	  MucharmapChartablePrivate *priv = chartable->priv;
 	  GtkWidget *widget = GTK_WIDGET (chartable);
-	  gint num_padded_rows = priv->n_padded_rows;
-	  gint from_row, to_row;
+	  GdkColor *untinted;
 	  GtkStyle *style;
-	  GtkAllocation *allocation;
-	  GtkAllocation widget_allocation;
+	  guint cell;
+	  gunichar wc;
 
-	  gtk_widget_get_allocation (widget, &widget_allocation);
-	  allocation = &widget_allocation;
+	  cairo_save (cr);
+
+	  cell = get_cell_at_rowcol (chartable, row, col);
+	  wc = mucharmap_codepoint_list_get_char (priv->codepoint_list, cell);
 
 	  style = gtk_widget_get_style (widget);
 
-	  if (ABS (row_offset) < priv->rows - num_padded_rows)
-		{
-		  gint num_rows, height;
+	  if (gtk_widget_has_focus (widget) && (gint)cell == priv->active_cell)
+	    untinted = &style->base[GTK_STATE_SELECTED];
+	  else if ((gint)cell == priv->active_cell)
+	    untinted = &style->base[GTK_STATE_ACTIVE];
+	  else if ((gint)cell > priv->last_cell)
+	    untinted = &style->dark[GTK_STATE_NORMAL];
+	  else if (! mucharmap_unichar_validate (wc))
+	    untinted = &style->fg[GTK_STATE_INSENSITIVE];
+	  else if (! mucharmap_unichar_isdefined (wc))
+	    untinted = &style->bg[GTK_STATE_INSENSITIVE];
+	  else
+	    untinted = &style->base[GTK_STATE_NORMAL];
 
-		  if (row_offset > 0)
-		    {
-		      from_row = row_offset;
-		      to_row = 0;
-		      num_rows = priv->rows - num_padded_rows - from_row;
-		    }
-		  else
-		    {
-		      from_row = 0;
-		      to_row = -row_offset;
-		      num_rows = priv->rows - num_padded_rows - to_row;
-		    }
+	  gdk_cairo_set_source_color (cr, untinted);
+	  cairo_set_line_width (cr, 1);
+	  cairo_set_line_cap (cr, CAIRO_LINE_CAP_SQUARE);
 
-		  height = _mucharmap_chartable_y_offset (chartable, num_rows)
-		           - _mucharmap_chartable_y_offset (chartable, 0) - 1;
+	  cairo_rectangle (cr,
+			  _mucharmap_chartable_x_offset (chartable, col),
+			  _mucharmap_chartable_y_offset (chartable, row),
+			  _mucharmap_chartable_column_width (chartable, col),
+			  _mucharmap_chartable_row_height (chartable, row));
+	  cairo_fill (cr);
 
-		  gdk_draw_drawable (
-		          priv->pixmap,
-		          style->base_gc[GTK_STATE_NORMAL],
-		          priv->pixmap,
-		          0, _mucharmap_chartable_y_offset (chartable, from_row),
-		          0, _mucharmap_chartable_y_offset (chartable, to_row),
-		          allocation->width, height);
-		}
-
-	  if (ABS (row_offset) < num_padded_rows)
-		{
-		  /* don't need num_rows or height, cuz we can go off the end */
-		  if (row_offset > 0)
-		    {
-		      from_row = priv->rows - num_padded_rows + row_offset;
-		      to_row = priv->rows - num_padded_rows;
-		    }
-		  else
-		    {
-		      from_row = priv->rows - num_padded_rows;
-		      to_row = priv->rows - num_padded_rows - row_offset;
-		    }
-
-		  /* it's ok to go off the end (so use allocation.height) */
-		  gdk_draw_drawable (
-		          priv->pixmap,
-		          style->base_gc[GTK_STATE_NORMAL],
-		          priv->pixmap,
-		          0, _mucharmap_chartable_y_offset (chartable, from_row),
-		          0, _mucharmap_chartable_y_offset (chartable, to_row),
-		          allocation->width,
-		          allocation->height);
-		}
+	  cairo_restore (cr);
 	}
 
 	static void
-	redraw_rows (MucharmapChartable *chartable, gint row_offset)
-	{
-	  MucharmapChartablePrivate *priv = chartable->priv;
-	  gint row, col, start_row, end_row;
-
-	  if (row_offset > 0)
-		{
-		  start_row = priv->rows - row_offset;
-		  end_row = priv->rows - 1;
-		}
-	  else
-		{
-		  start_row = 0;
-		  end_row = -row_offset - 1;
-		}
-
-	  for (row = 0;  row <= priv->rows;  row++)
-		{
-		  gboolean draw_row = FALSE;
-
-		  draw_row = draw_row || (row >= start_row && row <= end_row);
-
-		  if (row + row_offset >= 0 && row + row_offset <= priv->rows)
-		    {
-		      draw_row = draw_row || (_mucharmap_chartable_row_height (chartable, row)
-		                              != _mucharmap_chartable_row_height (chartable,
-		                                                     row + row_offset));
-		    }
-
-		  if (draw_row)
-		    {
-		      for (col = 0;  col < priv->cols;  col++)
-		        draw_square (chartable, row, col);
-		    }
-		}
-	}
-
-	/* Redraws whatever needs to be redrawn, in the character table and
-	 * everything, and exposes what needs to be exposed. */
-	void
-	_mucharmap_chartable_redraw (MucharmapChartable *chartable,
-		                     gboolean        move_zoom)
+	draw_borders (MucharmapChartable *chartable,
+		      cairo_t *cr)
 	{
 	  MucharmapChartablePrivate *priv = chartable->priv;
 	  GtkWidget *widget = GTK_WIDGET (chartable);
-	  gint row_offset;
-	  gboolean actives_done = FALSE;
+	  GtkAllocation *allocation;
+	  GtkStyle *style;
+	  gint x, y, col, row;
+	  GtkAllocation widget_allocation;
 
-	  row_offset = ((gint) priv->page_first_cell - (gint) priv->old_page_first_cell) / priv->cols;
+	  gtk_widget_get_allocation (widget, &widget_allocation);
+	  allocation = &widget_allocation;
 
-	#ifdef G_OS_WIN32
+	  cairo_save (cr);
 
-	  if (row_offset != 0)
-		{
-		  /* get around the bug in gdkdrawable-win32.c */
-		  /* yup, this makes it really slow */
-		  draw_chartable_from_scratch (chartable);
-		  gtk_widget_queue_draw (widget);
-		  actives_done = TRUE;
-		}
+	  /* dark_gc[GTK_STATE_NORMAL] seems to be what is used to draw the borders
+	   * around widgets, so we use it for the lines */
 
-	#else /* #ifdef G_OS_WIN32 */
+	  style = gtk_widget_get_style (widget);
+	  gdk_cairo_set_source_color (cr, &style->dark[GTK_STATE_NORMAL]);
 
-	  if (priv->codepoint_list_changed
-		      || row_offset >= priv->rows
-		      || row_offset <= -priv->rows)
-		{
-		  draw_chartable_from_scratch (chartable);
-		  gtk_widget_queue_draw (widget);
-		  actives_done = TRUE;
-		  priv->codepoint_list_changed = FALSE;
-		}
-	  else if (row_offset != 0)
-		{
-		  copy_rows (chartable, row_offset);
-		  redraw_rows (chartable, row_offset);
-		  draw_borders (chartable);
-		  gtk_widget_queue_draw (widget);
-		}
+	  cairo_set_line_width (cr, 1); /* FIXME themeable? */
+	  cairo_set_line_cap (cr, CAIRO_LINE_CAP_SQUARE);
 
-	#endif
+	  /* vertical lines */
+	  cairo_move_to (cr, .5, .5);
+	  cairo_line_to (cr, .5, allocation->height - .5);
 
-	  if (priv->active_cell != priv->old_active_cell)
-		{
-		  set_scrollbar_adjustment (chartable); /* XXX */
+	  for (col = 0, x = 0;  col < priv->cols;  col++)
+	  {
+	    x += _mucharmap_chartable_column_width (chartable, col);
+	    cairo_move_to (cr, x + .5, .5);
+	    cairo_line_to (cr, x + .5, allocation->height - .5);
+	  }
 
-		  if (!actives_done)
-		    {
-		      draw_and_expose_cell (chartable, priv->old_active_cell);
-		      draw_and_expose_cell (chartable, priv->active_cell);
-		    }
+	  /* horizontal lines */
+	  cairo_move_to (cr, .5, .5);
+	  cairo_line_to (cr, allocation->width - .5, .5);
 
-		  if (priv->zoom_window)
-		    update_zoom_window (chartable);
+	  for (row = 0, y = 0;  row < priv->rows;  row++)
+	  {
+	    y += _mucharmap_chartable_row_height (chartable, row);
 
-		  if (move_zoom && priv->zoom_window)
-		    {
-		      place_zoom_window_on_active_cell (chartable);
-		    }
-		}
+	    cairo_move_to (cr, .5, y + .5);
+	    cairo_line_to (cr, allocation->width - .5, y + .5);
+	  }
 
-	  priv->old_page_first_cell = priv->page_first_cell;
-	  priv->old_active_cell = priv->active_cell;
+	  cairo_stroke (cr);
+	  cairo_restore (cr);
+	}
+
+	static void
+	mucharmap_chartable_draw (MucharmapChartable *chartable,
+				  cairo_t *cr,
+				  int start_row,
+				  int end_row,
+				  int start_col,
+				  int end_col)
+	{
+	  int row, col;
+
+	  for (row = start_row;  row < end_row; ++row)
+	    {
+	      for (col = start_col;  col < end_col; ++col)
+	      {
+	        draw_square_bg (chartable, cr, row, col);
+	        draw_character (chartable, cr, row, col);
+	      }
+	    }
+
+	  draw_borders (chartable, cr);
 	}
 
 	static void
@@ -1267,24 +997,116 @@
 	  GtkAdjustment *vadjustment = priv->vadjustment;
 
 	  if (!vadjustment)
-		return;
+	    return;
 
 	  gtk_adjustment_configure (vadjustment,
-		                        1.0 * priv->page_first_cell / priv->cols,
-		                        0.0,
-		                        1.0 * ( priv->last_cell / priv->cols + 1 ),
-		                        3.0,
-		                        1.0 * priv->rows,
-		                        /* FIXMEchpe: shouldn't set page size at all! */
-		                        /* FIXMEchpe + 1 maybe? so scroll-wheel up/down scroll exactly half a page? */
-		                        priv->rows);
+				    1.0 * priv->page_first_cell / priv->cols,
+				    0.0 /* lower */,
+				    1.0 * ((priv->last_cell + priv->cols - 1) / priv->cols) /* upper */,
+				    3.0 /* step increment */,
+				    1.0 * priv->rows /* page increment */,
+				    priv->rows);
 	}
 
 	static void
-	vadjustment_value_changed_cb (GtkAdjustment *adjustment, MucharmapChartable *chartable)
+	mucharmap_chartable_set_active_cell (MucharmapChartable *chartable,
+					     int cell)
 	{
-	  set_top_row (chartable, (gint) gtk_adjustment_get_value (adjustment));
-	  _mucharmap_chartable_redraw (chartable, TRUE);
+	  GtkWidget *widget = GTK_WIDGET (chartable);
+	  MucharmapChartablePrivate *priv = chartable->priv;
+	  int old_active_cell, old_page_first_cell;
+
+	  if (cell == priv->active_cell)
+	    return;
+
+	  if (cell < 0)
+	    cell = 0;
+	  else if (cell > priv->last_cell)
+	    cell = priv->last_cell;
+
+	  old_active_cell = priv->active_cell;
+	  old_page_first_cell = priv->page_first_cell;
+
+	  priv->active_cell = cell;
+
+	  if (cell < priv->page_first_cell || cell >= priv->page_first_cell + priv->page_size)
+	  {
+	    int old_row = old_active_cell / priv->cols;
+	    int new_row = cell / priv->cols;
+	    int row_delta = new_row - old_row;
+	    int delta = row_delta * priv->cols;
+	    int first_cell_on_last_page = priv->last_cell - (priv->last_cell % priv->cols) - priv->cols * (priv->rows - 1);
+	    int new_page_first_cell = old_page_first_cell + delta;
+
+	    if (new_page_first_cell < 0)
+	      priv->page_first_cell = 0;
+	    else if (new_page_first_cell > first_cell_on_last_page)
+	      priv->page_first_cell = first_cell_on_last_page;
+	    else
+	      priv->page_first_cell = new_page_first_cell;
+
+	    if (priv->vadjustment)
+	      gtk_adjustment_set_value (priv->vadjustment, 1.0 * priv->page_first_cell / priv->cols);
+	    }
+
+	  else if (gtk_widget_get_realized (widget)) {
+	    expose_cell (chartable, old_active_cell);
+	    expose_cell (chartable, cell);
+	  }
+
+	  g_object_notify (G_OBJECT (chartable), "active-character");
+
+	  update_zoom_window (chartable);
+	  place_zoom_window_on_active_cell (chartable);
+	}
+
+	static void
+	set_active_char (MucharmapChartable *chartable,
+			 gunichar wc)
+	{
+	  MucharmapChartablePrivate *priv = chartable->priv;
+	  guint cell = mucharmap_codepoint_list_get_index (priv->codepoint_list, wc);
+	  if (cell == -1) {
+	    gtk_widget_error_bell (GTK_WIDGET (chartable));
+	    return;
+	  }
+
+	  mucharmap_chartable_set_active_cell (chartable, cell);
+	}
+
+	static void
+	vadjustment_value_changed_cb (GtkAdjustment *vadjustment, MucharmapChartable *chartable)
+	{
+	  MucharmapChartablePrivate *priv = chartable->priv;
+	  int row, r, c, old_page_first_cell, old_active_cell, first_cell;
+
+	  row = (int) gtk_adjustment_get_value (vadjustment);
+
+	  if (row < 0 || row > priv->last_cell / priv->cols)
+	    row = 0;
+
+	  first_cell = row * priv->cols;
+
+	  gtk_widget_queue_draw (GTK_WIDGET (chartable));
+
+	  old_page_first_cell = priv->page_first_cell;
+	  old_active_cell = priv->active_cell;
+
+	  priv->page_first_cell = first_cell;
+
+	  /* character is still on the visible page */
+	  if (priv->active_cell - priv->page_first_cell >= 0
+	      && priv->active_cell - priv->page_first_cell < priv->page_size)
+	    return;
+
+	  c = old_active_cell % priv->cols;
+
+	  if (priv->page_first_cell < old_page_first_cell)
+	    r = priv->rows - 1;
+	  else
+	    r = 0;
+
+	  mucharmap_chartable_set_active_cell (chartable, priv->page_first_cell + r * priv->cols + c);
 	}
 
 	/* GtkWidget class methods */
@@ -1318,25 +1140,11 @@
 	  else if (event->button == 1 && event->type == GDK_BUTTON_PRESS)
 		{
 		  mucharmap_chartable_set_active_cell (chartable, get_cell_at_xy (chartable, event->x, event->y));
-		  _mucharmap_chartable_redraw (chartable, TRUE);
 		}
 	  else if (event->button == 3)
 		{
 		  mucharmap_chartable_set_active_cell (chartable, get_cell_at_xy (chartable, event->x, event->y));
-		  _mucharmap_chartable_redraw (chartable, FALSE); /* FIXMEchpe */
-
-		  if (priv->zoom_mode_enabled)
-		  {
-		    make_zoom_window (chartable);
-
-		    /* FIXME: shouldn't this be "!=" ? */
-		    if (priv->active_cell == priv->old_active_cell)
-		      update_zoom_window (chartable);
-
-		    place_zoom_window (chartable, event->x_root, event->y_root);
-		    gtk_widget_show (priv->zoom_window);
-		    g_object_notify (G_OBJECT (chartable), "zoom-showing");
-		  }
+		  mucharmap_chartable_show_zoom (chartable);
 		}
 
 	  /* XXX: [need to return false so it gets drag events] */
@@ -1438,7 +1246,7 @@
 		{
 		  mucharmap_chartable_emit_status_message (chartable, _("Character found."));
 		  set_active_char (chartable, wc);
-		  _mucharmap_chartable_redraw (chartable, TRUE);
+		  place_zoom_window_on_active_cell (chartable);
 		}
 
 	  g_free (text);
@@ -1452,42 +1260,27 @@
 	{
 	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
 	  MucharmapChartablePrivate *priv = chartable->priv;
-	#if GTK_CHECK_VERSION(2,90,5)
-	  cairo_rectangle_int_t *rect;
-	  cairo_rectangle_int_t r;
-	#else
-	  GdkRectangle *rects;
-	  GdkRectangle *rect;
-	#endif
-	  int i, n_rects;
-	  GdkGC *gc;
 	  GtkStyle *style;
-	  GdkWindow *window;
+	  cairo_t *cr;
 
 	  /* Don't draw anything if we haven't set a codepoint list yet */
-	  if (priv->codepoint_list == NULL)
+	  if (event->window != gtk_widget_get_window (widget))
 		return FALSE;
 
-	  if (priv->pixmap == NULL)
-		{
-		  draw_chartable_from_scratch (chartable);
-		}
-
-	#if GTK_CHECK_VERSION(2,90,5)
+#if GTK_CHECK_VERSION (3, 0, 0)
 	  if (cairo_region_is_empty (event->region))
 		return FALSE;
-	  n_rects = cairo_region_num_rectangles (event->region);
-	#else
+#else
 	  if (gdk_region_empty (event->region))
 		return FALSE;
-	  gdk_region_get_rectangles (event->region, &rects, &n_rects);
-	#endif
-
-	  if (n_rects == 0)
-		return FALSE;
+#endif
 
 	#if 0
 	  {
+		int i, n_rects;
+
+		n_rects = cairo_region_num_rectangles (event->region);
+
 		g_print ("Exposing area %d:%d@(%d,%d) with %d rects ", event->area.width, event->area.height,
 		         event->area.x, event->area.y, n_rects);
 		for (i = 0; i < n_rects; ++i) {
@@ -1497,29 +1290,24 @@
 	  }
 	#endif
 
-	  style = gtk_widget_get_style (widget);
-	  window = gtk_widget_get_window (widget);
+	  cr = gdk_cairo_create (event->window);
+	  gdk_cairo_region (cr, event->region);
+	  cairo_clip (cr);
 
-	  gc = style->fg_gc[GTK_STATE_NORMAL];
-	  for (i = 0; i < n_rects; ++i) {
-	#if GTK_CHECK_VERSION(2,90,5)
-		cairo_region_get_rectangle (event->region, i, &r);
-		rect = &r;
-	#else
-		rect = rects + i;
-	#endif
-		gdk_draw_drawable (window,
-		                   gc,
-		                   priv->pixmap,
-		                   rect->x, rect->y,
-		                   rect->x, rect->y,
-		                   rect->width, rect->height);
+	  style = gtk_widget_get_style (widget);
+	  gdk_cairo_set_source_color (cr, &style->bg[GTK_STATE_NORMAL]);
+	  gdk_cairo_region (cr, event->region);
+	  cairo_fill (cr);
+
+	  if (priv->codepoint_list == NULL) {
+	    cairo_destroy (cr);
+	    return FALSE;
 	  }
 
-	#if GTK_CHECK_VERSION(2,90,5)
-	#else
-	  g_free (rects);
-	#endif
+	  mucharmap_chartable_draw (chartable, cr,
+				    0, priv->rows,
+				    0, priv->cols);
+	  cairo_destroy (cr);
 
 	  /* no need to chain up */
 	  return FALSE;
@@ -1532,8 +1320,7 @@
 	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
 	  MucharmapChartablePrivate *priv = chartable->priv;
 
-	  if (priv->pixmap != NULL)
-		draw_and_expose_cell (chartable, priv->active_cell);
+	  expose_cell (chartable, priv->active_cell);
 
 	  return GTK_WIDGET_CLASS (mucharmap_chartable_parent_class)->focus_in_event (widget, event);
 	}
@@ -1547,8 +1334,7 @@
 
 	  mucharmap_chartable_hide_zoom (chartable);
 
-	  if (priv->pixmap != NULL)
-		draw_and_expose_cell (chartable, priv->active_cell);
+	  expose_cell (chartable, priv->active_cell);
 
 	  /* FIXME: the parent's handler already does a draw... */
 
@@ -1630,7 +1416,6 @@
 		    {
 		      gtk_widget_hide (priv->zoom_window);
 		      mucharmap_chartable_set_active_cell (chartable, cell);
-		      _mucharmap_chartable_redraw (chartable, FALSE);
 		    }
 
 		  place_zoom_window (chartable, event->x_root, event->y_root);
@@ -1640,23 +1425,6 @@
 	  if (motion_notify_event)
 		motion_notify_event (widget, event);
 	  return FALSE;
-	}
-
-	static void
-	mucharmap_chartable_realize (GtkWidget *widget)
-	{
-	  MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (widget);
-	  MucharmapChartablePrivate *priv = chartable->priv;
-
-	  GTK_WIDGET_CLASS (mucharmap_chartable_parent_class)->realize (widget);
-
-	  gdk_window_set_back_pixmap (gtk_widget_get_window (widget), NULL, FALSE);
-
-	  if (priv->pixmap != NULL)
-		{
-		  g_object_unref (priv->pixmap);
-		  priv->pixmap = NULL;
-		}
 	}
 
 	#define FIRST_CELL_IN_SAME_ROW(x) ((x) - ((x) % priv->cols))
@@ -1711,11 +1479,6 @@
 	  priv->minimal_row_height = bare_minimal_row_height + total_extra_pixels / priv->rows;
 	  priv->n_padded_rows = allocation->height - (priv->minimal_row_height * priv->rows + 1);
 
-	  /* force pixmap to be redrawn on next expose event */
-	  if (priv->pixmap != NULL)
-		g_object_unref (priv->pixmap);
-	  priv->pixmap = NULL;
-
 	  if (priv->rows == old_rows && priv->cols == old_cols)
 		return;
 
@@ -1755,10 +1518,6 @@
 	  MucharmapChartablePrivate *priv = chartable->priv;
 
 	  GTK_WIDGET_CLASS (mucharmap_chartable_parent_class)->style_set (widget, previous_style);
-
-	  if (priv->pixmap != NULL)
-		g_object_unref (priv->pixmap);
-	  priv->pixmap = NULL;
 
 	  if (priv->pango_layout)
 		g_object_unref (priv->pango_layout);
@@ -1902,15 +1661,11 @@
 	  MucharmapChartablePrivate *priv = chartable->priv;
 	  GtkWidget *widget = GTK_WIDGET (chartable);
 	  gboolean is_rtl;
-	  int offset, new_cell;
+	  int offset;
 
 	  is_rtl = (gtk_widget_get_direction (widget) == GTK_TEXT_DIR_RTL);
 	  offset = is_rtl ? -count : count;
-	  new_cell = priv->active_cell + offset;
-
-	  if (new_cell >= 0 &&
-		  new_cell <= priv->last_cell)
-		mucharmap_chartable_set_active_cell (chartable, new_cell);
+	  mucharmap_chartable_set_active_cell (chartable, priv->active_cell + offset);
 	}
 
 	static void
@@ -1918,12 +1673,9 @@
 		                                     int count)
 	{
 	  MucharmapChartablePrivate *priv = chartable->priv;
-	  int new_cell;
 
-	  new_cell = priv->active_cell + priv->cols * count;
-	  if (new_cell >= 0 &&
-		  new_cell <= priv->last_cell)
-		mucharmap_chartable_set_active_cell (chartable, new_cell);
+	  mucharmap_chartable_set_active_cell (chartable,
+					       priv->active_cell + priv->cols * count);
 	}
 
 	static void
@@ -1931,12 +1683,9 @@
 		                                          int count)
 	{
 	  MucharmapChartablePrivate *priv = chartable->priv;
-	  int page_size, new_cell;
 
-	  page_size = priv->cols * priv->rows;
-	  new_cell = priv->active_cell + page_size * count;
-	  new_cell = CLAMP (new_cell, 0, priv->last_cell);
-	  mucharmap_chartable_set_active_cell (chartable, new_cell);
+	  mucharmap_chartable_set_active_cell (chartable,
+					       priv->active_cell + priv->page_size * count);
 	}
 
 	static void
@@ -1983,8 +1732,6 @@
 		default:
 		  g_assert_not_reached ();
 		}
-
-	  _mucharmap_chartable_redraw (chartable, TRUE);
 
 	  return TRUE;
 	}
@@ -2212,7 +1959,6 @@
 	  widget_class->key_press_event = mucharmap_chartable_key_press_event;
 	  widget_class->key_release_event = mucharmap_chartable_key_release_event;
 	  widget_class->motion_notify_event = mucharmap_chartable_motion_notify;
-	  widget_class->realize = mucharmap_chartable_realize;
 	  widget_class->size_allocate = mucharmap_chartable_size_allocate;
 	  widget_class->size_request = mucharmap_chartable_size_request;
 	  widget_class->style_set = mucharmap_chartable_style_set;
@@ -2585,7 +2331,6 @@
 		                                      gunichar wc)
 	{
 	  set_active_char (chartable, wc);
-	  _mucharmap_chartable_redraw (chartable, TRUE);
 	}
 
 	/**
@@ -2659,11 +2404,6 @@
 		priv->last_cell = mucharmap_codepoint_list_get_last_index (codepoint_list);
 	  else
 		priv->last_cell = 0;
-
-	  /* force pixmap to be redrawn */
-	  if (priv->pixmap != NULL)
-		g_object_unref (priv->pixmap);
-	  priv->pixmap = NULL;
 
 	  g_object_notify (object, "codepoint-list");
 	  g_object_notify (object, "active-character");
