@@ -378,38 +378,9 @@ static void
 help_contents (GtkAction *action,
 	           MucharmapWindow *window)
 {
-  const char *lang;
-  char *uri = NULL, *url;
-  guint i;
-
-  const char * const * langs = g_get_language_names ();
-  for (i = 0; langs[i]; i++) {
-	lang = langs[i];
-	if (strchr (lang, '.')) {
-	  continue;
-	}
-
-	uri = g_build_filename (HELPDIR,
-	                        "mucharmap", /* DOC_MODULE */
-	                        lang,
-	                        "mucharmap.xml",
-	                        NULL);
-
-	if (g_file_test (uri, G_FILE_TEST_EXISTS)) {
-	  break;
-	}
-
-	g_free (uri);
-	uri = NULL;
-  }
-
-  if (!uri)
-	return;
-
-  url = g_strconcat ("help://", uri, NULL);
-  open_url (GTK_WINDOW (window), url, gtk_get_current_event_time ());
-  g_free (uri);
-  g_free (url);
+  open_url (GTK_WINDOW (window),
+            "help:mucharmap", /* DOC_MODULE */
+            gtk_get_current_event_time ());
 }
 
 #if !GTK_CHECK_VERSION(3, 0, 0)
