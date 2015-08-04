@@ -1088,6 +1088,10 @@ mucharmap_charmap_init (MucharmapCharmap *charmap)
   gtk_scrolled_window_set_shadow_type (GTK_SCROLLED_WINDOW (scrolled_window),
 	                                   GTK_SHADOW_ETCHED_IN);
 
+#if GTK_CHECK_VERSION (3, 15, 9)
+  gtk_scrolled_window_set_overlay_scrolling (GTK_SCROLLED_WINDOW (scrolled_window), FALSE);
+#endif
+
   view = mucharmap_chapters_view_new ();
   priv->chapters_view = MUCHARMAP_CHAPTERS_VIEW (view);
   selection = gtk_tree_view_get_selection (GTK_TREE_VIEW (view));
