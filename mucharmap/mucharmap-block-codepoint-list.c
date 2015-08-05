@@ -42,7 +42,7 @@ get_char (MucharmapCodepointList *list,
   MucharmapBlockCodepointList *block_list = MUCHARMAP_BLOCK_CODEPOINT_LIST (list);
   MucharmapBlockCodepointListPrivate *priv = block_list->priv;
 
-  if (index > (gint)priv->end - priv->start)
+  if (index > (gint) (priv->end - priv->start))
 	return (gunichar)(-1);
   else
 	return (gunichar) priv->start + index;
