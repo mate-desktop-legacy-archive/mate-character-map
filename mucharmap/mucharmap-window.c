@@ -31,6 +31,10 @@
 #include "mucharmap-settings.h"
 #include "mucharmap-window.h"
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+#define gdk_cursor_unref g_object_unref
+#endif
+
 #define FONT_CHANGE_FACTOR    (1.189207115f) /* 2^(0.25) */
 
 /* #define ENABLE_PRINTING */

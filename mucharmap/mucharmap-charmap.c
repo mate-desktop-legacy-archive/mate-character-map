@@ -30,6 +30,10 @@
 #include "mucharmap-marshal.h"
 #include "mucharmap-private.h"
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+#define gdk_cursor_unref g_object_unref
+#endif
+
 struct _MucharmapCharmapPrivate {
 
   GtkWidget *notebook;

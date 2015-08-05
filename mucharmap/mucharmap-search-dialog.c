@@ -24,6 +24,10 @@
 #include "mucharmap-search-dialog.h"
 #include "mucharmap-window.h"
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+#define gdk_cursor_unref g_object_unref
+#endif
+
 #define MUCHARMAP_SEARCH_DIALOG_GET_PRIVATE(o) (G_TYPE_INSTANCE_GET_PRIVATE ((o), mucharmap_search_dialog_get_type (), MucharmapSearchDialogPrivate))
 
 #define I_(string) g_intern_static_string (string)
