@@ -946,7 +946,9 @@ mucharmap_window_init (MucharmapWindow *guw)
 
 #ifdef ENABLE_PROGRESSBAR_ON_STATUSBAR
 	guw->status = gtk_statusbar_new ();
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (guw->status), FALSE);
+#endif
 	gtk_box_pack_start (GTK_BOX (hbox), guw->status, TRUE, TRUE, 0);
 	gtk_widget_show (guw->status);
 	g_signal_connect (guw->status, "realize", G_CALLBACK (status_realize), guw);
@@ -955,7 +957,9 @@ mucharmap_window_init (MucharmapWindow *guw)
 	gtk_box_pack_start (GTK_BOX (hbox), guw->progress, FALSE, FALSE, 0);
 #else
 	guw->status = gtk_statusbar_new ();
+#if !GTK_CHECK_VERSION (3, 0, 0)
 	gtk_statusbar_set_has_resize_grip (GTK_STATUSBAR (guw->status), TRUE);
+#endif
 	gtk_box_pack_start (GTK_BOX (hbox), guw->status, TRUE, TRUE, 0);
 	gtk_widget_show(guw->status);
 #endif
@@ -999,6 +1003,10 @@ mucharmap_window_init (MucharmapWindow *guw)
 
   /* window geometry */
   mucharmap_settings_add_window (GTK_WINDOW (guw));
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+  gtk_window_set_has_resize_grip (GTK_WINDOW (guw), TRUE);
+#endif
 }
 
 static void
