@@ -50,6 +50,12 @@ enum
 enum
 {
   PROP_0,
+#if GTK_CHECK_VERSION (3, 0, 0)
+  PROP_HADJUSTMENT,
+  PROP_VADJUSTMENT,
+  PROP_HSCROLL_POLICY,
+  PROP_VSCROLL_POLICY,
+#endif
   PROP_ACTIVE_CHAR,
   PROP_CODEPOINT_LIST,
   PROP_FONT_DESC,
@@ -124,7 +130,12 @@ G_DEFINE_TYPE (MucharmapChartableAccessibleFactory, mucharmap_chartable_accessib
 
 /* Type definition */
 
+#if GTK_CHECK_VERSION (3, 0, 0)
+G_DEFINE_TYPE_WITH_CODE (MucharmapChartable, mucharmap_chartable, GTK_TYPE_DRAWING_AREA,
+                         G_IMPLEMENT_INTERFACE(GTK_TYPE_SCROLLABLE, NULL))
+#else
 G_DEFINE_TYPE (MucharmapChartable, mucharmap_chartable, GTK_TYPE_DRAWING_AREA)
+#endif
 
 /* utility functions */
 
@@ -1848,10 +1859,26 @@ mucharmap_chartable_get_accessible (GtkWidget *widget)
 
 /* MucharmapChartable class methods */
 
+#if GTK_CHECK_VERSION (3, 0, 0)
 static void
-mucharmap_chartable_set_adjustments (MucharmapChartable *chartable,
-	                                 GtkAdjustment *hadjustment,
-	                                 GtkAdjustment *vadjustment)
+mucharmap_chartable_set_hadjustment (MucharmapChartable *chartable,
+                                     GtkAdjustment *hadjustment)
+{
+  MucharmapChartablePrivate *priv = chartable->priv;
+
+  if (hadjustment == priv->hadjustment)
+    return;
+
+  if (priv->hadjustment)
+    g_object_unref (priv->hadjustment);
+
+  priv->hadjustment = hadjustment ? g_object_ref_sink (hadjustment) : NULL;
+}
+#endif
+
+static void
+mucharmap_chartable_set_vadjustment (MucharmapChartable *chartable,
+                                     GtkAdjustment *vadjustment)
 {
   MucharmapChartablePrivate *priv = chartable->priv;
 
@@ -1880,6 +1907,16 @@ mucharmap_chartable_set_adjustments (MucharmapChartable *chartable,
 
   update_scrollbar_adjustment (chartable);
 }
+
+#if !GTK_CHECK_VERSION (2, 91, 2)
+static void
+mucharmap_chartable_set_adjustments (MucharmapChartable *chartable,
+                                     GtkAdjustment *hadjustment,
+                                     GtkAdjustment *vadjustment)
+{
+  mucharmap_chartable_set_vadjustment (chartable, vadjustment);
+}
+#endif
 
 static void
 mucharmap_chartable_add_move_binding (GtkBindingSet  *binding_set,
@@ -2080,6 +2117,13 @@ mucharmap_chartable_init (MucharmapChartable *chartable)
   priv->snap_pow2_enabled = FALSE;
   priv->font_fallback = TRUE;
 
+  priv->vadjustment = NULL;
+#if GTK_CHECK_VERSION (3, 0, 0)
+  priv->hadjustment = NULL;
+  priv->hscroll_policy = GTK_SCROLL_NATURAL;
+  priv->vscroll_policy = GTK_SCROLL_NATURAL;
+#endif
+
 /* This didn't fix the slow expose events either: */
 /*  gtk_widget_set_double_buffered (widget, FALSE); */
 
@@ -2132,8 +2176,24 @@ mucharmap_chartable_set_property (GObject *object,
 	                              GParamSpec *pspec)
 {
   MucharmapChartable *chartable = MUCHARMAP_CHARTABLE (object);
-
+  MucharmapChartablePrivate *priv = chartable->priv;
   switch (prop_id) {
+#if GTK_CHECK_VERSION (3, 0, 0)
+	case PROP_HADJUSTMENT:
+	  mucharmap_chartable_set_hadjustment (chartable, g_value_get_object (value));
+	  break;
+	case PROP_VADJUSTMENT:
+	  mucharmap_chartable_set_vadjustment (chartable, g_value_get_object (value));
+	  break;
+	case PROP_HSCROLL_POLICY:
+	  priv->hscroll_policy = g_value_get_enum (value);
+	  gtk_widget_queue_resize_no_redraw (GTK_WIDGET (chartable));
+	  break;
+	case PROP_VSCROLL_POLICY:
+	  priv->vscroll_policy = g_value_get_enum (value);
+	  gtk_widget_queue_resize_no_redraw (GTK_WIDGET (chartable));
+	  break;
+#endif
 	case PROP_ACTIVE_CHAR:
 	  mucharmap_chartable_set_active_character (chartable, g_value_get_uint (value));
 	  break;
@@ -2171,6 +2231,20 @@ mucharmap_chartable_get_property (GObject *object,
   MucharmapChartablePrivate *priv = chartable->priv;
 
   switch (prop_id) {
+#if GTK_CHECK_VERSION (2, 91, 2)
+	case PROP_HADJUSTMENT:
+	  g_value_set_object (value, NULL);
+	  break;
+	case PROP_VADJUSTMENT:
+	  g_value_set_object (value, priv->vadjustment);
+	  break;
+	case PROP_HSCROLL_POLICY:
+	  g_value_set_enum (value, priv->hscroll_policy);
+	  break;
+	case PROP_VSCROLL_POLICY:
+	  g_value_set_enum (value, priv->vscroll_policy);
+	  break;
+#endif
 	case PROP_ACTIVE_CHAR:
 	  g_value_set_uint (value, mucharmap_chartable_get_active_character (chartable));
 	  break;
@@ -2218,7 +2292,7 @@ mucharmap_chartable_class_init (MucharmapChartableClass *klass)
   widget_class->button_release_event = mucharmap_chartable_button_release;
 #if GTK_CHECK_VERSION (3, 0, 0)
   widget_class->get_preferred_width = mucharmap_chartable_get_preferred_width;
-  widget_class->get_preferred_height = ucharmap_chartable_get_preferred_height;
+  widget_class->get_preferred_height = mucharmap_chartable_get_preferred_height;
   widget_class->draw = mucharmap_chartable_draw;
 #else
   widget_class->size_request = mucharmap_chartable_size_request;
@@ -2235,7 +2309,6 @@ mucharmap_chartable_class_init (MucharmapChartableClass *klass)
   widget_class->get_accessible = mucharmap_chartable_get_accessible;
 #endif
 
-  klass->set_scroll_adjustments = mucharmap_chartable_set_adjustments;
   klass->move_cursor = mucharmap_chartable_move_cursor;
   klass->activate = NULL;
   klass->copy_clipboard = mucharmap_chartable_copy_clipboard;
@@ -2251,6 +2324,15 @@ mucharmap_chartable_class_init (MucharmapChartableClass *klass)
 	              g_cclosure_marshal_VOID__VOID,
 	              G_TYPE_NONE,
 	              0);
+
+#if GTK_CHECK_VERSION (3, 0, 0)
+  /* GtkScrollable interface properties */
+  g_object_class_override_property (object_class, PROP_HADJUSTMENT, "hadjustment");
+  g_object_class_override_property (object_class, PROP_VADJUSTMENT, "vadjustment");
+  g_object_class_override_property (object_class, PROP_HSCROLL_POLICY, "hscroll-policy");
+  g_object_class_override_property (object_class, PROP_VSCROLL_POLICY, "vscroll-policy");
+#else
+  klass->set_scroll_adjustments = mucharmap_chartable_set_adjustments;
 
   /**
    * MucharmapChartable::set-scroll-adjustments
@@ -2270,6 +2352,7 @@ mucharmap_chartable_class_init (MucharmapChartableClass *klass)
 	              _mucharmap_marshal_VOID__OBJECT_OBJECT,
 	              G_TYPE_NONE, 2,
 	              GTK_TYPE_ADJUSTMENT, GTK_TYPE_ADJUSTMENT);
+#endif
 
   signals[STATUS_MESSAGE] =
 	g_signal_new (I_("status-message"), mucharmap_chartable_get_type (), G_SIGNAL_RUN_FIRST,
